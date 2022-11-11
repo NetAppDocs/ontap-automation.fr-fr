@@ -1,0 +1,45 @@
+---
+sidebar: sidebar 
+permalink: resources/networking.html 
+keywords: networking resources 
+summary: 'Vous pouvez utiliser ces appels d"API pour gérer les ressources physiques et logiques réseau utilisées avec le cluster.' 
+---
+= Mise en réseau
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser ces appels d'API pour gérer les ressources physiques et logiques réseau utilisées avec le cluster.
+
+Vous pouvez créer et administrer des groupes de pairs Border Gateway Protocol. Ce type de ressource a été introduit avec ONTAP 9.7.
+
+Un broadcast domain Ethernet est un ensemble de ports physiques qui semblent faire partie du même réseau physique. Tous les ports reçoivent un paquet lorsqu'ils sont diffusés à partir de l'un des ports du domaine. Chaque domaine de diffusion fait partie d'un IPspace. Ce type de ressource a été introduit avec ONTAP 9.6.
+
+Un port Ethernet est un point de terminaison de réseau physique ou virtuel. Les ports peuvent être combinés dans un groupe d'agrégats de liaison (LAG) ou séparés à l'aide d'un réseau local virtuel (VLAN). Ce type de ressource a été introduit avec ONTAP 9.6 et mis à jour avec ONTAP 9.8.
+
+Vous pouvez récupérer les informations de port d'un commutateur Ethernet. Ce type de ressource est nouveau avec ONTAP 9.8.
+
+Vous pouvez récupérer ou modifier la configuration des commutateurs Ethernet utilisés pour le réseau de stockage ou le cluster ONTAP. Ce type de ressource est nouveau avec ONTAP 9.8 et mis à jour avec 9.11.
+
+Vous pouvez utiliser les terminaux d'API REST de structure Fibre Channel (FC) pour extraire des informations sur le réseau FC. Cela inclut les connexions entre le cluster ONTAP et la structure FC, les commutateurs comprenant la structure et les zones du zoneset actif. Ce type de ressource a été introduit avec ONTAP 9.11.
+
+Une interface Fibre Channel est un terminal logique associé à un SVM. Ce type de ressource a été introduit avec ONTAP 9.6 et mis à jour avec ONTAP 9.8.
+
+Un port Fibre Channel est un adaptateur physique sur un nœud ONTAP utilisé pour se connecter au réseau Fibre Channel. Ce type de ressource a été introduit avec ONTAP 9.6 et mis à jour avec ONTAP 9.8.
+
+Vous pouvez configurer un proxy HTTP pour un SVM ou un IPSpace de cluster. Ce type de ressource a été introduit avec ONTAP 9.7.
+
+Une interface logique (LIF) est une adresse IP avec des attributs de configuration supplémentaires. Ce type de ressource a été introduit avec ONTAP 9.6 et mis à jour avec ONTAP 9.8.
+
+Une table de routage est un ensemble de routes IP utilisées pour transférer le trafic vers sa destination. Ce type de ressource a été introduit avec ONTAP 9.6.
+
+Les politiques du service IP définissent les services disponibles pour une LIF spécifique. Les politiques de services peuvent être configurées dans le contexte d'un SVM ou IPspace. Ce type de ressource a été introduit avec ONTAP 9.6 et mis à jour avec ONTAP 9.8.
+
+La capacité de mise en réseau ONTAP a été développée pour prendre en charge les sous-réseaux IP. L'API REST permet d'accéder à la configuration et à la gestion des sous-réseaux IP dans un cluster ONTAP. Ce type de ressource a été introduit avec ONTAP 9.11.
+
+Un IPspace crée un espace réseau pour prendre en charge un ou plusieurs SVM. Les IPspaces permettent d'isoler les IPspaces pour assurer la sécurité et la confidentialité. Ce type de ressource a été introduit avec ONTAP 9.6.

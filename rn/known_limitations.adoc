@@ -1,0 +1,30 @@
+---
+sidebar: sidebar 
+permalink: rn/known_limitations.html 
+keywords: limitations, known limitations 
+summary: 'L"API REST d"ONTAP comporte certaines limites ou restrictions qui peuvent affecter votre utilisation de l"API et le développement du code d"automatisation.' 
+---
+= Limites connues
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'API REST d'ONTAP comporte certaines limites ou restrictions qui peuvent affecter votre utilisation de l'API et le développement du code d'automatisation. Ces restrictions sont décrites ci-dessous. De manière générale, chacune s'applique à toutes les versions d'ONTAP prises en charge où l'API REST est disponible. Consultez le champ _ONTAP releases_ pour plus d'informations.
+
+
+NOTE: L'API REST a été disponible pour la première fois avec ONTAP 9.6.
+
+_Versions de ONTAP : toutes les versions prises en charge_
+
+Chaque requête client de l'API REST est reçue par ONTAP et placée dans une file d'attente d'entrée avant d'être traitée. Lorsque les taux d'arrivée sont extrêmement élevés, la file d'attente d'entrée contenant ces requêtes API peut être temporairement remplie. Lorsque cela se produit, chaque demande de débordement supplémentaire est rejetée. Dans ces situations :
+
+* ONTAP reconnaît que la connexion entrante dépasse la profondeur de la file d'attente et consigne un message indiquant qu'elle a échoué à la connexion.
+* Le client REST observe l'échec de la connexion, bien que le comportement exact puisse dépendre du client. Par exemple, avec un client NMSDK, le message « échec de la connexion à SSL » s'affiche.
+
+
+Le remplissage de la file d'attente d'entrée de l'API REST est un événement rare. Mais le rejet des demandes excédentaires offre une protection contre les attaques dos.

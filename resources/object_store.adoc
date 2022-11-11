@@ -1,0 +1,29 @@
+---
+sidebar: sidebar 
+permalink: resources/object_store.html 
+keywords: object store resources 
+summary: 'Vous pouvez utiliser ces appels d"API pour accéder au stockage objet basé sur S3.' 
+---
+= Magasin d'objets
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser ces appels d'API pour accéder au stockage objet basé sur S3.
+
+Un compartiment est un conteneur d'objets et il est structuré à l'aide d'un espace de noms d'objet. Chaque serveur d'objets S3 peut avoir plusieurs compartiments. Ce type de ressource a été introduit avec ONTAP 9.7 et mis à jour avec ONTAP 9.8.
+
+Vous pouvez créer et gérer la configuration ONTAP S3, y compris les configurations de serveurs et de compartiments. Ce type de ressource a été introduit avec ONTAP 9.7.
+
+Un compartiment est un conteneur d'objets et il est structuré à l'aide d'un espace de noms d'objet. Vous pouvez gérer les compartiments pour un serveur S3 spécifique. Ce type de ressource a été introduit avec ONTAP 9.7.
+
+Vous pouvez créer des groupes d'utilisateurs S3 et gérer le contrôle d'accès au niveau des groupes. Ce type de ressource est nouveau avec ONTAP 9.8.
+
+Vous pouvez créer une règle S3 et l'associer à une ressource pour définir diverses autorisations. Ce type de ressource est nouveau avec ONTAP 9.8.
+
+Les comptes utilisateurs S3 sont gérés sur le serveur S3. Les comptes utilisateur reposent sur une paire de clés et sont associés aux compartiments qu'ils contrôlent. Ce type de ressource a été introduit avec ONTAP 9.7.

@@ -1,0 +1,85 @@
+---
+sidebar: sidebar 
+permalink: rest/object_references_and_access.html 
+keywords: objects, access paths, uuid, uuidv4, collections, object collection 
+summary: 'Les instances de ressources ou les objets exposés via l"API REST de ONTAP peuvent être référencés et accessibles de différentes manières.' 
+---
+= Accès et références d'objets
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les instances de ressources ou les objets exposés via l'API REST de ONTAP peuvent être référencés et accessibles de différentes manières.
+
+
+
+== Chemins d'accès aux objets
+
+À un niveau élevé, il existe deux types de chemin d'accès lors de l'accès à un objet :
+
+* Primaire
++
+L'objet est la cible principale ou directe de l'appel d'API.
+
+* Étranger
++
+L'objet n'est pas la référence principale de l'appel API, mais il est lié à partir de l'objet principal. Il s'agit donc d'un objet étranger ou en aval et est référencé par un champ dans l'objet principal.
+
+
+
+
+
+== Accès à un objet à l'aide de l'UUID
+
+Un identifiant unique est attribué à chaque objet lors de sa création, qui est dans la plupart des cas un UUID 128 bits. Les valeurs UUID attribuées sont immuables et sont utilisées en interne dans ONTAP pour accéder aux ressources et les gérer. De ce fait, l'UUID fournit généralement le moyen le plus rapide et le plus stable d'accéder aux objets.
+
+Pour de nombreux types de ressource, une valeur UUID peut être fournie dans le cadre de la clé de chemin de l'URL pour accéder à un objet spécifique. Par exemple, vous pouvez utiliser la commande suivante pour accéder à une instance de nœud : ``/cluster/nodes/{uuid}`
+
+
+
+== Accès à un objet à l'aide d'une propriété d'objet
+
+Outre l'UUID, vous pouvez également accéder à un objet à l'aide d'une propriété d'objet. Dans la plupart des cas, il est pratique d'utiliser la propriété name. Par exemple, vous pouvez utiliser le paramètre de requête suivant dans la chaîne d'URL pour accéder à une instance de nœud par son nom : `/cluster/nodes?name=node_one`. En plus d'un paramètre de requête, un objet étranger peut être accessible via une propriété dans l'objet principal.
+
+Bien que vous puissiez utiliser le nom ou une autre propriété pour accéder à un objet au lieu de l'UUID, il existe plusieurs inconvénients possibles :
+
+* Le champ de nom n'est pas immuable et peut être modifié. Si le nom d'un objet est modifié avant d'accéder à un objet, le mauvais objet sera renvoyé ou une erreur d'accès à l'objet échouera.
++
+
+NOTE: Ce problème peut survenir avec une méthode POST ou PATCH sur un objet étranger ou avec une méthode GET sur un objet primaire.
+
+* ONTAP doit traduire le champ Nom dans l'UUID correspondant. Il s'agit d'un type d'accès indirect qui peut devenir un problème de performances.
+
+
+Notamment, une dégradation des performances peut se concrétiser lorsque :
+
+* La méthode GET est utilisée
+* Un grand ensemble d'objets est accessible
+* Une requête complexe ou élaborée est utilisée
+
+
+
+
+== Contexte cluster ou SVM
+
+Il existe plusieurs terminaux REST qui prennent en charge un cluster et un SVM. Lorsque vous utilisez l'un de ces noeuds finaux, vous pouvez indiquer le contexte de l'appel API via le `scope=[svm|cluster]` valeur. Les interfaces IP et les rôles de sécurité sont des exemples de points de terminaison prenant en charge un contexte double.
+
+
+NOTE: La valeur de portée est basée sur les valeurs par défaut des propriétés fournies pour chaque appel d'API.
+
+
+
+== Utilisation DE PATCH et SUPPRESSION sur une collection d'objets
+
+Chaque noeud final REST prenant en charge LE CORRECTIF ou LA SUPPRESSION sur une instance de ressource prend également en charge la même méthode sur un ensemble d'objets. La seule exigence est qu'au moins un champ doit être fourni via un paramètre de requête dans la chaîne d'URL. Lors de l'émission d'un CORRECTIF ou DE LA SUPPRESSION sur une collection, cela équivaut à effectuer les opérations suivantes en interne :
+
+* RÉCUPÉRATION basée sur une requête pour récupérer la collection
+* Séquence série de PATCH ou SUPPRESSION d'appels sur chaque objet de la collection
+
+
+Le délai d'exécution de l'opération peut être défini par `return_timeout` par défaut, 15 secondes. Si elle n'est pas terminée avant le délai, la réponse inclut un lien vers l'objet suivant. Vous devez réémettre la même méthode HTTP en utilisant le lien suivant pour poursuivre l'opération.

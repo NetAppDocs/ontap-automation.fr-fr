@@ -1,0 +1,32 @@
+---
+sidebar: sidebar 
+permalink: resources/snaplock.html 
+keywords: snaplock resources 
+summary: 'Vous pouvez utiliser ces appels d"API pour administrer la fonction SnapLock.' 
+---
+= SnapLock
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapLock est une implémentation basée sur le stockage de la solution optique WORM (write once, read many) traditionnelle. Elle permet une conservation à long terme des données. Vous pouvez utiliser ces appels d'API pour administrer la fonction SnapLock.
+
+La structure du journal SnapLock est basée sur des répertoires et des fichiers d'un volume spécifique contenant les enregistrements des journaux. Les fichiers journaux sont remplis et archivés en fonction de la taille maximale du journal. Ce type de ressource a été introduit avec ONTAP 9.7.
+
+L'horloge de conformité détermine l'heure d'expiration des objets SnapLock. L'horloge doit être initialisée en dehors de l'API REST et ne peut pas être modifiée. Ce type de ressource a été introduit avec ONTAP 9.7.
+
+Vous pouvez utiliser la fonction de rétention basée sur les événements (EBR, Event Based Retention) de SnapLock pour définir la durée de conservation d'un fichier après l'occurrence d'un événement. Ce type de ressource a été introduit avec ONTAP 9.7.
+
+Vous pouvez gérer la durée de conservation d'un fichier créé par SnapLock. Si nécessaire, vous pouvez également supprimer des fichiers WORM non expirés sur un volume d'entreprise SnapLock. Ce type de ressource a été introduit avec ONTAP 9.7.
+
+
+NOTE: Le seul rôle intégré disposant de l'autorité pour exécuter l'opération de suppression est vsadmin-snaplock.
+
+Vous pouvez afficher et gérer les informations de base décrivant les fichiers et les volumes, telles que le type et la date d'expiration. Ce type de ressource a été introduit avec ONTAP 9.7.
+
+Vous pouvez utiliser ces appels API pour gérer les fichiers qui font partie d'un processus de litige. Ce type de ressource a été introduit avec ONTAP 9.7.

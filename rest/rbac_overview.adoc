@@ -1,0 +1,101 @@
+---
+sidebar: sidebar 
+permalink: rest/rbac_overview.html 
+keywords: rbac, rbac security, rbac overview, roles, scope, role mapping 
+summary: 'ONTAP inclut des fonctionnalités robustes et évolutives de contrôle d"accès basé sur des rôles (RBAC). Vous pouvez attribuer chaque compte un rôle différent afin de contrôler l"accès de l"utilisateur aux ressources exposées via l"API REST et l"interface de ligne de commande. Les rôles définissent les différents niveaux d"accès administratif des différents utilisateurs ONTAP.' 
+---
+= Présentation de la sécurité RBAC
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+ONTAP inclut des fonctionnalités robustes et évolutives de contrôle d'accès basé sur des rôles (RBAC). Vous pouvez attribuer chaque compte un rôle différent afin de contrôler l'accès de l'utilisateur aux ressources exposées via l'API REST et l'interface de ligne de commande. Les rôles définissent les différents niveaux d'accès administratif des différents utilisateurs ONTAP.
+
+
+NOTE: La fonction RBAC d'ONTAP s'est poursuivie et a été considérablement améliorée grâce à ONTAP 9.11.1 (et aux versions suivantes). Voir link:../rest/rbac_overview.html#summary-of-rbac-evolution["Résumé de l'évolution du RBAC"] et link:../rn/whats_new.html["Nouveautés de l'API REST et de l'automatisation ONTAP"] pour en savoir plus.
+
+
+
+== Rôles ONTAP
+
+Un rôle est un ensemble de privilèges qui définissent collectivement les actions que l'utilisateur peut effectuer. Chaque privilège identifie un chemin d'accès spécifique et le niveau d'accès associé. Les rôles sont attribués aux comptes utilisateur et appliqués par ONTAP lors de décisions de contrôle d'accès.
+
+
+
+=== Types de rôles
+
+Il existe deux types de rôles. Elles ont été introduites et adaptées à différents environnements, comme ONTAP a évolué.
+
+
+NOTE: Il y a des avantages et des inconvénients lors de l'utilisation de chaque type de rôle. Voir link:../rest/work_roles_users.html#comparing-the-role-types["Comparaison des types de rôle"] pour en savoir plus.
+
+[cols="20,80"]
+|===
+| Type | Description 
+
+
+| REPOS | Les rôles REST ont été introduits avec ONTAP 9.6 et sont généralement appliqués aux utilisateurs qui accèdent à ONTAP via l'API REST. La création d'un rôle REST crée automatiquement un rôle _mapping_ traditionnel. 
+
+
+| Traditionnel | Il s'agit des rôles hérités inclus avant ONTAP 9.6. Elles ont été ajoutées à l'environnement CLI d'ONTAP et continuent d'être essentielles à la sécurité du RBAC. 
+|===
+
+
+=== Portée
+
+Chaque rôle a une portée ou un contexte dans lequel il est défini et appliqué. Le périmètre détermine où et comment un rôle spécifique est utilisé.
+
+
+NOTE: Les comptes utilisateur ONTAP ont également un périmètre similaire qui détermine la façon dont un utilisateur est défini et utilisé.
+
+[cols="20,80"]
+|===
+| Portée | Description 
+
+
+| Cluster | Les rôles ayant une étendue du cluster sont définis au niveau du cluster ONTAP. Ils sont associés aux comptes utilisateur au niveau du cluster. 
+
+
+| SVM | Les rôles ayant une portée SVM sont définis pour une SVM de données spécifique. Ils sont affectés aux comptes utilisateurs dans la même SVM. 
+|===
+
+
+=== Source des définitions de rôle
+
+Il existe deux façons de définir un rôle ONTAP.
+
+[cols="20,80"]
+|===
+| Source du rôle | Description 
+
+
+| Personnalisées | L'administrateur ONTAP peut créer des rôles personnalisés. Ces rôles peuvent être adaptés à un environnement spécifique et à des exigences de sécurité spécifiques. 
+
+
+| Intégrée | Bien que les rôles personnalisés offrent davantage de flexibilité, il existe également un ensemble de rôles intégrés disponibles au niveau du cluster et des SVM. Ces rôles sont prédéfinis et peuvent être utilisés pour de nombreuses tâches administratives courantes. 
+|===
+
+
+== Mapping de rôles et traitement ONTAP
+
+Selon la version de ONTAP que vous utilisez, tous ou presque tous les appels de l'API REST sont redirigés vers une ou plusieurs commandes de l'interface de ligne de commande. Lorsque vous créez un rôle DE REPOS, un rôle traditionnel ou hérité est également créé. Ce rôle traditionnel *mappé* est basé sur les commandes CLI correspondantes et ne peut pas être manipulé ni modifié.
+
+
+NOTE: Le mappage de rôle inverse n'est pas pris en charge. C'est-à-dire que la création d'un rôle traditionnel ne crée pas de rôle DE REPOS correspondant.
+
+
+
+== Résumé de l'évolution du RBAC
+
+Ces rôles sont inclus dans toutes les versions de ONTAP 9. Les rôles DE REPOS ont été introduits plus tard et ont évolué comme décrit ci-dessous.
+
+L'API REST a été introduite avec ONTAP 9.6. Les rôles DE REPOS étaient également inclus dans cette version. De plus, lorsque vous créez un rôle DE REPOS, un rôle traditionnel correspondant est également créé.
+
+Chaque version de ONTAP de 9.7 à 9.10.1 inclut des améliorations de l'API REST. Par exemple, des terminaux REST supplémentaires ont été ajoutés à chaque version. Toutefois, la création et la gestion des deux types de rôles sont demeurées distinctes. Par ailleurs, ONTAP 9.10.1 a ajouté LA prise en charge du RBAC REST pour le terminal REST de snapshots `/api/storage/volumes/{vol.uuid}/snapshots` qui est un noeud final qualifié de ressource.
+
+La possibilité de configurer et de gérer les rôles classiques à l'aide de l'API REST a été ajoutée avec cette version. Des niveaux d'accès supplémentaires pour LES rôles REST ont également été ajoutés.

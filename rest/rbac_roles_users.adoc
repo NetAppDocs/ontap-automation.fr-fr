@@ -1,0 +1,226 @@
+---
+sidebar: sidebar 
+permalink: rest/rbac_roles_users.html 
+keywords: rbac, roles, users, rest endpoints, cli, privileges, access level, cluster, svm 
+summary: Une fois que vous avez compris les fonctionnalités RBAC de base, vous pouvez commencer à travailler avec les rôles et les utilisateurs ONTAP. 
+---
+= Travaillez avec les rôles et les utilisateurs
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+Une fois que vous avez compris les fonctionnalités RBAC de base, vous pouvez commencer à travailler avec les rôles et les utilisateurs ONTAP.
+
+
+
+== Accès administratif
+
+Vous pouvez créer et gérer des rôles ONTAP via l'API REST ou l'interface de ligne de commande. Les informations d'accès sont décrites ci-dessous.
+
+
+
+=== API REST
+
+Plusieurs terminaux peuvent être utilisés avec des rôles RBAC et des comptes utilisateur. Les quatre premiers du tableau sont utilisés pour créer et gérer les rôles. Les deux derniers sont utilisés pour créer et gérer des comptes utilisateur.
+
+
+TIP: Vous pouvez accéder à la ONTAP en ligne link:../reference/api_reference.html["Référence API"] Documentation pour plus d'informations, notamment des exemples d'utilisation de l'API.
+
+[cols="35,65"]
+|===
+| Point final | Description 
+
+
+| `/security/roles` | Ce noeud final vous permet de créer un nouveau rôle DE REPOS. Vous pouvez également définir un rôle traditionnel à partir de ONTAP 9.11.1. Dans ce cas, ONTAP détermine le type de rôle en fonction des paramètres d'entrée. Vous pouvez également récupérer une liste des rôles définis. 
+
+
+| `/security/roles/{owner.UUID}/{name}` | Vous pouvez récupérer ou supprimer un cluster ou un rôle SVM défini. La valeur UUID identifie le SVM où le rôle est défini (cluster ou SVM des données). La valeur nom correspond au nom du rôle. 
+
+
+| `/security/roles/{owner.UUID}/{name}/privileges` | Ce noeud final vous permet de configurer les privilèges pour un rôle spécifique. Les rôles intégrés peuvent être récupérés mais pas mis à jour. Pour plus d'informations, consultez la documentation de référence sur les API de votre version de ONTAP. 
+
+
+| `/security/roles/{owner.UUID}/{name}/privileges/[path]` | Vous pouvez récupérer, modifier et supprimer le niveau d'accès et la valeur d'interrogation facultative d'un privilège spécifique. Pour plus d'informations, consultez la documentation de référence sur les API de votre version de ONTAP. 
+
+
+| `/security/accounts` | Ce noeud final vous permet de créer un nouveau compte utilisateur défini au niveau du cluster ou du SVM. Plusieurs types d'informations doivent être inclus ou ajoutés par la suite avant que le compte ne soit opérationnel. Vous pouvez également récupérer une liste des comptes utilisateur définis. 
+
+
+| `/security/accounts/{owner.UUID}/{name}` | Vous pouvez récupérer, modifier et supprimer un cluster ou un compte utilisateur délimité par des SVM. La valeur UUID identifie le SVM où l'utilisateur est défini (cluster ou SVM de données). La valeur nom correspond au nom du compte. 
+|===
+
+
+=== Interface de ligne de commandes
+
+Les commandes CLI ONTAP correspondantes sont décrites ci-dessous. Toutes les commandes sont accessibles au niveau du cluster par le biais d'un compte d'administrateur.
+
+[cols="30,70"]
+|===
+| Commande | Description 
+
+
+| `security login` | Il s'agit du répertoire contenant les commandes nécessaires à la création et à la gestion d'un login utilisateur. 
+
+
+| `security login rest-role` | Il s'agit du répertoire contenant les commandes nécessaires à la création et à la gestion d'un rôle REST associé à une connexion utilisateur. 
+
+
+| `security login role` | Il s'agit du répertoire contenant les commandes nécessaires à la création et à la gestion d'un rôle traditionnel associé à une connexion utilisateur. 
+|===
+
+
+== Définitions de rôle
+
+Les rôles REST et traditionnels sont définis via un ensemble d'attributs.
+
+Un rôle peut être qui appartient au cluster ONTAP ou à un SVM de données spécifique au sein du cluster. Le propriétaire détermine aussi implicitement la portée du rôle.
+
+Chaque rôle doit avoir un nom unique dans son périmètre. Le nom d'un rôle de cluster doit être unique au niveau du cluster ONTAP, tandis que les rôles de SVM doivent être uniques au sein de la SVM spécifique.
+
+
+NOTE: Le nom d'un nouveau rôle DE REPOS doit être unique entre les rôles DE REPOS ainsi que les rôles traditionnels. En effet, la création d'un rôle REST entraîne également un nouveau rôle _mapping_ traditionnel avec le même nom.
+
+Chaque rôle contient un ensemble d'un ou plusieurs privilèges. Chaque privilège identifie une ressource ou une commande spécifique et le niveau d'accès associé.
+
+
+
+== Privilèges
+
+Un rôle peut contenir un ou plusieurs privilèges. Chaque définition de privilège est un tuple et établit le niveau d'accès à une ressource ou une opération spécifique.
+
+
+
+=== Chemin de ressource
+
+Le chemin de la ressource est identifié comme un point de terminaison REST ou comme chemin de répertoire commande/commande CLI.
+
+Un noeud final API a identifié la ressource cible pour un rôle REST.
+
+Une commande CLI identifie la cible d'un rôle traditionnel. Un répertoire de commandes peut également être spécifié, qui inclura ensuite toutes les commandes en aval dans la hiérarchie de l'interface de ligne de commande ONTAP.
+
+
+
+=== Niveau d'accès
+
+Le niveau d'accès définit le type d'accès dont dispose le rôle à la commande ou au chemin de ressources spécifique. Les niveaux d'accès sont identifiés par un ensemble de mots-clés prédéfinis. Trois niveaux d'accès ont été introduits avec ONTAP 9.6. Elles peuvent être utilisées pour les rôles traditionnels et LES rôles DE REPOS. En outre, trois nouveaux niveaux d'accès ont été ajoutés avec ONTAP 9.11.1. Ces nouveaux niveaux d'accès ne peuvent être utilisés qu'avec les rôles REST.
+
+
+NOTE: Les niveaux d'accès suivent le modèle CRUD. Avec REST, ceci est basé sur les méthodes HTTP principales (POST, GET, PATCH, SUPPRESSION). Les opérations de l'interface de ligne de commande correspondantes sont généralement associées aux opérations REST (création, affichage, modification, suppression).
+
+[cols="20,45,15,20"]
+|===
+| Niveau d'accès | Primitives REST | Ajouté | Rôle REST uniquement 
+
+
+| Aucune | s/o | 9.6 | Non 
+
+
+| lecture seule | OBTENEZ | 9.6 | Non 
+
+
+| tous | OBTENIR, PUBLIER, CORRIGER, SUPPRIMER | 9.6 | Non 
+
+
+| read_create | GET, POST | 9.11.1 | Oui. 
+
+
+| lire_modifier | OBTENIR, CORRECTIF | 9.11.1 | Oui. 
+
+
+| read_create_modify | OBTENIR, PUBLIER, CORRIGER | 9.11.1 | Oui. 
+|===
+
+
+=== Requête facultative
+
+Lorsque vous créez un rôle traditionnel, vous pouvez éventuellement inclure une valeur *query* pour identifier le sous-ensemble d'objets applicables pour le répertoire de commande ou de commande.
+
+
+
+== Récapitulatif des rôles intégrés
+
+Il existe plusieurs rôles prédéfinis inclus dans ONTAP que vous pouvez utiliser au niveau du cluster ou des SVM.
+
+
+
+=== Rôles liés à la portée du cluster
+
+Plusieurs rôles intégrés sont disponibles au niveau du cluster.
+
+Voir https://docs.netapp.com/us-en/ontap/authentication/predefined-roles-cluster-administrators-concept.html["Rôles prédéfinis pour les administrateurs du cluster"^] pour en savoir plus.
+
+[cols="20,80"]
+|===
+| Rôle | Description 
+
+
+| admin | Les administrateurs ayant ce rôle possèdent des droits sans restriction et peuvent effectuer toutes les opérations nécessaires sur le système ONTAP. Ils peuvent configurer toutes les ressources au niveau du cluster et des SVM. 
+
+
+| AutoSupport | Il s'agit d'un rôle spécial, spécialement conçu pour le compte AutoSupport. 
+
+
+| sauvegarde | Ce rôle spécial pour les logiciels de sauvegarde qui doivent sauvegarder le système. 
+
+
+| SnapLock | Il s'agit d'un rôle spécial, spécialement conçu pour le compte SnapLock. 
+
+
+| lecture seule | Les administrateurs ayant ce rôle peuvent afficher tout au niveau du cluster, mais ne peuvent pas apporter de modifications. 
+
+
+| Aucune | Aucune fonctionnalité d'administration n'est fournie. 
+|===
+
+
+=== Rôles évalués du SVM
+
+Il existe plusieurs rôles intégrés disponibles dans le cadre du SVM. Le *vsadmin* donne accès aux fonctions les plus générales et les plus puissantes. Il existe plusieurs rôles supplémentaires adaptés à des tâches administratives spécifiques, notamment :
+
+* volume vsadmin
+* protocole vsadmin
+* sauvegarde vsadmin
+* vsadmin-snaplock
+* vsadmin-readdisponible
+
+
+Voir https://docs.netapp.com/us-en/ontap/authentication/predefined-roles-svm-administrators-concept.html["Rôles prédéfinis pour les administrateurs des SVM"^] pour en savoir plus.
+
+
+
+== Comparaison des types de rôle
+
+Avant de sélectionner un rôle *REST* ou *traditionnel*, vous devez être conscient des différences. Vous trouverez ci-dessous quelques méthodes de comparaison des deux types de rôle.
+
+
+NOTE: Pour les cas d'utilisation RBAC plus avancés ou plus complexes, vous devez généralement utiliser un rôle classique.
+
+
+
+=== Comment l'utilisateur accède à ONTAP
+
+Avant de créer un rôle, il est important de savoir comment l'utilisateur accède au système ONTAP. Un type de rôle peut être déterminé en fonction de ce type.
+
+[cols="2,7"]
+|===
+| L'accès | Type suggéré 
+
+
+| API REST uniquement | Le rôle REST est conçu pour être utilisé avec l'API REST. 
+
+
+| API REST ET INTERFACE DE LIGNE DE COMMANDES | Vous pouvez définir un rôle REST qui crée également un rôle traditionnel correspondant. 
+
+
+| Interface de ligne de commandes uniquement | Vous pouvez créer un rôle traditionnel. 
+|===
+
+
+=== Précision du chemin d'accès
+
+Le chemin d'accès défini pour un rôle REST est basé sur un terminal REST. Le chemin d'accès d'un rôle traditionnel repose sur une commande ou un répertoire de commande CLI. En outre, vous pouvez inclure un paramètre de requête facultatif avec un rôle traditionnel afin de restreindre davantage l'accès en fonction des valeurs des paramètres de la commande.

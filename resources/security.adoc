@@ -1,0 +1,86 @@
+---
+sidebar: sidebar 
+permalink: resources/security.html 
+keywords:  
+summary:  
+---
+= Sécurité
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ces appels d'API peuvent être utilisés pour gérer les paramètres de sécurité du cluster et des SVM.
+
+Il existe un ensemble de comptes utilisateurs pour le cluster et les SVM. Ce type de ressource a été introduit avec ONTAP 9.6.
+
+La configuration d'un compte utilisateur évalué. Ce type de ressource a été introduit avec ONTAP 9.6.
+
+Vous pouvez administrer les informations de compte SVM au serveur Active Directory. Ce type de ressource a été introduit avec ONTAP 9.7.
+
+ONTAP détecte les fichiers potentiellement contenant une menace d'attaque par ransomware. Il existe plusieurs catégories de terminaux. Vous pouvez récupérer une liste de ces fichiers suspects et les supprimer d'un volume. Ce type de ressource a été introduit avec ONTAP 9.10.1.
+
+Les paramètres qui déterminent ce qui est consigné dans les fichiers journaux d'audit. Ce type de ressource a été introduit avec ONTAP 9.6.
+
+Ces paramètres contrôlent la façon dont les informations du journal d'audit sont transférées vers des systèmes distants ou des serveurs splunk. Ce type de ressource a été introduit avec ONTAP 9.6.
+
+Vous pouvez récupérer les messages du journal d'audit. Ce type de ressource a été introduit avec ONTAP 9.6.
+
+Amazon Web Services inclut un service de gestion des clés qui fournit un stockage sécurisé pour les clés et d'autres secrets. Vous pouvez accéder à ce service via l'API REST pour permettre à ONTAP de stocker ses clés de chiffrement en toute sécurité dans le cloud. En outre, vous pouvez créer et lister les clés d'authentification utilisées par NetApp Storage Encryption. Cette prise en charge a été récemment prise en charge d'ONTAP 9.12.
+
+Cet ensemble d'appels d'API vous permet d'utiliser le coffre-fort de clés Azure pour stocker les clés de cryptage ONTAP. Ce type de ressource est nouveau avec ONTAP 9.8.
+
+Les appels API peuvent être utilisés pour installer, afficher et supprimer des certificats utilisés par ONTAP. Ce type de ressource a été introduit avec ONTAP 9.7.
+
+Vous pouvez récupérer des informations relatives à la sécurité au niveau du cluster et mettre à jour certains paramètres. Ce type de ressource a été introduit avec ONTAP 9.7 et mis à jour avec ONTAP 9.8.
+
+Cet ensemble d'appels API vous permet d'utiliser le service de gestion des clés Google Cloud Platform pour stocker et gérer les clés de chiffrement ONTAP. Ce type de ressource a été initialement introduit avec l'API REST de ONTAP 9.8. Cependant, cette fonctionnalité a été remaniée et est considérée comme nouvelle, avec de nouveaux types de ressources, dans ONTAP 9.9.
+
+IPSec (Internet Protocol Security) est une suite de protocoles assurant la sécurité entre deux points de terminaison via un réseau IP sous-jacent. Ce type de ressource est nouveau avec ONTAP 9.8.
+
+Vous pouvez ajouter, supprimer et récupérer des certificats d'autorité de certification IPSec. Ce type de ressource est nouveau avec ONTAP 9.10.
+
+Vous pouvez utiliser cet ensemble d'appels API pour gérer les stratégies en vigueur pour un déploiement IPSec. Ce type de ressource est nouveau avec ONTAP 9.8.
+
+Vous pouvez utiliser cet ensemble d'appels API pour gérer les associations de sécurité en vigueur pour un déploiement IPSec. Ce type de ressource est nouveau avec ONTAP 9.8.
+
+Ces noeuds finaux vous permettent de récupérer et de mettre à jour les configurations des gestionnaires de clés. Ce type de ressource est nouveau avec ONTAP 9.10.
+
+Un gestionnaire de clés permet aux modules clients de ONTAP de stocker des clés en toute sécurité. Ce type de ressource a été introduit avec ONTAP 9.6 et mis à jour pour ONTAP 9.7. Une autre mise à jour a été effectuée avec ONTAP 9.12 pour prendre en charge les clés d'authentification.
+
+Un magasin de clés décrit le type d'un gestionnaire de clés. Ce type de ressource est nouveau avec ONTAP 9.10.
+
+Ces appels d'API sont utilisés pour récupérer et gérer la configuration du serveur LDAP du cluster. Ce type de ressource a été introduit avec ONTAP 9.6.
+
+Permet d'afficher et de gérer les messages de connexion utilisés par ONTAP. Ce type de ressource a été introduit avec ONTAP 9.6.
+
+La fonction de vérification administrateur multiple fournit une structure d'autorisation flexible pour protéger l'accès aux commandes ou opérations ONTAP. Dix-sept nouveaux points finaux prennent en charge la définition, la demande et l'approbation de l'accès dans les domaines suivants :
+
+* Règles
+* Requêtes
+* Groupes d'approbation
+
+
+En autorisant plusieurs administrateurs à approuver l'accès, il améliore la sécurité de vos environnements ONTAP et IT. Ces types de ressources ont été introduits avec ONTAP 9.11.
+
+Ces paramètres sont utilisés pour récupérer et gérer la configuration du serveur NIS du cluster. Ce type de ressource a été introduit avec ONTAP 9.6.
+
+Cela inclut l'appel API utilisé pour modifier le mot de passe d'un compte utilisateur. Ce type de ressource a été introduit avec ONTAP 9.6.
+
+Gérer les privilèges d'un rôle spécifique. Ce type de ressource a été introduit avec ONTAP 9.6.
+
+Vous pouvez utiliser ces appels API pour configurer les clés publiques des comptes utilisateur. Ce type de ressource a été introduit avec ONTAP 9.7.
+
+Les rôles permettent d'attribuer des privilèges aux comptes d'utilisateur. Ce type de ressource a été introduit avec ONTAP 9.6.
+
+Instance spécifique d'un rôle. Ce type de ressource a été introduit avec ONTAP 9.6.
+
+Vous pouvez afficher et gérer la configuration du fournisseur de services SAML. Ce type de ressource a été introduit avec ONTAP 9.6.
+
+Ces appels vous permettent de définir la configuration SSH. Ce type de ressource a été introduit avec ONTAP 9.7.
+
+Ces terminaux vous permettent d'extraire la configuration de sécurité SSH pour tous les SVM. Ce type de ressource a été introduit avec ONTAP 9.10.

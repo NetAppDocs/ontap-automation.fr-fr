@@ -1,0 +1,10 @@
+---
+section: rn
+title: Notes de version
+entries:
+- title: Quoi de neuf
+  url: "/rn/whats_new.html"
+- title: Limites connues
+  url: "/rn/known_limitations.html"
+- title: Notes de version de ONTAP
+  url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508

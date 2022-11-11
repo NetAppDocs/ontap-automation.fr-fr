@@ -1,0 +1,203 @@
+---
+sidebar: sidebar 
+permalink: rest/rbac_wf_create_user.html 
+keywords: rbac, workflow, create role, create user 
+summary: Vous pouvez utiliser le workflow décrit ci-dessous pour créer un utilisateur avec un rôle REST associé. Avant de passer en revue le flux de travail, vous devez connaître les étapes générales de préparation. 
+---
+= Créer un utilisateur avec un rôle
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser le workflow décrit ci-dessous pour créer un utilisateur avec un rôle REST associé. Avant de passer en revue le flux de travail, vous devez connaître les étapes générales de préparation.
+
+
+
+== Préparer la création d'un utilisateur ONTAP avec un rôle attribué
+
+Avant de créer un rôle et de l'attribuer à un compte utilisateur ONTAP, il est important de vous préparer en consultant les principales exigences et options en matière de sécurité.
+
+La version d'ONTAP détermine les terminaux REST et les fonctionnalités RBAC disponibles.
+
+Vous devez identifier les ressources ou les commandes à protéger et le périmètre (cluster ou SVM).
+
+Après avoir identifié les ressources et la portée, vous devez déterminer le niveau d'accès à accorder.
+
+Celui-ci peut accéder au ONTAP via l'API REST, l'interface de ligne de commandes ou les deux.
+
+Il est plus pratique d'utiliser un rôle intégré existant, mais vous pouvez en créer un nouveau si nécessaire.
+
+En fonction des exigences de sécurité et de l'accès ONTAP, vous devez choisir de créer un rôle REST ou traditionnel.
+
+
+
+== Créez un utilisateur avec un rôle personnalisé
+
+Le workflow décrit ci-dessous inclut les étapes types nécessaires pour créer un rôle REST personnalisé et l'associer à un nouveau compte utilisateur. L'utilisateur et le rôle ont une étendue SVM et sont associés à un SVM de données spécifique.
+
+
+NOTE: Le workflow illustre le processus complet. Certaines étapes peuvent être facultatives ou doivent être modifiées en fonction de votre environnement.
+
+
+
+=== 1. Lister les SVM de données dans le cluster
+
+Effectuer l'appel d'API REST suivant pour lister les SVM dans le cluster. L'UUID et le nom de chaque SVM sont fournis dans le résultat.
+
+[cols="25,75"]
+|===
+| Méthode HTTP | Chemin 
+
+
+| OBTENEZ | /api/svm/svm 
+|===
+.exemple de boucle
+[source, curl]
+----
+curl --location -i --request GET 'https://10.222.81.101/api/svm/svms?order_by=name' -u admin:password -k --header 'Accept: */*'
+----
+Sélectionner le SVM souhaité dans la liste dans laquelle vous allez créer le nouvel utilisateur et le nouveau rôle.
+
+
+
+=== 2. Lister les utilisateurs définis par la SVM
+
+Effectuer l'appel de l'API REST suivant pour répertorier les utilisateurs définis dans la SVM que vous avez sélectionnée. Vous pouvez identifier le SVM via le paramètre propriétaire.
+
+[cols="25,75"]
+|===
+| Méthode HTTP | Chemin 
+
+
+| OBTENEZ | /api/sécurité/comptes 
+|===
+.exemple de boucle
+[source, curl]
+----
+curl --location -i --request GET 'https://10.222.81.101/api/security/accounts/?owner.name=dmp' -u admin:password -k --header 'Accept: */*'
+----
+En fonction des utilisateurs déjà définis au sein du SVM, choisissez un nom unique pour le nouvel utilisateur.
+
+
+
+=== 3. Lister les rôles REST définis par la SVM
+
+Effectuer l'appel de l'API REST suivant pour répertorier les rôles définis dans la SVM que vous avez sélectionnée. Vous pouvez identifier le SVM via le paramètre propriétaire.
+
+[cols="25,75"]
+|===
+| Méthode HTTP | Chemin 
+
+
+| OBTENEZ | /api/sécurité/rôles 
+|===
+.exemple de boucle
+[source, curl]
+----
+curl --location -i --request GET 'https://10.222.81.101/api/security/roles/?owner.name=dmp' -u admin:password -k --header 'Accept: */*'
+----
+En fonction des rôles déjà définis dans le SVM, choisissez un nom unique pour le nouveau rôle.
+
+
+
+=== 4. Créez un rôle DE REPOS personnalisé
+
+Effectuer l'appel d'API REST suivant pour créer un rôle REST personnalisé dans la SVM. Au départ, le rôle n'a qu'un privilège qui établit un accès par défaut de *none* de sorte que tout accès soit refusé.
+
+[cols="25,75"]
+|===
+| Méthode HTTP | Chemin 
+
+
+| POST | /api/sécurité/rôles 
+|===
+.Exemple d'entrée JSON
+[source, json]
+----
+{
+  "name": "dprole1",
+  "owner": {
+    "name": "dmp",
+    "uuid": "752d96be-f17c-11ec-9d19-005056bbad91"
+  },
+  "privileges": [
+      {"path": "/api", "access": "none"},
+  ]
+}
+----
+.exemple de boucle
+[source, curl]
+----
+curl --location -i --request POST 'https://10.222.81.101/api/security/roles' --data @JSONinput -u admin:password -k --header 'Accept: */*'
+----
+Vous pouvez également effectuer de nouveau l'étape 3 pour afficher le nouveau rôle. Vous pouvez également afficher les rôles au niveau de l'interface de ligne de commandes ONTAP.
+
+
+
+=== 5. Mettez à jour le rôle en ajoutant des privilèges supplémentaires
+
+Effectuez l'appel d'API REST suivant pour modifier le rôle en ajoutant des privilèges si nécessaire.
+
+[cols="25,75"]
+|===
+| Méthode HTTP | Chemin 
+
+
+| POST | /api/sécurité/rôles/{owner.uuid}/{name}/privilèges 
+|===
+.Exemple d'entrée JSON
+[source, json]
+----
+{
+  "path": "/api/storage/volumes", "access": "readonly"}
+}
+----
+.exemple de boucle
+[source, curl]
+----
+curl --location -i --request POST 'https://10.222.81.101/api/security/roles/752d96be-f17c-11ec-9d19-005056bbad91/dprole1/privileges' --data @JSONinput -u admin:password -k --header 'Accept: */*'
+----
+Vous pouvez également effectuer de nouveau l'étape 3 pour afficher le nouveau rôle. Vous pouvez également afficher les rôles au niveau de l'interface de ligne de commandes ONTAP.
+
+
+
+=== 6. Créez un utilisateur
+
+Effectuez l'appel d'API REST suivant pour créer un compte utilisateur. Le rôle `dprole1` créé ci-dessus est associé au nouvel utilisateur.
+
+
+TIP: Vous pouvez inclure l'utilisateur sans rôle. Dans ce cas, vous devrez modifier l'utilisateur pour affecter un rôle.
+
+[cols="25,75"]
+|===
+| Méthode HTTP | Chemin 
+
+
+| POST | /api/sécurité/comptes 
+|===
+.Exemple d'entrée JSON
+[source, json]
+----
+{
+  "owner": {"uuid":"daf84055-248f-11ed-a23d-005056ac4fe6"},
+  "name": "david",
+  "applications": [
+      {"application":"ssh",
+       "authentication_methods":["password"],
+       "second_authentication_method":"none"}
+  ],
+  "role":"dprole1",
+  "password":"netapp123"
+}
+----
+.exemple de boucle
+[source, curl]
+----
+curl --location -i --request POST 'https://10.222.81.101/api/security/accounts' --data @JSONinput -u admin:password -k --header 'Accept: */*'
+----
+Vous pouvez vous connecter à l'interface de gestion du SVM en utilisant les identifiants du nouvel utilisateur.

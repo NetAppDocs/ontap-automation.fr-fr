@@ -1,0 +1,198 @@
+---
+permalink: manage/ems-rest-api.html 
+sidebar: sidebar 
+keywords: ems, configuration, workflow 
+summary: 'Vous pouvez gérer la configuration ONTAP EMS à l"aide de l"API REST.' 
+---
+= Gérez les notifications d'événements EMS avec l'API REST de ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser l'API REST de ONTAP pour configurer la manière dont les notifications d'événements système de gestion d'événements (EMS) importantes sont envoyées. Vous pouvez également récupérer tous les messages EMS ou certains messages spécifiques avec certains attributs. Vous pouvez utiliser l'API REST pour automatiser les tâches liées à EMS et ainsi gagner du temps sur d'autres méthodes de gestion des messages EMS.
+
+Les exemples suivants vous montrent comment utiliser l'API REST de ONTAP pour travailler avec les messages EMS. Dans chaque exemple, veillez à fournir les valeurs pour les informations entre parenthèses <> à la place indiquée. Vous pouvez également référencer un échantillon https://github.com/NetApp/ontap-rest-python/blob/master/examples/rest_api/events.py["Script Python"^] Cela explique comment automatiser un certain nombre d'activités liées au SGE.
+
+
+
+== Affiche des journaux d'événements spécifiques
+
+À l'aide du `GET /support/ems/events` Appel API : vous pouvez récupérer des messages d'événement spécifiques, tels que le dernier message, les messages contenant du texte spécifique ou les messages ayant un niveau de gravité spécifique.
+
+.Exemple de demande : récupérer le dernier message
+[source, curl]
+----
+curl -X GET -u admin:<PASSWORD> -k 'https://<IP_ADDRESS>/api/support/ems/events?fields=message.name&max_records=1'
+----
+.Exemple de réponse
+[source, json]
+----
+"records": [
+    {
+      "node": {
+        "name": "malha-vsim1",
+        "uuid": "da4f9e62-9de3-11ec-976a-005056b369de",
+        "_links": {
+          "self": {
+            "href": "/api/cluster/nodes/da4f9e62-9de3-11ec-976a-005056b369de"
+          }
+        }
+      },
+      "index": 6260,
+      "message": {
+        "name": "netinet6.rtr.high.mtu"
+      },
+      "_links": {
+        "self": {
+          "href": "/api/support/ems/events/malha-vsim1/6260"
+        }
+      }
+    }
+  ],
+  "num_records": 1,
+  "_links": {
+    "self": {
+      "href": "/api/support/ems/events?fields=message.name&max_records=1"
+    },
+    "next": {
+      "href": "/api/support/ems/events?start.keytime=2022-03-22T10%3A28%3A29-04%3A00&start.node.name=malha-vsim1&start.index=6260&fields=message.name&max_records=1"
+    }
+  }
+}
+----
+.Exemple de demande : récupère un message contenant du texte et une gravité spécifiques
+[source, curl]
+----
+curl -X GET -u admin:<PASSWORD> -k 'https://<IP_ADDRESS>/api/support/ems/events?log_message=*disk*&message.severity=alert'
+----
+.Exemple de réponse
+[source, json]
+----
+"records": [
+    {
+      "node": {
+        "name": "malha-vsim1",
+        "uuid": "da4f9e62-9de3-11ec-976a-005056b369de",
+        "_links": {
+          "self": {
+            "href": "/api/cluster/nodes/da4f9e62-9de3-11ec-976a-005056b369de"
+          }
+        }
+      },
+      "index": 4602,
+      "time": "2022-03-18T06:37:46-04:00",
+      "message": {
+        "severity": "alert",
+        "name": "raid.autoPart.disabled"
+      },
+      "log_message": "raid.autoPart.disabled: Disk auto-partitioning is disabled on this system: the system needs a minimum of 4 usable internal hard disks.",
+      "_links": {
+        "self": {
+          "href": "/api/support/ems/events/malha-vsim1/4602"
+        }
+      }
+    }
+  ],
+  "num_records": 1,
+  "_links": {
+    "self": {
+      "href": "/api/support/ems/events?log_message=*disk*&message.severity=alert&max_records=1"
+    },
+    "next": {
+      "href": "/api/support/ems/events?start.keytime=2022-03-18T06%3A37%3A46-04%3A00&start.node.name=malha-vsim1&start.index=4602&log_message=*disk*&message.severity=alert"
+    }
+  }
+}
+----
+
+
+== Afficher la configuration EMS existante
+
+À l'aide du `GET /support/ems/` Appel API, vous pouvez récupérer des informations sur la configuration de notification EMS existante.
+
+.Exemple de demande
+[source, curl]
+----
+curl -X GET -u admin:<PASSWORD> -k 'https://<IP_ADDRESS>/api/support/ems/'
+----
+.Exemple de réponse
+[source, json]
+----
+{
+  "proxy_url": "https://proxyserver.mycompany.com",
+  "proxy_user": "proxy_user",
+  "mail_server": "mail@mycompany.com",
+  "_links": {
+    "self": {
+      "href": "/api/resourcelink"
+    }
+  },
+  "pubsub_enabled": "1",
+  "mail_from": "administrator@mycompany.com"
+}
+----
+
+
+== Créer une nouvelle configuration de notification EMS
+
+Vous pouvez utiliser plusieurs appels API ensemble pour créer une nouvelle configuration EMS afin de personnaliser la manière et l'heure de réception des messages.
+
+.Étapes
+. Configurez les paramètres de messagerie à l'échelle du système. Par exemple :
++
+[source, curl]
+----
+curl -X PATCH -u admin:<PASSWORD> -k 'https://<IP_ADDRESS>/api/support/ems?mail_from=administrator@mycompany.com&mail_server=mail@mycompany.com'
+----
+. Définissez un filtre qui utilise des règles spécifiques pour correspondre à certains messages. Par exemple :
++
+[source, curl]
+----
+curl -u admin:<PASSWORD> -X POST -d '{"name": "test-filter", "rules.type": ["include"], "rules.message_criteria.severities": ["emergency"]}' -k 'https://<IP_ADDRESS>/api/support/ems/filters/'
+----
+. Créez une destination pour les messages. Par exemple :
++
+[source, curl]
+----
+curl -u admin:<PASSWORD> -X POST -d '{"name": "test-destination", "type": "email", "destination": "administrator@mycompany.com", "filters.name": ["important-events"]}' -k 'https://<IP_ADDRESS>/api/support/ems/destinations/'
+----
+
+
+
+
+== Comparaison des commandes de l'API REST ONTAP et de l'interface CLI ONTAP
+
+L'API REST de ONTAP vous permet d'automatiser les workflows avec moins de commandes que l'interface de ligne de commandes ONTAP pour de nombreuses tâches. Par exemple, vous pouvez utiliser une seule méthode POST API pour créer un filtre, au lieu d'utiliser plusieurs commandes CLI. Le tableau suivant présente les commandes CLI dont vous aurez besoin pour effectuer les tâches EMS courantes par rapport aux appels de l'API REST correspondants :
+
+|===
+| L'API REST DE ONTAP | INTERFACE DE LIGNE DE COMMANDES DE ONTAP 
+
+
+| `GET /support/ems` | `event config show` 
+
+
+| `POST /support/ems/destinations`  a| 
+. `event notification destination create`
+. `event notification create`
+
+
+
+
+| `GET /support/ems/events` | `event log show` 
+
+
+| `POST /support/ems/filters`  a| 
+. `event filter create -filter-name <filtername>`
+. `event filter rule add -filter-name  <filtername>`
+
+
+|===
+
+
+== Informations associées
+
+* https://github.com/NetApp/ontap-rest-python/blob/master/examples/rest_api/events.py["Exemple de script Python d'EMS ONTAP REST"^]
+* https://blog.netapp.com/ontap-rest-apis-automate-notification["API REST ONTAP : automatisation des notifications d'événements de forte gravité"^]
+

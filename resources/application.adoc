@@ -1,0 +1,25 @@
+---
+sidebar: sidebar 
+permalink: resources/application.html 
+keywords: application resources 
+summary: 'Vous pouvez utiliser ces appels d"API pour gérer les ressources de l"application ONTAP.' 
+---
+= Client supplémentaire
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser ces appels d'API pour gérer les ressources de l'application ONTAP.
+
+Les applications prennent en charge les copies Snapshot, qui peuvent être créées ou restaurées à tout moment. Ce type de ressource a été introduit avec ONTAP 9.6.
+
+Les applications ONTAP sont organisées selon les types, notamment les modèles, les applications, les composants et les copies Snapshot. Ce type de ressource a été introduit avec ONTAP 9.6.
+
+Un groupe de cohérence est un ensemble de volumes qui sont regroupés au cours de certaines opérations telles que les snapshots. Cette fonctionnalité étend la même cohérence de panne et l'intégrité des données implicite avec les opérations à un seul volume sur un ensemble de volumes. Ce type de ressource a été introduit avec ONTAP 9.10 et mis à jour avec 9.12.
+
+Vous pouvez utiliser ces noeuds finaux pour copier, créer, inventorier et restaurer des instantanés pour un groupe de cohérence. Ce type de ressource a été introduit avec ONTAP 9.10.

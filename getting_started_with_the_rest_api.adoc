@@ -1,0 +1,17 @@
+---
+sidebar: sidebar 
+permalink: getting_started_with_the_rest_api.html 
+keywords: get started, getting started 
+summary: 'Vous pouvez rapidement vous lancer à l"aide de l"API REST de ONTAP et d"autres technologies d"automatisation. Après avoir préparé et compris un flux de réponse de demande de base, vous pouvez émettre un simple appel API en utilisant Curl.' 
+---
+= Mise en route de l'API REST
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Vous pouvez rapidement vous lancer à l'aide de l'API REST de ONTAP et d'autres technologies d'automatisation. Après avoir préparé et compris un flux de réponse de demande de base, vous pouvez émettre un simple appel API en utilisant Curl. Cette préparation fournit l'introduction et le point de vue nécessaires avant d'utiliser des flux de travail plus complexes sur un système actif.

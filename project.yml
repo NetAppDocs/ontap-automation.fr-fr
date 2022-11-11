@@ -1,0 +1,69 @@
+---
+settings:
+  name: ONTAP Automation
+  internal:
+    pdf_enabled: true
+  prod:
+    pdf_enabled: true
+    harmony_enabled: false
+  langs: fr-fr,us-en,ja-jp,zh-cn,zh-tw,ko-kr,de-de
+sidebar:
+  entries:
+  - title: Documentation sur l'automatisation ONTAP
+    url: "/index.html"
+  - section: rn
+  - section: get-started
+  - section: rest
+  - section: workflows
+  - section: manage
+  - section: python
+  - section: reference
+  - section: automate
+  - section: migrate
+  - section: additional
+  - title: Mentions légales
+    url: "/legal-notices.html"
+homepage:
+  tiles:
+  - title: Commencez
+    links:
+    - title: Notes de version
+      url: "/rn/whats_new.html"
+    - title: Options d'automatisation ONTAP
+      url: "/get-started/ontap_automation_options.html"
+    - title: Préparez-vous à utiliser l'API REST
+      url: "/get-started/prepare.html"
+    - title: Bonjour tout le monde
+      url: "/get-started/hello_world.html"
+  - title: L'API REST DE ONTAP
+    links:
+    - title: Détails d'implémentation REST
+      url: "/rest/rest_web_services_foundation.html"
+    - title: Autres considérations
+      url: "/rest/object_references_and_access.html"
+    - title: Résumé des ressources REST
+      url: "/resources/overview_categories.html"
+    - title: Référence API
+      url: "/reference/api_reference.html"
+  - title: Automatisation
+    links:
+    - title: Bibliothèque client Python
+      url: "/python/overview_pcl.html"
+    - title: ONTAP et Ansible
+      url: "/automate/ontap_ansible.html"
+    - title: Blogs d'automatisation
+      url: "/automate/blogs.html"
+  - title: Ressources supplémentaires
+    links:
+    - title: En savoir plus
+      url: "/additional/get_more_information.html"
+    - title: NetApp DevNet
+      url: https://devnet.netapp.com/restapi.php
+    - title: Documentation ONTAP 9
+      url: https://docs.netapp.com/us-en/ontap/
+    - title: Documentation ONTAP Select
+      url: https://docs.netapp.com/us-en/ontap-select/
+product-family:
+  name: ONTAP
+  repo: ontap-family
+  sidebar_label: Toute la documentation sur les produits ONTAP

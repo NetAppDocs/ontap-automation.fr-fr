@@ -1,0 +1,71 @@
+---
+sidebar: sidebar 
+permalink: resources/storage.html 
+keywords: storage resources 
+summary: 'Vous pouvez utiliser ces appels d"API pour gérer le stockage physique et logique.' 
+---
+= Stockage
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser ces appels d'API pour gérer le stockage physique et logique.
+
+Vous pouvez récupérer les données de metrics historiques pour un agrégat spécifique. Ce type de ressource a été introduit avec ONTAP 9.6 et mis à jour avec ONTAP 9.7.
+
+Copie physique du stockage WAFL au sein d'un agrégat. Ce type de ressource a été introduit avec ONTAP 9.6.
+
+Un agrégat se compose d'un ou plusieurs groupes RAID. Ce type de ressource a été introduit avec ONTAP 9.6.
+
+Vous pouvez récupérer les ponts dans un cluster. Ce type de ressource a été introduit avec ONTAP 9.9.
+
+Disques physiques dans le cluster. Ce type de ressource a été introduit avec ONTAP 9.6 et mis à jour avec ONTAP 9.7 et 9.8.
+
+Vous pouvez utiliser ces noeuds finaux pour créer des clones de fichiers, récupérer l'état de fractionnement et gérer les chargements fractionnés. Les ressources des terminaux de clonage de fichiers ont été introduites pour la première fois avec ONTAP 9.6 et étendues avec ONTAP 9.8. Avec ONTAP 9.10, ils ont de nouveau été considérablement étendus.
+
+Vous pouvez utiliser ces terminaux d'API REST pour déplacer un fichier entre deux volumes FlexVol ou au sein d'un volume FlexGroup. Une fois la demande acceptée, vous pouvez suivre la progression et l'état de la requête. Ce type de ressource a été introduit avec ONTAP 9.11.1.
+
+Ce type de ressource a été introduit avec ONTAP 9.6 et mis à jour avec ONTAP 9.8.
+
+FlexCache est un cache persistant d'un volume d'origine. Ce type de ressource a été initialement introduit avec ONTAP 9.6. La prise en charge a été améliorée avec l'API REST de ONTAP 9.9 pour prendre en charge la modification via la méthode DE CORRECTIF HTTP.
+
+Vous pouvez désigner des fichiers spécifiques pour une surveillance supplémentaire. Ce type de ressource est nouveau avec ONTAP 9.8.
+
+Vous pouvez créer un pool de stockage partagé et récupérer les pools de stockage d'un cluster. Ce type de ressource a été introduit avec ONTAP 9.11.1.
+
+Ports de stockage du cluster. Ce type de ressource a été introduit avec ONTAP 9.6 et amélioré avec ONTAP 9.11.1.
+
+Configuration des règles de qualité de service. Ce type de ressource a été introduit avec ONTAP 9.6.
+
+Une charge de travail de QoS représente un objet de stockage suivi par QoS. Vous pouvez récupérer les workflows QoS. Ce type de ressource a été introduit avec ONTAP 9.10.
+
+Vous pouvez utiliser ces appels d'API aux qtrees de gestion, un type de système de fichiers divisé logiquement. Ce type de ressource a été introduit avec ONTAP 9.6.
+
+Rapport sur les quotas, une technique permettant de limiter ou de suivre l'utilisation des fichiers ou de l'espace. Ce type de ressource a été introduit avec ONTAP 9.6.
+
+Règles utilisées pour appliquer les quotas. Ce type de ressource a été introduit avec ONTAP 9.6 et mis à jour avec ONTAP 9.7.
+
+Tiroirs disques dans le cluster. Ce type de ressource a été introduit avec ONTAP 9.6.
+
+Les snapshots sont créés en fonction de règles. Ce type de ressource a été introduit avec ONTAP 9.6.
+
+Vous pouvez contrôler les plannings de snapshots. Ce type de ressource a été récemment modifié avec ONTAP 9.8.
+
+Vous pouvez récupérer les commutateurs dans un cluster. Ce type de ressource a été introduit avec ONTAP 9.9.
+
+Vous pouvez récupérer les unités de bande dans un cluster. Ce type de ressource a été introduit avec ONTAP 9.9.
+
+Les principaux points d'extrémité des indicateurs vous permettent de déterminer l'activité d'un volume filtré par une mesure spécifique. Le filtrage peut être effectué en fonction des clients, des répertoires, des fichiers et des utilisateurs. Ce type de ressource a été introduit avec ONTAP 9.10.
+
+Vous pouvez utiliser ces appels d'API pour configurer l'efficacité appliquée à un volume entier. Ce type de ressource est nouveau avec ONTAP 9.8.
+
+Les conteneurs logiques sont utilisés pour fournir des données aux clients. Ce type de ressource a été initialement introduit avec l'API REST de ONTAP 9.6. De nombreuses valeurs des paramètres utilisées avec l'API ont été considérablement étendues avec ONTAP 9.9, notamment celles utilisées pour la gestion de l'espace.
+
+Vous pouvez récupérer une liste de fichiers et de répertoires pour un répertoire spécifique d'un volume. Ce type de ressource a été introduit avec ONTAP 9.7 et mis à jour avec ONTAP 9.8.
+
+Snapshots pour un volume. Ce type de ressource a été introduit avec ONTAP 9.6.

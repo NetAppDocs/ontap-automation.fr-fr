@@ -1,0 +1,28 @@
+---
+sidebar: sidebar 
+permalink: resources/overview_categories.html 
+keywords: resources, resource categories 
+summary: 'Les ressources disponibles via l"API REST de ONTAP sont organisées par catégories, comme affichées sur la page de documentation de l"API ONTAP.' 
+---
+= Vue d'ensemble des catégories de ressources
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les ressources disponibles via l'API REST de ONTAP sont organisées par catégories, comme affichées sur la page de documentation de l'API ONTAP. Une brève description de chacune des ressources avec les chemins de ressources de base est présentée ci-dessous, ainsi que des considérations d'utilisation supplémentaires, le cas échéant.
+
+Cette section décrit les ressources REST de la dernière version du produit. Si vous avez besoin de comprendre les modifications apportées par la version précédente, reportez-vous à la section _Release Notes_.
+
+
+TIP: Pour de nombreux terminaux REST, vous pouvez inclure une clé UUID dans la chaîne de chemin d'accès pour accéder à une instance d'objet spécifique. Cependant, vous pouvez également accéder aux objets à l'aide d'une valeur de propriété sur un paramètre de requête.
+
+.Informations associées
+* link:../rest/object_references_and_access.html["Autres considérations RELATIVES À L'UTILISATION DE REST"]
+* link:../reference/api_reference.html["Référence API"]
+* link:../rn/whats_new.html["Notes de version de ONTAP"]
+

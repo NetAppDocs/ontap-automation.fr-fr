@@ -1,0 +1,297 @@
+---
+sidebar: sidebar 
+permalink: migrate/performance-counters.html 
+keywords: performance, performance counters 
+summary: 'Le gestionnaire de compteurs de performances ONTAP permet aux utilisateurs de ONTAP d"accéder aux informations des compteurs de performances et d"exporter de nombreux metrics de compteurs de performances ONTAP différents.' 
+---
+= Compteurs de performances
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le gestionnaire de compteurs de performances ONTAP permet aux utilisateurs de ONTAP d'accéder aux informations des compteurs de performances et d'exporter de nombreux metrics de compteurs de performances ONTAP différents.
+
+Avant ONTAP 9.11.1, l'accès à l'ensemble des objets ONTAP Counter Manager est limité à l'interface de ligne de commandes et aux interfaces ONTAPI d'ONTAP.
+
+Depuis ONTAP 9.11.1, les utilisateurs de ONTAP peuvent accéder à un segment d'objets Counter Manager à l'aide de l'API REST de ONTAP. Les utilisateurs qui migrent leurs scripts d'automatisation à partir d'ONTAPI vers l'API REST d'ONTAP doivent comprendre les différences entre la présentation des données de compteur de performances à l'API ONTAPI et la présentation de ces données à l'API REST.
+
+Voir https://library.netapp.com/ecm/ecm_download_file/ECMLP2885053["Mappage du gestionnaire de compteur ONTAPI-REPOS ONTAP 9.12.1"^] Pour obtenir de la documentation sur l'ensemble des compteurs de ONTAP disponibles pour l'API REST dans ONTAP 9.11.1, ainsi que des informations sur la différence entre la consommation de l'API ONTAPI et CELLE de L'API REST.
+
+
+
+== Accès aux compteurs de performances à l'aide d'ONTAPI
+
+Au fur et à mesure de la consommation par ONTAPI, les données de compteurs de performances sont regroupées en objets. Par exemple, dans un nœud doté de quatre disques, les données des compteurs de performances disques sont regroupées en tant qu'objet. Chaque disque physique du système représente une instance de cet objet et vous pouvez utiliser ONTAPI pour accéder aux compteurs de performances individuels pour une seule instance de disque.
+
+
+
+== Accès aux compteurs de performances à l'aide de l'API REST de ONTAP
+
+Avec l'API REST de ONTAP, vous accédez aux objets Counter Manager comme une table (par exemple, `disk`). Cela signifie que chaque objet Counter Manager est représenté comme sa propre table, tandis que les instances de cet objet Counter Manager (comme les disques individuels du système) sont chacune accessibles comme une ligne dans cette table. Chaque ligne contient un certain nombre de compteurs de performances individuels pour cette instance. Vous pouvez accéder à un compteur de performances unique pour une instance sous forme de champ dans cette ligne de tableau.
+
+Dans l'exemple suivant, le `host_adapter` L'objet Counter Manager est représenté au format tableau pour illustrer la façon dont vous pouvez accéder à chaque compteur de performances à l'aide de l'API REST de ONTAP. Le système compte plusieurs adaptateurs hôtes, et chaque adaptateur hôte dispose de ses propres compteurs de performances :
+
+|===
+| Nom de l'instance 6+| Compteurs REST 
+
+
+| host_adapter_1 | total_lecture_ops | total_write_ops | lecture_octets | octets_écrits | max_link_data_rate | nombre_rscn 
+
+
+| adaptateur_hôte_2 | total_lecture_ops | total_write_ops | lecture_octets | octets_écrits | max_link_data_rate | nombre_rscn 
+
+
+| host_adapter_3 | total_lecture_ops | total_write_ops | lecture_octets | octets_écrits | max_link_data_rate | nombre_rscn 
+|===
+
+
+== Présentation de la structure avec des exemples d'API REST
+
+Utilisez les exemples d'API REST suivants pour comprendre la structure d'une table Counter Manager. Ces exemples vous montrent également comment utiliser l'API REST pour détecter les terminaux disponibles et les utiliser pour obtenir des informations sur la performance de votre système. Ces exemples explorent le `host_adapter` objet counter manager affiche des informations plus détaillées sur l'objet et les valeurs de compteur qu'il contient. Si vous essayez ces exemples sur votre système, assurez-vous de fournir les valeurs entre parenthèses <> à l'endroit indiqué.
+
+
+
+=== Découvrez les tableaux de compteurs de performances disponibles
+
+Vous pouvez utiliser cet appel d'API REST pour découvrir toutes les tables Counter Manager que vous pouvez interroger :
+
+.Exemple de demande :
+[source, curl]
+----
+curl -X GET -u admin:<PASSWORD> -k 'https://<ONTAP_IP_ADDRESS>/api/cluster/counter/tables'
+----
+.Exemple de réponse (tronquée pour la concision) :
+[source, json]
+----
+{
+  "records": [
+    {
+      "name": "copy_manager",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/copy_manager"
+        }
+      }
+    },
+    {
+      "name": "copy_manager:constituent",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/copy_manager%3Aconstituent"
+        }
+      }
+    },
+    {
+      "name": "disk",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/disk"
+        }
+      }
+    },
+    {
+      "name": "host_adapter",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/host_adapter"
+        }
+      }
+    }
+    ...
+  ],
+  "num_records": 68,
+  "_links": {
+    "self": {
+      "href": "/api/cluster/counter/tables"
+    }
+  }
+}
+----
+
+
+=== Interroger une table de compteur de performances individuelle
+
+Vous pouvez utiliser cet appel d'API REST pour afficher la description et les métadonnées d'une table spécifique (objet Counter Manager). Le résultat décrit l'objectif du tableau et décrit également le type d'information que chaque compteur de performances contient dans les enregistrements de tableau. Dans cet exemple, nous interroissons le `host_adapter` tableau :
+
+.Exemple de demande :
+[source, curl]
+----
+curl -X GET -u admin:<PASSWORD> -k 'https://<ONTAP_IP_ADDRESS>/api/cluster/counter/tables/host_adapter'
+----
+.Exemple de réponse :
+[source, json]
+----
+{
+  "name": "host_adapter",
+  "description": "The host_adapter table reports activity on the Fibre Channel, Serial Attached SCSI, and parallel SCSI Host Adapters the storage system uses to connect to disks and tape drives.",
+  "counter_schemas": [
+    {
+      "name": "bytes_read",
+      "description": "Bytes read via Host Adapter",
+      "type": "rate",
+      "unit": "per_sec"
+    },
+    {
+      "name": "bytes_written",
+      "description": "Bytes written via Host Adapter",
+      "type": "rate",
+      "unit": "per_sec"
+    },
+    {
+      "name": "max_link_data_rate",
+      "description": "Max link data rate in Kilobytes per second for Host Adapter",
+      "type": "raw",
+      "unit": "kb_per_sec"
+    },
+    {
+      "name": "node.name",
+      "description": "System node name",
+      "type": "string",
+      "unit": "none"
+    },
+    {
+      "name": "rscn_count",
+      "description": "Number of RSCN(s) received by the FC HBA",
+      "type": "raw",
+      "unit": "none"
+    },
+    {
+      "name": "total_read_ops",
+      "description": "Total number of reads on Host Adapter",
+      "type": "rate",
+      "unit": "per_sec"
+    },
+    {
+      "name": "total_write_ops",
+      "description": "Total number of writes on Host Adapter",
+      "type": "rate",
+      "unit": "per_sec"
+    }
+  ],
+  "_links": {
+    "self": {
+      "href": "/api/cluster/counter/tables/host_adapter"
+    }
+  }
+}
+----
+
+
+=== Afficher les lignes dans une table de compteurs de performances
+
+Vous pouvez utiliser cet appel d'API REST pour afficher les lignes d'une table, qui vous indique quelles instances de l'objet Counter Manager existent :
+
+.Exemple de demande :
+[source, curl]
+----
+curl -X GET -u admin:<PASSWORD> -k 'https://<ONTAP_IP_ADDRESS>/api/cluster/counter/tables/host_adapter/rows'
+----
+.Exemple de réponse :
+[source, json]
+----
+{
+  "records": [
+    {
+      "id": "power-01:0b",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/host_adapter/rows/power-01%3A0b"
+        }
+      }
+    },
+    {
+      "id": "power-01:0c",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/host_adapter/rows/power-01%3A0c"
+        }
+      }
+    },
+    {
+      "id": "power-01:0d",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/host_adapter/rows/power-01%3A0d"
+        }
+      }
+    },
+    {
+      "id": "power-01:0e",
+      "_links": {
+        "self": {
+          "href": "/api/cluster/counter/tables/host_adapter/rows/power-01%3A0e"
+        }
+      }
+    }
+  ],
+  "num_records": 4,
+  "_links": {
+    "self": {
+      "href": "/api/cluster/counter/tables/host_adapter/rows"
+    }
+  }
+}
+----
+
+
+=== Interroger une instance Counter Manager spécifique
+
+Vous pouvez utiliser cet appel d'API REST pour afficher les valeurs de compteur de performances d'une instance de gestionnaire de compteurs spécifique dans le tableau. Dans cet exemple, nous demandons des informations relatives au compteur de performances pour l'une des alimentations du système :
+
+.Exemple de demande :
+[source, curl]
+----
+curl -X GET -u admin:<PASSWORD> -k 'https://<ONTAP_IP_ADDRESS>/api/cluster/counter/tables/host_adapter/rows/power-01:0b'
+----
+.Exemple de réponse :
+[source, json]
+----
+{
+  "counter_table": {
+    "name": "host_adapter"
+  },
+  "id": "power-01:0b",
+  "properties": [
+    {
+      "name": "node.name",
+      "value": "power-01"
+    }
+  ],
+  "counters": [
+    {
+      "name": "total_read_ops",
+      "value": 3600516
+    },
+    {
+      "name": "total_write_ops",
+      "value": 3591536
+    },
+    {
+      "name": "bytes_read",
+      "value": 86354320000
+    },
+    {
+      "name": "bytes_written",
+      "value": 480863081920
+    },
+    {
+      "name": "max_link_data_rate",
+      "value": 375000
+    },
+    {
+      "name": "rscn_count",
+      "value": 0
+    }
+  ],
+  "_links": {
+    "self": {
+      "href": "/api/cluster/counter/tables/host_adapter/rows/power-01:0b"
+    }
+  }
+}
+----

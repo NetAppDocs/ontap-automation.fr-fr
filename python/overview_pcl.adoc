@@ -1,0 +1,22 @@
+---
+sidebar: sidebar 
+permalink: python/overview_pcl.html 
+keywords: overview, python client library, pcl 
+summary: 'La bibliothèque client NetApp ONTAP Python est un pack que vous pouvez installer et utiliser pour écrire des scripts permettant d"accéder à l"API REST de ONTAP. Il vous permet de développer rapidement un code fiable afin de prendre en charge l"automatisation des déploiements ONTAP.' 
+---
+= Présentation de la bibliothèque client Python
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+La bibliothèque client NetApp ONTAP Python est un pack que vous pouvez installer et utiliser pour écrire des scripts permettant d'accéder à l'API REST de ONTAP. Il prend en charge plusieurs services sous-jacents, notamment la gestion des connexions, le traitement asynchrone, le traitement des exceptions et les messages d'erreur. Il vous permet de développer rapidement un code fiable afin de prendre en charge l'automatisation des déploiements ONTAP.
+
+
+NOTE: NetApp tient à jour un référentiel GitHub contenant des exemples de code et d'autres informations utiles. Vous pouvez naviguer vers le dossier _exemples_ pour accéder aux échantillons à l'aide de la bibliothèque client Python.
+
+https://github.com/NetApp/ontap-rest-python["Référentiel ONTAP PYTHON REST"^]

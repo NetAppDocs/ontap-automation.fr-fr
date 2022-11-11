@@ -1,0 +1,27 @@
+---
+sidebar: sidebar 
+permalink: resources/ndmp.html 
+keywords: ndmp resources 
+summary: 'Vous pouvez utiliser ces appels d"API pour gérer les services NDMP.' 
+---
+= NDMP
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le protocole Network Data Management Protocol fournit une norme de sauvegarde des périphériques NAS. Vous pouvez utiliser ces appels d'API pour gérer les services NDMP.
+
+Le mode de fonctionnement NDMP peut être défini au niveau du SVM ou du node. Ce type de ressource a été introduit avec ONTAP 9.7.
+
+Vous pouvez gérer la configuration NDMP des nœuds. Ce type de ressource a été introduit avec ONTAP 9.7.
+
+Vous pouvez récupérer et supprimer les détails d'une session NDMP pour un SVM ou un nœud spécifique. Ce type de ressource a été introduit avec ONTAP 9.7.
+
+On peut gérer la configuration NDMP des SVM. Ce type de ressource a été introduit avec ONTAP 9.7.
+
+Vous pouvez générer et récupérer des mots de passe pour un utilisateur NDMP spécifique au sein du contenu de la SVM. Ce type de ressource a été introduit avec l'API REST de ONTAP 9.8 et amélioré avec ONTAP 9.9.

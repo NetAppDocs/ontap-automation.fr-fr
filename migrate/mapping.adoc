@@ -1,0 +1,26 @@
+---
+sidebar: sidebar 
+permalink: migrate/mapping.html 
+keywords: ONTAPI, REST API, mapping, mapping documentation 
+summary: 'NetApp fournit une documentation qui décrit le mappage entre les appels d"API ONTAPI et les appels d"API REST équivalents.' 
+---
+= Mappage de l'API REST avec ONTAPI
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'API REST d'ONTAP comprend des fonctionnalités équivalentes à ONTAPI dans la plupart des domaines. NetApp fournit une documentation qui décrit le mappage entre les appels d'API ONTAPI et les appels d'API REST équivalents.
+
+La documentation relative au mappage de l'API dépend de la version de ONTAP :
+
+* https://docs.netapp.com/us-en/ontap-restmap-9121["ONTAP 9.12.1"^]
+* https://docs.netapp.com/us-en/ontap-restmap-9111["ONTAP 9.11.1"^]
+* https://docs.netapp.com/us-en/ontap-restmap-9101["ONTAP 9.10.1"^]
+* https://docs.netapp.com/us-en/ontap-restmap-991["ONTAP 9.9.1"^]
+* https://docs.netapp.com/us-en/ontap-restmap-98["ONTAP 9.8"^]
+

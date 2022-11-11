@@ -1,0 +1,82 @@
+---
+sidebar: sidebar 
+permalink: rest/asynchronous_processing.html 
+keywords: asynchronous, asynchronous processing, job, job object 
+summary: 'Après l"émission d"une requête API conçue pour s"exécuter de manière asynchrone, un objet de travail est toujours créé et renvoyé à l"appelant. Le travail décrit et ancres une tâche d"arrière-plan qui traite la demande.' 
+---
+= Traitement asynchrone à l'aide de l'objet travail
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+Après l'émission d'une requête API conçue pour s'exécuter de manière asynchrone, un objet de travail est toujours créé et renvoyé à l'appelant. Le travail décrit et ancres une tâche d'arrière-plan qui traite la demande. En fonction du code d'état HTTP, vous devez récupérer l'état du travail pour déterminer si la demande a réussi.
+
+Reportez-vous à la section link:../reference/api_reference.html["Référence API"] Pour déterminer quels appels API sont conçus pour être effectués de manière asynchrone.
+
+
+
+== Contrôle du traitement d'une demande
+
+Vous pouvez utiliser le `return_timeout` Paramètre de requête pour contrôler le traitement d'un appel d'API asynchrone. Deux résultats sont possibles lors de l'utilisation de ce paramètre.
+
+Le délai expire avant la fin de la demande:: Pour les requêtes valides, ONTAP renvoie un code d'état HTTP 202 avec l'objet travail. Vous devez récupérer l'état du travail pour déterminer si la demande a bien été effectuée.
+La demande est terminée avant l'expiration du délai:: Si la requête est valide et s'exécute correctement avant l'expiration du délai, ONTAP renvoie un code d'état HTTP 200 avec l'objet travail. Comme la demande est terminée de manière synchrone, comme indiqué par le 200, il n'est pas nécessaire de récupérer l'état du travail.
++
+--
+
+NOTE: La valeur par défaut de l' `return_timeout` le paramètre est de zéro seconde. Par conséquent, si vous n'incluez pas le paramètre, le code d'état 202 HTTP est toujours renvoyé pour une demande valide.
+
+--
+
+
+
+
+== Interrogation de l'objet travail associé à une requête API
+
+L'objet travail renvoyé dans la réponse HTTP contient plusieurs propriétés. Vous pouvez interroger la propriété d'état dans un appel d'API suivant pour déterminer si la demande a bien été effectuée. Un objet travail se trouve toujours dans l'un des États suivants :
+
+États non terminaux::
++
+--
+* En file d'attente
+* Exécution
+* En pause
+
+
+--
+États de terminal::
++
+--
+* Réussite
+* Panne
+
+
+--
+
+
+
+
+== Procédure générale d'émission d'une demande asynchrone
+
+Vous pouvez utiliser la procédure de haut niveau suivante pour effectuer un appel d'API asynchrone. Cet exemple suppose le `return_timeout` le paramètre n'est pas utilisé ou que le délai expire avant la fin du travail en arrière-plan.
+
+. Émettre un appel d'API conçu pour être effectué de manière asynchrone.
+. Recevoir une réponse HTTP 202 indiquant l'acceptation d'une demande valide.
+. Extraire l'identifiant de l'objet travail du corps de réponse.
+. Dans une boucle temporisée, effectuez les opérations suivantes dans chaque cycle :
++
+.. Obtenir l'état actuel du travail.
+.. Si le travail est dans un état autre que terminal, effectuez une nouvelle boucle.
+
+
+. Arrêter lorsque le travail atteint un état terminal (réussite, échec).
+
+
+.Informations associées
+* link:../workflows/wf_1_update_cluster_contact.html["Workflow 1 : mise à jour du contact du cluster et vérification de l'état du travail"]
+

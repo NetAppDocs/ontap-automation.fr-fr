@@ -1,0 +1,99 @@
+---
+sidebar: sidebar 
+permalink: rest/operational_characteristics.html 
+keywords: operation, request and response, crud 
+summary: 'Vous pouvez accéder ONTAP à l"API REST de plusieurs façons.' 
+---
+= Caractéristiques opérationnelles de base
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+Alors QUE REST établit un ensemble commun de technologies et de meilleures pratiques, les détails de chaque API peuvent varier en fonction des choix de conception.
+
+
+
+== Transaction d'API de demande et de réponse
+
+Chaque appel de l'API REST est exécuté en tant que requête HTTP vers le système ONTAP, qui génère une réponse associée au client. Cette paire de requête/réponse est considérée comme une transaction API. Avant d'utiliser l'API, vous devez connaître les variables d'entrée disponibles pour contrôler une requête et le contenu de la sortie de réponse.
+
+
+
+== Prise en charge des opérations CRUD
+
+Chaque ressource disponible via l'API REST ONTAP est accessible selon le modèle CRUD :
+
+* Création
+* Lecture
+* Mise à jour
+* Supprimer
+
+
+Pour certaines ressources, seul un sous-ensemble des opérations est pris en charge. Pour plus d'informations sur chaque ressource, consultez la page de documentation de l'API ONTAP sur le cluster ONTAP.
+
+
+
+== Identifiants d'objets
+
+Un identifiant unique est attribué à chaque instance de ressource ou objet lors de sa création. Dans la plupart des cas, l'identificateur est un UUID 128 bits. Ces identifiants sont globalement uniques dans un cluster ONTAP spécifique. Après l'émission d'un appel API qui crée une nouvelle instance d'objet, une URL avec la valeur d'ID associée est renvoyée à l'appelant dans l'en-tête d'emplacement de la réponse HTTP. Vous pouvez extraire l'identificateur et l'utiliser sur les appels suivants lorsque vous faites référence à l'instance de ressource.
+
+
+NOTE: Le contenu et la structure interne des identificateurs d'objet peuvent changer à tout moment. Vous ne devez utiliser les identificateurs sur les appels API applicables que si nécessaire lorsque vous faites référence aux objets associés.
+
+
+
+== Instances et collections d'objets
+
+Selon le chemin de ressource et la méthode HTTP, un appel API peut s'appliquer à une instance d'objet spécifique ou à une collection d'objets.
+
+
+
+== Opérations synchrones et asynchrones
+
+ONTAP effectue une requête HTTP reçue d'un client de deux manières.
+
+Traitement synchrone:: ONTAP exécute la demande immédiatement et répond avec un code d'état HTTP 200 ou 201 s'il réussit.
++
+--
+Chaque demande utilisant les méthodes GET, HEAD et OPTIONS est toujours effectuée de manière synchrone. En outre, les demandes qui utilisent POST, PATCH et DELETE sont conçues pour s'exécuter de manière synchrone si elles devraient se terminer en moins de deux secondes.
+
+--
+Traitement asynchrone:: Si une demande asynchrone est valide, ONTAP crée une tâche d'arrière-plan pour traiter la demande et un objet de travail pour ancrer la tâche. L'état HTTP 202 est renvoyé à l'appelant avec l'objet travail. Pour déterminer le succès ou l'échec final, vous devez récupérer l'état du travail.
++
+--
+Les demandes qui utilisent les méthodes POST, PATCH et DELETE sont conçues pour s'exécuter de manière asynchrone si elles devraient prendre plus de deux secondes.
+
+
+NOTE: Le `return_timeout` Le paramètre de requête est disponible avec des appels d'API asynchrones et peut convertir un appel asynchrone pour terminer de manière synchrone. Reportez-vous à la section `How asynchronous processing works using the Job object` pour en savoir plus.
+
+--
+
+
+
+
+== Sécurité
+
+La sécurité fournie avec l'API REST repose principalement sur les fonctionnalités de sécurité disponibles avec ONTAP. La sécurité suivante est utilisée par l'API :
+
+* Sécurité de la couche de transport
++
+L'ensemble du trafic envoyé sur le réseau entre le LIF ONTAP et le client est généralement chiffré à l'aide du protocole TLS, selon les paramètres de configuration du ONTAP.
+
+* Authentification client
++
+Les mêmes options d'authentification disponibles avec ONTAP System Manager et le SDK de gestion réseau peuvent également être utilisées avec l'API REST de ONTAP.
+
+* Authentification HTTP
++
+Au niveau HTTP, l'authentification de base est utilisée pour les transactions API. Un en-tête HTTP avec le nom d'utilisateur et le mot de passe dans une chaîne base64 est ajouté à chaque requête.
+
+* Autorisation ONTAP
++
+ONTAP implémente un modèle d'autorisation basé sur des rôles. Le compte que vous utilisez lors de l'accès à l'API REST ou à la page de documentation de l'API ONTAP doit disposer des droits appropriés.
+
+

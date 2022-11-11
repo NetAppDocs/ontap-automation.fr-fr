@@ -1,0 +1,39 @@
+---
+sidebar: sidebar 
+permalink: resources/name_services.html 
+keywords: name services resources 
+summary: 'Vous pouvez utiliser ces appels d"API pour gérer les services de noms pris en charge par ONTAP.' 
+---
+= Nommer les services
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez utiliser ces appels d'API pour gérer les services de noms pris en charge par ONTAP.
+
+Les services de noms ONTAP prennent en charge la mise en cache pour améliorer les performances et la résilience. La configuration du cache des services de noms peut désormais être accessible via l'API REST. Les paramètres peuvent être appliqués à plusieurs niveaux, y compris les hôtes, les utilisateurs unix, les groupes unix et les groupes réseau. Ce type de ressource a été introduit avec ONTAP 9.11.
+
+Vous pouvez afficher les informations DNS dynamique (DDNS) et gérer le sous-système DDNS. Ce type de ressource est nouveau avec ONTAP 9.8.
+
+DNS prend en charge l'intégration du cluster ONTAP au sein de votre réseau. Ce type de ressource a été introduit avec ONTAP 9.6.
+
+Ces noeuds finaux vous permettent d'afficher l'adresse IP d'un nom d'hôte spécifié ainsi que le nom d'hôte d'une adresse IP. Ce type de ressource a été introduit avec ONTAP 9.10.
+
+Les serveurs LDAP peuvent être utilisés pour gérer les informations utilisateur. Ce type de ressource a été introduit avec ONTAP 9.6.
+
+Vous pouvez créer, modifier et lister les schémas LDAP utilisés par ONTAP. Quatre schémas par défaut sont inclus. Ce type de ressource a été introduit avec ONTAP 9.11.
+
+Vous pouvez utiliser ces noeuds finaux pour afficher et gérer les mappages locaux pour les noms d'hôtes. Ce type de ressource a été introduit avec ONTAP 9.10.
+
+Les mappages de noms vous permettent de mapper des identités d'un domaine de noms à un autre. Par exemple, vous pouvez mapper les identités de CIFS à UNIX, de Kerberos à UNIX et d'UNIX à CIFS. Ce type de ressource a été introduit avec ONTAP 9.6.
+
+Vous pouvez récupérer les détails du fichier netgroup et supprimer un fichier pour une SVM. Ce type de ressource a été introduit avec ONTAP 9.11.
+
+Les serveurs NIS peuvent être utilisés pour authentifier les utilisateurs et les postes de travail client. Ce type de ressource a été introduit avec ONTAP 9.6.
+
+Les utilisateurs et groupes UNIX locaux ont fait partie des précédentes versions de ONTAP. Cependant, la prise en charge a été ajoutée à l'API REST, ce qui vous permet d'afficher et de gérer les utilisateurs et les groupes. Ces types de ressources REST ont été introduits avec ONTAP 9.9 et considérablement améliorés avec ONTAP 9.10.

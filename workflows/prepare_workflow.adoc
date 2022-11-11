@@ -1,0 +1,50 @@
+---
+sidebar: sidebar 
+permalink: workflows/prepare_workflows.html 
+keywords: workflows, preparation, prepare to use workflows 
+summary: 'Vous devez préparer avant d"utiliser les processus de flux de travail.' 
+---
+= Préparez l'utilisation des workflows
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Vous devez préparer avant d'utiliser les processus de flux de travail.
+
+
+
+=== Présentation des appels API utilisés dans les workflows
+
+La page de documentation en ligne de l'API ONTAP contient les détails de chaque appel d'API REST. Au lieu de répéter ces détails ici, chaque appel d'API utilisé dans les exemples de flux de travail comprend uniquement les informations dont vous avez besoin pour localiser l'appel sur la page de documentation. Après avoir localisé un appel API spécifique, vous pouvez vérifier les détails complets de l'appel, y compris les paramètres d'entrée, les formats de sortie, les codes d'état HTTP et le type de traitement de la demande.
+
+Les informations suivantes sont incluses pour chaque appel d'API au sein d'un flux de travail afin de localiser l'appel sur la page de documentation :
+
+* Catégorie
++
+Les appels API sont organisés sur la page de documentation en zones ou catégories liées aux fonctions. Pour localiser un appel API spécifique, faites défiler la page jusqu'en bas et cliquez sur la catégorie API applicable.
+
+* Méthode HTTP
++
+La méthode HTTP identifie l'action effectuée sur une ressource. Chaque appel d'API est exécuté via une seule méthode HTTP.
+
+* Chemin
++
+Le chemin détermine la ressource spécifique à laquelle l'action s'applique dans le cadre d'un appel. La chaîne de chemin d'accès est ajoutée à l'URL principale pour former l'URL complète identifiant la ressource.
+
+
+
+
+
+=== Construction d'une URL pour accéder directement à l'API REST
+
+En plus de la page de documentation ONTAP, vous pouvez également accéder à l'API REST ONTAP directement via un langage de programmation tel que Python. Dans ce cas, l'URL principale est légèrement différente de l'URL utilisée lors de l'accès à la page de documentation en ligne. Lorsque vous accédez directement à l'API, vous devez ajouter `/api` vers le domaine et la chaîne de port. Par exemple : `https://ontap.mycompany.com/api`
+
+.Liens connexes
+* link:../rest/access_rest_api.html["Comment accéder à l'API ONTAP"]
+* link:../resources/overview_categories.html["Résumé des ressources REST"]
+
