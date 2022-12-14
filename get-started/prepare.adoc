@@ -16,10 +16,14 @@ summary: 'Vous devez effectuer plusieurs étapes pour préparer l"utilisation de
 [role="lead"]
 Vous devez effectuer plusieurs étapes pour préparer l'utilisation de l'API REST de ONTAP.
 
+.Expérience avec ONTAP 9
 Vous devriez avoir de l'expérience avec ONTAP 9. Cela comprend la compréhension des concepts de base et de la terminologie, ainsi que l'expérience de l'administration du système. Voir https://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-concepts/home.html["Concepts relatifs à ONTAP 9"^] pour commencer.
 
+.Examiner les concepts DE REPOS et la mise en œuvre
 Assurez-vous de passer en revue link:../rest/rest_web_services_foundation.html["L'API REST DE ONTAP"] Pour plus d'informations sur les concepts REST et les détails concernant la conception de l'API REST de ONTAP.
 
+.En arrière-plan du développement logiciel
 Il est utile d'avoir une certaine expérience des technologies et processus de développement logiciel, y compris un ou plusieurs langages de programmation ainsi que des utilitaires communs tels que Curl.
 
+.En savoir plus
 Vous devez connaître les ressources d'information supplémentaires, comme le suggère le link:../additional/get_more_information.html["En savoir plus"].

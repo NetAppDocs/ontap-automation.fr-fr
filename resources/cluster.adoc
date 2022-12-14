@@ -16,54 +16,80 @@ summary: 'Vous pouvez utiliser ces appels d"API pour gérer les clusters ONTAP e
 [role="lead"]
 Vous pouvez utiliser ces appels d'API pour gérer les clusters ONTAP et les ressources associées.
 
+.Pools de capacité
 Le modèle de licence Capacity pools permet d'obtenir une capacité de stockage sous licence pour chaque nœud de cluster à partir d'un pool partagé. Ce type de ressource est nouveau avec ONTAP 9.8.
 
+.Châssis
 Le châssis présente la structure matérielle prenant en charge un cluster. Ce type de ressource a été introduit avec ONTAP 9.6.
 
+.Clusters
 Un cluster ONTAP contient un ou plusieurs nœuds et les paramètres de configuration associés qui définissent le système de stockage. Ce type de ressource a été introduit avec ONTAP 9.6.
 
+.Tables de compteurs
 Plusieurs informations statistiques sur ONTAP sont capturées par le sous-système Counter Manager. Vous pouvez accéder à ces informations pour évaluer les performances du système. Ce type de ressource a été introduit avec ONTAP 9.11.
 
+.Micrologiciel
 Vous pouvez récupérer un historique des demandes de mise à jour du micrologiciel. Ce type de ressource est nouveau avec ONTAP 9.8.
 
+.Emplois
 Les demandes d'API REST asynchrones sont exécutées à l'aide d'une tâche d'arrière-plan ancrée par un travail. Ce type de ressource a été introduit avec ONTAP 9.6.
 
+.Instance de licence
 Chaque licence peut être gérée séparément. Ce type de ressource a été introduit avec ONTAP 9.6.
 
+.Gestionnaires de licences
 Vous pouvez gérer la configuration et d'autres informations relatives à chaque instance de gestionnaire de licences associée à un cluster ONTAP. Ce type de ressource est nouveau avec ONTAP 9.8.
 
+.Licences
 Les licences vous permettent d'implémenter des fonctionnalités ONTAP spécifiques. Ce type de ressource a été introduit avec ONTAP 9.6.
 
+.Médiateurs
 Vous pouvez gérer le médiateur associé à MetroCluster, notamment ajouter ou supprimer l'instance médiateur. Ce type de ressource est nouveau avec ONTAP 9.8.
 
+.MetroCluster
 Vous pouvez créer et gérer un déploiement MetroCluster, notamment l'exécution des opérations de basculement ou de rétablissement. Ce type de ressource est nouveau avec ONTAP 9.8 et mis à jour avec 9.11.
 
+.Diagnostics MetroCluster
 Vous pouvez effectuer une opération de diagnostic sur un déploiement MetroCluster et extraire les résultats. Ce type de ressource est nouveau avec ONTAP 9.8.
 
+.Groupes de reprise sur incident MetroCluster
 Vous pouvez effectuer des opérations liées aux groupes de reprise après incident MetroCluster. Ce type de ressource est nouveau avec ONTAP 9.8.
 
+.Interconnexions MetroCluster
 Vous pouvez récupérer l'état de l'interconnexion MetroCluster. Ce type de ressource est nouveau avec ONTAP 9.8.
 
+.Nœuds MetroCluster
 Vous pouvez récupérer l'état de chaque nœud d'un déploiement MetroCluster. Ce type de ressource est nouveau avec ONTAP 9.8.
 
+.Opérations MetroCluster
 Vous pouvez récupérer la liste des opérations récemment exécutées pour une configuration MetroCluster. Ce type de ressource est nouveau avec ONTAP 9.8.
 
+.SVM MetroCluster
 Vous pouvez extraire des informations sur toutes les paires des SVM dans une configuration MetroCluster. Ce type de ressource a été introduit avec ONTAP 9.11.1.
 
+.Nœuds
 Les clusters ONTAP comprennent un ou plusieurs nœuds. Ce type de ressource a été introduit avec ONTAP 9.6 et mis à jour avec ONTAP 9.8.
 
+.Clés NTP
 Le protocole NTP (Network Time Protocol) peut être configuré de manière à utiliser des clés privées partagées entre ONTAP et des serveurs de temps NTP externes de confiance. Ce type de ressource a été introduit avec ONTAP 9.7.
 
+.Serveur NTP
 Vous pouvez utiliser ces appels d'API pour configurer les paramètres du protocole ONTAP Network Time Protocol, y compris les serveurs et les clés NTP externes. Ce type de ressource a été introduit avec ONTAP 9.7.
 
+.Pairs
 Les objets peer représentent les terminaux et prennent en charge les relations de peering de cluster. Ce type de ressource a été introduit avec ONTAP 9.6.
 
+.Compteurs de performances
 Les versions précédentes de ONTAP ont tenu à jour des informations statistiques sur les caractéristiques opérationnelles du système. Avec la version 9.11.1, les informations ont été améliorées et sont désormais disponibles via l'API REST. Cette fonctionnalité rapproche l'API REST de ONTAP et l'API Data ONTAP (ONTAPI ou ZAPI). Ce type de ressource a été introduit avec ONTAP 9.11.1.
 
+.Planifications
 Les planifications peuvent être utilisées pour automatiser l'exécution des tâches. Ce type de ressource a été introduit avec ONTAP 9.6.
 
+.Capteurs
 Vous pouvez utiliser ces noeuds finaux pour récupérer des détails sur tous les capteurs d'environnement de plate-forme. Ce type de ressource a été introduit avec ONTAP 9.11.
 
+.Logiciel
 Un cluster ONTAP inclut le profil logiciel du cluster, la collecte de packs logiciels et la collecte d'historique logiciel. Ce type de ressource a été introduit avec ONTAP 9.6 et mis à jour avec ONTAP 9.8.
 
+.Web
 Vous pouvez utiliser ces noeuds finaux pour mettre à jour les configurations des services Web et pour récupérer la configuration actuelle. Ce type de ressource a été introduit avec ONTAP 9.10.

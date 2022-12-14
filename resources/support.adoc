@@ -16,44 +16,65 @@ summary: 'Vous pouvez utiliser ces appels d"API pour gérer les fonctionnalités
 [role="lead"]
 Vous pouvez utiliser ces appels d'API pour gérer les fonctionnalités ONTAP utilisées pour prendre en charge un cluster.
 
+.Journal de l'application
 Une application autonome peut enregistrer des événements EMS et des paquets AutoSupport générés en option sur un système ONTAP en émettant une demande POST. Ce type de ressource a été introduit avec ONTAP 9.11.1
 
+.Mise à jour automatique
 La fonction de mise à jour automatique maintient vos systèmes ONTAP à jour en téléchargeant et en appliquant les dernières mises à jour logicielles. Il existe plusieurs catégories de points de terminaison pour prendre en charge la fonction, y compris l'état, les configurations et les mises à jour. Ces types de ressources ont été introduits avec ONTAP 9.10.
 
+.AutoSupport
 AutoSupport collecte des informations sur la configuration et l'état, ainsi que des erreurs et transmet ces informations à NetApp. Ce type de ressource a été introduit avec ONTAP 9.6.
 
+.Messages AutoSupport
 Chaque nœud conserve les messages AutoSupport qui peuvent être générés et récupérés. Ce type de ressource a été introduit avec ONTAP 9.6.
 
+.Sauvegarde de la configuration
 Vous pouvez utiliser ces API pour récupérer et mettre à jour les paramètres de sauvegarde actuels. Ce type de ressource a été introduit avec ONTAP 9.6.
 
+.Opérations de sauvegarde de la configuration
 Vous pouvez créer, récupérer et supprimer des fichiers de sauvegarde de configuration. Ce type de ressource a été introduit avec ONTAP 9.7.
 
+.« Core dump »
 Vous pouvez utiliser ces terminaux pour récupérer et gérer les « core dumps » de mémoire générés par un cluster ou un nœud. Ce type de ressource a été introduit avec ONTAP 9.10.
 
+.EMS
 Le système de gestion des événements (EMS) collecte des événements et envoie des notifications à une ou plusieurs destinations. Ce type de ressource a été introduit avec ONTAP 9.6.
 
+.Destinations EMS
 Les destinations EMS déterminent comment et où les notifications sont envoyées. Ce type de ressource a été introduit avec ONTAP 9.6.
 
+.Instance de destinations EMS
 Une instance de destination EMS est définie par type et emplacement. Ce type de ressource a été introduit avec ONTAP 9.6.
 
+.Événements EMS
 Il s'agit d'un ensemble d'événements système en direct pour le cluster. Ce type de ressource a été introduit avec ONTAP 9.6.
 
+.Filtres EMS
 Les filtres EMS identifient collectivement les événements nécessitant un traitement supplémentaire. Ce type de ressource a été introduit avec ONTAP 9.6.
 
+.Instance de filtres EMS
 Une instance de filtre EMS est un ensemble de règles appliquées aux événements. Ce type de ressource a été introduit avec ONTAP 9.6.
 
+.Messages EMS
 Permet d'accéder au catalogue des événements EMS. Ce type de ressource a été introduit avec ONTAP 9.6.
 
+.Règles EMS pour l'instance de filtre
 Une liste de règles peut être gérée pour une instance spécifique d'un filtre EMS. Ce type de ressource a été introduit avec ONTAP 9.6.
 
+.Instance de règles EMS pour l'instance de filtre
 Règle individuelle pour une instance spécifique d'un filtre EMS. Ce type de ressource a été introduit avec ONTAP 9.6.
 
+.SNMP
 Vous pouvez activer et désactiver les opérations SNMP et d'interruption pour le cluster. Ce type de ressource a été introduit avec ONTAP 9.7.
 
+.Hôte d'interruption SNMP
 Un hôte d'interruption SNMP est un système configuré pour recevoir des interruptions SNMP de ONTAP. Vous pouvez récupérer et définir les hôtes. Ce type de ressource a été introduit avec ONTAP 9.7.
 
+.Instance hôte d'interruption SNMP
 Vous pouvez gérer des hôtes d'interruption SNMP spécifiques. Ce type de ressource a été introduit avec ONTAP 9.7.
 
+.Utilisateurs SNMP
 Vous pouvez définir et administrer des utilisateurs SNMP. Ce type de ressource a été introduit avec ONTAP 9.7.
 
+.Instance d'utilisateurs SNMP
 Vous pouvez administrer un utilisateur SNMP spécifique où l'ID moteur est associé au SVM d'administration ou à un SVM de données. Ce type de ressource a été introduit avec ONTAP 9.7.

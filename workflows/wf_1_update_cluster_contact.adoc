@@ -28,6 +28,7 @@ Vous pouvez lancer un appel d'API pour mettre à jour les coordonnées. Comme la
 
 | Cluster | CORRECTIF | /cluster 
 |===
+.Type de traitement
 Asynchrone
 
 .Gondolage
@@ -38,6 +39,7 @@ curl -X PATCH -H 'Content-Type: application/json' -u admin:password -k -d @step0
   "contact": "support@company-demo.com"
 }
 ----
+.Sortie JSON
 Un objet de travail avec l'identifiant associé est renvoyé.
 
 [source, json]
@@ -64,6 +66,7 @@ Vous devez récupérer l'état du travail pour déterminer si la demande asynchr
 
 | Cluster | OBTENEZ | /cluster/tâches/{uuid} 
 |===
+.Type de traitement
 Synchrone
 
 .Gondolage
@@ -71,6 +74,7 @@ Synchrone
 ----
 curl -X GET -H 'Content-Type: application/json' -u admin:password -k 'https:// 10.222.81.101/api/cluster/jobs/*uuid*'
 ----
+.Sortie
 Un objet de travail avec l'état et d'autres champs est renvoyé.
 
 [source, json]

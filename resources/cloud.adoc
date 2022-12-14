@@ -16,4 +16,5 @@ summary: 'Vous pouvez utiliser ces appels d"API pour gérer les connexions aux r
 [role="lead"]
 Vous pouvez utiliser ces appels d'API pour gérer les connexions aux ressources de stockage objet dans le cloud.
 
+.Cibles
 Une cible représente une ressource de stockage objet dans le cloud. Chaque cible comprend les informations de configuration nécessaires pour connecter la ressource de stockage. Ce type de ressource a été introduit avec ONTAP 9.6.

@@ -16,6 +16,7 @@ summary: 'Vous devez préparer l"environnement d"exécution local avant d"utilis
 [role="lead"]
 Vous devez préparer l'environnement d'exécution local avant d'utiliser la bibliothèque client Python.
 
+.Critères de base
 Vous devez utiliser Python 3.5 ou version ultérieure. Les packages suivants sont également requis :
 
 * requêtes 2.22.1 ou ultérieures
@@ -23,10 +24,13 @@ Vous devez utiliser Python 3.5 ou version ultérieure. Les packages suivants son
 * guimauve 3.2.1 ou ultérieure
 
 
+.Nom et version du package
 Le nom du pack de bibliothèque client Python est *netapp-ontap*. La version associée au package est une combinaison des numéros de version majeure et secondaire ONTAP à partir de laquelle la bibliothèque a été générée, avec une version mineure pour le client dans la version ONTAP. Par exemple, les numéros de version valides incluent : 9.6.1, 9.6.2 et 9.7.1.
 
+.Installation
 vous devez utiliser pip pour installer le package netapp_ontap à partir du site Web Python Package Index (PyPi).
 
+.Documentation et ressources supplémentaires
 Consultez la _NetApp Developer Network_ pour obtenir des liens vers de la documentation et d'autres ressources.
 
 .Informations associées

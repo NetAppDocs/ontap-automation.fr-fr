@@ -16,6 +16,7 @@ summary: 'Vous pouvez lancer une commande curl simple sur l"interface de ligne d
 [role="lead"]
 Vous pouvez lancer une commande curl simple sur l'interface de ligne de commande pour commencer à utiliser l'API REST ONTAP et confirmer sa disponibilité.
 
+.Avant de commencer
 L'utilitaire Curl doit être disponible sur votre poste de travail. Vous devez également disposer des éléments suivants :
 
 * Adresse IP ou nom d'hôte de la LIF de gestion du cluster ONTAP
@@ -38,4 +39,5 @@ NOTE: Si vos informations d'identification incluent des caractères spéciaux, v
 
 
 
+.Une fois que vous avez terminé
 Les informations relatives à la version de ONTAP sont affichées au format JSON.

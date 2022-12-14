@@ -18,6 +18,7 @@ Chaque transaction API se compose d'une requête HTTP et de la réponse associé
 
 image:rest_call_01.png["Illustration d'un appel d'API REST simple"]
 
+.Requête HTTP
 La demande envoyée par le client au serveur comprend les éléments suivants :
 
 * OBTENIR verb
@@ -26,6 +27,7 @@ La demande envoyée par le client au serveur comprend les éléments suivants :
 * En-têtes de demande, autorisation comprise
 
 
+.Réponse HTTP
 La réponse envoyée du serveur au client est constituée des éléments suivants :
 
 * Code d'état 200

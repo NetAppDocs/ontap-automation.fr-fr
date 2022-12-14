@@ -78,13 +78,16 @@ Les commandes CLI ONTAP correspondantes sont décrites ci-dessous. Toutes les co
 
 Les rôles REST et traditionnels sont définis via un ensemble d'attributs.
 
+.Propriétaire et portée
 Un rôle peut être qui appartient au cluster ONTAP ou à un SVM de données spécifique au sein du cluster. Le propriétaire détermine aussi implicitement la portée du rôle.
 
+.Nom unique
 Chaque rôle doit avoir un nom unique dans son périmètre. Le nom d'un rôle de cluster doit être unique au niveau du cluster ONTAP, tandis que les rôles de SVM doivent être uniques au sein de la SVM spécifique.
 
 
 NOTE: Le nom d'un nouveau rôle DE REPOS doit être unique entre les rôles DE REPOS ainsi que les rôles traditionnels. En effet, la création d'un rôle REST entraîne également un nouveau rôle _mapping_ traditionnel avec le même nom.
 
+.Ensemble de privilèges
 Chaque rôle contient un ensemble d'un ou plusieurs privilèges. Chaque privilège identifie une ressource ou une commande spécifique et le niveau d'accès associé.
 
 
@@ -99,8 +102,10 @@ Un rôle peut contenir un ou plusieurs privilèges. Chaque définition de privil
 
 Le chemin de la ressource est identifié comme un point de terminaison REST ou comme chemin de répertoire commande/commande CLI.
 
+.Terminal REST
 Un noeud final API a identifié la ressource cible pour un rôle REST.
 
+.Commande CLI
 Une commande CLI identifie la cible d'un rôle traditionnel. Un répertoire de commandes peut également être spécifié, qui inclura ensuite toutes les commandes en aval dans la hiérarchie de l'interface de ligne de commande ONTAP.
 
 

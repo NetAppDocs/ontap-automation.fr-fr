@@ -16,14 +16,17 @@ summary: 'Plusieurs articles de blog sont disponibles pour vous aider à mieux c
 [role="lead"]
 Plusieurs articles de blog sont disponibles pour vous aider à mieux comprendre comment migrer de ONTAPI vers l'API REST ONTAP.
 
+.Mappage ONTAPI vers REST
 NetApp prend en charge le transfert de l'API ONTAPI propriétaire vers l'API REST ONTAP via la documentation de mappage.
 
 https://netapp.io/2020/12/17/ontapi-to-rest-mapping/["netapp.io/2020/12/17/ontapi-to-rest-mapping"^]
 
+.Transformez votre automatisation en API REST ONTAP à partir de ONTAPI
 Plusieurs technologies sont disponibles pour vous aider à transformer votre environnement d'automatisation ONTAP basé sur l'API REST.
 
 https://www.netapp.com/blog/transform-automation-ontap-rest-api/["www.netapp.com/blog/transform-automation-ontap-rest-api"^]
 
+.Transition depuis ONTAPI à l'aide de l'outil de reporting d'utilisation ONTAPI
 NetApp propose un outil qui aide les clients et les partenaires à passer à l'API REST ONTAP.
 
 https://netapp.io/2022/03/21/transitioning-from-ontapizapi-using-ontapi-usage-reporting-tool/["netapp.io/2022/03/21/transition-from-ontapizapi-using-ontapi-reporting-utilisation-reporting"^]

@@ -94,8 +94,11 @@ NOTE: Le mappage de rôle inverse n'est pas pris en charge. C'est-à-dire que la
 
 Ces rôles sont inclus dans toutes les versions de ONTAP 9. Les rôles DE REPOS ont été introduits plus tard et ont évolué comme décrit ci-dessous.
 
+.ONTAP 9.6
 L'API REST a été introduite avec ONTAP 9.6. Les rôles DE REPOS étaient également inclus dans cette version. De plus, lorsque vous créez un rôle DE REPOS, un rôle traditionnel correspondant est également créé.
 
+.ONTAP 9.7 à 9.10.1
 Chaque version de ONTAP de 9.7 à 9.10.1 inclut des améliorations de l'API REST. Par exemple, des terminaux REST supplémentaires ont été ajoutés à chaque version. Toutefois, la création et la gestion des deux types de rôles sont demeurées distinctes. Par ailleurs, ONTAP 9.10.1 a ajouté LA prise en charge du RBAC REST pour le terminal REST de snapshots `/api/storage/volumes/{vol.uuid}/snapshots` qui est un noeud final qualifié de ressource.
 
+.ONTAP 9.11.1
 La possibilité de configurer et de gérer les rôles classiques à l'aide de l'API REST a été ajoutée avec cette version. Des niveaux d'accès supplémentaires pour LES rôles REST ont également été ajoutés.

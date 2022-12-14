@@ -28,4 +28,5 @@ Le chemin des ressources de base pour l'accès à l'interface de ligne de comman
 
 NOTE: NetApp tient à jour un référentiel GitHub contenant des exemples de code et d'autres informations utiles. Vous pouvez accéder au référentiel pour obtenir des exemples d'utilisation de la fonction d'authentification CLI.
 
+.Liens connexes
 https://github.com/NetApp/ontap-rest-python/tree/master/examples/rest_api/cli_passthrough_samples["Référentiel Python REST de ONTAP : exemples de passerelle CLI"^]
