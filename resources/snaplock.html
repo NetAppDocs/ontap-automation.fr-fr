@@ -1347,7 +1347,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-11-14 20:11:09 +0000">11/14/2022</time>
+    <time datetime="2022-12-14 18:15:05 +0000">12/14/2022</time>
     
   
 
@@ -1361,15 +1361,19 @@
 <p>SnapLock est une implémentation basée sur le stockage de la solution optique WORM (write once, read many) traditionnelle. Elle permet une conservation à long terme des données. Vous pouvez utiliser ces appels d&#8217;API pour administrer la fonction SnapLock.</p>
 </div>
 <div class="paragraph">
+<div class="title">Journal</div>
 <p>La structure du journal SnapLock est basée sur des répertoires et des fichiers d&#8217;un volume spécifique contenant les enregistrements des journaux. Les fichiers journaux sont remplis et archivés en fonction de la taille maximale du journal. Ce type de ressource a été introduit avec ONTAP 9.7.</p>
 </div>
 <div class="paragraph">
+<div class="title">Horloge de conformité</div>
 <p>L&#8217;horloge de conformité détermine l&#8217;heure d&#8217;expiration des objets SnapLock. L&#8217;horloge doit être initialisée en dehors de l&#8217;API REST et ne peut pas être modifiée. Ce type de ressource a été introduit avec ONTAP 9.7.</p>
 </div>
 <div class="paragraph">
+<div class="title">Conservation des événements</div>
 <p>Vous pouvez utiliser la fonction de rétention basée sur les événements (EBR, Event Based Retention) de SnapLock pour définir la durée de conservation d&#8217;un fichier après l&#8217;occurrence d&#8217;un événement. Ce type de ressource a été introduit avec ONTAP 9.7.</p>
 </div>
 <div class="paragraph">
+<div class="title">Conservation des fichiers et suppression privilégiée</div>
 <p>Vous pouvez gérer la durée de conservation d&#8217;un fichier créé par SnapLock. Si nécessaire, vous pouvez également supprimer des fichiers WORM non expirés sur un volume d&#8217;entreprise SnapLock. Ce type de ressource a été introduit avec ONTAP 9.7.</p>
 </div>
 <div class="admonitionblock note">
@@ -1385,9 +1389,11 @@ Le seul rôle intégré disposant de l&#8217;autorité pour exécuter l&#8217;op
 </table>
 </div>
 <div class="paragraph">
+<div class="title">Fichier d&#8217;empreinte digitale</div>
 <p>Vous pouvez afficher et gérer les informations de base décrivant les fichiers et les volumes, telles que le type et la date d&#8217;expiration. Ce type de ressource a été introduit avec ONTAP 9.7.</p>
 </div>
 <div class="paragraph">
+<div class="title">Obligation légale</div>
 <p>Vous pouvez utiliser ces appels API pour gérer les fichiers qui font partie d&#8217;un processus de litige. Ce type de ressource a été introduit avec ONTAP 9.7.</p>
 </div>
 

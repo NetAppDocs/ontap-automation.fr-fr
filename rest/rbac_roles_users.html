@@ -1347,7 +1347,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-11-14 20:11:09 +0000">11/14/2022</time>
+    <time datetime="2022-12-14 18:15:05 +0000">12/14/2022</time>
     
   
 
@@ -1467,9 +1467,11 @@ Vous pouvez accéder à la ONTAP en ligne <a href="../reference/api_reference.ht
 <p>Les rôles REST et traditionnels sont définis via un ensemble d&#8217;attributs.</p>
 </div>
 <div class="paragraph">
+<div class="title">Propriétaire et portée</div>
 <p>Un rôle peut être qui appartient au cluster ONTAP ou à un SVM de données spécifique au sein du cluster. Le propriétaire détermine aussi implicitement la portée du rôle.</p>
 </div>
 <div class="paragraph">
+<div class="title">Nom unique</div>
 <p>Chaque rôle doit avoir un nom unique dans son périmètre. Le nom d&#8217;un rôle de cluster doit être unique au niveau du cluster ONTAP, tandis que les rôles de SVM doivent être uniques au sein de la SVM spécifique.</p>
 </div>
 <div class="admonitionblock note">
@@ -1485,6 +1487,7 @@ Le nom d&#8217;un nouveau rôle DE REPOS doit être unique entre les rôles DE R
 </table>
 </div>
 <div class="paragraph">
+<div class="title">Ensemble de privilèges</div>
 <p>Chaque rôle contient un ensemble d&#8217;un ou plusieurs privilèges. Chaque privilège identifie une ressource ou une commande spécifique et le niveau d&#8217;accès associé.</p>
 </div>
 </div>
@@ -1501,9 +1504,11 @@ Le nom d&#8217;un nouveau rôle DE REPOS doit être unique entre les rôles DE R
 <p>Le chemin de la ressource est identifié comme un point de terminaison REST ou comme chemin de répertoire commande/commande CLI.</p>
 </div>
 <div class="paragraph">
+<div class="title">Terminal REST</div>
 <p>Un noeud final API a identifié la ressource cible pour un rôle REST.</p>
 </div>
 <div class="paragraph">
+<div class="title">Commande CLI</div>
 <p>Une commande CLI identifie la cible d&#8217;un rôle traditionnel. Un répertoire de commandes peut également être spécifié, qui inclura ensuite toutes les commandes en aval dans la hiérarchie de l&#8217;interface de ligne de commande ONTAP.</p>
 </div>
 </div>
