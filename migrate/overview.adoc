@@ -14,7 +14,7 @@ summary: 'Si vous utilisez l"API ONTAPI, vous êtes invité à commencer la migr
 
 
 [role="lead"]
-Si vous utilisez l'API ONTAPI, vous êtes invité à commencer la migration vers l'API REST ONTAP. Cette section décrit les ressources disponibles et met en avant les fonctionnalités et outils utiles qui vous aideront à gérer votre migration.
+Si vous utilisez l'API ONTAPI, vous êtes invité à commencer la migration vers l'API REST ONTAP. De nombreux outils et ressources utiles sont disponibles pour vous aider dans votre migration.
 
 
 NOTE: NetApp a lancé l'API REST avec ONTAP 9.6. Depuis, l'API continue à se développer et à évoluer. Il offre désormais l'alternative stratégique et privilégiée par ONTAPI lors de l'automatisation de l'administration de vos déploiements ONTAP.
