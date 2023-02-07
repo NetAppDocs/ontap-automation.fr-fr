@@ -1535,4 +1535,7 @@
   <block id="8b650ff756e15491b90bea96a705b16b" category="inline-link-macro">Quelles sont les nouveautés de l'API REST de ONTAP</block>
   <block id="d9f8d52d6d6ec5ead10f99c5fd6ae4ae" category="paragraph">Les ressources REST décrites dans ce résumé sont basées sur la dernière version du produit. Si vous avez besoin de comprendre les modifications apportées par les versions précédentes, reportez-vous à la section <block ref="26eaa6b7897a71145f335345df4a84a2" category="inline-link-macro-rx"></block> ainsi que le<block ref="13c0668cefb5d13050e1de01793dacbb" category="inline-link-rx"></block>.</block>
   <block id="4acb4d74fe00ae1c12d51ed7033cfe13" category="paragraph">Si vous utilisez l'API ONTAPI, vous êtes invité à commencer la migration vers l'API REST ONTAP. De nombreux outils et ressources utiles sont disponibles pour vous aider dans votre migration.</block>
+  <block id="07eb085f158de3f60622e4d2e80f4439" category="paragraph">Pour faciliter la transition des utilisateurs de l'interface de ligne de commande et de ONTAP vers l'API REST ONTAP, ONTAP fournit un terminal d'API REST privé pouvant être utilisé pour accéder à n'importe quelle commande CLI.</block>
+  <block id="b1499db826a2349f9ed4124e74094a5c" category="inline-link"><block ref="b1499db826a2349f9ed4124e74094a5c" category="inline-link-rx"></block></block>
+  <block id="bec415242b70caa298d3b8964f06c830" category="paragraph"><block ref="bec415242b70caa298d3b8964f06c830" category="inline-link-rx"></block></block>
 </blocks>
