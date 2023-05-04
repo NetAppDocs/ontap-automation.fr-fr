@@ -23,7 +23,7 @@ Les services de noms ONTAP prennent en charge la mise en cache pour améliorer l
 Vous pouvez afficher les informations DNS dynamique (DDNS) et gérer le sous-système DDNS. Ce type de ressource est nouveau avec ONTAP 9.8.
 
 .DNS
-DNS prend en charge l'intégration du cluster ONTAP au sein de votre réseau. Ce type de ressource a été introduit avec ONTAP 9.6.
+DNS prend en charge l'intégration du cluster ONTAP au sein de votre réseau. Ce type de ressource a été introduit avec ONTAP 9.6 et amélioré avec ONTAP 9.13.
 
 .Enregistrement hôte
 Ces noeuds finaux vous permettent d'afficher l'adresse IP d'un nom d'hôte spécifié ainsi que le nom d'hôte d'une adresse IP. Ce type de ressource a été introduit avec ONTAP 9.10.

@@ -80,7 +80,10 @@ Vous pouvez utiliser ces appels d'API pour configurer les paramètres du protoco
 Les objets peer représentent les terminaux et prennent en charge les relations de peering de cluster. Ce type de ressource a été introduit avec ONTAP 9.6.
 
 .Compteurs de performances
-Les versions précédentes de ONTAP ont tenu à jour des informations statistiques sur les caractéristiques opérationnelles du système. Avec la version 9.11.1, les informations ont été améliorées et sont désormais disponibles via l'API REST. Cette fonctionnalité rapproche l'API REST de ONTAP et l'API Data ONTAP (ONTAPI ou ZAPI). Ce type de ressource a été introduit avec ONTAP 9.11.1.
+Les versions précédentes de ONTAP ont tenu à jour des informations statistiques sur les caractéristiques opérationnelles du système. Avec la version 9.11.1, les informations ont été améliorées et sont désormais disponibles via l'API REST. Cette fonctionnalité rapproche l'API REST de ONTAP et l'API Data ONTAP (ONTAPI ou ZAPI). Ce type de ressource a été introduit avec ONTAP 9.11.
+
+.Balises de ressource
+Vous pouvez utiliser des balises pour regrouper les ressources de l'API REST. Vous pouvez le faire pour associer des ressources associées à un projet ou à un groupe organisationnel spécifique. L'utilisation de balises permet d'organiser et de suivre les ressources plus efficacement. Ce type de ressource a été introduit avec ONTAP 9.13.
 
 .Planifications
 Les planifications peuvent être utilisées pour automatiser l'exécution des tâches. Ce type de ressource a été introduit avec ONTAP 9.6.

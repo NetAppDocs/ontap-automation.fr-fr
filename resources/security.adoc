@@ -68,7 +68,7 @@ Vous pouvez utiliser cet ensemble d'appels API pour gérer les associations de s
 Ces noeuds finaux vous permettent de récupérer et de mettre à jour les configurations des gestionnaires de clés. Ce type de ressource est nouveau avec ONTAP 9.10.
 
 .Gestionnaires clés
-Un gestionnaire de clés permet aux modules clients de ONTAP de stocker des clés en toute sécurité. Ce type de ressource a été introduit avec ONTAP 9.6 et mis à jour pour ONTAP 9.7. Une autre mise à jour a été effectuée avec ONTAP 9.12 pour prendre en charge les clés d'authentification.
+Un gestionnaire de clés permet aux modules clients de ONTAP de stocker des clés en toute sécurité. Ce type de ressource a été introduit avec ONTAP 9.6 et mis à jour pour ONTAP 9.7. Une autre mise à jour a été effectuée avec ONTAP 9.12 pour prendre en charge les clés d'authentification. Une fonctionnalité de restauration a été ajoutée à ONTAP 9.13.
 
 .Magasins clés
 Un magasin de clés décrit le type d'un gestionnaire de clés. Ce type de ressource est nouveau avec ONTAP 9.10.
@@ -115,3 +115,6 @@ Ces appels vous permettent de définir la configuration SSH. Ce type de ressourc
 
 .SVM SSH
 Ces terminaux vous permettent d'extraire la configuration de sécurité SSH pour tous les SVM. Ce type de ressource a été introduit avec ONTAP 9.10.
+
+.TOTPS
+Vous pouvez utiliser l'API REST pour configurer les profils TOTP (Time-based unique password) pour les comptes qui se connectent et accèdent à ONTAP à l'aide de SSH. Ce type de ressource a été introduit avec ONTAP 9.13.

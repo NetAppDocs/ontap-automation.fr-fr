@@ -2,11 +2,13 @@
 section: migrate
 title: Migrer vers l'API REST
 entries:
-- title: Présentation
+- title: Désactivation d'ONTAPI
   url: "/migrate/overview.html"
 - title: Mappage ONTAPI vers REST
   url: "/migrate/mapping.html"
 - title: Compteurs de performances
   url: "/migrate/performance-counters.html"
-- title: Blogs
+- title: Outils et logiciels
+  url: "/migrate/software.html"
+- title: Articles de blog
   url: "/migrate/blogs.html"

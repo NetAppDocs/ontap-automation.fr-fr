@@ -18,6 +18,21 @@ NetApp met régulièrement à jour l'API REST de ONTAP pour vous offrir de nouve
 
 
 
+== ONTAP 9.13.1
+
+ONTAP 9.13.1 continue d'étendre les fonctionnalités de l'API REST ONTAP avec plus de deux douzaines de nouveaux appels d'API. Ces terminaux prennent en charge les nouvelles fonctionnalités ONTAP ainsi que les améliorations apportées aux fonctionnalités existantes. Cette version est axée sur les améliorations apportées à la sécurité, la gestion des ressources, les options améliorées de configuration des SVM et les metrics de performance.
+
+Balisage des ressources:: Vous pouvez utiliser des balises pour regrouper les ressources de l'API REST. Vous pouvez le faire pour associer des ressources associées à un projet ou à un groupe organisationnel spécifique. L'utilisation de balises permet d'organiser et de suivre les ressources plus efficacement.
+Groupes de cohérence:: ONTAP 9.13.1 continue d'augmenter la disponibilité des données de compteur de performances. Vous pouvez désormais accéder à ce type d'informations statistiques pour suivre l'historique des performances et de la capacité des groupes de cohérence. De plus, des améliorations ont été apportées afin de configurer et de gérer les relations parent-enfant entre les groupes de cohérence.
+Configuration DNS par SVM:: Les terminaux DNS existants ont été étendus pour permettre d'effectuer la configuration du serveur et du domaine DNS pour des SVM individuels.
+Configuration du rôle EMS:: La fonction de support EMS existante a été étendue pour permettre la gestion des rôles et la configuration de contrôle d'accès attribuée aux rôles. Cela permet de limiter ou de filtrer les événements et les messages en fonction de la configuration du rôle.
+Sécurité:: Vous pouvez utiliser l'API REST pour configurer les profils TOTP (Time-based unique password) pour les comptes qui se connectent et accèdent à ONTAP à l'aide de SSH. En outre, les noeuds finaux du gestionnaire de clés ont été étendus pour fournir une opération de restauration à partir d'un serveur de gestion des clés spécifié.
+Configuration CIFS par SVM:: Les terminaux CIFS existants ont été étendus pour permettre la mise à jour de la configuration d'un SVM spécifique.
+Règles du compartiment S3:: Les terminaux de compartiment S3 ont été développés pour inclure une définition de règle. Chaque règle est une liste d'objets et définit l'ensemble des actions à effectuer sur un objet dans le compartiment. Collectivement, ces règles vous permettent de mieux gérer le cycle de vie de vos compartiments S3.
+
+
+
+
 == ONTAP 9.12.1
 
 Avec plus de quarante nouveaux appels d'API, ONTAP 9.12.1 continue d'étendre les fonctionnalités de l'API REST ONTAP. Ces terminaux prennent en charge les nouvelles fonctionnalités ONTAP ainsi que les améliorations apportées aux fonctionnalités existantes. Cette version vise à améliorer la sécurité et les fonctionnalités NAS.

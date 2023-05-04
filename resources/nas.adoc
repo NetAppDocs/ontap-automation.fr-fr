@@ -29,7 +29,7 @@ Vous pouvez rediriger les événements d'audit NAS vers un SVM spécifique. Ce t
 Vous pouvez récupérer une liste des connexions CIFS établies. Ce type de ressource a été introduit avec ONTAP 9.11.1.
 
 .Domaines CIFS
-La prise en charge des domaines CIFS a été ajoutée au niveau du cluster et de la SVM avec plusieurs catégories de terminaux. Vous pouvez récupérer la configuration de domaine ainsi que créer et supprimer des contrôleurs de domaine préférés. Ce type de ressource est nouveau avec ONTAP 9.10.
+La prise en charge des domaines CIFS a été ajoutée au niveau du cluster et de la SVM avec plusieurs catégories de terminaux. Vous pouvez récupérer la configuration de domaine ainsi que créer et supprimer des contrôleurs de domaine préférés. Ce type de ressource a été introduit avec ONTAP 9.10 et amélioré avec ONTAP 9.13.
 
 .Règles de groupe CIFS
 Des terminaux ont été ajoutés pour prendre en charge la création et la gestion des règles de groupe CIFS. Les informations de configuration sont disponibles et administrées par le biais d'objets de règles de groupe qui s'appliquent à tous les SVM ou à des SVM spécifiques. Cette prise en charge a été ajoutée à ONTAP 9.12.

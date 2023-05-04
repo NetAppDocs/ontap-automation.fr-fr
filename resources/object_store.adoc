@@ -25,6 +25,9 @@ Vous pouvez créer et gérer la configuration ONTAP S3, y compris les configurat
 .Godets de service
 Un compartiment est un conteneur d'objets et il est structuré à l'aide d'un espace de noms d'objet. Vous pouvez gérer les compartiments pour un serveur S3 spécifique. Ce type de ressource a été introduit avec ONTAP 9.7.
 
+.Règles du compartiment S3
+Les compartiments S3 peuvent inclure une définition de règle. Chaque règle est une liste d'objets et définit l'ensemble des actions à effectuer sur un objet dans le compartiment. Ce type de ressource a été introduit avec ONTAP 9.13.
+
 .Groupes S3
 Vous pouvez créer des groupes d'utilisateurs S3 et gérer le contrôle d'accès au niveau des groupes. Ce type de ressource est nouveau avec ONTAP 9.8.
 

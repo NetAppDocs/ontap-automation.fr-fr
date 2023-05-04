@@ -32,7 +32,7 @@ Un rôle est un ensemble de privilèges qui définissent collectivement les acti
 Il existe deux types de rôles. Elles ont été introduites et adaptées à différents environnements, comme ONTAP a évolué.
 
 
-NOTE: Il y a des avantages et des inconvénients lors de l'utilisation de chaque type de rôle. Voir link:../rest/work_roles_users.html#comparing-the-role-types["Comparaison des types de rôle"] pour en savoir plus.
+NOTE: Il y a des avantages et des inconvénients lors de l'utilisation de chaque type de rôle. Voir link:../rest/rbac_roles_users.html#comparing-the-role-types["Comparaison des types de rôle"] pour en savoir plus.
 
 [cols="20,80"]
 |===
