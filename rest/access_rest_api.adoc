@@ -30,7 +30,7 @@ Vous pouvez vous connecter à l'API REST via les interfaces suivantes :
 La LIF que vous choisissez d'utiliser doit être configurée pour prendre en charge le protocole de gestion HTTPS. De plus, la configuration du pare-feu de votre réseau doit autoriser le trafic HTTPS.
 
 
-TIP: Vous devez toujours utiliser la LIF de gestion du cluster. La charge équilibre les requêtes d'API sur l'ensemble des nœuds et évite les nœuds hors ligne ou qui rencontrent des problèmes de connectivité.
+TIP: Vous devez toujours utiliser une LIF de cluster management. La charge sera ainsi équilibrée entre les requêtes d'API sur tous les nœuds et évitez les nœuds hors ligne ou qui rencontrent des problèmes de connectivité. Si plusieurs LIF de cluster management sont configurées, elles sont toutes équivalentes en ce qui concerne l'accès à l'API REST.
 
 
 

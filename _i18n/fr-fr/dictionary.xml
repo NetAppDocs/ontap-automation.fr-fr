@@ -525,7 +525,6 @@
   <block id="e2578ec54f85b5b6333c94364b756a1c" category="list-text">FRV de gestion des nœuds</block>
   <block id="a954bd55e944d7b65a02512356ab0177" category="list-text">LIF de gestion SVM</block>
   <block id="3869128f90019baba527314ae533f075" category="paragraph">La LIF que vous choisissez d'utiliser doit être configurée pour prendre en charge le protocole de gestion HTTPS. De plus, la configuration du pare-feu de votre réseau doit autoriser le trafic HTTPS.</block>
-  <block id="45959e4341735c410aac6dadf11dd966" category="admonition">Vous devez toujours utiliser la LIF de gestion du cluster. La charge équilibre les requêtes d'API sur l'ensemble des nœuds et évite les nœuds hors ligne ou qui rencontrent des problèmes de connectivité.</block>
   <block id="649819179ab6bae8f5294207b4462523" category="section-title">Page de documentation en ligne de l'API ONTAP</block>
   <block id="ca5aea2c13440a3ecc9b8840e770344f" category="inline-link-macro">Résumé des ressources REST</block>
   <block id="424fc80aa929edad9729b9b006049584" category="paragraph">La page de documentation en ligne de l'API ONTAP fournit un point d'accès lors de l'utilisation d'un navigateur Web. En plus de fournir un moyen d'exécuter directement des appels API individuels, la page comprend une description détaillée de l'API, y compris les paramètres d'entrée et d'autres options pour chaque appel. Les appels API sont organisés en catégories fonctionnelles. Voir <block ref="b04c0c0415c8329423a4dc5d04335c63" category="inline-link-macro-rx"></block> pour en savoir plus.</block>
@@ -1629,4 +1628,5 @@
   <block id="f9f9079f4f63047ab8997287078e8b41" category="admonition">Il y a des avantages et des inconvénients lors de l'utilisation de chaque type de rôle. Voir <block ref="35c80ca1076cc300bab74e8699286675" category="inline-link-macro-rx"></block> pour en savoir plus.</block>
   <block id="6b6a02ad27b147c17d7a65dc825f0954" category="list-text"><block ref="6b6a02ad27b147c17d7a65dc825f0954" category="inline-link-rx"></block></block>
   <block id="678330802b81d1f1d610daadb5e6f060" category="sidebar">Articles de blog</block>
+  <block id="2a698685a16733183bec999b7c2ac13d" category="admonition">Vous devez toujours utiliser une LIF de cluster management. La charge sera ainsi équilibrée entre les requêtes d'API sur tous les nœuds et évitez les nœuds hors ligne ou qui rencontrent des problèmes de connectivité. Si plusieurs LIF de cluster management sont configurées, elles sont toutes équivalentes en ce qui concerne l'accès à l'API REST.</block>
 </blocks>
