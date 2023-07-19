@@ -570,7 +570,6 @@
   <block id="ad647e4ae904c7ed54ee93040d8298c7" category="cell">Inférieur à</block>
   <block id="cedf8da05466bb54708268b3c694a78f" category="cell">&gt;</block>
   <block id="05824b7be006782aaefd1fdb97c71e06" category="cell">Supérieur à</block>
-  <block id="a7eeaea90b4e8312b88abcd178019929" category="cell">&lt;=</block>
   <block id="28d1141142e2cbb29e657b69a044ddf4" category="cell">Inférieur ou égal à</block>
   <block id="3a1e9b87c94b54dec1202b5ca6539806" category="cell">&gt;=</block>
   <block id="798fe01fcb2754a295b6937ed885a69a" category="cell">Supérieur ou égal à</block>
@@ -612,7 +611,6 @@
   <block id="d803d2dd2f39605b0bc879d0532fc5ba" category="paragraph">Le nombre d'objets effectivement renvoyés peut être inférieur au maximum en vigueur, en fonction de la contrainte associée sur le nombre d'objets ainsi que du nombre total d'objets dans le système.</block>
   <block id="2dadc767979da8ab1576ee0aa8da5e21" category="list-text">Rétrécir le jeu de résultats</block>
   <block id="317480d31248a2b7b399c7ddbecbf74a" category="list-text">Si nécessaire, vous pouvez combiner ces deux paramètres avec des paramètres de requête supplémentaires pour affiner le jeu de résultats. Par exemple, le suivant renvoie jusqu'à 10 événements ems générés après le temps spécifié :</block>
-  <block id="89163f6e2498a9f894e7813e6de46b08" category="paragraph"><block ref="3a4009b6b07614ee155d4af5ecfaf8bc" prefix="" category="inline-code"></block></block>
   <block id="5394a0e51a0e30e195e0299ede162a02" category="paragraph">Vous pouvez émettre plusieurs demandes de page via les objets. Chaque appel d'API suivant doit utiliser une nouvelle valeur de temps basée sur le dernier événement du dernier jeu de résultats.</block>
   <block id="050a8c11f48cd555f6e5e6bab96225d6" category="section-title">Propriétés de taille</block>
   <block id="721165b216d0f852ad3d9fd6e430dbe1" category="paragraph">Les valeurs d'entrée utilisées avec certains appels API ainsi que certains paramètres de requête sont numériques. Au lieu de fournir un entier en octets, vous pouvez éventuellement utiliser un suffixe comme indiqué dans le tableau suivant.</block>
@@ -1629,4 +1627,6 @@
   <block id="6b6a02ad27b147c17d7a65dc825f0954" category="list-text"><block ref="6b6a02ad27b147c17d7a65dc825f0954" category="inline-link-rx"></block></block>
   <block id="678330802b81d1f1d610daadb5e6f060" category="sidebar">Articles de blog</block>
   <block id="2a698685a16733183bec999b7c2ac13d" category="admonition">Vous devez toujours utiliser une LIF de cluster management. La charge sera ainsi équilibrée entre les requêtes d'API sur tous les nœuds et évitez les nœuds hors ligne ou qui rencontrent des problèmes de connectivité. Si plusieurs LIF de cluster management sont configurées, elles sont toutes équivalentes en ce qui concerne l'accès à l'API REST.</block>
+  <block id="9d755089336a033163e3d2d980b0a0c6" category="cell">\&lt;=</block>
+  <block id="e62ced77ec600a0a48c6c84c38cf0e4e" category="paragraph"><block ref="b53150fedbbf0bd1cbc9f3f68a84f43c" prefix="" category="inline-code"></block></block>
 </blocks>

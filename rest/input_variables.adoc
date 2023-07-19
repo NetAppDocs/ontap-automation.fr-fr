@@ -91,7 +91,7 @@ En plus d'une correspondance exacte, d'autres opérateurs sont disponibles pour 
 | > | Supérieur à 
 
 
-| <= | Inférieur ou égal à 
+| \<= | Inférieur ou égal à 
 
 
 | >= | Supérieur ou égal à 
@@ -180,7 +180,7 @@ Le nombre d'objets effectivement renvoyés peut être inférieur au maximum en v
 Rétrécir le jeu de résultats:: Si nécessaire, vous pouvez combiner ces deux paramètres avec des paramètres de requête supplémentaires pour affiner le jeu de résultats. Par exemple, le suivant renvoie jusqu'à 10 événements ems générés après le temps spécifié :
 +
 --
-`time=> 2018-04-04T15:41:29.140265Z&max_records=10`
+`time\=> 2018-04-04T15:41:29.140265Z&max_records=10`
 
 Vous pouvez émettre plusieurs demandes de page via les objets. Chaque appel d'API suivant doit utiliser une nouvelle valeur de temps basée sur le dernier événement du dernier jeu de résultats.
 
