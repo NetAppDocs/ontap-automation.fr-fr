@@ -42,3 +42,9 @@ La bibliothèque client Python est un pack que vous pouvez utiliser lors de l'é
 == Avec Ansible
 
 Ansible est un outil logiciel open source qui prend en charge le provisionnement, la gestion de la configuration et le déploiement d'applications. Depuis sa sortie et son acquisition ultérieure par RedHat, elle a continué de croître dans la popularité. NetApp fournit des modules certifiés Ansible qui permettent aux clients d'automatiser l'administration de leurs systèmes de stockage ONTAP. Vous devez commencer par examiner la documentation de ce site, y compris link:../automate/ontap_ansible.html["Automatisation ONTAP et Ansible"].
+
+
+
+== Catalogue d'automatisation BlueXP
+
+La solution NetApp https://console.bluexp.netapp.com/automationCatalog/["Catalogue d'automatisation BlueXP"^] Est disponible via l'interface utilisateur Web BlueXP. Ce catalogue vous donne accès à des solutions qui peuvent vous aider dans le déploiement et l'intégration automatisés de ONTAP et d'autres produits NetApp. Voir la https://docs.netapp.com/us-en/netapp-automation/["Automatisation NetApp"^] documentation pour une description des solutions d'automatisation.
