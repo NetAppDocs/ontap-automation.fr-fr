@@ -6,8 +6,10 @@ entries:
 - title: Découvrez les options d'automatisation
   url: "/get-started/ontap_automation_options.html"
 - title: Préparez-vous à utiliser l'API REST
-  url: "/get-started/prepare.html"
+  url: "/get-started/prepare_rest.html"
 - title: Récupère la version logicielle du cluster
   url: "/get-started/retrieve_cluster_software_version.html"
 - title: Votre premier appel API
   url: "/get-started/first_call.html"
+- title: Préparez l'utilisation des workflows
+  url: "/get-started/prepare_workflows.html"

@@ -19,7 +19,7 @@ Un numéro de version de l'API REST inclus dans ONTAP 9 est attribué indépenda
 
 NOTE: Toutes les versions d'ONTAP 9 utilisent la même version de l'API REST.
 
-ONTAP 9.6 à ONTAP 9.10.1:: Version 1
+ONTAP 9.6 à ONTAP 9.13.1:: Version 1
 
 
 .Liens connexes

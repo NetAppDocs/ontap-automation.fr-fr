@@ -1,0 +1,55 @@
+---
+sidebar: sidebar 
+permalink: workflows/wf_get_cluster.html 
+keywords: workflow, get cluster, cluster configuration 
+summary: 'Vous pouvez récupérer la configuration d"un cluster ONTAP avec des champs spécifiques. Vous pouvez le faire dans le cadre de l"évaluation de l"état du cluster ou avant la mise à jour de la configuration.' 
+---
+= Obtenez la configuration du cluster
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Vous pouvez récupérer la configuration d'un cluster ONTAP avec des champs spécifiques. Vous pouvez le faire dans le cadre de l'évaluation de l'état du cluster ou avant la mise à jour de la configuration.
+
+.Méthode HTTP et noeud final
+Cet appel d'API REST utilise la méthode et le point de terminaison suivants.
+
+[cols="25,75"]
+|===
+| Méthode HTTP | OBTENEZ 
+
+
+| OBTENEZ | /cluster 
+|===
+.Paramètres d'entrée supplémentaires pour les exemples de boucles
+Outre les paramètres communs à tous les appels API REST, les paramètres suivants sont également utilisés dans l'exemple curl de cette étape.
+
+[cols="25,10,10,55"]
+|===
+| Paramètre | Type | Obligatoire | Description 
+
+
+| champs | Requête | Non | Sélectionnez les valeurs que vous souhaitez renvoyer. Voici quelques exemples `contact` et `version`. 
+|===
+.Exemple curl : permet de récupérer les informations de contact du cluster
+Cet exemple illustre comment récupérer un seul champ. Pour obtenir la configuration complète du cluster, vous devez supprimer `fields` paramètre de requête.
+
+[source, curl]
+----
+curl --location --include \
+--request GET "https://$FQDN_IP/api/cluster?fields=contact" \
+--header "Accept: */*" \
+--header "Authorization: Basic $BASIC_AUTH"
+----
+.Exemple de sortie JSON
+[listing]
+----
+{
+  "contact": "support@company-demo.com"
+}
+----

@@ -49,13 +49,24 @@ NOTE: Toutes les méthodes HTTP ne sont pas disponibles sur chacun des terminaux
 |===
 
 
+== Variables de chemin
+
+Le chemin du point de terminaison utilisé avec chaque appel de l'API REST peut inclure divers identificateurs. Chaque ID correspond à une instance de ressource spécifique. Exemples : ID de cluster et ID de SVM.
+
+
+
 == En-têtes de demande
 
 Vous devez inclure plusieurs en-têtes dans la requête HTTP.
 
 Type de contenu:: Si le corps de la demande inclut JSON, cet en-tête doit être défini sur `application/json`.
 Accepter:: Cette barre de coupe doit être réglée sur `application/hal+json`. S'il est réglé sur `application/json` Aucun des liens HAL ne sera retourné, sauf un lien nécessaire pour récupérer le prochain lot d'enregistrements. Si l'en-tête est autre chose en dehors de ces deux valeurs, la valeur par défaut de l' `content-type` en-tête dans la réponse sera `application/hal+json`.
-Autorisation:: L'authentification de base doit être définie avec le nom d'utilisateur et le mot de passe codés en tant que chaîne base64.
+Autorisation:: L'authentification de base doit être définie avec le nom d'utilisateur et le mot de passe codés en tant que chaîne base64. Par exemple :
++
+--
+`Authorization: Basic YWRtaW46cGV0ZXJzb24=`.
+
+--
 
 
 

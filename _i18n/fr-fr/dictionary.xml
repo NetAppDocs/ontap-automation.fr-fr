@@ -101,7 +101,6 @@
   <block id="a131529b4b9e76bc39353ef1aa209dd9" category="summary">Un numéro de version de l'API REST inclus dans ONTAP 9 est attribué indépendamment du numéro de version de ONTAP. Vous devez connaître la version de l'API fournie avec votre version de ONTAP et savoir en quoi cela pourrait affecter votre utilisation de l'API.</block>
   <block id="645796c14f90a49c10fe89ef0d9036f0" category="doc">GESTION DES VERSIONS D'API REST D'ONTAP</block>
   <block id="8797a71e8a89cb9c915f588f435aa882" category="admonition">Toutes les versions d'ONTAP 9 utilisent la même version de l'API REST.</block>
-  <block id="bfed0b768d4205be491cf9aab9ef5bf1" category="list-text">ONTAP 9.6 à ONTAP 9.10.1</block>
   <block id="d4b36e25c7ff304278d8f8203382ad65" category="list-text">Version 1</block>
   <block id="f6bd0d7447ff66cc6b859603a88fbde9" category="list-title">Liens connexes</block>
   <block id="626a7cbe056796bcb1c158b143866230" category="inline-link-macro">Notes de version de ONTAP</block>
@@ -482,8 +481,6 @@
   <block id="51c033a34d63a2d1737e1b6bdf842d1f" category="list-text">Obtenir l'état actuel du travail.</block>
   <block id="b281ec87e30bc1058b3173012f46c637" category="list-text">Si le travail est dans un état autre que terminal, effectuez une nouvelle boucle.</block>
   <block id="6caaacff3c8abae5d9b2e02a5e4d0829" category="list-text">Arrêter lorsque le travail atteint un état terminal (réussite, échec).</block>
-  <block id="13d76f06d267496e8846be9e378c6df8" category="inline-link-macro">Workflow 1 : mise à jour du contact du cluster et vérification de l'état du travail</block>
-  <block id="5a683654a64ec8dd5cecf5ff4ead9469" category="list-text"><block ref="5a683654a64ec8dd5cecf5ff4ead9469" category="inline-link-macro-rx"></block></block>
   <block id="58722e059e2f5bb0441a986407122c33" category="summary">ONTAP inclut des fonctionnalités robustes et évolutives de contrôle d'accès basé sur des rôles (RBAC). Vous pouvez attribuer chaque compte un rôle différent afin de contrôler l'accès de l'utilisateur aux ressources exposées via l'API REST et l'interface de ligne de commande. Les rôles définissent les différents niveaux d'accès administratif des différents utilisateurs ONTAP.</block>
   <block id="40631aef1c7a95be86710dae30e73e3d" category="doc">Présentation de la sécurité RBAC</block>
   <block id="fb40fe81e6f182515c987233a6044be5" category="inline-link-macro">Résumé de l'évolution du RBAC</block>
@@ -555,7 +552,6 @@
   <block id="c4408d335012a56ff58937d78050efad" category="list-text">Accepter</block>
   <block id="43e5eac57fb1fee548fbabb2345d61d5" category="list-text">Cette barre de coupe doit être réglée sur<block ref="b0b3b1ba6cf89f84d95cf2d9936f1bc6" prefix=" " category="inline-code"></block>. S'il est réglé sur<block ref="d1f5a9d446c6cec2cf63545e8163e585" prefix=" " category="inline-code"></block> Aucun des liens HAL ne sera retourné, sauf un lien nécessaire pour récupérer le prochain lot d'enregistrements. Si l'en-tête est autre chose en dehors de ces deux valeurs, la valeur par défaut de l'<block ref="cc0af601bfd673427a8abb171f62c707" prefix=" " category="inline-code"></block> en-tête dans la réponse sera<block ref="b0b3b1ba6cf89f84d95cf2d9936f1bc6" prefix=" " category="inline-code"></block>.</block>
   <block id="9cd8a2455b1839ff98ef70c05b9b5983" category="list-text">Autorisation</block>
-  <block id="1ef8df17a9442d1f08a0df818861c5e5" category="list-text">L'authentification de base doit être définie avec le nom d'utilisateur et le mot de passe codés en tant que chaîne base64.</block>
   <block id="a3ba8461439f7d0176ef3944696ea2ac" category="section-title">Corps de la demande</block>
   <block id="973ab3cad185dec8eac7662330e49f1c" category="paragraph">Le contenu du corps de la demande varie en fonction de l'appel spécifique. Le corps de requête HTTP comprend l'un des éléments suivants :</block>
   <block id="b86f5c6ed2b7d52e2940495dc8a984f4" category="list-text">Objet JSON avec variables d'entrée</block>
@@ -708,15 +704,8 @@
   <block id="7985c67b4ff49ccabd48db90e57852eb" category="paragraph">La bibliothèque client Python est un pack que vous pouvez utiliser lors de l'écriture de scripts pour accéder à l'API REST de ONTAP. Il prend en charge plusieurs services sous-jacents, notamment la gestion des connexions, le traitement asynchrone des demandes et le traitement des exceptions. Il vous suffit d'utiliser la bibliothèque client Python pour développer rapidement un code robuste en vue de la prise en charge de vos objectifs en matière d'automatisation ONTAP. Vous devez commencer par examiner la documentation de ce site, y compris <block ref="a9a8739a57e07a475c98045ed71a9c60" category="inline-link-macro-rx"></block>.</block>
   <block id="47139a5580026883093b61e1de623719" category="section-title">Avec Ansible</block>
   <block id="4956e155e9e91d90d4a7af3019a3980c" category="paragraph">Ansible est un outil logiciel open source qui prend en charge le provisionnement, la gestion de la configuration et le déploiement d'applications. Depuis sa sortie et son acquisition ultérieure par RedHat, elle a continué de croître dans la popularité. NetApp fournit des modules certifiés Ansible qui permettent aux clients d'automatiser l'administration de leurs systèmes de stockage ONTAP. Vous devez commencer par examiner la documentation de ce site, y compris <block ref="db69795f6822fbede287b8f9090c22dc" category="inline-link-macro-rx"></block>.</block>
-  <block id="a30f2db6f9a8c5629dc89b408b5d97e4" category="summary">Vous pouvez lancer une commande curl simple sur l'interface de ligne de commande pour commencer à utiliser l'API REST ONTAP et confirmer sa disponibilité.</block>
-  <block id="f1d5e3ebc77f66e2befb5941d10019ee" category="paragraph">L'utilitaire Curl doit être disponible sur votre poste de travail. Vous devez également disposer des éléments suivants :</block>
   <block id="f9f1769b9ec1d047022000f65ca5c05a" category="list-text">Adresse IP ou nom d'hôte de la LIF de gestion du cluster ONTAP</block>
-  <block id="ec4f05f95246e64e1875be5ee79905b2" category="list-text">Nom d'utilisateur et mot de passe d'un compte disposant des droits d'accès à l'API REST de ONTAP (ressource de cluster).</block>
-  <block id="da932131b500d8e907961663d8ef346b" category="admonition">Si vos informations d'identification incluent des caractères spéciaux, vous devez les formater de manière acceptable pour Curl, en fonction du shell que vous utilisez. Par exemple, vous pouvez insérer une barre oblique inverse avant chaque caractère spécial ou envelopper la totalité<block ref="133e1b8eda335c4c7f7a508620ca7f10" prefix=" " category="inline-code"></block> chaîne de devis unique.</block>
-  <block id="58866791801e443554927396816c827c" category="list-text">Sur l'interface de ligne de commande de votre poste de travail local, récupérez la version du logiciel ONTAP :</block>
-  <block id="8a35977a6f21dff949427e42cf6d3999" category="paragraph"><block ref="892011b005f9c4d7f74866cf57dd4f06" prefix="" category="inline-code"></block></block>
   <block id="938f1047c15f00fdd0cbfc8e4cfa15e1" category="paragraph">*Exemple*</block>
-  <block id="1620bfae18b24c9aeb26299384e3355d" category="paragraph"><block ref="401c2d208e75667081ddd397c23cd73d" prefix="" category="inline-code"></block></block>
   <block id="42ac9c1cc1752704f9d6980ce41b7ba3" category="paragraph">Les informations relatives à la version de ONTAP sont affichées au format JSON.</block>
   <block id="1474d65709aff61f7e01ec29740e4346" category="summary">La référence de l'API contient des détails sur tous les appels de l'API REST de ONTAP, y compris les méthodes HTTP, les paramètres d'entrée et les réponses. Cette référence complète est utile lors du développement d'applications d'automatisation à l'aide de l'API REST.</block>
   <block id="485855357f10b438740d2ed039caaa84" category="admonition">Vous pouvez accéder au contenu de référence en ligne de votre système ONTAP local ou à une copie statique de la documentation gérée par NetApp.</block>
@@ -782,32 +771,12 @@
   <block id="8d4056bb7e1987655b2aad3e78b46bc4" category="list-text"><block ref="8d4056bb7e1987655b2aad3e78b46bc4" category="inline-link-rx"></block></block>
   <block id="e996b4c3d79a1e2689fba6ba27c0372f" category="paragraph">Accédez à des rapports techniques, à des livres blancs et à d'autres documents.</block>
   <block id="7de269085c4e23e4ff26c31b7122144d" category="summary">Ce workflow met à jour les informations de contact sur le cluster. Comme la requête est traitée de manière asynchrone, elle indique également comment déterminer si la tâche d'arrière-plan s'exécute correctement.</block>
-  <block id="efa1dd0050ca05b6c44b7b778e28c93b" category="doc">Workflow 1 : mettez à jour le contact du cluster et vérifiez l'état du travail</block>
-  <block id="530cddf0f41aa70491fa5a19e26768cb" category="section-title">1. Mettre à jour les coordonnées du cluster</block>
-  <block id="4a79b9839f0a471eb4a2d3d7f2bf76f9" category="paragraph">Vous pouvez lancer un appel d'API pour mettre à jour les coordonnées. Comme la requête s'exécute de manière asynchrone, vous devez confirmer le succès du travail associé.</block>
-  <block id="3adbdb3ac060038aa0e6e6c138ef9873" category="cell">Catégorie</block>
   <block id="e95402dceacd5260b74e758bf2e748ef" category="cell">/cluster</block>
   <block id="288aae25bc408055f50c21c991903a44" category="paragraph">Asynchrone</block>
-  <block id="66b29b9f2bdc949a7545046fbe59fcef" category="listing-title">Gondolage</block>
-  <block id="8f2622c34a0d14fa4c9c3a13011b9b6c" category="paragraph">Un objet de travail avec l'identifiant associé est renvoyé.</block>
-  <block id="6f5089fd2df9f1fabec1177bfdc6290f" category="section-title">2. Récupérez l'état du travail</block>
-  <block id="82437d3826cc31eff7495baa268e454c" category="paragraph">Vous devez récupérer l'état du travail pour déterminer si la demande asynchrone a bien été effectuée.</block>
   <block id="98dbba5c9ef16c64ae0471156940f706" category="cell">/cluster/tâches/{uuid}</block>
   <block id="2fe4167817733fec8e6ba1afddf78f1b" category="paragraph">Synchrone</block>
-  <block id="50ccf1eac00654a4ac10e12d843b2025" category="paragraph">Un objet de travail avec l'état et d'autres champs est renvoyé.</block>
-  <block id="cdbbcb4acb019584472990be1e68660f" category="summary">Vous devez préparer avant d'utiliser les processus de flux de travail.</block>
   <block id="1b18b55a054bdd1b04a8c8f5c862bc4f" category="doc">Préparez l'utilisation des workflows</block>
-  <block id="4e9340308dca4d4fa10ce0a1c9d5c96a" category="section-title">Présentation des appels API utilisés dans les workflows</block>
-  <block id="ee7a9ae73028cfda6ec52c2a5e7c84f0" category="paragraph">La page de documentation en ligne de l'API ONTAP contient les détails de chaque appel d'API REST. Au lieu de répéter ces détails ici, chaque appel d'API utilisé dans les exemples de flux de travail comprend uniquement les informations dont vous avez besoin pour localiser l'appel sur la page de documentation. Après avoir localisé un appel API spécifique, vous pouvez vérifier les détails complets de l'appel, y compris les paramètres d'entrée, les formats de sortie, les codes d'état HTTP et le type de traitement de la demande.</block>
-  <block id="457726be17407daf1c955d43ea661695" category="paragraph">Les informations suivantes sont incluses pour chaque appel d'API au sein d'un flux de travail afin de localiser l'appel sur la page de documentation :</block>
-  <block id="765304ffcf8618a62227ccee634b1d12" category="paragraph">Les appels API sont organisés sur la page de documentation en zones ou catégories liées aux fonctions. Pour localiser un appel API spécifique, faites défiler la page jusqu'en bas et cliquez sur la catégorie API applicable.</block>
-  <block id="94e58690c162ba826800973567ad1063" category="paragraph">La méthode HTTP identifie l'action effectuée sur une ressource. Chaque appel d'API est exécuté via une seule méthode HTTP.</block>
-  <block id="0564266fb62d9d7133097f1bae879dde" category="paragraph">Le chemin détermine la ressource spécifique à laquelle l'action s'applique dans le cadre d'un appel. La chaîne de chemin d'accès est ajoutée à l'URL principale pour former l'URL complète identifiant la ressource.</block>
-  <block id="3af7790bee98254ae139d4927f1bb354" category="section-title">Construction d'une URL pour accéder directement à l'API REST</block>
-  <block id="cb9e0022deebe15c9fcf226449b0ffca" category="paragraph">En plus de la page de documentation ONTAP, vous pouvez également accéder à l'API REST ONTAP directement via un langage de programmation tel que Python. Dans ce cas, l'URL principale est légèrement différente de l'URL utilisée lors de l'accès à la page de documentation en ligne. Lorsque vous accédez directement à l'API, vous devez ajouter<block ref="944da21c517df0c48dfbef7af28f3093" prefix=" " category="inline-code"></block> vers le domaine et la chaîne de port. Par exemple :<block ref="a95a04d3ccd21dbba5bf8be384636742" prefix=" " category="inline-code"></block></block>
   <block id="29fe0e3b021fed4ff52a274326d05c86" category="inline-link-macro">Comment accéder à l'API ONTAP</block>
-  <block id="87d9604d2178e58e4d22b66dc74675f2" category="list-text"><block ref="87d9604d2178e58e4d22b66dc74675f2" category="inline-link-macro-rx"></block></block>
-  <block id="b04c0c0415c8329423a4dc5d04335c63" category="list-text"><block ref="b04c0c0415c8329423a4dc5d04335c63" category="inline-link-macro-rx"></block></block>
   <block id="d45d9e85cc7b83745a3636a19ac8b2bb" category="summary">L'API REST d'ONTAP comporte certaines limites ou restrictions qui peuvent affecter votre utilisation de l'API et le développement du code d'automatisation.</block>
   <block id="482723983a4f2af954e36ff41e567451" category="doc">Limites connues</block>
   <block id="b5ec85c168694921a9de5eadfa6243a8" category="paragraph">L'API REST d'ONTAP comporte certaines limites ou restrictions qui peuvent affecter votre utilisation de l'API et le développement du code d'automatisation. Ces restrictions sont décrites ci-dessous. De manière générale, chacune s'applique à toutes les versions d'ONTAP prises en charge où l'API REST est disponible. Consultez le champ _ONTAP releases_ pour plus d'informations.</block>
@@ -1237,7 +1206,6 @@
   <block id="466b9c64436468f52860809312c8a835" category="sidebar">Découvrez les options d'automatisation</block>
   <block id="5201581c33f8ca3c8850ac4a788dbda3" category="sidebar">Récupère la version logicielle du cluster</block>
   <block id="e6b088db24ebe67ed0e9567d309387ec" category="sidebar">Flux de travail</block>
-  <block id="57bf92c591d867814abf9287e2781651" category="sidebar">Workflow 1 : mettez à jour le contact du cluster et vérifiez son état</block>
   <block id="33871b6190a8d5adbe8b15282054766c" category="sidebar">Quoi de neuf</block>
   <block id="8cd67c079826033809b33b6f3ac2da9a" category="sidebar">Script pour récupérer la configuration du cluster</block>
   <block id="6e6432511bc053d1916f5f8f0915598d" category="sidebar">Migrer vers l'API REST</block>
@@ -1470,8 +1438,6 @@
   <block id="0a783c3ce00e8d3af4931704ca629ba3" category="paragraph-title">L'un des rôles intégrés est-il suffisant ou le rôle personnalisé requis ?</block>
   <block id="531201515c1ec0bfadb1f37e57c2222d" category="paragraph-title">Quel type de rôle est nécessaire ?</block>
   <block id="11678e3d67c685db9322ab4433f227a6" category="paragraph-title">Type de traitement</block>
-  <block id="11a1b77794af7e7ad738c9603dcf8730" category="paragraph-title">Sortie JSON</block>
-  <block id="29c2c02a361c9d7028472e5d92cd4a54" category="paragraph-title">Sortie</block>
   <block id="56aa3ed9dba484ac641c5247a15b1ed6" category="paragraph-title">Critères de base</block>
   <block id="11593a40313671a88f29e6475859f238" category="paragraph-title">Nom et version du package</block>
   <block id="7cd8fb6e31cc946c078d2740c76a9899" category="paragraph-title">Installation</block>
@@ -1636,4 +1602,108 @@
   <block id="dd38f906b37d412de7d1c1dcf4cbf31c" category="paragraph"><block ref="dd38f906b37d412de7d1c1dcf4cbf31c" category="inline-link-macro-rx"></block></block>
   <block id="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-macro"><block ref="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-rx"></block></block>
   <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
+  <block id="4ab1add905aec7c143d5425426b1470e" category="summary">Vous pouvez exécuter une commande curl pour commencer à utiliser l'API REST ONTAP et confirmer sa disponibilité.</block>
+  <block id="78a7b7c7971a80951fd85f4b28e7518c" category="paragraph">En plus de disposer de l'utilitaire curl sur votre poste de travail, vous avez besoin des éléments suivants :</block>
+  <block id="7bfe29215621deb70a47f902294281bf" category="list-text">Adresse IP ou FQDN de la LIF de gestion de cluster ONTAP</block>
+  <block id="6c62a36f8e262347f2ba79452265a020" category="list-text">Identifiants ONTAP pour un compte habilité à accéder à l'API REST ONTAP</block>
+  <block id="21569412cc525b31a0c126598a680b86" category="admonition">Si vos informations d'identification incluent des caractères spéciaux, vous devez les formater d'une manière acceptable pour boucler en fonction du shell que vous utilisez. Par exemple, vous pouvez insérer une barre oblique inverse avant chaque caractère spécial ou envelopper la chaîne d'informations d'identification entière entre guillemets.</block>
+  <block id="81c7a329d4f4793f536260d6cec23a04" category="list-text">Sur l'interface de ligne de commande de votre poste de travail local, exécutez la commande suivante :</block>
+  <block id="b5b73d02b288e67898182f6b6f76e267" category="paragraph"><block ref="429d1cce820c881fb624c558f06b534f" prefix="" category="inline-code"></block></block>
+  <block id="f9c5f8c688d72b2f67cbb721eb8bd53e" category="summary">Vous devez connaître la structure et le format des workflows ONTAP avant de les utiliser avec un déploiement en direct.</block>
+  <block id="0b79795d3efc95b9976c7c5b933afce2" category="section-title">Introduction</block>
+  <block id="f5d6d63dd550f378522648a645333f6d" category="paragraph">Un _workflow_ est une séquence d'une ou de plusieurs étapes nécessaires à la réalisation d'une tâche ou d'un objectif administratif spécifique. Les workflows ONTAP incluent les étapes clés et les paramètres dont vous avez besoin pour mener à bien chaque tâche. Elles constituent un point de départ pour la personnalisation de votre environnement d'automatisation ONTAP.</block>
+  <block id="122f0884abaeb43a4eccb0ddc5dbdbb8" category="paragraph-title">Types d'étape</block>
+  <block id="4e91dc3707946c5fde9a76d95d86ab96" category="paragraph">Chaque étape d'un flux de travail ONTAP est l'un des types suivants :</block>
+  <block id="6f01c5142da7df41a4b71dc3f7570bda" category="list-text">Appel d'API REST (avec des détails tels que des exemples Curl et JSON)</block>
+  <block id="f0c298fa6a4d2b967cd3572a4ce8c34f" category="list-text">Exécuter ou appeler un autre flux de travail ONTAP</block>
+  <block id="45632949cdd1c5466795de61555ae0ca" category="list-text">Tâches liées diverses (telles que la prise d'une décision de configuration)</block>
+  <block id="b75a89b63647fdd9b09694c37ca63bf9" category="paragraph-title">Appels API REST</block>
+  <block id="a8492c61ad8067f69139069d55e20ede" category="paragraph">La plupart des étapes du workflow sont des appels d'API REST. Ces étapes utilisent un format commun qui inclut un exemple de boucle et d'autres informations. Voir la <block ref="10fd548eb0773eced2b1f8455835ae29" category="inline-link-macro-rx"></block> Pour plus de détails sur les appels de l'API REST.</block>
+  <block id="67159a63ec04dcd49136183d2862cd66" category="paragraph-title">Flux de production en une seule étape</block>
+  <block id="5570ed8b3997fd4a9427eb890ee775d9" category="paragraph">Un flux de travail ne peut contenir qu'une seule étape. Ces flux de travail à une seule étape sont formatés légèrement différemment des flux de travail contenant plusieurs étapes. Par exemple, le nom explicite de l'étape est supprimé. L'action de workflow doit être claire en fonction du titre.</block>
+  <block id="cc10a6127f01a14ee7d08690e5476c21" category="paragraph">Les flux de travail sont conçus pour être aussi généraux que possible et peuvent donc être utilisés dans n'importe quel environnement ONTAP. Dans cet esprit, les appels de l'API REST utilisent des variables dans les exemples de boucles et d'autres entrées. Les appels de l'API REST peuvent ensuite être facilement adaptés à différents environnements ONTAP.</block>
+  <block id="5e57b8d8be99da22a6cda01581fc3221" category="section-title">Format d'URL de base</block>
+  <block id="604fbbb8706e844b0b4aa2616a3a72ec" category="paragraph">Vous pouvez accéder à l'API REST ONTAP directement via curl ou un langage de programmation tel que Python. Dans ce cas, l'URL de base est différente de l'URL que vous utilisez lorsque vous accédez à la documentation en ligne de ONTAP ou à System Manager.</block>
+  <block id="b2e546a32c02144282fc626a17b4123a" category="paragraph">Lorsque vous accédez directement à l'API, vous devez ajouter *api* au domaine ou à l'adresse IP. Par exemple :</block>
+  <block id="1130426d3f04c52f410ac60e6ce8b230" category="paragraph"><block ref="3fb09ca3875413da44a9832d2ed627b7" prefix="" category="inline-code"></block></block>
+  <block id="224416f5b5ef9ebeb4b9501a363a46a3" category="paragraph">Voir <block ref="87d9604d2178e58e4d22b66dc74675f2" category="inline-link-macro-rx"></block> Pour plus d'informations sur l'accès à l'API REST ONTAP.</block>
+  <block id="3791b7d0d91a2238c40dbbfefa886cc7" category="section-title">Paramètres d'entrée communs</block>
+  <block id="42f67270fcba9fb260d596a38b564570" category="paragraph">Il existe plusieurs paramètres d'entrée couramment utilisés avec la plupart des appels API REST. Ces paramètres ne sont généralement pas décrits dans chaque flux de travail. Vous devez connaître les paramètres. Voir <block ref="430e01911dcacc88e4a83d838ae504e2" category="inline-link-macro-rx"></block> pour en savoir plus.</block>
+  <block id="4cad1a5966d83b6ddc6a861ab5449fce" category="paragraph">Si des paramètres supplémentaires sont nécessaires pour un exemple de boucle spécifique, ils sont inclus dans la section *Paramètres d'entrée supplémentaires pour l'exemple de boucle* pour chaque flux de travail.</block>
+  <block id="c7975313824cd849192810f63bcd9a1e" category="section-title">Format variable</block>
+  <block id="662081edc74f6dec8617a183354314a9" category="paragraph">Les valeurs d'ID et les autres variables utilisées avec les exemples de workflows sont opaques et peuvent varier en fonction du cluster ONTAP. Pour améliorer la lisibilité des exemples, les valeurs réelles ne sont pas utilisées. Les variables sont utilisées à la place. Cette approche, basée sur un format et un ensemble cohérents de noms réservés, présente plusieurs avantages :</block>
+  <block id="6846bd19d3855d33378ece05b56de412" category="list-text">Les échantillons Curl et JSON sont plus lisibles et plus faciles à comprendre.</block>
+  <block id="89bd915fe5612063332c1abcee674fbb" category="list-text">Comme tous les mots-clés utilisent le même format, vous pouvez rapidement les identifier.</block>
+  <block id="d94ea72c6f873db4ad92c298e5f6c0b5" category="list-text">Il n'y a pas d'exposition de sécurité car les valeurs ne peuvent pas être copiées et réutilisées.</block>
+  <block id="262817c71879ed58754769cf3f684d4b" category="paragraph">Les variables sont formatées pour être utilisées dans un environnement shell Bash. Chaque variable commence par un signe dollar et est placée entre guillemets si nécessaire. Cela les rend reconnaissables à Bash. La casse supérieure est toujours utilisée pour les noms.</block>
+  <block id="d1970310ade44fffdc04c2b848f972f1" category="paragraph">Voici quelques mots clés de variable communs. Cette liste n'est pas exhaustive et des mots-clés supplémentaires sont utilisés au besoin. Leur signification devrait être évidente sur la base du contexte.</block>
+  <block id="220f3d3750583b9db48568a0b5b9a5f1" category="cell">Mot-clé</block>
+  <block id="00fb17c50b70dc75802223ee442804c7" category="cell">$FQDN_IP</block>
+  <block id="e6b391a8d2c4d45902a23a8b6585703d" category="cell">URL</block>
+  <block id="f42332ef9ed7d9b54c78a421adffdd26" category="cell">Nom de domaine complet ou adresse IP de la LIF de gestion du cluster ONTAP.</block>
+  <block id="8422281c7f63b05015c4269e5d39d708" category="cell">$CLUSTER_ID</block>
+  <block id="d2888ae6c2336e3de9f327d87d6d6e8c" category="cell">Valeur UUIDv4 identifiant le cluster ONTAP sur lequel s'exécutent les opérations de l'API.</block>
+  <block id="4ed5b72e5a5b649b5d306892bfcb0f7d" category="cell">$BASIC_AUTH</block>
+  <block id="bf50d5e661106d0abe925af3c2e6f7e7" category="cell">En-tête</block>
+  <block id="7d8953ad437c7a74fa7c3eaa1037c286" category="cell">Chaîne d'informations d'identification utilisée pour l'authentification de base HTTP.</block>
+  <block id="71d08941d68cdfdc2782675a59475359" category="section-title">Options d'authentification</block>
+  <block id="189c9092755b5ec9acf4ef1fb0b54d46" category="paragraph">La méthode d'authentification principale disponible pour l'API REST via ONTAP 9.13.1 est l'authentification de base.</block>
+  <block id="5f7f2e03d053c151ec8a08fd76564f5a" category="section-title">Authentification de base HTTP</block>
+  <block id="dc248dc9e4f71e5475b8cecc054f14d4" category="paragraph">Lors de l'utilisation de l'authentification de base, les informations d'identification de l'utilisateur doivent être incluses dans chaque requête HTTP. Il existe deux options pour envoyer les informations d'identification.</block>
+  <block id="303374a8533b38fb7d98a5790a54237c" category="paragraph-title">Construisez l'en-tête de requête HTTP</block>
+  <block id="1eb945a3e58fc6954932a5681f004ce7" category="paragraph">Vous pouvez construire manuellement l'en-tête autorisation et l'inclure aux requêtes HTTP. Cela peut être fait lors de l'utilisation d'une commande curl dans l'interface de ligne de commande ou d'un langage de programmation avec votre code d'automatisation. Les étapes à un niveau élevé incluent :</block>
+  <block id="de502eeb74b9db18547f010273db3a03" category="list-text">Concaténez les valeurs d'utilisateur et de mot de passe avec deux points :</block>
+  <block id="4f765dee7c913da188ec3feb5803b2eb" category="paragraph"><block ref="4a88e1f19c3245879ff3b041cf65f2c0" prefix="" category="inline-code"></block></block>
+  <block id="1320cf2b61c91bbb314f468cb1b3faac" category="list-text">Convertissez la chaîne entière en base64 :</block>
+  <block id="3541da9612cccb446ac474f889742961" category="paragraph"><block ref="927aacc3bfdb5b911a7d032315797f39" prefix="" category="inline-code"></block></block>
+  <block id="942788e1858aada3519259908aefaa6e" category="list-text">Construisez l'en-tête de la demande :</block>
+  <block id="3329f37c2d3fbc845a99400ebeaccffa" category="paragraph"><block ref="ad7510dc039743abb39bd92fafca587a" prefix="" category="inline-code"></block></block>
+  <block id="8069d08f897b1eab0ae8b8e27b7c85d5" category="paragraph">Les exemples de boucles de flux de travail incluent cet en-tête avec la variable *$BASIC_AUTH* que vous devez mettre à jour avant d'utiliser.</block>
+  <block id="549a8ef894c94e44e0caa995eaef719f" category="paragraph-title">Utilisez un paramètre de courbure</block>
+  <block id="fe675d9d322274e9cc5a016dc13952d0" category="paragraph">Une autre option lors de l'utilisation de curl consiste à supprimer l'en-tête autorisation et à utiliser le paramètre curl *user* à la place. Par exemple :</block>
+  <block id="2ce89c4ab048c9d719169c11cda31579" category="paragraph"><block ref="784832b5a8f97e143e4744b38ce2ea72" prefix="" category="inline-code"></block></block>
+  <block id="64f444a853187a8c5bb3d8507d2ba64f" category="paragraph">Vous devez remplacer les informations d'identification appropriées pour votre environnement. Lors de l'exécution de la commande curl avec ce paramètre, l'en-tête autorisation est généré pour vous.</block>
+  <block id="76b8f173097880ead5a0f4cfd6e0618c" category="section-title">Utilisation d'exemples de boucles avec la coque de hachage</block>
+  <block id="70ce4cad9d30893dd103460ed8538167" category="paragraph">Si vous utilisez directement les exemples de boucles de flux de travail, vous devez mettre à jour les variables qu'ils contiennent avec les valeurs appropriées à votre environnement. Vous pouvez modifier manuellement les exemples ou vous appuyer sur le shell de hachage pour effectuer la substitution pour vous, comme décrit ci-dessous.</block>
+  <block id="f2e6cc557c48559ec2b9ae2a12ddd1c6" category="admonition">L'un des avantages de Bash est que vous pouvez définir les valeurs de variable une fois dans une session shell au lieu d'une fois par commande curl.</block>
+  <block id="1e5ad8f157b0c54185ce7c5af4fe8bbd" category="list-text">Ouvrez le shell Bash fourni avec Linux ou un système d'exploitation similaire.</block>
+  <block id="8fe545575762c5e2da996636397d8976" category="list-text">Définissez les valeurs variables incluses dans l'exemple de boucle que vous allez exécuter. Par exemple :</block>
+  <block id="af3f9a43c563b71e1cb6eba057c67406" category="paragraph"><block ref="f17f552ff5676b0b95e7c1c4474e4a0e" prefix="" category="inline-code"></block></block>
+  <block id="a76ad0ce3b4ce85c64bbc3d3cd25bdd2" category="list-text">Copiez l'exemple de boucle depuis la page de flux de travail et collez-le dans le terminal shell.</block>
+  <block id="1eaec3fd5985d760443b0386d2ee593a" category="list-text">Appuyez sur *ENTER* pour effectuer les opérations suivantes :</block>
+  <block id="198b3154f73c4a62a05f7a0089ea4f3a" category="list-text">Remplacez les valeurs de variable que vous avez définies</block>
+  <block id="9a6c9ba6963e8edb0564d74a05262568" category="list-text">Exécutez la commande curl</block>
+  <block id="ba73b1e2f51518a93f594eedbae7551e" category="doc">Mettre à jour le contact du cluster et confirmer l'état du travail</block>
+  <block id="9c06a14d4914d8244b17d64ba72bb24b" category="paragraph">Ce workflow met à jour les informations de contact sur le cluster. Étant donné que la demande est traitée de manière asynchrone, elle illustre également comment déterminer si le travail d'arrière-plan associé s'est terminé avec succès.</block>
+  <block id="8d14eea70d7cb75d7edf6e297701e7c1" category="section-title">Étape 1 : mettez à jour les coordonnées du cluster</block>
+  <block id="5b65398d9afd1a14a452f4645c7fb774" category="paragraph">Vous pouvez lancer un appel d'API pour mettre à jour les coordonnées.</block>
+  <block id="aeeec844965e3df4410c1eb088d94a03" category="paragraph-title">Méthode HTTP et noeud final</block>
+  <block id="0b0231c1815d06ad4701a091ce91a740" category="paragraph">Cet appel d'API REST utilise la méthode et le point de terminaison suivants.</block>
+  <block id="75e17ff813d0ed4dba4fcb32abc673e6" category="paragraph">L'identifiant de l'objet de travail est renvoyé. Vous devez enregistrer la valeur ID pour l'utiliser à l'étape suivante en tant que variable $JOB_ID.</block>
+  <block id="8bcf2b807fe961fb45913f99dea0b662" category="section-title">Étape 2 : récupération de l'état du travail</block>
+  <block id="be81401da9da70cf197e1449ca61043d" category="paragraph">Vous devez récupérer l'état du travail pour déterminer si la demande asynchrone a abouti.</block>
+  <block id="4044a674901deb07947f235775f9654d" category="paragraph">La valeur d'état et d'autres champs sont inclus dans l'objet de travail renvoyé.</block>
+  <block id="1e6808f43cf2da1acd44c6e982792490" category="summary">Vous pouvez afficher la liste des SVM (Storage Virtual machines) définis au sein d'un cluster ONTAP. Pour cela, vous pouvez rechercher l'identifiant d'un SVM spécifique ou assurer son unicité avant de créer un SVM.</block>
+  <block id="8febb780900dedf3c9e7802be64e20b8" category="doc">Lister les SVM</block>
+  <block id="e713e270523baa8c3aca351e280ceba0" category="cell">/svm/svm</block>
+  <block id="a3d2e020750395446da7d89e6da9765d" category="summary">Vous pouvez récupérer la configuration d'un cluster ONTAP avec des champs spécifiques. Vous pouvez le faire dans le cadre de l'évaluation de l'état du cluster ou avant la mise à jour de la configuration.</block>
+  <block id="a01b413c1a87a4e0b5a27f7477459347" category="doc">Obtenez la configuration du cluster</block>
+  <block id="0510f6e6bd78b2ec3d88fb42187ae328" category="paragraph-title">Paramètres d'entrée supplémentaires pour les exemples de boucles</block>
+  <block id="a9ea431a49179a653fb353a3d8027b29" category="paragraph">Outre les paramètres communs à tous les appels API REST, les paramètres suivants sont également utilisés dans l'exemple curl de cette étape.</block>
+  <block id="83f499a540b1323009c200d6f8cc9396" category="cell">Paramètre</block>
+  <block id="b651efdb98a5d6bd2b3935d0c3f4a5e2" category="cell">Obligatoire</block>
+  <block id="d05b6ed7d2345020440df396d6da7f73" category="cell">champs</block>
+  <block id="66c1b4c7f3dc385b68a9fa903ccd016d" category="cell">Requête</block>
+  <block id="a734854ee8bdd547b3a1a8eeee4f56a8" category="cell">Sélectionnez les valeurs que vous souhaitez renvoyer. Voici quelques exemples<block ref="2f8a6bf31f3bd67bd2d9720c58b19c9a" prefix=" " category="inline-code"></block> et<block ref="2af72f100c356273d46284f6fd1dfc08" prefix=" " category="inline-code"></block>.</block>
+  <block id="d68c817e523bebfd3bb5d6e6aed3c2f7" category="paragraph-title">Exemple curl : permet de récupérer les informations de contact du cluster</block>
+  <block id="defb04d386d33eda3cf981695c9da0e8" category="paragraph">Cet exemple illustre comment récupérer un seul champ. Pour obtenir la configuration complète du cluster, vous devez supprimer<block ref="d05b6ed7d2345020440df396d6da7f73" prefix=" " category="inline-code"></block> paramètre de requête.</block>
+  <block id="361f902ffbf6412778b4224d2f0f31a2" category="section-title">Variables de chemin</block>
+  <block id="847793b45951d6e2be78711a2dcc9cbc" category="paragraph">Le chemin du point de terminaison utilisé avec chaque appel de l'API REST peut inclure divers identificateurs. Chaque ID correspond à une instance de ressource spécifique. Exemples : ID de cluster et ID de SVM.</block>
+  <block id="cca8864630faf59781a9627c4ff42b91" category="list-text">L'authentification de base doit être définie avec le nom d'utilisateur et le mot de passe codés en tant que chaîne base64. Par exemple :</block>
+  <block id="d4a75631c199e30063c5b55330d690dc" category="paragraph"><block ref="20e17731e08bc5284461439422e12e1a" prefix="" category="inline-code"></block>.</block>
+  <block id="8e69453af156d83ee85c0320efa52ea2" category="list-text"><block ref="8e69453af156d83ee85c0320efa52ea2" category="inline-link-macro-rx"></block></block>
+  <block id="29ca978338507bc932aabe7888d4b362" category="list-text">ONTAP 9.6 à ONTAP 9.13.1</block>
+  <block id="a9cf0528ce80a52d0d018708afdefd2b" category="sidebar">Obtenez la configuration du cluster</block>
+  <block id="64893f12dbe0e133d03e0bed1c70559e" category="sidebar">Mettre à jour le contact du cluster</block>
+  <block id="8dba8e84622ab6bad2deffab01006636" category="sidebar">Liste des SVM</block>
 </blocks>

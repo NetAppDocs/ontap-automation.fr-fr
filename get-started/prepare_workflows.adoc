@@ -1,0 +1,153 @@
+---
+sidebar: sidebar 
+permalink: get-started/prepare_workflows.html 
+keywords: workflows, preparation, prepare to use workflows 
+summary: Vous devez connaître la structure et le format des workflows ONTAP avant de les utiliser avec un déploiement en direct. 
+---
+= Préparez l'utilisation des workflows
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Vous devez connaître la structure et le format des workflows ONTAP avant de les utiliser avec un déploiement en direct.
+
+
+
+== Introduction
+
+Un _workflow_ est une séquence d'une ou de plusieurs étapes nécessaires à la réalisation d'une tâche ou d'un objectif administratif spécifique. Les workflows ONTAP incluent les étapes clés et les paramètres dont vous avez besoin pour mener à bien chaque tâche. Elles constituent un point de départ pour la personnalisation de votre environnement d'automatisation ONTAP.
+
+.Types d'étape
+Chaque étape d'un flux de travail ONTAP est l'un des types suivants :
+
+* Appel d'API REST (avec des détails tels que des exemples Curl et JSON)
+* Exécuter ou appeler un autre flux de travail ONTAP
+* Tâches liées diverses (telles que la prise d'une décision de configuration)
+
+
+.Appels API REST
+La plupart des étapes du workflow sont des appels d'API REST. Ces étapes utilisent un format commun qui inclut un exemple de boucle et d'autres informations. Voir la link:../reference/api_reference.html["Référence API"] Pour plus de détails sur les appels de l'API REST.
+
+.Flux de production en une seule étape
+Un flux de travail ne peut contenir qu'une seule étape. Ces flux de travail à une seule étape sont formatés légèrement différemment des flux de travail contenant plusieurs étapes. Par exemple, le nom explicite de l'étape est supprimé. L'action de workflow doit être claire en fonction du titre.
+
+
+
+== Variables d'entrée
+
+Les flux de travail sont conçus pour être aussi généraux que possible et peuvent donc être utilisés dans n'importe quel environnement ONTAP. Dans cet esprit, les appels de l'API REST utilisent des variables dans les exemples de boucles et d'autres entrées. Les appels de l'API REST peuvent ensuite être facilement adaptés à différents environnements ONTAP.
+
+
+
+=== Format d'URL de base
+
+Vous pouvez accéder à l'API REST ONTAP directement via curl ou un langage de programmation tel que Python. Dans ce cas, l'URL de base est différente de l'URL que vous utilisez lorsque vous accédez à la documentation en ligne de ONTAP ou à System Manager.
+
+Lorsque vous accédez directement à l'API, vous devez ajouter *api* au domaine ou à l'adresse IP. Par exemple :
+
+`https://ontap.demo-example.com/api`
+
+Voir link:../rest/access_rest_api.html["Comment accéder à l'API ONTAP"] Pour plus d'informations sur l'accès à l'API REST ONTAP.
+
+
+
+=== Paramètres d'entrée communs
+
+Il existe plusieurs paramètres d'entrée couramment utilisés avec la plupart des appels API REST. Ces paramètres ne sont généralement pas décrits dans chaque flux de travail. Vous devez connaître les paramètres. Voir link:../rest/input_variables.html["Variables d'entrée contrôlant une requête API"] pour en savoir plus.
+
+Si des paramètres supplémentaires sont nécessaires pour un exemple de boucle spécifique, ils sont inclus dans la section *Paramètres d'entrée supplémentaires pour l'exemple de boucle* pour chaque flux de travail.
+
+
+
+=== Format variable
+
+Les valeurs d'ID et les autres variables utilisées avec les exemples de workflows sont opaques et peuvent varier en fonction du cluster ONTAP. Pour améliorer la lisibilité des exemples, les valeurs réelles ne sont pas utilisées. Les variables sont utilisées à la place. Cette approche, basée sur un format et un ensemble cohérents de noms réservés, présente plusieurs avantages :
+
+* Les échantillons Curl et JSON sont plus lisibles et plus faciles à comprendre.
+* Comme tous les mots-clés utilisent le même format, vous pouvez rapidement les identifier.
+* Il n'y a pas d'exposition de sécurité car les valeurs ne peuvent pas être copiées et réutilisées.
+
+
+Les variables sont formatées pour être utilisées dans un environnement shell Bash. Chaque variable commence par un signe dollar et est placée entre guillemets si nécessaire. Cela les rend reconnaissables à Bash. La casse supérieure est toujours utilisée pour les noms.
+
+Voici quelques mots clés de variable communs. Cette liste n'est pas exhaustive et des mots-clés supplémentaires sont utilisés au besoin. Leur signification devrait être évidente sur la base du contexte.
+
+[cols="25,15,60"]
+|===
+| Mot-clé | Type | Description 
+
+
+| $FQDN_IP | URL | Nom de domaine complet ou adresse IP de la LIF de gestion du cluster ONTAP. 
+
+
+| $CLUSTER_ID | Chemin | Valeur UUIDv4 identifiant le cluster ONTAP sur lequel s'exécutent les opérations de l'API. 
+
+
+| $BASIC_AUTH | En-tête | Chaîne d'informations d'identification utilisée pour l'authentification de base HTTP. 
+|===
+
+
+== Options d'authentification
+
+La méthode d'authentification principale disponible pour l'API REST via ONTAP 9.13.1 est l'authentification de base.
+
+
+
+=== Authentification de base HTTP
+
+Lors de l'utilisation de l'authentification de base, les informations d'identification de l'utilisateur doivent être incluses dans chaque requête HTTP. Il existe deux options pour envoyer les informations d'identification.
+
+.Construisez l'en-tête de requête HTTP
+Vous pouvez construire manuellement l'en-tête autorisation et l'inclure aux requêtes HTTP. Cela peut être fait lors de l'utilisation d'une commande curl dans l'interface de ligne de commande ou d'un langage de programmation avec votre code d'automatisation. Les étapes à un niveau élevé incluent :
+
+. Concaténez les valeurs d'utilisateur et de mot de passe avec deux points :
++
+`admin:david123`
+
+. Convertissez la chaîne entière en base64 :
++
+`YWRtaW46ZGF2aWQxMjM=`
+
+. Construisez l'en-tête de la demande :
++
+`Authorization: Basic YWRtaW46ZGF2aWQxMjM=`
+
+
+
+Les exemples de boucles de flux de travail incluent cet en-tête avec la variable *$BASIC_AUTH* que vous devez mettre à jour avant d'utiliser.
+
+.Utilisez un paramètre de courbure
+Une autre option lors de l'utilisation de curl consiste à supprimer l'en-tête autorisation et à utiliser le paramètre curl *user* à la place. Par exemple :
+
+`--user username:password`
+
+Vous devez remplacer les informations d'identification appropriées pour votre environnement. Lors de l'exécution de la commande curl avec ce paramètre, l'en-tête autorisation est généré pour vous.
+
+
+
+== Utilisation d'exemples de boucles avec la coque de hachage
+
+Si vous utilisez directement les exemples de boucles de flux de travail, vous devez mettre à jour les variables qu'ils contiennent avec les valeurs appropriées à votre environnement. Vous pouvez modifier manuellement les exemples ou vous appuyer sur le shell de hachage pour effectuer la substitution pour vous, comme décrit ci-dessous.
+
+
+NOTE: L'un des avantages de Bash est que vous pouvez définir les valeurs de variable une fois dans une session shell au lieu d'une fois par commande curl.
+
+.Étapes
+. Ouvrez le shell Bash fourni avec Linux ou un système d'exploitation similaire.
+. Définissez les valeurs variables incluses dans l'exemple de boucle que vous allez exécuter. Par exemple :
++
+`CLUSTER_ID=ce559b75-4145-11ee-b51a-005056aee9fb`
+
+. Copiez l'exemple de boucle depuis la page de flux de travail et collez-le dans le terminal shell.
+. Appuyez sur *ENTER* pour effectuer les opérations suivantes :
++
+.. Remplacez les valeurs de variable que vous avez définies
+.. Exécutez la commande curl
+
+
+

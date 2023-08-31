@@ -1,0 +1,114 @@
+---
+sidebar: sidebar 
+permalink: workflows/wf_update_cluster_contact.html 
+keywords: workflow, update cluster, cluster contact, job, job state 
+summary: 'Ce workflow met à jour les informations de contact sur le cluster. Comme la requête est traitée de manière asynchrone, elle indique également comment déterminer si la tâche d"arrière-plan s"exécute correctement.' 
+---
+= Mettre à jour le contact du cluster et confirmer l'état du travail
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Ce workflow met à jour les informations de contact sur le cluster. Étant donné que la demande est traitée de manière asynchrone, elle illustre également comment déterminer si le travail d'arrière-plan associé s'est terminé avec succès.
+
+
+
+== Étape 1 : mettez à jour les coordonnées du cluster
+
+Vous pouvez lancer un appel d'API pour mettre à jour les coordonnées.
+
+.Méthode HTTP et noeud final
+Cet appel d'API REST utilise la méthode et le point de terminaison suivants.
+
+[cols="25,75"]
+|===
+| Méthode HTTP | Chemin 
+
+
+| CORRECTIF | /cluster 
+|===
+.Type de traitement
+Asynchrone
+
+.Exemple de boucle
+[source, curl]
+----
+curl --location --include \
+--request PATCH "https://$FQDN_IP/api/cluster" \
+--header "Content-Type: application/json" \
+--header "Accept: */*" \
+--header "Authorization: Basic $BASIC_AUTH" \
+--data @JSONinput
+----
+.Exemple d'entrée JSON
+[source, json]
+----
+{
+  "contact": "support@company-demo.com"
+}
+----
+.Exemple de sortie JSON
+L'identifiant de l'objet de travail est renvoyé. Vous devez enregistrer la valeur ID pour l'utiliser à l'étape suivante en tant que variable $JOB_ID.
+
+[source, json]
+----
+{ "job": {
+    "uuid": "d877f5bb-3aa7-11e9-b6c6-005056a78c89",
+    "_links": {
+      "self": {
+        "href": "/api/cluster/jobs/d877f5bb-3aa7-11e9-b6c6-005056a78c89"
+      }
+    }
+  }
+}
+----
+
+
+== Étape 2 : récupération de l'état du travail
+
+Vous devez récupérer l'état du travail pour déterminer si la demande asynchrone a abouti.
+
+.Méthode HTTP et noeud final
+Cet appel d'API REST utilise la méthode et le point de terminaison suivants.
+
+[cols="25,75"]
+|===
+| Méthode HTTP | Chemin 
+
+
+| OBTENEZ | /cluster/tâches/{uuid} 
+|===
+.Type de traitement
+Synchrone
+
+.Exemple de boucle
+[source, curl]
+----
+curl --location --include \
+--request GET "https://$FQDN_IP/api/cluster/$JOB_ID" \
+--header "Accept: */*" \
+--header "Authorization: Basic $BASIC_AUTH"
+----
+.Exemple de sortie JSON
+La valeur d'état et d'autres champs sont inclus dans l'objet de travail renvoyé.
+
+[listing]
+----
+{
+  "uuid": "d877f5bb-3aa7-11e9-b6c6-005056a78c89",
+  "description": "PATCH /api/cluster",
+  "state": "success",
+  "message": "success",
+  "code": 0,
+  "_links": {
+    "self": {
+      "href": "/api/cluster/jobs/d877f5bb-3aa7-11e9-b6c6-005056a78c89"
+    }
+  }
+}
+----

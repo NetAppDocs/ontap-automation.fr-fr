@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: get-started/first_call.html 
-keywords: simple API call 
-summary: 'Vous pouvez lancer une commande curl simple sur l"interface de ligne de commande pour commencer à utiliser l"API REST ONTAP et confirmer sa disponibilité.' 
+keywords: first REST API call, test REST API 
+summary: 'Vous pouvez exécuter une commande curl pour commencer à utiliser l"API REST ONTAP et confirmer sa disponibilité.' 
 ---
 = Votre premier appel API
 :hardbreaks:
@@ -14,28 +14,32 @@ summary: 'Vous pouvez lancer une commande curl simple sur l"interface de ligne d
 
 
 [role="lead"]
-Vous pouvez lancer une commande curl simple sur l'interface de ligne de commande pour commencer à utiliser l'API REST ONTAP et confirmer sa disponibilité.
+Vous pouvez exécuter une commande curl pour commencer à utiliser l'API REST ONTAP et confirmer sa disponibilité.
 
 .Avant de commencer
-L'utilitaire Curl doit être disponible sur votre poste de travail. Vous devez également disposer des éléments suivants :
+En plus de disposer de l'utilitaire curl sur votre poste de travail, vous avez besoin des éléments suivants :
 
-* Adresse IP ou nom d'hôte de la LIF de gestion du cluster ONTAP
-* Nom d'utilisateur et mot de passe d'un compte disposant des droits d'accès à l'API REST de ONTAP (ressource de cluster).
+* Adresse IP ou FQDN de la LIF de gestion de cluster ONTAP
+* Identifiants ONTAP pour un compte habilité à accéder à l'API REST ONTAP
 
 
 
-NOTE: Si vos informations d'identification incluent des caractères spéciaux, vous devez les formater de manière acceptable pour Curl, en fonction du shell que vous utilisez. Par exemple, vous pouvez insérer une barre oblique inverse avant chaque caractère spécial ou envelopper la totalité `username:password` chaîne de devis unique.
+NOTE: Si vos informations d'identification incluent des caractères spéciaux, vous devez les formater d'une manière acceptable pour boucler en fonction du shell que vous utilisez. Par exemple, vous pouvez insérer une barre oblique inverse avant chaque caractère spécial ou envelopper la chaîne d'informations d'identification entière entre guillemets.
 
 .Étapes
-. Sur l'interface de ligne de commande de votre poste de travail local, récupérez la version du logiciel ONTAP :
+. Sur l'interface de ligne de commande de votre poste de travail local, exécutez la commande suivante :
 +
-`curl -X GET -u username:password -k "https://<ip_address>/api/cluster?fields=version"`
-
+[source, curl]
+----
+curl --request GET \
+--user username:password \
+"https://$FQDN_IP/api/cluster?fields=version"
+----
 +
 *Exemple*
 
 +
-`curl -X GET -u admin:password -k "https://10.222.81.101/api/cluster?fields=version"`
+`curl --request GET --user admin:david123 "https://10.222.81.101/api/cluster?fields=version"`
 
 
 
