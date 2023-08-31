@@ -92,6 +92,18 @@ Voici quelques mots clés de variable communs. Cette liste n'est pas exhaustive 
 |===
 
 
+=== Exemples d'entrée JSON
+
+Certains appels de l'API REST, tels que ceux utilisant POST ou PATCH, nécessitent une entrée JSON pour le corps de la requête. Pour plus de clarté, les exemples d'entrée JSON sont présentés séparément des exemples de boucles. Vous pouvez utiliser les exemples d'entrée JSON avec l'une des techniques décrites ci-dessous.
+
+.Enregistrer dans le fichier local
+Vous pouvez copier l'exemple JSON dans un fichier et l'enregistrer localement. La commande curl fait référence au fichier utilisant le `--data` paramètre avec la valeur indiquant le nom du fichier avec un `@` préfixe.
+
+.Coller dans la borne après l'exemple de courbure
+Vous devez tout d'abord copier et coller l'exemple de boucle dans le shell du terminal. Modifiez ensuite l'exemple pour supprimer complètement le `--data` à la fin du paramètre et remplacez-le par le `--data-raw` paramètre. Enfin, copiez et collez dans l'exemple JSON pour qu'il suive la commande curl et le paramètre mis à jour.
+
+
+
 == Options d'authentification
 
 La méthode d'authentification principale disponible pour l'API REST via ONTAP 9.13.1 est l'authentification de base.
@@ -130,7 +142,7 @@ Vous devez remplacer les informations d'identification appropriées pour votre e
 
 
 
-== Utilisation d'exemples de boucles avec la coque de hachage
+== En utilisant les exemples avec Bash
 
 Si vous utilisez directement les exemples de boucles de flux de travail, vous devez mettre à jour les variables qu'ils contiennent avec les valeurs appropriées à votre environnement. Vous pouvez modifier manuellement les exemples ou vous appuyer sur le shell de hachage pour effectuer la substitution pour vous, comme décrit ci-dessous.
 

@@ -1663,7 +1663,6 @@
   <block id="fe675d9d322274e9cc5a016dc13952d0" category="paragraph">Une autre option lors de l'utilisation de curl consiste à supprimer l'en-tête autorisation et à utiliser le paramètre curl *user* à la place. Par exemple :</block>
   <block id="2ce89c4ab048c9d719169c11cda31579" category="paragraph"><block ref="784832b5a8f97e143e4744b38ce2ea72" prefix="" category="inline-code"></block></block>
   <block id="64f444a853187a8c5bb3d8507d2ba64f" category="paragraph">Vous devez remplacer les informations d'identification appropriées pour votre environnement. Lors de l'exécution de la commande curl avec ce paramètre, l'en-tête autorisation est généré pour vous.</block>
-  <block id="76b8f173097880ead5a0f4cfd6e0618c" category="section-title">Utilisation d'exemples de boucles avec la coque de hachage</block>
   <block id="70ce4cad9d30893dd103460ed8538167" category="paragraph">Si vous utilisez directement les exemples de boucles de flux de travail, vous devez mettre à jour les variables qu'ils contiennent avec les valeurs appropriées à votre environnement. Vous pouvez modifier manuellement les exemples ou vous appuyer sur le shell de hachage pour effectuer la substitution pour vous, comme décrit ci-dessous.</block>
   <block id="f2e6cc557c48559ec2b9ae2a12ddd1c6" category="admonition">L'un des avantages de Bash est que vous pouvez définir les valeurs de variable une fois dans une session shell au lieu d'une fois par commande curl.</block>
   <block id="1e5ad8f157b0c54185ce7c5af4fe8bbd" category="list-text">Ouvrez le shell Bash fourni avec Linux ou un système d'exploitation similaire.</block>
@@ -1676,10 +1675,8 @@
   <block id="ba73b1e2f51518a93f594eedbae7551e" category="doc">Mettre à jour le contact du cluster et confirmer l'état du travail</block>
   <block id="9c06a14d4914d8244b17d64ba72bb24b" category="paragraph">Ce workflow met à jour les informations de contact sur le cluster. Étant donné que la demande est traitée de manière asynchrone, elle illustre également comment déterminer si le travail d'arrière-plan associé s'est terminé avec succès.</block>
   <block id="8d14eea70d7cb75d7edf6e297701e7c1" category="section-title">Étape 1 : mettez à jour les coordonnées du cluster</block>
-  <block id="5b65398d9afd1a14a452f4645c7fb774" category="paragraph">Vous pouvez lancer un appel d'API pour mettre à jour les coordonnées.</block>
   <block id="aeeec844965e3df4410c1eb088d94a03" category="paragraph-title">Méthode HTTP et noeud final</block>
   <block id="0b0231c1815d06ad4701a091ce91a740" category="paragraph">Cet appel d'API REST utilise la méthode et le point de terminaison suivants.</block>
-  <block id="75e17ff813d0ed4dba4fcb32abc673e6" category="paragraph">L'identifiant de l'objet de travail est renvoyé. Vous devez enregistrer la valeur ID pour l'utiliser à l'étape suivante en tant que variable $JOB_ID.</block>
   <block id="8bcf2b807fe961fb45913f99dea0b662" category="section-title">Étape 2 : récupération de l'état du travail</block>
   <block id="be81401da9da70cf197e1449ca61043d" category="paragraph">Vous devez récupérer l'état du travail pour déterminer si la demande asynchrone a abouti.</block>
   <block id="4044a674901deb07947f235775f9654d" category="paragraph">La valeur d'état et d'autres champs sont inclus dans l'objet de travail renvoyé.</block>
@@ -1696,7 +1693,6 @@
   <block id="66c1b4c7f3dc385b68a9fa903ccd016d" category="cell">Requête</block>
   <block id="a734854ee8bdd547b3a1a8eeee4f56a8" category="cell">Sélectionnez les valeurs que vous souhaitez renvoyer. Voici quelques exemples<block ref="2f8a6bf31f3bd67bd2d9720c58b19c9a" prefix=" " category="inline-code"></block> et<block ref="2af72f100c356273d46284f6fd1dfc08" prefix=" " category="inline-code"></block>.</block>
   <block id="d68c817e523bebfd3bb5d6e6aed3c2f7" category="paragraph-title">Exemple curl : permet de récupérer les informations de contact du cluster</block>
-  <block id="defb04d386d33eda3cf981695c9da0e8" category="paragraph">Cet exemple illustre comment récupérer un seul champ. Pour obtenir la configuration complète du cluster, vous devez supprimer<block ref="d05b6ed7d2345020440df396d6da7f73" prefix=" " category="inline-code"></block> paramètre de requête.</block>
   <block id="361f902ffbf6412778b4224d2f0f31a2" category="section-title">Variables de chemin</block>
   <block id="847793b45951d6e2be78711a2dcc9cbc" category="paragraph">Le chemin du point de terminaison utilisé avec chaque appel de l'API REST peut inclure divers identificateurs. Chaque ID correspond à une instance de ressource spécifique. Exemples : ID de cluster et ID de SVM.</block>
   <block id="cca8864630faf59781a9627c4ff42b91" category="list-text">L'authentification de base doit être définie avec le nom d'utilisateur et le mot de passe codés en tant que chaîne base64. Par exemple :</block>
@@ -1706,4 +1702,15 @@
   <block id="a9cf0528ce80a52d0d018708afdefd2b" category="sidebar">Obtenez la configuration du cluster</block>
   <block id="64893f12dbe0e133d03e0bed1c70559e" category="sidebar">Mettre à jour le contact du cluster</block>
   <block id="8dba8e84622ab6bad2deffab01006636" category="sidebar">Liste des SVM</block>
+  <block id="c17ef84c021b2307b064e8e24b8013a6" category="paragraph">Vous pouvez lancer une commande curl simple pour commencer à utiliser l'API REST de ONTAP et confirmer sa disponibilité.</block>
+  <block id="a98b00db4ce1fec40c21222810430c05" category="section-title">Exemples d'entrée JSON</block>
+  <block id="09e5af60e7e961d326ecb94915481554" category="paragraph">Certains appels de l'API REST, tels que ceux utilisant POST ou PATCH, nécessitent une entrée JSON pour le corps de la requête. Pour plus de clarté, les exemples d'entrée JSON sont présentés séparément des exemples de boucles. Vous pouvez utiliser les exemples d'entrée JSON avec l'une des techniques décrites ci-dessous.</block>
+  <block id="4d8521855bcfebae2c0518f634b5dcbd" category="paragraph-title">Enregistrer dans le fichier local</block>
+  <block id="399feb8e89d476ceeca1f9a576fb97ef" category="paragraph">Vous pouvez copier l'exemple JSON dans un fichier et l'enregistrer localement. La commande curl fait référence au fichier utilisant le<block ref="c579f384f53351a66c689bf14353d49c" prefix=" " category="inline-code"></block> paramètre avec la valeur indiquant le nom du fichier avec un<block ref="518ed29525738cebdac49c49e60ea9d3" prefix=" " category="inline-code"></block> préfixe.</block>
+  <block id="4ee40cd4d378b7de61905cb45f1009f5" category="paragraph-title">Coller dans la borne après l'exemple de courbure</block>
+  <block id="d44e4ebc435b8a720eca9d2dce5b7c87" category="paragraph">Vous devez tout d'abord copier et coller l'exemple de boucle dans le shell du terminal. Modifiez ensuite l'exemple pour supprimer complètement le<block ref="c579f384f53351a66c689bf14353d49c" prefix=" " category="inline-code"></block> à la fin du paramètre et remplacez-le par le<block ref="3165aa3b2ee77197f8cfd2cc80c7278f" prefix=" " category="inline-code"></block> paramètre. Enfin, copiez et collez dans l'exemple JSON pour qu'il suive la commande curl et le paramètre mis à jour.</block>
+  <block id="12c6401fb02cab85d072b4b981f50e87" category="section-title">En utilisant les exemples avec Bash</block>
+  <block id="b5cda5e8b7bc8b7e8457fef21d91230b" category="paragraph">Vous pouvez émettre un appel d'API pour mettre à jour les informations de contact du cluster.</block>
+  <block id="a8a1e002536d347b924b548b0ac40eaa" category="paragraph">L'objet de travail est renvoyé. Vous devez enregistrer l'identificateur de travail pour l'utiliser à l'étape suivante en tant que variable $JOB_ID.</block>
+  <block id="8c95ed01afcec406b4d0570ec3d3ff18" category="paragraph">Cet exemple illustre comment récupérer un seul champ. Pour obtenir l'ensemble de l'objet et de la configuration du cluster, vous devez supprimer le<block ref="d05b6ed7d2345020440df396d6da7f73" prefix=" " category="inline-code"></block> paramètre de requête.</block>
 </blocks>

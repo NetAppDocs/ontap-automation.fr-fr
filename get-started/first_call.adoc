@@ -14,7 +14,7 @@ summary: 'Vous pouvez exécuter une commande curl pour commencer à utiliser l"A
 
 
 [role="lead"]
-Vous pouvez exécuter une commande curl pour commencer à utiliser l'API REST ONTAP et confirmer sa disponibilité.
+Vous pouvez lancer une commande curl simple pour commencer à utiliser l'API REST de ONTAP et confirmer sa disponibilité.
 
 .Avant de commencer
 En plus de disposer de l'utilitaire curl sur votre poste de travail, vous avez besoin des éléments suivants :

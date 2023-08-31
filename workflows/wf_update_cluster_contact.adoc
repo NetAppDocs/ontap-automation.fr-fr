@@ -20,7 +20,7 @@ Ce workflow met à jour les informations de contact sur le cluster. Étant donn�
 
 == Étape 1 : mettez à jour les coordonnées du cluster
 
-Vous pouvez lancer un appel d'API pour mettre à jour les coordonnées.
+Vous pouvez émettre un appel d'API pour mettre à jour les informations de contact du cluster.
 
 .Méthode HTTP et noeud final
 Cet appel d'API REST utilise la méthode et le point de terminaison suivants.
@@ -53,9 +53,9 @@ curl --location --include \
 }
 ----
 .Exemple de sortie JSON
-L'identifiant de l'objet de travail est renvoyé. Vous devez enregistrer la valeur ID pour l'utiliser à l'étape suivante en tant que variable $JOB_ID.
+L'objet de travail est renvoyé. Vous devez enregistrer l'identificateur de travail pour l'utiliser à l'étape suivante en tant que variable $JOB_ID.
 
-[source, json]
+[listing]
 ----
 { "job": {
     "uuid": "d877f5bb-3aa7-11e9-b6c6-005056a78c89",

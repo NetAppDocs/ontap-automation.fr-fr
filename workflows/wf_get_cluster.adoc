@@ -37,7 +37,7 @@ Outre les paramètres communs à tous les appels API REST, les paramètres suiva
 | champs | Requête | Non | Sélectionnez les valeurs que vous souhaitez renvoyer. Voici quelques exemples `contact` et `version`. 
 |===
 .Exemple curl : permet de récupérer les informations de contact du cluster
-Cet exemple illustre comment récupérer un seul champ. Pour obtenir la configuration complète du cluster, vous devez supprimer `fields` paramètre de requête.
+Cet exemple illustre comment récupérer un seul champ. Pour obtenir l'ensemble de l'objet et de la configuration du cluster, vous devez supprimer le `fields` paramètre de requête.
 
 [source, curl]
 ----
