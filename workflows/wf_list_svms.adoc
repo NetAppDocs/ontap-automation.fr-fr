@@ -29,8 +29,9 @@ Cet appel d'API REST utilise la méthode et le point de terminaison suivants.
 .Exemple de boucle
 [source, curl]
 ----
-curl --location --include \
---request GET "https://$FQDN_IP/api/svm/svms" \
+curl --request GET \
+--location "https://$FQDN_IP/api/svm/svms" \
+--include \
 --header "Accept: */*" \
 --header "Authorization: Basic $BASIC_AUTH"
 ----

@@ -38,8 +38,9 @@ Asynchrone
 .Exemple de boucle
 [source, curl]
 ----
-curl --location --include \
---request PATCH "https://$FQDN_IP/api/cluster" \
+curl --request PATCH \
+--location "https://$FQDN_IP/api/cluster" \
+--include \
 --header "Content-Type: application/json" \
 --header "Accept: */*" \
 --header "Authorization: Basic $BASIC_AUTH" \
@@ -89,8 +90,9 @@ Synchrone
 .Exemple de boucle
 [source, curl]
 ----
-curl --location --include \
---request GET "https://$FQDN_IP/api/cluster/$JOB_ID" \
+curl --request GET \
+--location "https://$FQDN_IP/api/cluster/jobs/$JOB_ID" \
+--include \
 --header "Accept: */*" \
 --header "Authorization: Basic $BASIC_AUTH"
 ----
@@ -112,3 +114,8 @@ La valeur d'état et d'autres champs sont inclus dans l'objet de travail renvoy�
   }
 }
 ----
+
+
+== Étape 3 : confirmez les coordonnées du cluster
+
+Exécutez le flux de travail link:../workflows/wf_get_cluster.html["Obtenez la configuration du cluster"]. Vous devez définir le `fields` interroger le paramètre sur `contact`.
