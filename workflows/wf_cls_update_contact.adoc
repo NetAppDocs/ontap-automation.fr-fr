@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
-permalink: workflows/wf_update_cluster_contact.html 
+permalink: workflows/wf_cls_update_contact.html 
 keywords: workflow, update cluster, cluster contact, job, job state 
-summary: 'Ce workflow met à jour les informations de contact sur le cluster. Comme la requête est traitée de manière asynchrone, elle indique également comment déterminer si la tâche d"arrière-plan s"exécute correctement.' 
+summary: 'Vous pouvez mettre à jour les coordonnées d"un cluster. Étant donné que la demande est traitée de manière asynchrone, ce flux de travail illustre également comment déterminer si le travail d"arrière-plan associé s"est terminé avec succès.' 
 ---
 = Mettre à jour le contact du cluster et confirmer l'état du travail
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: 'Ce workflow met à jour les informations de contact sur le cluster. Co
 
 
 [role="lead"]
-Ce workflow met à jour les informations de contact sur le cluster. Étant donné que la demande est traitée de manière asynchrone, elle illustre également comment déterminer si le travail d'arrière-plan associé s'est terminé avec succès.
+Vous pouvez mettre à jour les coordonnées d'un cluster. Étant donné que la demande est traitée de manière asynchrone, ce flux de travail illustre également comment déterminer si le travail d'arrière-plan associé s'est terminé avec succès.
 
 
 

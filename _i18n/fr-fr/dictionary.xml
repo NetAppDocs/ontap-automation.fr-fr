@@ -770,7 +770,6 @@
   <block id="5528d45d676e7b5e4b5f82591b52d795" category="inline-link">Bibliothèque NetApp de rapports techniques et de livres blancs</block>
   <block id="8d4056bb7e1987655b2aad3e78b46bc4" category="list-text"><block ref="8d4056bb7e1987655b2aad3e78b46bc4" category="inline-link-rx"></block></block>
   <block id="e996b4c3d79a1e2689fba6ba27c0372f" category="paragraph">Accédez à des rapports techniques, à des livres blancs et à d'autres documents.</block>
-  <block id="7de269085c4e23e4ff26c31b7122144d" category="summary">Ce workflow met à jour les informations de contact sur le cluster. Comme la requête est traitée de manière asynchrone, elle indique également comment déterminer si la tâche d'arrière-plan s'exécute correctement.</block>
   <block id="e95402dceacd5260b74e758bf2e748ef" category="cell">/cluster</block>
   <block id="288aae25bc408055f50c21c991903a44" category="paragraph">Asynchrone</block>
   <block id="98dbba5c9ef16c64ae0471156940f706" category="cell">/cluster/tâches/{uuid}</block>
@@ -1660,8 +1659,6 @@
   <block id="1eaec3fd5985d760443b0386d2ee593a" category="list-text">Appuyez sur *ENTER* pour effectuer les opérations suivantes :</block>
   <block id="198b3154f73c4a62a05f7a0089ea4f3a" category="list-text">Remplacez les valeurs de variable que vous avez définies</block>
   <block id="9a6c9ba6963e8edb0564d74a05262568" category="list-text">Exécutez la commande curl</block>
-  <block id="ba73b1e2f51518a93f594eedbae7551e" category="doc">Mettre à jour le contact du cluster et confirmer l'état du travail</block>
-  <block id="9c06a14d4914d8244b17d64ba72bb24b" category="paragraph">Ce workflow met à jour les informations de contact sur le cluster. Étant donné que la demande est traitée de manière asynchrone, elle illustre également comment déterminer si le travail d'arrière-plan associé s'est terminé avec succès.</block>
   <block id="8d14eea70d7cb75d7edf6e297701e7c1" category="section-title">Étape 1 : mettez à jour les coordonnées du cluster</block>
   <block id="aeeec844965e3df4410c1eb088d94a03" category="paragraph-title">Méthode HTTP et noeud final</block>
   <block id="0b0231c1815d06ad4701a091ce91a740" category="paragraph">Cet appel d'API REST utilise la méthode et le point de terminaison suivants.</block>
@@ -1685,7 +1682,6 @@
   <block id="847793b45951d6e2be78711a2dcc9cbc" category="paragraph">Le chemin du point de terminaison utilisé avec chaque appel de l'API REST peut inclure divers identificateurs. Chaque ID correspond à une instance de ressource spécifique. Exemples : ID de cluster et ID de SVM.</block>
   <block id="cca8864630faf59781a9627c4ff42b91" category="list-text">L'authentification de base doit être définie avec le nom d'utilisateur et le mot de passe codés en tant que chaîne base64. Par exemple :</block>
   <block id="d4a75631c199e30063c5b55330d690dc" category="paragraph"><block ref="20e17731e08bc5284461439422e12e1a" prefix="" category="inline-code"></block>.</block>
-  <block id="8e69453af156d83ee85c0320efa52ea2" category="list-text"><block ref="8e69453af156d83ee85c0320efa52ea2" category="inline-link-macro-rx"></block></block>
   <block id="29ca978338507bc932aabe7888d4b362" category="list-text">ONTAP 9.6 à ONTAP 9.13.1</block>
   <block id="a9cf0528ce80a52d0d018708afdefd2b" category="sidebar">Obtenez la configuration du cluster</block>
   <block id="64893f12dbe0e133d03e0bed1c70559e" category="sidebar">Mettre à jour le contact du cluster</block>
@@ -1715,4 +1711,8 @@
   <block id="cb607a6c7e4c50ffa4ecc75254227d82" category="list-text">Définissez les valeurs variables incluses dans l'exemple de boucle que vous souhaitez exécuter. Par exemple :</block>
   <block id="88c3404621959196699b6d5e21481f01" category="section-title">Étape 3 : confirmez les coordonnées du cluster</block>
   <block id="d6e97a74db077b800b27092e142ea420" category="paragraph">Exécutez le flux de travail <block ref="7fc6abcb7d64eb85778fdfad2da4ab1a" category="inline-link-macro-rx"></block>. Vous devez définir le<block ref="d05b6ed7d2345020440df396d6da7f73" prefix=" " category="inline-code"></block> interroger le paramètre sur<block ref="2f8a6bf31f3bd67bd2d9720c58b19c9a" prefix=" " category="inline-code"></block>.</block>
+  <block id="3522d2e743ab2fd440e2280ea09b6946" category="inline-link-macro">Mettre à jour le contact du cluster et confirmer l'état du travail</block>
+  <block id="3c2bc619ddaef1bedada529634c6826d" category="list-text"><block ref="3c2bc619ddaef1bedada529634c6826d" category="inline-link-macro-rx"></block></block>
+  <block id="1adca2e27b8e8a9864351adf6119bafb" category="summary">Vous pouvez mettre à jour les coordonnées d'un cluster. Étant donné que la demande est traitée de manière asynchrone, ce flux de travail illustre également comment déterminer si le travail d'arrière-plan associé s'est terminé avec succès.</block>
+  <block id="3a434b661b7a5e9113a6b4de74efe1a0" category="sidebar">Résumé des ressources REST</block>
 </blocks>

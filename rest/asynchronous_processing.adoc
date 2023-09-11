@@ -78,5 +78,5 @@ Vous pouvez utiliser la procédure de haut niveau suivante pour effectuer un app
 
 
 .Informations associées
-* link:../workflows/wf_update_cluster_contact.html["Mettre à jour le contact du cluster et confirmer l'état du travail"]
+* link:../workflows/wf_cls_update_contact.html["Mettre à jour le contact du cluster et confirmer l'état du travail"]
 
