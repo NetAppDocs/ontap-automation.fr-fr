@@ -118,4 +118,4 @@ La valeur d'état et d'autres champs sont inclus dans l'objet de travail renvoy�
 
 == Étape 3 : confirmez les coordonnées du cluster
 
-Exécutez le flux de travail link:../workflows/wf_get_cluster.html["Obtenez la configuration du cluster"]. Vous devez définir le `fields` interroger le paramètre sur `contact`.
+Exécutez le flux de travail link:../workflows/wf_cls_get_cluster.html["Obtenez la configuration du cluster"]. Vous devez définir le `fields` interroger le paramètre sur `contact`.

@@ -1669,7 +1669,6 @@
   <block id="8febb780900dedf3c9e7802be64e20b8" category="doc">Lister les SVM</block>
   <block id="e713e270523baa8c3aca351e280ceba0" category="cell">/svm/svm</block>
   <block id="a3d2e020750395446da7d89e6da9765d" category="summary">Vous pouvez récupérer la configuration d'un cluster ONTAP avec des champs spécifiques. Vous pouvez le faire dans le cadre de l'évaluation de l'état du cluster ou avant la mise à jour de la configuration.</block>
-  <block id="a01b413c1a87a4e0b5a27f7477459347" category="doc">Obtenez la configuration du cluster</block>
   <block id="0510f6e6bd78b2ec3d88fb42187ae328" category="paragraph-title">Paramètres d'entrée supplémentaires pour les exemples de boucles</block>
   <block id="a9ea431a49179a653fb353a3d8027b29" category="paragraph">Outre les paramètres communs à tous les appels API REST, les paramètres suivants sont également utilisés dans l'exemple curl de cette étape.</block>
   <block id="83f499a540b1323009c200d6f8cc9396" category="cell">Paramètre</block>
@@ -1710,9 +1709,9 @@
   <block id="8bf3778ef40518b21cade909ac39bb88" category="paragraph">Vous devez remplacer les informations d'identification appropriées pour votre environnement. Les informations d'identification ne sont pas codées en base64. Lors de l'exécution de la commande curl avec ce paramètre, la chaîne est codée et l'en-tête autorisation est généré pour vous.</block>
   <block id="cb607a6c7e4c50ffa4ecc75254227d82" category="list-text">Définissez les valeurs variables incluses dans l'exemple de boucle que vous souhaitez exécuter. Par exemple :</block>
   <block id="88c3404621959196699b6d5e21481f01" category="section-title">Étape 3 : confirmez les coordonnées du cluster</block>
-  <block id="d6e97a74db077b800b27092e142ea420" category="paragraph">Exécutez le flux de travail <block ref="7fc6abcb7d64eb85778fdfad2da4ab1a" category="inline-link-macro-rx"></block>. Vous devez définir le<block ref="d05b6ed7d2345020440df396d6da7f73" prefix=" " category="inline-code"></block> interroger le paramètre sur<block ref="2f8a6bf31f3bd67bd2d9720c58b19c9a" prefix=" " category="inline-code"></block>.</block>
   <block id="3522d2e743ab2fd440e2280ea09b6946" category="inline-link-macro">Mettre à jour le contact du cluster et confirmer l'état du travail</block>
   <block id="3c2bc619ddaef1bedada529634c6826d" category="list-text"><block ref="3c2bc619ddaef1bedada529634c6826d" category="inline-link-macro-rx"></block></block>
   <block id="1adca2e27b8e8a9864351adf6119bafb" category="summary">Vous pouvez mettre à jour les coordonnées d'un cluster. Étant donné que la demande est traitée de manière asynchrone, ce flux de travail illustre également comment déterminer si le travail d'arrière-plan associé s'est terminé avec succès.</block>
   <block id="3a434b661b7a5e9113a6b4de74efe1a0" category="sidebar">Résumé des ressources REST</block>
+  <block id="3cf1284c45d0adfeed6003bf3d9bfe2e" category="paragraph">Exécutez le flux de travail <block ref="f8ef83534bba2e0fcad9a980050577d2" category="inline-link-macro-rx"></block>. Vous devez définir le<block ref="d05b6ed7d2345020440df396d6da7f73" prefix=" " category="inline-code"></block> interroger le paramètre sur<block ref="2f8a6bf31f3bd67bd2d9720c58b19c9a" prefix=" " category="inline-code"></block>.</block>
 </blocks>
