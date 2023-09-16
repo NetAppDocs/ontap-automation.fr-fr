@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
-permalink: additional/get_more_information.html 
+permalink: additional/resources.html 
 keywords: more information, additional resources 
 summary: 'Il existe plusieurs ressources supplémentaires qui vous aideront à obtenir de l"aide et à trouver plus d"informations sur l"automatisation du déploiement et de l"administration de vos systèmes de stockage ONTAP.' 
 ---
-= En savoir plus
+= Ressources supplémentaires
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -23,6 +23,10 @@ Il existe plusieurs ressources supplémentaires qui vous aideront à obtenir de 
 * https://docs.netapp.com/us-en/ontap-family/["Documentation produit sur ONTAP 9"^]
 +
 Fournit de la documentation relative à la gamme de produits ONTAP 9.
+
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508["Notes de version de ONTAP"^]
++
+Notes de version de ONTAP 9 avec des informations sur la version actuelle.
 
 * https://www.netapp.com/us/documentation/ontap-and-oncommand-system-manager.aspx["Ressources ONTAP et ONTAP System Manager"^]
 +
