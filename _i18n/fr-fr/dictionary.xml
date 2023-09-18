@@ -95,13 +95,8 @@
   <block id="10cb31045b1e0319cad9e10cb17e7d7f" category="section-title">Ressources du développeur</block>
   <block id="488449a83a7af94bacba6d31023a0ace" category="inline-link-macro">Solutions DevOps NetApp Ansible</block>
   <block id="8b328188cce263fb3b3c747dfca835f3" category="paragraph">Voir <block ref="0edd4b40b713849ac51dc73d6ee2b46b" category="inline-link-macro-rx"></block> Pour obtenir de l'aide sur la mise en route d'Ansible dans un environnement DevOps.</block>
-  <block id="a131529b4b9e76bc39353ef1aa209dd9" category="summary">Un numéro de version de l'API REST inclus dans ONTAP 9 est attribué indépendamment du numéro de version de ONTAP. Vous devez connaître la version de l'API fournie avec votre version de ONTAP et savoir en quoi cela pourrait affecter votre utilisation de l'API.</block>
-  <block id="645796c14f90a49c10fe89ef0d9036f0" category="doc">GESTION DES VERSIONS D'API REST D'ONTAP</block>
-  <block id="8797a71e8a89cb9c915f588f435aa882" category="admonition">Toutes les versions d'ONTAP 9 utilisent la même version de l'API REST.</block>
-  <block id="d4b36e25c7ff304278d8f8203382ad65" category="list-text">Version 1</block>
   <block id="f6bd0d7447ff66cc6b859603a88fbde9" category="list-title">Liens connexes</block>
   <block id="626a7cbe056796bcb1c158b143866230" category="inline-link-macro">Notes de version de ONTAP</block>
-  <block id="fa229fc458ab35ecd4519d4dcca0e7bb" category="list-text"><block ref="fa229fc458ab35ecd4519d4dcca0e7bb" category="inline-link-macro-rx"></block></block>
   <block id="80f5621e734bd116c58617e6c799fd18" category="summary">Vous pouvez utiliser le workflow décrit ci-dessous pour créer un utilisateur avec un rôle REST associé. Avant de passer en revue le flux de travail, vous devez connaître les étapes générales de préparation.</block>
   <block id="7341eaad1796dcd6268b71a308240243" category="doc">Créer un utilisateur avec un rôle</block>
   <block id="4615b675487f476dd46329e196d46e0b" category="section-title">Préparer la création d'un utilisateur ONTAP avec un rôle attribué</block>
@@ -1666,7 +1661,6 @@
   <block id="847793b45951d6e2be78711a2dcc9cbc" category="paragraph">Le chemin du point de terminaison utilisé avec chaque appel de l'API REST peut inclure divers identificateurs. Chaque ID correspond à une instance de ressource spécifique. Exemples : ID de cluster et ID de SVM.</block>
   <block id="cca8864630faf59781a9627c4ff42b91" category="list-text">L'authentification de base doit être définie avec le nom d'utilisateur et le mot de passe codés en tant que chaîne base64. Par exemple :</block>
   <block id="d4a75631c199e30063c5b55330d690dc" category="paragraph"><block ref="20e17731e08bc5284461439422e12e1a" prefix="" category="inline-code"></block>.</block>
-  <block id="29ca978338507bc932aabe7888d4b362" category="list-text">ONTAP 9.6 à ONTAP 9.13.1</block>
   <block id="a9cf0528ce80a52d0d018708afdefd2b" category="sidebar">Obtenez la configuration du cluster</block>
   <block id="64893f12dbe0e133d03e0bed1c70559e" category="sidebar">Mettre à jour le contact du cluster</block>
   <block id="8dba8e84622ab6bad2deffab01006636" category="sidebar">Liste des SVM</block>
@@ -1682,7 +1676,6 @@
   <block id="39b13b297edf030e2a6f8316d1a33f56" category="paragraph">Vous devez connaître la structure et le format des flux de travail avant de les utiliser avec un déploiement ONTAP en direct.</block>
   <block id="0ee204047e3ff10a0e6d606b38224615" category="paragraph">Un flux de travail ne peut contenir qu'une seule étape. Ces flux de travail à une seule étape sont formatés légèrement différemment des flux de travail contenant plusieurs étapes. Par exemple, le nom explicite de l'étape est supprimé. L'action ou l'opération doit être claire en fonction du titre du flux de travail.</block>
   <block id="8d197ea17b19bf5b877d0bca6b13aa1c" category="paragraph">Vous pouvez accéder directement à l'API REST ONTAP via curl ou un langage de programmation. Dans ce cas, l'URL de base est différente de l'URL que vous utilisez lorsque vous accédez à la documentation en ligne de ONTAP ou à System Manager.</block>
-  <block id="96dc946163c536a828ef3f6ac5ab199d" category="paragraph">Voir <block ref="fd12ec3737d055cdf76a7f06b5b60e9a" category="inline-link-macro-rx"></block> pour en savoir plus.</block>
   <block id="8b601595dec3f885a40ef9fec71f259d" category="paragraph">Si des paramètres supplémentaires sont nécessaires pour un appel d'API REST spécifique, ils sont inclus dans la section *Paramètres d'entrée supplémentaires pour l'exemple de boucle* pour chaque flux de travail.</block>
   <block id="dc9f325cca41d07c0fa65042753d1c30" category="paragraph">Les valeurs d'ID et les autres variables utilisées avec les exemples de workflow sont opaques et peuvent varier en fonction du cluster ONTAP. Pour améliorer la lisibilité des exemples, les valeurs réelles ne sont pas utilisées. Les variables sont utilisées à la place. Cette approche, basée sur un format et un ensemble cohérents de noms réservés, présente plusieurs avantages, notamment :</block>
   <block id="5fdcf5dc19660a9231d7bb52846ce0da" category="paragraph">Voici quelques mots clés de variable communs. Cette liste n'est pas exhaustive et d'autres variables sont utilisées si nécessaire. Leur signification devrait être évidente sur la base du contexte.</block>
@@ -1703,4 +1696,5 @@
   <block id="d70430e3ce6fd2f61524c5b7b9d27cb4" category="list-text"><block ref="d70430e3ce6fd2f61524c5b7b9d27cb4" category="inline-link-rx"></block></block>
   <block id="3f5e5352c860872dbfb2b2a52bd08d4c" category="paragraph">Notes de version de ONTAP 9 avec des informations sur la version actuelle.</block>
   <block id="0adc03eac86772ad2c75c8f140be417e" category="sidebar">Connaissances et support</block>
+  <block id="f792317fd7e11e74c29e5d363e4e430d" category="paragraph">Voir <block ref="431fa54c68c6c490a4d44973df3ba937" category="inline-link-macro-rx"></block> pour en savoir plus.</block>
 </blocks>

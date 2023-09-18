@@ -52,7 +52,7 @@ Lorsque vous accédez directement à l'API, vous devez ajouter *api* au domaine 
 
 `https://ontap.demo-example.com/api`
 
-Voir link:../rest/access_rest_api.html["Comment accéder à l'API REST de ONTAP"] pour en savoir plus.
+Voir link:../get-started/access_rest_api.html["Comment accéder à l'API REST de ONTAP"] pour en savoir plus.
 
 
 
