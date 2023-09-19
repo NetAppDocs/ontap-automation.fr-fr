@@ -1,0 +1,115 @@
+---
+sidebar: sidebar 
+permalink: workflows/wf_rbac_limit_svm.html 
+keywords:  
+summary: 'Vous pouvez définir un rôle de restriction de l"administration des volumes de stockage au sein d"une SVM.' 
+---
+= Limiter l'accès aux opérations de volume du SVM
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Vous pouvez définir un rôle de restriction de l'administration des volumes de stockage au sein d'une SVM.
+
+.A propos de ce flux de travail
+Un rôle traditionnel est d'abord créé pour autoriser initialement l'accès à toutes les principales fonctions d'administration des volumes, à l'exception du clonage. Le rôle est défini avec les caractéristiques suivantes :
+
+* Possibilité d'effectuer toutes les opérations de volume CRUD, y compris obtenir, créer, modifier et supprimer
+* Impossible de créer un clone de volume
+
+
+Vous pouvez ensuite, si nécessaire, mettre à jour le rôle. Dans ce workflow, le rôle est modifié dans la deuxième étape pour permettre à l'utilisateur de créer un clone de volume.
+
+
+
+== Étape 1 : créer le rôle
+
+Vous pouvez émettre un appel d'API pour créer le rôle RBAC.
+
+.Méthode HTTP et noeud final
+Cet appel d'API REST utilise la méthode et le point de terminaison suivants.
+
+[cols="25,75"]
+|===
+| Méthode HTTP | Chemin 
+
+
+| POST | /api/sécurité/rôles 
+|===
+.Exemple de boucle
+[source, curl]
+----
+curl --request POST \
+--location "https://$FQDN_IP/api/security/roles" \
+-- include \
+--header "Accept: */*" \
+--header "Authorization: Basic $BASIC_AUTH" \
+--data @JSONinput
+----
+.Exemple d'entrée JSON
+[source, curl]
+----
+{
+  "name": "role1",
+  "owner": {
+    "name": "cluster-1",
+    "uuid": "852d96be-f17c-11ec-9d19-005056bbad91"
+  },
+  "privileges": [
+      { "path": "volume create", "access": "all" },
+      { "path": "volume delete", "access": "all" }
+    ]
+}
+----
+
+
+== Étape 2 : mettez à jour le rôle
+
+Vous pouvez émettre un appel API pour mettre à jour le rôle existant.
+
+.Méthode HTTP et noeud final
+Cet appel d'API REST utilise la méthode et le point de terminaison suivants.
+
+[cols="25,75"]
+|===
+| Méthode HTTP | Chemin 
+
+
+| POST | /api/sécurité/rôles 
+|===
+.Paramètres d'entrée supplémentaires pour les exemples de boucles
+Outre les paramètres communs à tous les appels API REST, les paramètres suivants sont également utilisés dans l'exemple curl de cette étape.
+
+[cols="25,10,10,55"]
+|===
+| Paramètre | Type | Obligatoire | Description 
+
+
+| $SVM_ID | Chemin | Oui. | Il s'agit de l'UUID du SVM qui contient la définition du rôle. 
+
+
+| $NOM_RÔLE | Chemin | Oui. | Voici le nom du rôle au sein de la SVM à mettre à jour. 
+|===
+.Exemple de boucle
+[source, curl]
+----
+curl --request POST \
+--location "https://$FQDN_IP/api/security/roles/$SVM_ID/$ROLE_NAME/priveleges" \
+-- include \
+--header "Accept: */*" \
+--header "Authorization: Basic $BASIC_AUTH" \
+--data @JSONinput
+----
+.Exemple d'entrée JSON
+[source, curl]
+----
+{
+  "path": "volume clone",
+  "access": "all"
+}
+----

@@ -1,0 +1,245 @@
+---
+sidebar: sidebar 
+permalink: workflows/wf_rbac_user_role.html 
+keywords:  
+summary: Vous pouvez utiliser ce flux de travail pour créer un utilisateur avec un rôle REST associé. 
+---
+= Créer un utilisateur avec un rôle
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Vous pouvez utiliser ce flux de travail pour créer un utilisateur avec un rôle REST associé.
+
+.A propos de ce flux de travail
+Ce flux de travail comprend les étapes types nécessaires pour créer un rôle REST personnalisé et l'associer à un nouveau compte utilisateur. L'utilisateur et le rôle ont une étendue SVM et sont associés à un SVM de données spécifique. Certaines étapes peuvent être facultatives ou doivent être modifiées en fonction de votre environnement.
+
+
+
+== Étape 1 : liste des SVM de données dans le cluster
+
+Effectuer l'appel d'API REST suivant pour lister les SVM dans le cluster. L'UUID et le nom de chaque SVM sont fournis dans le résultat.
+
+.Méthode HTTP et noeud final
+Cet appel d'API REST utilise la méthode et le point de terminaison suivants.
+
+[cols="25,75"]
+|===
+| Méthode HTTP | Chemin 
+
+
+| OBTENEZ | /api/svm/svm 
+|===
+.Exemple de boucle
+[source, curl]
+----
+curl --request GET \
+--location "https://$FQDN_IP/api/svm/svms?order_by=name" \
+-- include \
+--header "Accept: */*" \
+--header "Authorization: Basic $BASIC_AUTH"
+----
+.Une fois que vous avez terminé
+Sélectionner le SVM souhaité dans la liste dans laquelle vous allez créer le nouvel utilisateur et le nouveau rôle.
+
+
+
+== Étape 2 : liste des utilisateurs définis pour la SVM
+
+Effectuer l'appel de l'API REST suivant pour répertorier les utilisateurs définis dans la SVM que vous avez sélectionnée. Vous pouvez identifier le SVM via le paramètre propriétaire.
+
+.Méthode HTTP et noeud final
+Cet appel d'API REST utilise la méthode et le point de terminaison suivants.
+
+[cols="25,75"]
+|===
+| Méthode HTTP | Chemin 
+
+
+| OBTENEZ | /api/sécurité/comptes 
+|===
+.Exemple de boucle
+[source, curl]
+----
+curl --request GET \
+--location "https://$FQDN_IP/api/security/accounts?owner.name=dmp" \
+-- include \
+--header "Accept: */*" \
+--header "Authorization: Basic $BASIC_AUTH"
+----
+.Une fois que vous avez terminé
+En fonction des utilisateurs déjà définis au sein du SVM, choisissez un nom unique pour le nouvel utilisateur.
+
+
+
+== Étape 3 : liste des rôles REST définis pour la SVM
+
+Effectuer l'appel de l'API REST suivant pour répertorier les rôles définis dans la SVM que vous avez sélectionnée. Vous pouvez identifier le SVM via le paramètre propriétaire.
+
+.Méthode HTTP et noeud final
+Cet appel d'API REST utilise la méthode et le point de terminaison suivants.
+
+[cols="25,75"]
+|===
+| Méthode HTTP | Chemin 
+
+
+| OBTENEZ | /api/sécurité/rôles 
+|===
+.Exemple de boucle
+[source, curl]
+----
+curl --request GET \
+--location "https://$FQDN_IP/api/security/roles?owner.name=dmp" \
+-- include \
+--header "Accept: */*" \
+--header "Authorization: Basic $BASIC_AUTH" \
+--data @JSONinput
+----
+.Une fois que vous avez terminé
+En fonction des rôles déjà définis dans le SVM, choisissez un nom unique pour le nouveau rôle.
+
+
+
+== Étape 4 : créez un rôle REST personnalisé
+
+Effectuer l'appel d'API REST suivant pour créer un rôle REST personnalisé dans la SVM. Au départ, le rôle n'a qu'un privilège qui établit un accès par défaut de *none* de sorte que tout accès soit refusé.
+
+.Méthode HTTP et noeud final
+Cet appel d'API REST utilise la méthode et le point de terminaison suivants.
+
+[cols="25,75"]
+|===
+| Méthode HTTP | Chemin 
+
+
+| POST | /api/sécurité/rôles 
+|===
+.Exemple de boucle
+[source, curl]
+----
+curl --request POST \
+--location "https://$FQDN_IP/api/security/roles" \
+-- include \
+--header "Accept: */*" \
+--header "Authorization: Basic $BASIC_AUTH" \
+--data @JSONinput
+----
+.Exemple d'entrée JSON
+[source, curl]
+----
+{
+  "name": "dprole1",
+  "owner": {
+    "name": "dmp",
+    "uuid": "752d96be-f17c-11ec-9d19-005056bbad91"
+  },
+  "privileges": [
+      {"path": "/api", "access": "none"},
+  ]
+}
+----
+.Une fois que vous avez terminé
+Vous pouvez également effectuer de nouveau l'étape 3 pour afficher le nouveau rôle. Vous pouvez également afficher les rôles au niveau de l'interface de ligne de commandes ONTAP.
+
+
+
+== Étape 5 : mettez à jour le rôle en ajoutant des privilèges supplémentaires
+
+Effectuez l'appel d'API REST suivant pour modifier le rôle en ajoutant des privilèges si nécessaire.
+
+.Méthode HTTP et noeud final
+Cet appel d'API REST utilise la méthode et le point de terminaison suivants.
+
+[cols="25,75"]
+|===
+| Méthode HTTP | Chemin 
+
+
+| POST | /api/sécurité/rôles/{owner.uuid}/{name}/privilèges 
+|===
+.Paramètres d'entrée supplémentaires pour les exemples de boucles
+Outre les paramètres communs à tous les appels API REST, les paramètres suivants sont également utilisés dans l'exemple curl de cette étape.
+
+[cols="25,10,10,55"]
+|===
+| Paramètre | Type | Obligatoire | Description 
+
+
+| $SVM_ID | Chemin | Oui. | UUID du SVM qui contient la définition de rôle. 
+
+
+| $NOM_RÔLE | Chemin | Oui. | Nom du rôle au sein de la SVM à mettre à jour. 
+|===
+.Exemple de boucle
+[source, curl]
+----
+curl --request POST \
+--location "https://$FQDN_IP/api/security/roles/$SVM_ID/$ROLE_NAME/priveleges" \
+-- include \
+--header "Accept: */*" \
+--header "Authorization: Basic $BASIC_AUTH" \
+--data @JSONinput
+----
+.Exemple d'entrée JSON
+[source, curl]
+----
+{
+  "path": "/api/storage/volumes",
+  "access": "readonly"
+}
+----
+.Une fois que vous avez terminé
+Vous pouvez également effectuer de nouveau l'étape 3 pour afficher le nouveau rôle. Vous pouvez également afficher les rôles au niveau de l'interface de ligne de commandes ONTAP.
+
+
+
+== Étape 6 : créer un utilisateur
+
+Effectuez l'appel d'API REST suivant pour créer un compte utilisateur. Le rôle *dprole1* créé ci-dessus est associé au nouvel utilisateur.
+
+
+TIP: Vous pouvez inclure l'utilisateur sans rôle. Dans ce cas, vous devrez modifier l'utilisateur pour attribuer un rôle.
+
+.Méthode HTTP et noeud final
+Cet appel d'API REST utilise la méthode et le point de terminaison suivants.
+
+[cols="25,75"]
+|===
+| Méthode HTTP | Chemin 
+
+
+| POST | /api/sécurité/comptes 
+|===
+.Exemple de boucle
+[source, curl]
+----
+curl --request POST \
+--location "https://$FQDN_IP/api/security/accounts" \
+-- include \
+--header "Accept: */*" \
+--header "Authorization: Basic $BASIC_AUTH" \
+--data @JSONinput
+----
+.Exemple d'entrée JSON
+[source, curl]
+----
+{
+  "owner": {"uuid":"daf84055-248f-11ed-a23d-005056ac4fe6"},
+  "name": "david",
+  "applications": [
+      {"application":"ssh",
+       "authentication_methods":["password"],
+       "second_authentication_method":"none"}
+  ],
+  "role":"dprole1",
+  "password":"netapp123"
+}
+----
+.Une fois que vous avez terminé
+Vous pouvez vous connecter à l'interface de gestion du SVM en utilisant les identifiants du nouvel utilisateur.

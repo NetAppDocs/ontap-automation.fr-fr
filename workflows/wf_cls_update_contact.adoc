@@ -30,7 +30,7 @@ Cet appel d'API REST utilise la méthode et le point de terminaison suivants.
 | Méthode HTTP | Chemin 
 
 
-| CORRECTIF | /cluster 
+| CORRECTIF | /api/cluster 
 |===
 .Type de traitement
 Asynchrone
@@ -82,7 +82,7 @@ Cet appel d'API REST utilise la méthode et le point de terminaison suivants.
 | Méthode HTTP | Chemin 
 
 
-| OBTENEZ | /cluster/tâches/{uuid} 
+| OBTENEZ | /api/cluster/jobs/{uuid} 
 |===
 .Type de traitement
 Synchrone

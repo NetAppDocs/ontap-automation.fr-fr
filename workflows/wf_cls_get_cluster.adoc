@@ -21,10 +21,10 @@ Cet appel d'API REST utilise la méthode et le point de terminaison suivants.
 
 [cols="25,75"]
 |===
-| Méthode HTTP | OBTENEZ 
+| Méthode HTTP | Chemin 
 
 
-| OBTENEZ | /cluster 
+| OBTENEZ | /api/cluster 
 |===
 .Paramètres d'entrée supplémentaires pour les exemples de boucles
 Outre les paramètres communs à tous les appels API REST, les paramètres suivants sont également utilisés dans l'exemple curl de cette étape.

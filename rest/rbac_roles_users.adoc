@@ -17,6 +17,9 @@ summary: Une fois que vous avez compris les fonctionnalités RBAC de base, vous 
 Une fois que vous avez compris les fonctionnalités RBAC de base, vous pouvez commencer à travailler avec les rôles et les utilisateurs ONTAP.
 
 
+NOTE: Voir link:../workflows/wf_rbac_prepare.html["Workflows RBAC"] Le fournit des exemples de création et d'utilisation de rôles avec l'API REST ONTAP.
+
+
 
 == Accès administratif
 

@@ -21,10 +21,10 @@ Cet appel d'API REST utilise la méthode et le point de terminaison suivants.
 
 [cols="25,75"]
 |===
-| Méthode HTTP | OBTENEZ 
+| Méthode HTTP | Chemin 
 
 
-| OBTENEZ | /svm/svm 
+| OBTENEZ | /api/svm/svm 
 |===
 .Exemple de boucle
 [source, curl]
