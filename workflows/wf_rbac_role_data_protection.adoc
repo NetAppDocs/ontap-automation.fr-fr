@@ -38,7 +38,7 @@ Cet appel d'API REST utilise la méthode et le point de terminaison suivants.
 ----
 curl --request POST \
 --location "https://$FQDN_IP/api/security/roles" \
--- include \
+--include \
 --header "Accept: */*" \
 --header "Authorization: Basic $BASIC_AUTH" \
 --data @JSONinput

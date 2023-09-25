@@ -40,7 +40,7 @@ Cet appel d'API REST utilise la méthode et le point de terminaison suivants.
 ----
 curl --request GET \
 --location "https://$FQDN_IP/api/svm/svms?order_by=name" \
--- include \
+--include \
 --header "Accept: */*" \
 --header "Authorization: Basic $BASIC_AUTH"
 ----
@@ -68,7 +68,7 @@ Cet appel d'API REST utilise la méthode et le point de terminaison suivants.
 ----
 curl --request GET \
 --location "https://$FQDN_IP/api/security/accounts?owner.name=dmp" \
--- include \
+--include \
 --header "Accept: */*" \
 --header "Authorization: Basic $BASIC_AUTH"
 ----
@@ -96,7 +96,7 @@ Cet appel d'API REST utilise la méthode et le point de terminaison suivants.
 ----
 curl --request GET \
 --location "https://$FQDN_IP/api/security/roles?owner.name=dmp" \
--- include \
+--include \
 --header "Accept: */*" \
 --header "Authorization: Basic $BASIC_AUTH" \
 --data @JSONinput
@@ -125,7 +125,7 @@ Cet appel d'API REST utilise la méthode et le point de terminaison suivants.
 ----
 curl --request POST \
 --location "https://$FQDN_IP/api/security/roles" \
--- include \
+--include \
 --header "Accept: */*" \
 --header "Authorization: Basic $BASIC_AUTH" \
 --data @JSONinput
@@ -180,8 +180,8 @@ Outre les paramètres communs à tous les appels API REST, les paramètres suiva
 [source, curl]
 ----
 curl --request POST \
---location "https://$FQDN_IP/api/security/roles/$SVM_ID/$ROLE_NAME/priveleges" \
--- include \
+--location "https://$FQDN_IP/api/security/roles/$SVM_ID/$ROLE_NAME/privileges" \
+--include \
 --header "Accept: */*" \
 --header "Authorization: Basic $BASIC_AUTH" \
 --data @JSONinput
@@ -204,7 +204,7 @@ Vous pouvez également effectuer de nouveau l'étape 3 pour afficher le nouveau 
 Effectuez l'appel d'API REST suivant pour créer un compte utilisateur. Le rôle *dprole1* créé ci-dessus est associé au nouvel utilisateur.
 
 
-TIP: Vous pouvez inclure l'utilisateur sans rôle. Dans ce cas, vous devrez modifier l'utilisateur pour attribuer un rôle.
+TIP: Vous pouvez créer l'utilisateur sans rôle. Dans ce cas, un rôle par défaut est attribué à l'utilisateur (soit `admin` ou `vsadmin`) Selon que l'utilisateur est défini ou non avec le périmètre du cluster ou du SVM. Vous devrez modifier l'utilisateur pour attribuer un rôle différent.
 
 .Méthode HTTP et noeud final
 Cet appel d'API REST utilise la méthode et le point de terminaison suivants.
@@ -221,7 +221,7 @@ Cet appel d'API REST utilise la méthode et le point de terminaison suivants.
 ----
 curl --request POST \
 --location "https://$FQDN_IP/api/security/accounts" \
--- include \
+--include \
 --header "Accept: */*" \
 --header "Authorization: Basic $BASIC_AUTH" \
 --data @JSONinput
