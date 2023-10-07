@@ -1719,4 +1719,14 @@
   <block id="b74cf40de9fee3f0ba4a3b37a59ed082" category="doc">Répertorie les certificats installés</block>
   <block id="f69688cd7802eb62a67f6a56384b3d93" category="cell">max_records</block>
   <block id="09548bddb5b6b060a8ff9db149caf9b5" category="cell">Spécifiez le nombre d'enregistrements que vous souhaitez renvoyer.</block>
+  <block id="b933168f11c5a1fef62b427e5c4faba9" category="summary">Vous pouvez installer un certificat X.509 signé dans votre cluster ONTAP. Vous pouvez le faire dans le cadre de la configuration d'une fonctionnalité ou d'un protocole ONTAP nécessitant une authentification forte.</block>
+  <block id="86ba127d49846ec207c19190730b16ac" category="doc">Installez un certificat</block>
+  <block id="5c88f057b69ff938c461962eab9693dc" category="paragraph">Vous devez disposer du certificat que vous souhaitez installer. Vous devez également vous assurer que tous les certificats intermédiaires sont installés selon les besoins.</block>
+  <block id="6a9cd64c223b26e7117c3bc5cd084d43" category="admonition">Avant d'utiliser les exemples d'entrée JSON inclus ci-dessous, assurez-vous de mettre à jour le<block ref="d73414ceb92d4d043000a5e640fd38a8" prefix=" " category="inline-code"></block> valeur avec le certificat pour votre environnement.</block>
+  <block id="bc81a95e520df56e073aa3da00713e6b" category="section-title">Étape 1 : installez le certificat</block>
+  <block id="7b92d99be03324f62f907c845be5b97c" category="paragraph">Vous pouvez émettre un appel d'API pour installer le certificat.</block>
+  <block id="2a277cc2a72e1e678197b2173c54ece4" category="listing-title">Exemple curl : installez un certificat CA racine au niveau du cluster</block>
+  <block id="f6c0383d899dc40b8c8d016d4b5f85de" category="section-title">Étape 2 : confirmez que le certificat a été installé</block>
+  <block id="5b3cfccbac20b0363f1d4e2d4431ab0e" category="paragraph">Exécutez le flux de travail <block ref="cf365ce6cd35c6dbd8b87fe3303f2226" category="inline-link-macro-rx"></block> et vérifiez que le certificat est disponible.</block>
+  <block id="1346018f60bf3711f3e704204dc2db96" category="sidebar">Installez le certificat</block>
 </blocks>
