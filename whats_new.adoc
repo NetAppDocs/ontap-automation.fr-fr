@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: rn/whats_new.html 
+permalink: whats_new.html 
 keywords: new features, new in release 
 summary: 'NetApp met régulièrement à jour l"API REST de ONTAP pour vous offrir de nouvelles fonctionnalités, améliorations et correctifs.' 
 ---
@@ -15,6 +15,9 @@ summary: 'NetApp met régulièrement à jour l"API REST de ONTAP pour vous offri
 
 [role="lead"]
 NetApp met régulièrement à jour l'API REST de ONTAP pour vous offrir de nouvelles fonctionnalités, améliorations et correctifs.
+
+
+TIP: Vous devez également consulter le https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508["Notes de version de ONTAP"^] pour plus d'informations, y compris les limitations ou problèmes connus.
 
 
 

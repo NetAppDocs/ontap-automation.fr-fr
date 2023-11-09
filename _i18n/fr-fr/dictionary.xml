@@ -140,7 +140,6 @@
   <block id="c731207305059b4146b7b02e506607f9" category="list-text">ONTAP 9.7 et versions antérieures : v1 et v2 (ONTAPI uniquement)</block>
   <block id="a7fc2881def06d9d5d2e90252bccd071" category="list-text">ONTAP 9.8 – 9.9 : v1, v2 et v3 (API ONTAPI et REST)</block>
   <block id="1a7f82d18a27e10799e90edeb79d7ff5" category="list-text">ONTAP 9.10.1 : v3 uniquement (API REST uniquement)</block>
-  <block id="e5adab4baa780b014bfe7130066b2a36" category="paragraph">Pour plus d'informations, reportez-vous à la section <block ref="fa229fc458ab35ecd4519d4dcca0e7bb" category="inline-link-macro-rx"></block>.</block>
   <block id="430e01911dcacc88e4a83d838ae504e2" category="list-text"><block ref="430e01911dcacc88e4a83d838ae504e2" category="inline-link-macro-rx"></block></block>
   <block id="ec99af624b0dd923250ecbec162bcc59" category="inline-link">Aux informations de mappage d'API REST</block>
   <block id="8159db13d1fb608175963a59674de159" category="list-text"><block ref="8159db13d1fb608175963a59674de159" category="inline-link-rx"></block></block>
@@ -461,7 +460,6 @@
   <block id="40631aef1c7a95be86710dae30e73e3d" category="doc">Présentation de la sécurité RBAC</block>
   <block id="fb40fe81e6f182515c987233a6044be5" category="inline-link-macro">Résumé de l'évolution du RBAC</block>
   <block id="e9019ae8c9c4fb4acd7eba0895e32433" category="inline-link-macro">Nouveautés de l'API REST et de l'automatisation ONTAP</block>
-  <block id="f06d994dc2c76601280d13d092043991" category="admonition">La fonction RBAC d'ONTAP s'est poursuivie et a été considérablement améliorée grâce à ONTAP 9.11.1 (et aux versions suivantes). Voir <block ref="a7069b5bd09115d6dd0ed5b5c7e1ff08" category="inline-link-macro-rx"></block> et <block ref="5c7637441553bbdd364a0c84153850ad" category="inline-link-macro-rx"></block> pour en savoir plus.</block>
   <block id="8964641d12d0ef111bd01efe34f212c2" category="section-title">Rôles ONTAP</block>
   <block id="9929e2b53efd5ebe9b5548b705552bf0" category="paragraph">Un rôle est un ensemble de privilèges qui définissent collectivement les actions que l'utilisateur peut effectuer. Chaque privilège identifie un chemin d'accès spécifique et le niveau d'accès associé. Les rôles sont attribués aux comptes utilisateur et appliqués par ONTAP lors de décisions de contrôle d'accès.</block>
   <block id="062c6b1332887634d0f4ba9bb07e2408" category="section-title">Types de rôles</block>
@@ -726,15 +724,6 @@
   <block id="288aae25bc408055f50c21c991903a44" category="paragraph">Asynchrone</block>
   <block id="2fe4167817733fec8e6ba1afddf78f1b" category="paragraph">Synchrone</block>
   <block id="1b18b55a054bdd1b04a8c8f5c862bc4f" category="doc">Préparez l'utilisation des workflows</block>
-  <block id="d45d9e85cc7b83745a3636a19ac8b2bb" category="summary">L'API REST d'ONTAP comporte certaines limites ou restrictions qui peuvent affecter votre utilisation de l'API et le développement du code d'automatisation.</block>
-  <block id="482723983a4f2af954e36ff41e567451" category="doc">Limites connues</block>
-  <block id="b5ec85c168694921a9de5eadfa6243a8" category="paragraph">L'API REST d'ONTAP comporte certaines limites ou restrictions qui peuvent affecter votre utilisation de l'API et le développement du code d'automatisation. Ces restrictions sont décrites ci-dessous. De manière générale, chacune s'applique à toutes les versions d'ONTAP prises en charge où l'API REST est disponible. Consultez le champ _ONTAP releases_ pour plus d'informations.</block>
-  <block id="3428b552896ca875d0afc0a87f353a49" category="admonition">L'API REST a été disponible pour la première fois avec ONTAP 9.6.</block>
-  <block id="3a7bd150a3b127f640a55f3e4295ae12" category="paragraph">_Versions de ONTAP : toutes les versions prises en charge_</block>
-  <block id="3806b2980e70701200d32d0a7249795f" category="paragraph">Chaque requête client de l'API REST est reçue par ONTAP et placée dans une file d'attente d'entrée avant d'être traitée. Lorsque les taux d'arrivée sont extrêmement élevés, la file d'attente d'entrée contenant ces requêtes API peut être temporairement remplie. Lorsque cela se produit, chaque demande de débordement supplémentaire est rejetée. Dans ces situations :</block>
-  <block id="b313d34412fbec083537488efb6a7265" category="list-text">ONTAP reconnaît que la connexion entrante dépasse la profondeur de la file d'attente et consigne un message indiquant qu'elle a échoué à la connexion.</block>
-  <block id="b497355f60941f025ea8887fd49f2692" category="list-text">Le client REST observe l'échec de la connexion, bien que le comportement exact puisse dépendre du client. Par exemple, avec un client NMSDK, le message « échec de la connexion à SSL » s'affiche.</block>
-  <block id="ba9b38c8f7abd73c0e9a44d75391a449" category="paragraph">Le remplissage de la file d'attente d'entrée de l'API REST est un événement rare. Mais le rejet des demandes excédentaires offre une protection contre les attaques dos.</block>
   <block id="b5ad0fadac714409796245d1b58f5199" category="summary">NetApp met régulièrement à jour l'API REST de ONTAP pour vous offrir de nouvelles fonctionnalités, améliorations et correctifs.</block>
   <block id="eb0cda77424e206695a7e1df680678f7" category="paragraph">Avec plus de quarante nouveaux appels d'API, ONTAP 9.12.1 continue d'étendre les fonctionnalités de l'API REST ONTAP. Ces terminaux prennent en charge les nouvelles fonctionnalités ONTAP ainsi que les améliorations apportées aux fonctionnalités existantes. Cette version vise à améliorer la sécurité et les fonctionnalités NAS.</block>
   <block id="5f6c185eb38c56187fc699dfbe62654b" category="list-text">Sécurité améliorée</block>
@@ -1389,11 +1378,9 @@
   <block id="2e02e4fcb54e6e1277182e7dcc734294" category="paragraph-title">Mappage ONTAPI vers REST</block>
   <block id="805b9473c23e0b45b5fd4963679c3e01" category="paragraph-title">Transformez votre automatisation en API REST ONTAP à partir de ONTAPI</block>
   <block id="1619e1c3b30e9ffacda0df56950f805b" category="paragraph-title">Transition depuis ONTAPI à l'aide de l'outil de reporting d'utilisation ONTAPI</block>
-  <block id="21aec37d095265f9895a6901a6c9b4be" category="paragraph-title">Les demandes d'API REST sont rejetées lorsque la file d'attente d'entrée est pleine</block>
   <block id="88e25761f6eadcead9ced5f76a00e95c" category="doc">Votre premier appel API</block>
   <block id="75c90b2d1f920512c61cb6505fb520e4" category="paragraph">Les ressources disponibles via l'API REST de ONTAP sont organisées par catégories, comme illustré dans la documentation en ligne de l'API ONTAP. Une brève description de chacune des ressources est présentée ci-dessous, ainsi que des considérations d'utilisation supplémentaires le cas échéant.</block>
   <block id="8b650ff756e15491b90bea96a705b16b" category="inline-link-macro">Quelles sont les nouveautés de l'API REST de ONTAP</block>
-  <block id="d9f8d52d6d6ec5ead10f99c5fd6ae4ae" category="paragraph">Les ressources REST décrites dans ce résumé sont basées sur la dernière version du produit. Si vous avez besoin de comprendre les modifications apportées par les versions précédentes, reportez-vous à la section <block ref="26eaa6b7897a71145f335345df4a84a2" category="inline-link-macro-rx"></block> ainsi que le<block ref="13c0668cefb5d13050e1de01793dacbb" category="inline-link-rx"></block>.</block>
   <block id="07eb085f158de3f60622e4d2e80f4439" category="paragraph">Pour faciliter la transition des utilisateurs de l'interface de ligne de commande et de ONTAP vers l'API REST ONTAP, ONTAP fournit un terminal d'API REST privé pouvant être utilisé pour accéder à n'importe quelle commande CLI.</block>
   <block id="b1499db826a2349f9ed4124e74094a5c" category="inline-link"><block ref="b1499db826a2349f9ed4124e74094a5c" category="inline-link-rx"></block></block>
   <block id="bec415242b70caa298d3b8964f06c830" category="paragraph"><block ref="bec415242b70caa298d3b8964f06c830" category="inline-link-rx"></block></block>
@@ -1729,4 +1716,8 @@
   <block id="453c37c8e9a76deb2b13d5a2c2c4be7b" category="paragraph"><block ref="71e2add861ef98d4019f3cebd53921c4" prefix="" category="inline-code"></block></block>
   <block id="c22e9379c891fca636de58b50cf46bc3" category="paragraph"><block ref="e27598c7184d00cb3ee9f87da21a55c5" prefix="" category="inline-code"></block></block>
   <block id="adbde3ab61ea5b6041902022caaaeddc" category="paragraph"><block ref="c07b7bd445e059f84d0bc076867fcd31" prefix="" category="inline-code"></block></block>
+  <block id="3b4eb2c2464d0801cad28a2ce6319a1c" category="paragraph">Les ressources REST décrites dans ce résumé sont basées sur la dernière version du produit. Si vous avez besoin de comprendre les modifications apportées par les versions précédentes, reportez-vous à la section <block ref="eea437b9922115b60f36debdfc0ed4d0" category="inline-link-macro-rx"></block> ainsi que le<block ref="13c0668cefb5d13050e1de01793dacbb" category="inline-link-rx"></block>.</block>
+  <block id="47c25bc89f41cb229d9f5a0f8cc43df0" category="admonition">Vous devez également consulter le<block ref="13c0668cefb5d13050e1de01793dacbb" category="inline-link-rx"></block> pour plus d'informations, y compris les limitations ou problèmes connus.</block>
+  <block id="72679fae292d57bf767f718c146bf6a1" category="admonition">La fonction RBAC d'ONTAP s'est poursuivie et a été considérablement améliorée grâce à ONTAP 9.11.1 (et aux versions suivantes). Voir <block ref="a7069b5bd09115d6dd0ed5b5c7e1ff08" category="inline-link-macro-rx"></block> et <block ref="44134cd34c398895e571223ccabdd386" category="inline-link-macro-rx"></block> pour en savoir plus.</block>
+  <block id="f3b85d23635afa201e61913278969401" category="paragraph">Pour plus d'informations, reportez-vous à la section<block ref="13c0668cefb5d13050e1de01793dacbb" category="inline-link-rx"></block>.</block>
 </blocks>
