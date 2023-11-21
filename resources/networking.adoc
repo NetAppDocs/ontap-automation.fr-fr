@@ -35,10 +35,10 @@ Vous pouvez récupérer ou modifier la configuration des commutateurs Ethernet u
 Vous pouvez utiliser les terminaux d'API REST de structure Fibre Channel (FC) pour extraire des informations sur le réseau FC. Cela inclut les connexions entre le cluster ONTAP et la structure FC, les commutateurs comprenant la structure et les zones du zoneset actif. Ce type de ressource a été introduit avec ONTAP 9.11.
 
 .Interfaces Fibre Channel
-Une interface Fibre Channel est un terminal logique associé à un SVM. Ce type de ressource a été introduit avec ONTAP 9.6 et mis à jour avec ONTAP 9.8.
+Une interface Fibre Channel est un terminal logique associé à un SVM. Ce type de ressource a été introduit avec ONTAP 9.6 et mis à jour avec ONTAP 9.8. La prise en charge de l'extraction des données de mesures de performances a été ajoutée avec ONTAP 9.14.
 
 .Ports Fibre Channel
-Un port Fibre Channel est un adaptateur physique sur un nœud ONTAP utilisé pour se connecter au réseau Fibre Channel. Ce type de ressource a été introduit avec ONTAP 9.6 et mis à jour avec ONTAP 9.8.
+Un port Fibre Channel est un adaptateur physique sur un nœud ONTAP utilisé pour se connecter au réseau Fibre Channel. Ce type de ressource a été introduit avec ONTAP 9.6 et mis à jour avec ONTAP 9.8. La prise en charge de l'extraction des données de mesures de performances a été ajoutée avec ONTAP 9.14.
 
 .Proxy HTTP
 Vous pouvez configurer un proxy HTTP pour un SVM ou un IPSpace de cluster. Ce type de ressource a été introduit avec ONTAP 9.7.

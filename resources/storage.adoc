@@ -55,6 +55,9 @@ Ports de stockage du cluster. Ce type de ressource a été introduit avec ONTAP 
 .Des règles DE QOS
 Configuration des règles de qualité de service. Ce type de ressource a été introduit avec ONTAP 9.6.
 
+.Options de QOS
+Les terminaux ont été introduits pour vous permettre de récupérer et de définir les options de QoS pour le cluster. Par exemple, vous pouvez réserver un pourcentage des ressources de traitement système disponibles pour les tâches en arrière-plan. Ce type de ressource a été introduit avec ONTAP 9.14.
+
 .De QUALITÉ de service
 Une charge de travail de QoS représente un objet de stockage suivi par QoS. Vous pouvez récupérer les workflows QoS. Ce type de ressource a été introduit avec ONTAP 9.10.
 

@@ -85,6 +85,9 @@ Les moteurs FPolicy vous permettent d'identifier les serveurs externes qui reço
 .Événements FPolicy
 La configuration identifiant la façon dont l'accès aux fichiers est surveillé et les événements générés. Ce type de ressource a été introduit avec ONTAP 9.6.
 
+.Stockage persistant FPolicy
+Vous pouvez configurer et gérer un magasin persistant pour la configuration et les événements ONTAP FPolicy. Chaque SVM peut disposer d'un magasin persistant qui est partagé pour les différentes règles au sein de la SVM. Ce type de ressource a été introduit avec ONTAP 9.14.
+
 .Règles FPolicy
 Conteneur pour les éléments du framework FPolicy, y compris les moteurs et les événements FPolicy. Ce type de ressource a été introduit avec ONTAP 9.6.
 

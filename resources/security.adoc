@@ -46,6 +46,9 @@ Cet ensemble d'appels d'API vous permet d'utiliser le coffre-fort de clés Azure
 .Certificats
 Les appels API peuvent être utilisés pour installer, afficher et supprimer des certificats utilisés par ONTAP. Ce type de ressource a été introduit avec ONTAP 9.7.
 
+.Duo Cisco
+Duo fournit une authentification à deux facteurs pour les connexions SSH. Vous pouvez configurer Duo pour qu'il fonctionne au niveau du cluster ONTAP ou du SVM. Ce type de ressource a été introduit avec ONTAP 9.14.
+
 .Sécurité du cluster
 Vous pouvez récupérer des informations relatives à la sécurité au niveau du cluster et mettre à jour certains paramètres. Ce type de ressource a été introduit avec ONTAP 9.7 et mis à jour avec ONTAP 9.8.
 
@@ -71,7 +74,7 @@ Ces noeuds finaux vous permettent de récupérer et de mettre à jour les config
 Un gestionnaire de clés permet aux modules clients de ONTAP de stocker des clés en toute sécurité. Ce type de ressource a été introduit avec ONTAP 9.6 et mis à jour pour ONTAP 9.7. Une autre mise à jour a été effectuée avec ONTAP 9.12 pour prendre en charge les clés d'authentification. Une fonctionnalité de restauration a été ajoutée à ONTAP 9.13.
 
 .Magasins clés
-Un magasin de clés décrit le type d'un gestionnaire de clés. Ce type de ressource est nouveau avec ONTAP 9.10.
+Un magasin de clés décrit le type d'un gestionnaire de clés. Ce type de ressource est nouveau avec ONTAP 9.10. Des terminaux supplémentaires prenant en charge le contrôle renforcé ont été ajoutés avec ONTAP 9.14.
 
 .Authentification LDAP
 Ces appels d'API sont utilisés pour récupérer et gérer la configuration du serveur LDAP du cluster. Ce type de ressource a été introduit avec ONTAP 9.6.
@@ -91,6 +94,9 @@ En autorisant plusieurs administrateurs à approuver l'accès, il améliore la s
 
 .Authentification NIS
 Ces paramètres sont utilisés pour récupérer et gérer la configuration du serveur NIS du cluster. Ce type de ressource a été introduit avec ONTAP 9.6.
+
+.OAuth 2.0
+L'autorisation ouverte (OAuth 2.0) est une structure basée sur un jeton qui peut être utilisée pour restreindre l'accès à vos ressources de stockage ONTAP. Vous pouvez l'utiliser avec des clients qui accèdent à ONTAP via l'API REST. La configuration peut s'effectuer avec toutes les interfaces d'administration ONTAP, y compris l'API REST. Ce type de ressource a été introduit avec ONTAP 9.14.
 
 .Authentification par mot de passe
 Cela inclut l'appel API utilisé pour modifier le mot de passe d'un compte utilisateur. Ce type de ressource a été introduit avec ONTAP 9.6.

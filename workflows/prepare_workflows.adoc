@@ -109,13 +109,13 @@ Vous devez tout d'abord copier et coller l'exemple de boucle dans une coque de t
 
 == Options d'authentification
 
-La méthode d'authentification principale disponible pour l'API REST via ONTAP 9.13.1 est l'authentification de base.
+La technique d'authentification principale disponible pour l'API REST est l'authentification de base HTTP. À partir de ONTAP 9.14, vous avez également la possibilité d'utiliser l'infrastructure d'autorisation ouverte (OAuth 2.0) avec authentification et autorisation basées sur des jetons.
 
 
 
 === Authentification de base HTTP
 
-Lors de l'utilisation de l'authentification de base, les informations d'identification de l'utilisateur doivent être incluses dans chaque requête HTTP. Il existe deux options pour envoyer les informations d'identification.
+Lors de l'utilisation de l'authentification de base, les informations d'identification de l'utilisateur doivent être incluses avec chaque requête HTTP. Il existe deux options pour envoyer les informations d'identification.
 
 .Construisez l'en-tête de requête HTTP
 Vous pouvez construire manuellement l'en-tête autorisation et l'inclure aux requêtes HTTP. Cela peut être fait lors de l'utilisation d'une commande curl dans l'interface de ligne de commande ou d'un langage de programmation avec votre code d'automatisation. Les étapes générales comprennent :
@@ -142,6 +142,30 @@ Une autre option lors de l'utilisation de curl consiste à supprimer l'en-tête 
 `--user username:password`
 
 Vous devez remplacer les informations d'identification appropriées pour votre environnement. Les informations d'identification ne sont pas codées en base64. Lors de l'exécution de la commande curl avec ce paramètre, la chaîne est codée et l'en-tête autorisation est généré pour vous.
+
+
+
+=== OAuth 2.0
+
+Lorsque vous utilisez OAuth 2.0, vous devez demander un jeton d'accès à un serveur d'autorisation externe et l'inclure à chaque requête HTTP. Les étapes générales de base sont décrites ci-dessous. Voir aussi https://docs.netapp.com/us-en/ontap/authentication/overview-oauth2.html["Présentation de la mise en œuvre de ONTAP OAuth 2.0"^] Pour plus d'informations sur OAuth 2.0 et sur son utilisation avec ONTAP.
+
+.Préparez votre environnement ONTAP
+Avant d'utiliser l'API REST pour accéder à ONTAP, vous devez préparer et configurer l'environnement ONTAP. À un niveau élevé, les étapes comprennent :
+
+* Identifier les ressources et les clients protégés par ONTAP
+* Vérifiez le rôle REST ONTAP et les définitions d'utilisateur existantes
+* Installez et configurez le serveur d'autorisation
+* Concevoir et configurer les définitions d'autorisation client
+* Configurez ONTAP et activez OAuth 2.0
+
+
+.Demander un jeton d'accès
+Avec ONTAP et le serveur d'autorisation défini et actif, vous pouvez effectuer un appel d'API REST à l'aide d'un jeton OAuth 2.0. La première étape consiste à demander un jeton d'accès au serveur d'autorisation. Cette opération est effectuée en dehors de ONTAP en utilisant l'une des différentes techniques basées sur le serveur. ONTAP n'émet pas de tokens d'accès ni n'effectue de redirection.
+
+.Construisez l'en-tête de requête HTTP
+Après avoir obtenu un jeton d'accès, vous pouvez construire un en-tête autorisation et l'inclure aux requêtes HTTP. Que vous utilisiez curl ou un langage de programmation pour accéder à l'API REST, vous devez inclure l'en-tête à chaque demande client. Vous pouvez construire l'en-tête comme suit :
+
+`Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSld ...`
 
 
 
