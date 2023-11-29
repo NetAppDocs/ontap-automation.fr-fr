@@ -1446,8 +1446,6 @@
   <block id="4482877c1310ddfbbba9fb22dc7df61b" category="paragraph">Vous pouvez utiliser cet appel d'API REST pour afficher toutes les lignes d'une table. Indique les instances des objets Counter Manager existantes.</block>
   <block id="fcecf68c3a713225f78b4de16ac6df03" category="section-title">Exemple 4 : une seule ligne dans une table spécifique</block>
   <block id="0aeaf5f6b15f47a8487668e4d5e041f2" category="paragraph">Vous pouvez utiliser cet appel d'API REST pour afficher les valeurs de compteur de performances d'une instance de gestionnaire de compteurs spécifique dans le tableau. Dans cet exemple, les données de performances de l'un des adaptateurs hôtes sont demandées.</block>
-  <block id="19a9062545fe4aec02e4bb9d69d9e65d" category="inline-link">Documentation NetApp PCL pour 9.13.1</block>
-  <block id="99984697846692a3881d97799a42681d" category="list-text"><block ref="99984697846692a3881d97799a42681d" category="inline-link-rx"></block></block>
   <block id="963d435d638b3d71d80951dc73d9e301" category="paragraph">Un groupe de cohérence est un ensemble de volumes qui sont regroupés au cours de certaines opérations telles que les snapshots. Cette fonctionnalité étend la même cohérence de panne et l'intégrité des données implicite avec les opérations à un seul volume sur un ensemble de volumes. Ce type de ressource a été introduit avec ONTAP 9.10 et mis à jour avec 9.12. Un terminal pour récupérer les données de mesure de la performance et de la capacité a été ajouté à ONTAP 9.13.</block>
   <block id="a8b23618c319cee164fb5e3f52338ae8" category="paragraph">Un gestionnaire de clés permet aux modules clients de ONTAP de stocker des clés en toute sécurité. Ce type de ressource a été introduit avec ONTAP 9.6 et mis à jour pour ONTAP 9.7. Une autre mise à jour a été effectuée avec ONTAP 9.12 pour prendre en charge les clés d'authentification. Une fonctionnalité de restauration a été ajoutée à ONTAP 9.13.</block>
   <block id="f677f9a733e2a55d249253e8ee3e8921" category="paragraph-title">TOTPS</block>
@@ -1461,8 +1459,6 @@
   <block id="718f01f530b26a630c97ea9d3dabf463" category="paragraph">Vous pouvez utiliser des balises pour regrouper les ressources de l'API REST. Vous pouvez le faire pour associer des ressources associées à un projet ou à un groupe organisationnel spécifique. L'utilisation de balises permet d'organiser et de suivre les ressources plus efficacement. Ce type de ressource a été introduit avec ONTAP 9.13.</block>
   <block id="6e35f32cbbb6f9e4f935f3e9092771f0" category="paragraph-title">Règles du compartiment S3</block>
   <block id="6bc2fc1d1d82b40d53835f8a9db33179" category="paragraph">Les compartiments S3 peuvent inclure une définition de règle. Chaque règle est une liste d'objets et définit l'ensemble des actions à effectuer sur un objet dans le compartiment. Ce type de ressource a été introduit avec ONTAP 9.13.</block>
-  <block id="5f6bf2fac8af69fcf38f9b1b785e910e" category="inline-link">PyPI : NetApp ONTAP 9.13.1</block>
-  <block id="1d6690c7f751b90aee685c57c28ea355" category="list-text"><block ref="1d6690c7f751b90aee685c57c28ea355" category="inline-link-rx"></block></block>
   <block id="3d1c384a3746b6aef27889dab20ca2a0" category="doc">Outils et logiciels</block>
   <block id="0a88f9e4d64baf56329012472f2f7f1c" category="paragraph">NetApp fournit des exemples de scripts Python et d'autres logiciels associés pour prendre en charge votre migration d'ONTAPI vers l'API REST ONTAP. Les plus importants de ces échantillons sont décrits ci-dessous.</block>
   <block id="2025f1a4ba0e95c1bd1bd27f08690087" category="inline-link">NetApp ONTAP REST Python</block>
@@ -1763,4 +1759,6 @@
   <block id="f393f584e27f669b011040984c1c9496" category="inline-link">Mappage du compteur de performances ONTAP 9.14.1</block>
   <block id="49ffd7a8d8266844e2ec7c32f18e5cb1" category="list-text"><block ref="49ffd7a8d8266844e2ec7c32f18e5cb1" category="inline-link-rx"></block></block>
   <block id="61a5cb9aa0d74d026e5b2a2811ac5856" category="list-text"><block ref="61a5cb9aa0d74d026e5b2a2811ac5856" category="inline-link-rx"></block></block>
+  <block id="2cea11979f1d383a5921860d201ed868" category="inline-link">IP: NetApp ONTAP 9.14.1</block>
+  <block id="90412d82652a0008df94a427a205c033" category="list-text"><block ref="90412d82652a0008df94a427a205c033" category="inline-link-rx"></block></block>
 </blocks>
