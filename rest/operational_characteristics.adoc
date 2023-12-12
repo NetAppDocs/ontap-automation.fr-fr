@@ -69,7 +69,7 @@ Traitement asynchrone:: Si une demande asynchrone est valide, ONTAP crée une t�
 Les demandes qui utilisent les méthodes POST, PATCH et DELETE sont conçues pour s'exécuter de manière asynchrone si elles devraient prendre plus de deux secondes.
 
 
-NOTE: Le `return_timeout` Le paramètre de requête est disponible avec des appels d'API asynchrones et peut convertir un appel asynchrone pour terminer de manière synchrone. Reportez-vous à la section `How asynchronous processing works using the Job object` pour en savoir plus.
+NOTE: Le `return_timeout` Le paramètre de requête est disponible avec des appels d'API asynchrones et peut convertir un appel asynchrone pour terminer de manière synchrone. Reportez-vous à la section link:../rest/asynchronous_processing.html["Traitement asynchrone à l'aide de l'objet travail"] pour en savoir plus.
 
 --
 

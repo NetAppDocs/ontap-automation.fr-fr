@@ -1,0 +1,61 @@
+---
+sidebar: sidebar 
+permalink: workflows/wf_jobs_get_job.html 
+keywords: workflow, job, job state 
+summary: 'Vous pouvez récupérer l"instance d"un travail ONTAP spécifique. Vous devez généralement effectuer cette opération pour déterminer si le travail et l"opération associée ont réussi.' 
+---
+= Obtenir l'instance de travail
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Vous pouvez récupérer l'instance d'un travail ONTAP spécifique. Vous devez généralement effectuer cette opération pour déterminer si le travail et l'opération associée ont réussi.
+
+
+NOTE: Vous avez besoin de l'UUID de l'objet de travail, généralement fourni après l'émission d'une requête asynchrone. Consultez également link:../rest/asynchronous_processing.html["Traitement asynchrone à l'aide de l'objet travail"] Avant de travailler avec des travaux internes ONTAP.
+
+.Méthode HTTP et noeud final
+Cet appel d'API REST utilise la méthode et le point de terminaison suivants.
+
+[cols="25,75"]
+|===
+| Méthode HTTP | Chemin 
+
+
+| OBTENEZ | /api/cluster/jobs/{uuid} 
+|===
+.Type de traitement
+Synchrone
+
+.Exemple de boucle
+[source, curl]
+----
+curl --request GET \
+--location "https://$FQDN_IP/api/cluster/jobs/$JOB_ID" \
+--include \
+--header "Accept: */*" \
+--header "Authorization: Basic $BASIC_AUTH"
+----
+.Exemple de sortie JSON
+La valeur d'état et d'autres champs sont inclus dans l'objet de travail renvoyé. Dans cet exemple, la tâche a été exécutée dans le cadre de la mise à jour d'un cluster ONTAP.
+
+[listing]
+----
+{
+  "uuid": "d877f5bb-3aa7-11e9-b6c6-005056a78c89",
+  "description": "PATCH /api/cluster",
+  "state": "success",
+  "message": "success",
+  "code": 0,
+  "_links": {
+    "self": {
+      "href": "/api/cluster/jobs/d877f5bb-3aa7-11e9-b6c6-005056a78c89"
+    }
+  }
+}
+----
