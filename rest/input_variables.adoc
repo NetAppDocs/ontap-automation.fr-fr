@@ -108,9 +108,6 @@ En plus d'une correspondance exacte, d'autres opérateurs sont disponibles pour 
 | >= | Supérieur ou égal à 
 
 
-| MISE À JOUR | Ou 
-
-
 | ! | Différent de 
 
 
