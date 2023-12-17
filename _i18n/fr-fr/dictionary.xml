@@ -524,9 +524,6 @@
   <block id="973ab3cad185dec8eac7662330e49f1c" category="paragraph">Le contenu du corps de la demande varie en fonction de l'appel spécifique. Le corps de requête HTTP comprend l'un des éléments suivants :</block>
   <block id="b86f5c6ed2b7d52e2940495dc8a984f4" category="list-text">Objet JSON avec variables d'entrée</block>
   <block id="ac860c2e604ebd01436860da72828954" category="section-title">Filtrage d'objets</block>
-  <block id="0438b035fcfcfd3b3c333dd8d993e532" category="paragraph">Lors de l'émission d'un appel API utilisant GET, vous pouvez limiter ou filtrer les objets renvoyés en fonction de n'importe quel attribut. Par exemple, vous pouvez spécifier une valeur exacte à associer :</block>
-  <block id="1fc998fba92eac6c354078a63d749232" category="paragraph"><block ref="9f076f2b1cbf046a6f73c579be1c3ca0" prefix="" category="inline-code"></block></block>
-  <block id="7d306d43ad9025b540f138ad516bc09f" category="paragraph">En plus d'une correspondance exacte, d'autres opérateurs sont disponibles pour renvoyer un ensemble d'objets sur une plage de valeurs. L'API REST ONTAP prend en charge les opérateurs de filtrage indiqués dans le tableau ci-dessous.</block>
   <block id="e1b3ec89ead7f83a9245ed5c9cacfdbf" category="cell">Opérateur</block>
   <block id="43ec3e5dee6e706af7766fffea512721" category="cell">=</block>
   <block id="495c04002891bebf41bc3b56507f6d6b" category="cell">Égal à</block>
@@ -1768,7 +1765,6 @@
   <block id="0b741905860f34a10d74010f462f6dab" category="paragraph-title">Paramètres d'entrée supplémentaires pour les exemples Curl</block>
   <block id="8ad1007adda12ebaacc83f24d677e5e6" category="paragraph">Outre les paramètres communs à tous les appels API REST, les paramètres suivants sont également utilisés dans les exemples de boucles pour cette étape.</block>
   <block id="dfcd3526cb1256fb8b0242048ce8f6fe" category="cell">Renvoie une liste limitée des valeurs de configuration pertinentes.</block>
-  <block id="c7d3a12d9cd219818b942ce7b79635d9" category="listing-title">Exemple curl : renvoie toutes les LIFs avec les valeurs de configuration par défaut</block>
   <block id="533043f9cd78f3216839a884ba0b162b" category="listing-title">Exemple curl : renvoie toutes les LIFs avec quatre valeurs de configuration spécifiques</block>
   <block id="5060abb5e8980122d0dc1c35e9f85efd" category="doc">Répertorier les disques</block>
   <block id="9e414eeae313ebca6ec1a78d41b6aa68" category="paragraph">Vous pouvez récupérer la liste des disques du cluster. Vous pouvez ainsi localiser une ou plusieurs réserves à utiliser dans le cadre de la création d'un agrégat.</block>
@@ -1777,4 +1773,32 @@
   <block id="6e5a184a338e990223b90751d5dce3fa" category="cell">Peut être utilisé pour identifier les disques de spare disponibles pour les nouveaux agrégats.</block>
   <block id="9c049e1832aad88667dcc17e261acc9c" category="listing-title">Exemple curl : renvoie tous les disques</block>
   <block id="2f16f01d47fc5581920b2b69e5a6cdc2" category="listing-title">Exemple curl : renvoyez les disques de rechange</block>
+  <block id="2a11f21f5d4741d58b7d14923d4e08f9" category="doc">Répertoriez les comptes</block>
+  <block id="4394c7ebecc609175a50f72d74a0557f" category="paragraph">Vous pouvez récupérer une liste des comptes. Vous pouvez procéder ainsi pour évaluer votre environnement de sécurité ou avant de créer un nouveau compte.</block>
+  <block id="47a8ff2921d745ff1e85c78a7811f188" category="doc">Lister les agrégats</block>
+  <block id="490c2fcb0f7a2efc0e882e344265c316" category="paragraph">Vous pouvez récupérer la liste des agrégats dans le cluster. Vous pourriez le faire pour évaluer l'utilisation et les performances.</block>
+  <block id="6edce6e6c5993cbcc3356de83eed68df" category="cell">node.name</block>
+  <block id="586ba6b164fb68d2e277e5509c3d920e" category="cell">Peut être utilisé pour identifier le nœud auquel chaque agrégat est rattaché.</block>
+  <block id="d77215a29f7c4c57074e8278a01cb44d" category="listing-title">Exemple de bouclage : renvoie tous les agrégats avec les valeurs de configuration par défaut</block>
+  <block id="3d13cd0551da6b0edbb329a4192f28a3" category="listing-title">Exemple de bouclage : renvoie tous les agrégats avec une valeur de configuration spécifique</block>
+  <block id="902758a99886ee9a4b12dd38cc667f95" category="doc">Répertorie les interfaces IP</block>
+  <block id="1220a442fc15fd5c171980b6a6315040" category="listing-title">Exemple curl : renvoie toutes les LIFs avec les valeurs de configuration par défaut</block>
+  <block id="36e958b717916175c77e1c0a9bd8a51d" category="doc">Répertoriez les disques</block>
+  <block id="c4acc246007fa7e427ad78bab2246d93" category="cell">$JOB_ID</block>
+  <block id="e62ba1f7e88de861aba828d64f793b2f" category="cell">Nécessaire pour identifier le travail demandé.</block>
+  <block id="542fcd84c10c6cf94d17a2aec683b3f3" category="paragraph">Lors de l'émission d'un appel API avec la méthode GET, vous pouvez limiter ou filtrer les objets renvoyés en fonction de n'importe quel attribut à l'aide d'un paramètre de requête.</block>
+  <block id="955b7d9243f52aec4fa2071a7e7ad288" category="paragraph-title">Analyse et interprétation des paramètres de requête</block>
+  <block id="9450bd9053706a256157ab8cc92adf52" category="paragraph">Un ensemble d'un ou de plusieurs paramètres peut être ajouté à la chaîne d'URL commençant après<block ref="d1457b72c3fb323a2671125aef3eab5d" prefix=" " category="inline-code"></block> caractère. Si plusieurs paramètres sont fournis, les paramètres de requête sont divisés en fonction du<block ref="c2249209343ab488c055da76368f04a0" prefix=" " category="inline-code"></block> caractère. Chaque clé et chaque valeur du paramètre sont divisées au niveau du<block ref="43ec3e5dee6e706af7766fffea512721" prefix=" " category="inline-code"></block> caractère.</block>
+  <block id="95fa08f73714767c61e4cea7b8a20379" category="paragraph">Par exemple, vous pouvez spécifier une valeur exacte à associer à l'aide du signe égal :</block>
+  <block id="74f6abd0177ccf8e12b99c549ea3b6d9" category="paragraph"><block ref="be5382cb5b9ec38c8c64155f50b2673c" prefix="" category="inline-code"></block></block>
+  <block id="3d0d077df6fbc6a8dacd58d0e3a43157" category="paragraph">Pour une requête plus complexe, l'opérateur supplémentaire est placé après le signe égal. Par exemple, pour sélectionner l'ensemble d'objets en fonction d'un champ spécifique supérieur ou égal à une valeur donnée, la requête sera :</block>
+  <block id="1b978b08d514ad8048572a85cc260aaa" category="paragraph"><block ref="5ab924ec7238940346c80a48f8d1f72a" prefix="" category="inline-code"></block></block>
+  <block id="a2d3029446b19abc06285a2799e13be1" category="paragraph-title">Opérateurs de filtrage</block>
+  <block id="13b6a9b0d5425b920127d4f9acaf22a8" category="paragraph">En plus des exemples fournis ci-dessus, des opérateurs supplémentaires sont disponibles pour renvoyer des objets sur une plage de valeurs. Le tableau ci-dessous présente un récapitulatif des opérateurs de filtrage pris en charge par l'API REST ONTAP.</block>
+  <block id="d67829f213cbca0faa82b58361450353" category="paragraph-title">Exemples de flux de travail</block>
+  <block id="dc131215a5de282bcdc24d4b9a1a79c0" category="paragraph">Certains workflows de l'API REST de ce site en sont quelques exemples.</block>
+  <block id="2a47586adb0d57af3895f5a0dd2cebc4" category="list-text"><block ref="2a47586adb0d57af3895f5a0dd2cebc4" category="inline-link-macro-rx"></block></block>
+  <block id="b9fa03b6deb6ff800a98be430195fdf0" category="paragraph">Filtrer en fonction du<block ref="9ed39e2ea931586b6a985a6942ef573e" prefix=" " category="inline-code"></block> variable permettant de sélectionner les disques de spare.</block>
+  <block id="a095881e994974280881b1e5dd2a89a9" category="sidebar">Répertorier les comptes</block>
+  <block id="075cb19bc679ad9261b9031c5f0c7d2f" category="sidebar">Répertorier les agrégats</block>
 </blocks>

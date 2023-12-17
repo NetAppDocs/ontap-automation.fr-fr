@@ -83,13 +83,28 @@ Le contenu du corps de la demande varie en fonction de l'appel spécifique. Le c
 
 == Filtrage d'objets
 
-Lors de l'émission d'un appel API utilisant GET, vous pouvez limiter ou filtrer les objets renvoyés en fonction de n'importe quel attribut. Par exemple, vous pouvez spécifier une valeur exacte à associer :
+Lors de l'émission d'un appel API avec la méthode GET, vous pouvez limiter ou filtrer les objets renvoyés en fonction de n'importe quel attribut à l'aide d'un paramètre de requête.
 
-`<field>=<query value>`
+.Analyse et interprétation des paramètres de requête
+Un ensemble d'un ou de plusieurs paramètres peut être ajouté à la chaîne d'URL commençant après `?` caractère. Si plusieurs paramètres sont fournis, les paramètres de requête sont divisés en fonction du `&` caractère. Chaque clé et chaque valeur du paramètre sont divisées au niveau du `=` caractère.
 
-En plus d'une correspondance exacte, d'autres opérateurs sont disponibles pour renvoyer un ensemble d'objets sur une plage de valeurs. L'API REST ONTAP prend en charge les opérateurs de filtrage indiqués dans le tableau ci-dessous.
+Par exemple, vous pouvez spécifier une valeur exacte à associer à l'aide du signe égal :
+
+`<field>=<value>`
+
+Pour une requête plus complexe, l'opérateur supplémentaire est placé après le signe égal. Par exemple, pour sélectionner l'ensemble d'objets en fonction d'un champ spécifique supérieur ou égal à une valeur donnée, la requête sera :
+
+`<field>\=>=<value>`
+
+.Opérateurs de filtrage
+En plus des exemples fournis ci-dessus, des opérateurs supplémentaires sont disponibles pour renvoyer des objets sur une plage de valeurs. Le tableau ci-dessous présente un récapitulatif des opérateurs de filtrage pris en charge par l'API REST ONTAP.
+
+
+NOTE: Les champs qui ne sont pas définis sont généralement exclus des requêtes correspondantes.
 
 |===
+
+
 | Opérateur | Description 
 
 
@@ -115,8 +130,14 @@ En plus d'une correspondance exacte, d'autres opérateurs sont disponibles pour 
 |===
 Vous pouvez également renvoyer une collection d'objets en fonction de la définition ou non d'un champ spécifique à l'aide du `null` mot clé ou sa négation `!null` dans le cadre de la requête.
 
+.Exemples de flux de travail
+Certains workflows de l'API REST de ce site en sont quelques exemples.
 
-NOTE: Les champs qui ne sont pas définis sont généralement exclus des requêtes correspondantes.
+* link:../workflows/wf_stor_list_disks.html["Répertorier les disques"]
++
+Filtrer en fonction du `state` variable permettant de sélectionner les disques de spare.
+
+
 
 
 

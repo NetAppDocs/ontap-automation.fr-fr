@@ -32,6 +32,16 @@ Cet appel d'API REST utilise la méthode et le point de terminaison suivants.
 .Type de traitement
 Synchrone
 
+.Paramètres d'entrée supplémentaires pour les exemples Curl
+Outre les paramètres communs à tous les appels API REST, les paramètres suivants sont également utilisés dans les exemples de boucles pour cette étape.
+
+[cols="25,10,10,55"]
+|===
+| Paramètre | Type | Obligatoire | Description 
+
+
+| $JOB_ID | Chemin | Oui. | Nécessaire pour identifier le travail demandé. 
+|===
 .Exemple de boucle
 [source, curl]
 ----

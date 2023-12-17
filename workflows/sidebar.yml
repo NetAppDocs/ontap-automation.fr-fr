@@ -18,6 +18,10 @@ entries:
     url: "/workflows/wf_net_list_ip_lifs.html"
 - title: Sécurité
   entries:
+  - title: Comptes
+    entries:
+    - title: Répertorier les comptes
+      url: "/workflows/wf_sec_list_accounts.html"
   - title: Certificats et clés
     entries:
     - title: Répertorier les certificats
@@ -40,6 +44,8 @@ entries:
       url: "/workflows/wf_rbac_user_role.html"
 - title: Stockage
   entries:
+  - title: Répertorier les agrégats
+    url: "/workflows/wf_stor_list_aggrs.html"
   - title: Répertorier les disques
     url: "/workflows/wf_stor_list_disks.html"
 - title: SVM
