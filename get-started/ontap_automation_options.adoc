@@ -29,7 +29,7 @@ Vous pouvez accéder directement à l'API REST de ONTAP via n'importe quel langa
 
 == Adaptez le code ONTAPI hérité pour utiliser LE REPOS
 
-Si vous disposez d'un code existant à l'aide de l'API ONTAPI, NetApp prend en charge la conversion de votre code pour utiliser l'API REST ONTAP plus récente. Voir https://library.netapp.com/ecm/ecm_download_file/ECMLP2879870["Aux informations de mappage d'API REST"^] Pour plus d'informations sur le mappage des appels ONTAPI vers les appels d'API REST équivalents.
+Si vous disposez d'un code existant à l'aide de l'API ONTAPI, NetApp prend en charge la conversion de votre code pour utiliser l'API REST ONTAP plus récente. Voir link:../migrate/mapping.html["Mappage de l'API REST avec ONTAPI"] Pour plus d'informations sur le mappage des appels ONTAPI vers les appels d'API REST équivalents.
 
 
 
