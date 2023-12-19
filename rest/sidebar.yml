@@ -14,8 +14,6 @@ entries:
     url: "/rest/interpret_api_response.html"
   - title: Traitement asynchrone à l'aide de l'objet de travail
     url: "/rest/asynchronous_processing.html"
-- title: Autres considérations
-  entries:
   - title: Accès et références d'objets
     url: "/rest/object_references_and_access.html"
   - title: Utilisateurs de l'API ONTAPI et de l'interface de ligne de commande ONTAP
