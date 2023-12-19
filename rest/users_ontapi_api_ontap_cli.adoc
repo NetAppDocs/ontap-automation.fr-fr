@@ -51,5 +51,5 @@ Pour plus d'informations, reportez-vous à la section https://library.netapp.com
 
 .Informations associées
 * link:../rest/input_variables.html["Variables d'entrée contrôlant une requête API"]
-* https://library.netapp.com/ecm/ecm_download_file/ECMLP2879870["Aux informations de mappage d'API REST"^]
+* link:../migrate/mapping.html["Mappage de l'API REST avec ONTAPI"]
 
