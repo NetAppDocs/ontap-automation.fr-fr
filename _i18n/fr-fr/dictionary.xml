@@ -79,22 +79,11 @@
   <block id="acfce8bc71a552130aa0ccb8784fe895" category="list-text"><block ref="acfce8bc71a552130aa0ccb8784fe895" category="inline-link-rx"></block></block>
   <block id="04a23c4efdbd2046f23f7897eaf905ba" category="inline-link">API REST ONTAP : automatisation des notifications d'événements de forte gravité</block>
   <block id="83ca92150c32a0d9b3b4b2ab9e9a2df4" category="list-text"><block ref="83ca92150c32a0d9b3b4b2ab9e9a2df4" category="inline-link-rx"></block></block>
-  <block id="166d9995800bde3bddfef3d2294b5aa9" category="summary">Plusieurs articles de blog sont disponibles pour vous aider à mieux comprendre les différentes technologies et approches lors de l'automatisation d'un déploiement ONTAP.</block>
-  <block id="5b588205bbe49d54e5a0303fd962d449" category="doc">Blogs sur l'automatisation ONTAP</block>
   <block id="4561b01a73d4a9676d22f56757f49ab2" category="paragraph">La méthode de passage de l'interface de ligne de commande fournit une technique pour l'exécution des commandes de l'interface de ligne de commande ONTAP à l'aide de l'API REST.</block>
-  <block id="ec141cf04dfb48ccacaa7a20c45d7195" category="inline-link">netapp.io/2020/11/09/private-cli-passthrough-api-rest-ontap</block>
-  <block id="b87866cc7b2f4d3bca6b529f08021191" category="paragraph"><block ref="b87866cc7b2f4d3bca6b529f08021191" category="inline-link-rx"></block></block>
   <block id="3232acac3eec8e3d87880c5b41ab690d" category="paragraph">Si vous ne connaissez pas encore Ansible pour l'automatisation d'ONTAP, c'est un bon point de départ.</block>
-  <block id="b1ed8990c321e2a215dff03bbacc2765" category="inline-link">netapp.io/2018/10/08/débuter-with-netapp-and-ansible-install-ansible</block>
-  <block id="00408e25be42eda5dda0c969763cecef" category="paragraph"><block ref="00408e25be42eda5dda0c969763cecef" category="inline-link-rx"></block></block>
-  <block id="f820c3830ab123b8422eb4a89ffeb2e6" category="summary">Plusieurs ressources sont disponibles pour vous aider à comprendre comment Ansible peut être utilisé pour automatiser le déploiement et l'administration des ressources de stockage ONTAP.</block>
-  <block id="a8f88f602880c7c7c74079d3f99ff931" category="doc">Automatisation ONTAP et Ansible</block>
   <block id="554cfab3938e21d9270bd6b75931f96f" category="section-title">Vidéos</block>
   <block id="039792ff8ff6ac357ed8f4a13b3345c2" category="inline-link-macro">Modules certifiés Ansible</block>
-  <block id="b9604383a9491878c8331801e487f3e0" category="paragraph">La vidéo ci-dessus est également disponible sur NetApp TV à l'adresse <block ref="0fbd1fba292ef7e8dc7c843e65ec1153" category="inline-link-macro-rx"></block>.</block>
-  <block id="10cb31045b1e0319cad9e10cb17e7d7f" category="section-title">Ressources du développeur</block>
   <block id="488449a83a7af94bacba6d31023a0ace" category="inline-link-macro">Solutions DevOps NetApp Ansible</block>
-  <block id="8b328188cce263fb3b3c747dfca835f3" category="paragraph">Voir <block ref="0edd4b40b713849ac51dc73d6ee2b46b" category="inline-link-macro-rx"></block> Pour obtenir de l'aide sur la mise en route d'Ansible dans un environnement DevOps.</block>
   <block id="f6bd0d7447ff66cc6b859603a88fbde9" category="list-title">Liens connexes</block>
   <block id="626a7cbe056796bcb1c158b143866230" category="inline-link-macro">Notes de version de ONTAP</block>
   <block id="7341eaad1796dcd6268b71a308240243" category="doc">Créer un utilisateur avec un rôle</block>
@@ -640,7 +629,6 @@
   <block id="5a0dcab393f624ccdcf664bede74e9b2" category="inline-link-macro">Bibliothèque client Python</block>
   <block id="7985c67b4ff49ccabd48db90e57852eb" category="paragraph">La bibliothèque client Python est un pack que vous pouvez utiliser lors de l'écriture de scripts pour accéder à l'API REST de ONTAP. Il prend en charge plusieurs services sous-jacents, notamment la gestion des connexions, le traitement asynchrone des demandes et le traitement des exceptions. Il vous suffit d'utiliser la bibliothèque client Python pour développer rapidement un code robuste en vue de la prise en charge de vos objectifs en matière d'automatisation ONTAP. Vous devez commencer par examiner la documentation de ce site, y compris <block ref="a9a8739a57e07a475c98045ed71a9c60" category="inline-link-macro-rx"></block>.</block>
   <block id="47139a5580026883093b61e1de623719" category="section-title">Avec Ansible</block>
-  <block id="4956e155e9e91d90d4a7af3019a3980c" category="paragraph">Ansible est un outil logiciel open source qui prend en charge le provisionnement, la gestion de la configuration et le déploiement d'applications. Depuis sa sortie et son acquisition ultérieure par RedHat, elle a continué de croître dans la popularité. NetApp fournit des modules certifiés Ansible qui permettent aux clients d'automatiser l'administration de leurs systèmes de stockage ONTAP. Vous devez commencer par examiner la documentation de ce site, y compris <block ref="db69795f6822fbede287b8f9090c22dc" category="inline-link-macro-rx"></block>.</block>
   <block id="f9f1769b9ec1d047022000f65ca5c05a" category="list-text">Adresse IP ou nom d'hôte de la LIF de gestion du cluster ONTAP</block>
   <block id="938f1047c15f00fdd0cbfc8e4cfa15e1" category="paragraph">*Exemple*</block>
   <block id="42ac9c1cc1752704f9d6980ce41b7ba3" category="paragraph">Les informations relatives à la version de ONTAP sont affichées au format JSON.</block>
@@ -686,10 +674,8 @@
   <block id="8f3b394b3596fb5977bc82383618f11f" category="paragraph">Documentation relative à la bibliothèque client NetApp Python.</block>
   <block id="b597994ba1223810c3ac8977cffacb37" category="inline-link">Réseau de développeurs NetApp : API RESTful ONTAP</block>
   <block id="6228139d56297e6f87b517feae45bc99" category="list-text"><block ref="6228139d56297e6f87b517feae45bc99" category="inline-link-rx"></block></block>
-  <block id="851a3f787680b56a5580f460ad9424f3" category="paragraph">Fournit les ressources et la documentation nécessaires pour utiliser l'API REST de ONTAP, y compris la bibliothèque du client Python de ONTAP.</block>
   <block id="e6d9d2044073b02a5ea64a67b46c528d" category="inline-link">Mise en route avec la bibliothèque client Python NetApp ONTAP</block>
   <block id="b93fb835faa7e2d92c1bb9e56f4f9f3e" category="list-text"><block ref="b93fb835faa7e2d92c1bb9e56f4f9f3e" category="inline-link-rx"></block></block>
-  <block id="1016adf11e3bfe1329073f40bbc1f5b8" category="paragraph">Bonne présentation de la bibliothèque client NetApp Python et mise en route de l'écriture du code à l'aide de la bibliothèque.</block>
   <block id="ed08ca4078374e76c6df3f1999af7274" category="section-title">Ressources NetApp</block>
   <block id="09ea0908fbfc4cde85bf416e35dc55c8" category="inline-link">Support NetApp</block>
   <block id="4e3ffaad45a8ae63f200119be8101498" category="list-text"><block ref="4e3ffaad45a8ae63f200119be8101498" category="inline-link-rx"></block></block>
@@ -1092,15 +1078,12 @@
   <block id="e78273b83daaaecb5744859fa531181b" category="sidebar">Détails d'implémentation REST</block>
   <block id="015f8c34f52b6ef8a3361958660f5e88" category="sidebar">Autres considérations</block>
   <block id="caea8340e2d186a540518d08602aa065" category="sidebar">Automatisation</block>
-  <block id="fa3072c5dcc3c24dc044383b1ee6e52d" category="sidebar">ONTAP et Ansible</block>
-  <block id="1cad56f823354795cae3db2ac36569ec" category="sidebar">Blogs d'automatisation</block>
   <block id="16761f90ea92726a06e16dfb23549c0a" category="sidebar">NetApp DevNet</block>
   <block id="98bf123aa3933daaa4019109c98c08eb" category="sidebar">Documentation ONTAP 9</block>
   <block id="34a5cab8543c50812e1e9045207ef342" category="sidebar">Documentation ONTAP Select</block>
   <block id="f543ca5c2e4e8371b14327b0c907dce3" category="sidebar">Gérez le ONTAP avec l'API REST</block>
   <block id="f719347e95688149977dfc1399128cfd" category="sidebar">Notifications d'événements EMS</block>
   <block id="31be5a65a5bd0c7e64b5cc0f6b8790c7" category="sidebar">Autorisations DACL et SACL</block>
-  <block id="5f6e122585e52ed38be95d84c84f7806" category="sidebar">Technologies d'automatisation</block>
   <block id="45cd4354f07a1ab359a1cc263ed79868" category="sidebar">Comment accéder à l'API REST</block>
   <block id="a02956d1e8bd45f8818a7c63426eceba" category="sidebar">Variables d'entrée</block>
   <block id="bbd1bf9de2e4077d7d60ab5cd0b761b0" category="sidebar">Interpréter une réponse API</block>
@@ -1796,4 +1779,14 @@
   <block id="0b08cc4c67821b9e4925ec877f62dc60" category="list-text">Pour vous aider à transférer votre code d'automatisation ONTAP vers l'API REST, NetApp fournit la documentation relative au mappage des API. Cette référence inclut une liste d'appels ONTAPI et l'équivalent API REST pour chacun. Le document de mappage a été mis à jour pour inclure les nouveaux points d'extrémité de l'API ONTAP 9.9.1. Voir <block ref="9a78e4571d9a7f8312d61713dd66ccf3" category="inline-link-macro-rx"></block> pour en savoir plus.</block>
   <block id="8cdc96bc9ea6b47bb91dc9a53923dd2c" category="list-text">Pour vous aider à mettre à jour votre automatisation ONTAPI, NetApp fournit une liste d'appels ONTAPI qui nécessitent un ou plusieurs paramètres d'entrée, avec un mappage de ces appels vers l'appel d'API REST équivalent ONTAP 9. Voir <block ref="9a78e4571d9a7f8312d61713dd66ccf3" category="inline-link-macro-rx"></block> pour en savoir plus.</block>
   <block id="a45cab230f2297dd4eb30fef224dd154" category="section-title">Transaction standard d'API REST</block>
+  <block id="f53d66bdb1fa04bbb3f2f929505e7427" category="paragraph">Plusieurs ressources supplémentaires sont disponibles pour vous aider à automatiser le déploiement et l'administration de vos systèmes de stockage ONTAP.</block>
+  <block id="4c88e81e8e2f62a8d9cfedb968114f86" category="list-text">Il aide à la mise en route avec Ansible dans un environnement DevOps.</block>
+  <block id="05917f5547f49546f295db785e86d3c2" category="paragraph"><block ref="05917f5547f49546f295db785e86d3c2" category="inline-link-rx"></block></block>
+  <block id="7dc68bd8bccd5cc5398d5245bc9e9c6e" category="list-text">Fournit les ressources et la documentation nécessaires à l'utilisation de l'API REST ONTAP.</block>
+  <block id="7c4309c7347e40c4e823d0bc8c4d6c52" category="paragraph"><block ref="7c4309c7347e40c4e823d0bc8c4d6c52" category="inline-link-rx"></block></block>
+  <block id="940b33dd3ba3d167b07b98a018af32be" category="paragraph"><block ref="940b33dd3ba3d167b07b98a018af32be" category="inline-link-rx"></block></block>
+  <block id="0937dacc143a9ef9a8e961bb05d706cb" category="list-text">Une bonne introduction à la bibliothèque client NetApp Python et comment commencer à écrire du code à l'aide de la bibliothèque.</block>
+  <block id="16109e56f76ab0efaf7b92775cbe1b12" category="list-text">Cette vidéo est également disponible sur NetApp TV à l'adresse <block ref="0fbd1fba292ef7e8dc7c843e65ec1153" category="inline-link-macro-rx"></block>.</block>
+  <block id="c481c55f899fe826c43a53c975e485f0" category="list-text">Découvrez les modules certifiés Ansible.</block>
+  <block id="47df15a6cd9dfe893d2aabb6bbfb82d6" category="paragraph">Ansible est un outil logiciel open source qui prend en charge le provisionnement, la gestion de la configuration et le déploiement d'applications. Depuis sa sortie et son acquisition ultérieure par RedHat, elle a continué de croître dans la popularité. NetApp fournit des modules certifiés Ansible qui permettent aux clients d'automatiser l'administration de leurs systèmes de stockage ONTAP. Vous devez commencer par consulter la documentation de ce site.</block>
 </blocks>
