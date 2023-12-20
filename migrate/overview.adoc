@@ -20,5 +20,5 @@ NetApp a lancé l'API REST avec ONTAP 9.6. Depuis, l'API REST a continué à se 
 
 .Informations associées
 * https://mysupport.netapp.com/info/communications/ECMLP2880232.html["Fin de disponibilité du CPC-00410 : ONTAPI"^]
-* https://devnet.netapp.com/restapi.php["NetApp DevNet : API REST ONTAP"^]
+* https://kb.netapp.com/onprem/ontap/dm/REST_API/FAQs_on_ZAPI_to_ONTAP_REST_API_transformation_for_CPC_(Customer_Product_Communiques)_notification["FAQ sur la transformation de l'API REST de ZAPI vers ONTAP pour CPC"^]
 
