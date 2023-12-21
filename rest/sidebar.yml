@@ -16,10 +16,6 @@ entries:
     url: "/rest/asynchronous_processing.html"
   - title: Accès et références d'objets
     url: "/rest/object_references_and_access.html"
-  - title: Utilisateurs de l'API ONTAPI et de l'interface de ligne de commande ONTAP
-    url: "/rest/users_ontapi_api_ontap_cli.html"
-  - title: Accédez à l'interface de ligne de commandes de ONTAP
-    url: "/rest/access_ontap_cli.html"
   - title: Mesures de performances pour les ressources de stockage
     url: "/rest/performance_metrics.html"
 - title: Sécurité RBAC
