@@ -1,0 +1,108 @@
+---
+sidebar: sidebar 
+permalink: workflows/wf_ems_list_log_events.html 
+keywords: support, ems, event management system, get events, get notifications, retrieve events 
+summary: 'Vous pouvez récupérer tous les messages de notification d"événements ou ceux ayant des caractéristiques spécifiques.' 
+---
+= Répertorie les événements du journal EMS
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Vous pouvez récupérer tous les messages de notification d'événements ou uniquement ceux ayant des caractéristiques spécifiques.
+
+.Méthode HTTP et noeud final
+Cet appel d'API REST utilise la méthode et le point de terminaison suivants.
+
+[cols="25,75"]
+|===
+| Méthode HTTP | Chemin 
+
+
+| OBTENEZ | /api/support/ems/events 
+|===
+.Type de traitement
+Synchrone
+
+.Paramètres d'entrée supplémentaires pour les exemples Curl
+Outre les paramètres communs à tous les appels API REST, les paramètres suivants sont également utilisés dans les exemples de boucles pour cette étape.
+
+[cols="25,10,10,55"]
+|===
+| Paramètre | Type | Obligatoire | Description 
+
+
+| champs | Requête | Non | Permet de demander l'inclusion de champs spécifiques dans la réponse. 
+
+
+| max_records | Requête | Non | Peut être utilisé pour limiter le nombre d'enregistrements renvoyés dans une seule demande. 
+
+
+| message_journal | Requête | Non | Utilisé pour rechercher une valeur de texte spécifique et renvoyer uniquement les messages correspondants. 
+
+
+| message.severity | Requête | Non | Limitez les messages renvoyés à ceux dont le niveau de gravité est spécifique, par exemple `alert`. 
+|===
+.Exemple de boucle : renvoie le dernier message et la valeur du nom
+[source, curl]
+----
+curl --request GET \
+--location "https://$FQDN_IP/api/support/ems/events?fields=message.name&max_records=1" \
+--include \
+--header "Accept: */*" \
+--header "Authorization: Basic $BASIC_AUTH"
+----
+.Exemple de boucle : renvoie un message contenant un texte et une gravité spécifiques
+[source, curl]
+----
+curl --request GET \
+--location "https://$FQDN_IP/api/support/ems/events?log_message=*disk*&message.severity=alert" \
+--include \
+--header "Accept: */*" \
+--header "Authorization: Basic $BASIC_AUTH"
+----
+.Exemple de sortie JSON
+[listing]
+----
+{
+  "records": [
+    {
+      "node": {
+        "name": "malha-vsim1",
+        "uuid": "da4f9e62-9de3-11ec-976a-005056b369de",
+        "_links": {
+          "self": {
+            "href": "/api/cluster/nodes/da4f9e62-9de3-11ec-976a-005056b369de"
+          }
+        }
+      },
+      "index": 4602,
+      "time": "2022-03-18T06:37:46-04:00",
+      "message": {
+        "severity": "alert",
+        "name": "raid.autoPart.disabled"
+      },
+      "log_message": "raid.autoPart.disabled: Disk auto-partitioning is disabled on this system: the system needs a minimum of 4 usable internal hard disks.",
+      "_links": {
+        "self": {
+          "href": "/api/support/ems/events/malha-vsim1/4602"
+        }
+      }
+    }
+  ],
+  "num_records": 1,
+  "_links": {
+    "self": {
+      "href": "/api/support/ems/events?log_message=*disk*&message.severity=alert&max_records=1"
+    },
+    "next": {
+      "href": "/api/support/ems/events?start.keytime=2022-03-18T06%3A37%3A46-04%3A00&start.node.name=malha-vsim1&start.index=4602&log_message=*disk*&message.severity=alert"
+    }
+  }
+}
+----

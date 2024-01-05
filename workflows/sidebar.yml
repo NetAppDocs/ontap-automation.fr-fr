@@ -48,6 +48,18 @@ entries:
     url: "/workflows/wf_stor_list_aggrs.html"
   - title: Répertorier les disques
     url: "/workflows/wf_stor_list_disks.html"
+- title: Assistance
+  entries:
+  - title: EMS
+    entries:
+    - title: Se préparer à utiliser EMS
+      url: "/workflows/wf_ems_prepare.html"
+    - title: Répertorie les événements du journal
+      url: "/workflows/wf_ems_list_log_events.html"
+    - title: Obtenir la configuration EMS
+      url: "/workflows/wf_ems_get_configuration.html"
+    - title: Créer une notification EMS
+      url: "/workflows/wf_ems_create_notification.html"
 - title: SVM
   entries:
   - title: Liste des SVM

@@ -1,0 +1,156 @@
+---
+sidebar: sidebar 
+permalink: workflows/wf_ems_create_notification.html 
+keywords: support, ems, event management system, create ems, create ems notification 
+summary: 'Vous pouvez utiliser le flux de travail suivant pour créer une nouvelle destination de notification EMS afin de recevoir les messages d"événement sélectionnés.' 
+---
+= Créez une notification EMS
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Vous pouvez utiliser le flux de travail suivant pour créer une nouvelle destination de notification EMS afin de recevoir les messages d'événement sélectionnés.
+
+
+
+== Étape 1 : configurer les paramètres de messagerie de l'ensemble du système
+
+Vous pouvez émettre l'appel d'API suivant pour configurer les paramètres de messagerie du système.
+
+.Méthode HTTP et noeud final
+Cet appel d'API REST utilise la méthode et le point de terminaison suivants.
+
+[cols="25,75"]
+|===
+| Méthode HTTP | Chemin 
+
+
+| CORRECTIF | /api/support/ems 
+|===
+.Type de traitement
+Synchrone
+
+.Paramètres d'entrée supplémentaires pour les exemples Curl
+Outre les paramètres communs à tous les appels API REST, les paramètres suivants sont également utilisés dans les exemples de boucles pour cette étape.
+
+[cols="25,10,10,55"]
+|===
+| Paramètre | Type | Obligatoire | Description 
+
+
+| mail_from | Requête | Oui. | Définit le `from` dans les e-mails de notification. 
+
+
+| serveur_de_messagerie | Requête | Oui. | Configure le serveur de messagerie SMTP cible. 
+|===
+.Exemple de boucle
+[source, curl]
+----
+curl --request PATCH \
+--location "https://$FQDN_IP/api/support/ems?mail_from=administrator@mycompany.com&mail_server=mail@mycompany.com" \
+--include \
+--header "Accept: */*" \
+--header "Authorization: Basic $BASIC_AUTH"
+----
+
+
+== Étape 2 : définir un filtre de message
+
+Vous pouvez émettre un appel d'API pour définir une règle de filtre correspondant aux messages.
+
+.Méthode HTTP et noeud final
+Cet appel d'API REST utilise la méthode et le point de terminaison suivants.
+
+[cols="25,75"]
+|===
+| Méthode HTTP | Chemin 
+
+
+| POST | /api/support/ems/filtres 
+|===
+.Type de traitement
+Synchrone
+
+.Paramètres d'entrée supplémentaires pour les exemples Curl
+Outre les paramètres communs à tous les appels API REST, les paramètres suivants sont également utilisés dans les exemples de boucles pour cette étape.
+
+[cols="25,10,10,55"]
+|===
+| Paramètre | Type | Obligatoire | Description 
+
+
+| Filtre | Corps | Oui. | Inclut les valeurs de la configuration du filtre. 
+|===
+.Exemple de boucle
+[source, curl]
+----
+curl --request POST \
+--location "https://$FQDN_IP/api/support/ems/filters" \
+--include \
+--header "Accept: */*" \
+--header "Authorization: Basic $BASIC_AUTH" \
+--data @JSONinput
+----
+.Exemple d'entrée JSON
+[source, json]
+----
+{
+  "name": "test-filter",
+  "rules.type": ["include"],
+  "rules.message_criteria.severities": ["emergency"]
+}
+----
+
+
+== Étape 3 : création d'une destination de message
+
+Vous pouvez émettre un appel API pour créer une destination de message.
+
+.Méthode HTTP et noeud final
+Cet appel d'API REST utilise la méthode et le point de terminaison suivants.
+
+[cols="25,75"]
+|===
+| Méthode HTTP | Chemin 
+
+
+| POST | /api/support/ems/destinations 
+|===
+.Type de traitement
+Synchrone
+
+.Paramètres d'entrée supplémentaires pour les exemples Curl
+Outre les paramètres communs à tous les appels API REST, les paramètres suivants sont également utilisés dans les exemples de boucles pour cette étape.
+
+[cols="25,10,10,55"]
+|===
+| Paramètre | Type | Obligatoire | Description 
+
+
+| Configuration de la destination | Corps | Oui. | Inclut les valeurs de la destination de l'événement. 
+|===
+.Exemple de boucle
+[source, curl]
+----
+curl --request POST \
+--location "https://$FQDN_IP/api/support/ems/destinations" \
+--include \
+--header "Accept: */*" \
+--header "Authorization: Basic $BASIC_AUTH" \
+--data @JSONinput
+----
+.Exemple d'entrée JSON
+[source, curl]
+----
+{
+  "name": "test-destination",
+  "type": "email",
+  "destination": "administrator@mycompany.com",
+  "filters.name": ["important-events"]
+}
+----
