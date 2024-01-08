@@ -35,11 +35,11 @@ entries:
     - title: Créer des rôles
       entries:
       - title: Limiter les opérations de volume SVM
-        url: "/workflows/wf_rbac_limit_svm.html"
+        url: "/workflows/wf_rbac_role_limit_svm.html"
       - title: Protection des données
-        url: "/workflows/wf_rbac_data_protection.html"
+        url: "/workflows/wf_rbac_role_data_protection.html"
       - title: Autoriser la génération de rapports ONTAP
-        url: "/workflows/wf_rbac_ontap_reports.html"
+        url: "/workflows/wf_rbac_role_ontap_reports.html"
     - title: Créer un utilisateur avec un rôle
       url: "/workflows/wf_rbac_user_role.html"
 - title: Stockage
