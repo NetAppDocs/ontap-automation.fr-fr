@@ -18,7 +18,7 @@ Vous pouvez supprimer une entrée de contrôle d'accès (ACE) existante d'un fic
 
 
 
-== Étape 1 : appliquez les nouvelles autorisations
+== Étape 1 : supprimez l'ACE
 
 .Méthode HTTP et noeud final
 Cet appel d'API REST utilise la méthode et le point de terminaison suivants.
