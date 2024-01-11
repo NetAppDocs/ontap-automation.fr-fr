@@ -12,6 +12,22 @@ entries:
     url: "/workflows/wf_cls_update_contact.html"
   - title: Obtenir l'instance de travail
     url: "/workflows/wf_jobs_get_job.html"
+- title: NAS
+  entries:
+  - title: Autorisations de sécurité des fichiers
+    entries:
+    - title: Préparez-vous à gérer la sécurité des fichiers
+      url: "/workflows/wf_nas_fs_prepare.html"
+    - title: Obtenez des autorisations efficaces
+      url: "/workflows/wf_nas_fs_get_permissions.html"
+    - title: Obtenez des informations d'audit
+      url: "/workflows/wf_nas_fs_get_audit_info.html"
+    - title: Appliquez les autorisations
+      url: "/workflows/wf_nas_fs_apply_permissions.html"
+    - title: Mettez à jour un descripteur de sécurité
+      url: "/workflows/wf_nas_fs_update_sd.html"
+    - title: Supprimer une entrée de contrôle d'accès
+      url: "/workflows/wf_nas_fs_delete_ace.html"
 - title: Mise en réseau
   entries:
   - title: Répertorie les interfaces IP

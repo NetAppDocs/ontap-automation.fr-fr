@@ -1,0 +1,72 @@
+---
+sidebar: sidebar 
+permalink: workflows/wf_nas_fs_delete_ace.html 
+keywords: nas, file security, access control entry, ace, delete ace 
+summary: 'Vous pouvez supprimer une entrée d"accès cotrol existante (ACE) d"un fichier ou d"un dossier spécifique. La modification se propage à tous les objets enfants.' 
+---
+= Supprimer une entrée de contrôle d'accès
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Vous pouvez supprimer une entrée de contrôle d'accès (ACE) existante d'un fichier ou d'un dossier spécifique. La modification se propage à tous les objets enfants.
+
+
+
+== Étape 1 : appliquez les nouvelles autorisations
+
+.Méthode HTTP et noeud final
+Cet appel d'API REST utilise la méthode et le point de terminaison suivants.
+
+[cols="25,75"]
+|===
+| Méthode HTTP | Chemin 
+
+
+| SUPPRIMER | /api/protocoles/sécurité-fichier/permissions/{svm.uuid}/{path} 
+|===
+.Type de traitement
+Asynchrone
+
+.Paramètres d'entrée supplémentaires pour les exemples de boucles
+Outre les paramètres communs à tous les appels API REST, les paramètres suivants sont également utilisés dans l'exemple curl de cette étape.
+
+[cols="25,10,10,55"]
+|===
+| Paramètre | Type | Obligatoire | Description 
+
+
+| $SVM_ID | Chemin | Oui. | Il s'agit de l'UUID du SVM contenant le fichier. 
+
+
+| $FILE_PATH | Chemin | Oui. | Il s'agit du chemin d'accès au fichier ou au dossier. 
+|===
+.Exemple de boucle
+[source, curl]
+----
+curl --request DELETE --location "https://$FQDN_IP/api/protocols/file-security/permissions/$SVM_ID/$FILE_PATH?return_timeout=0" --include --header "Accept */*" --header "Authorization: Basic $BASIC_AUTH" --data '{ \"access\": \"access_allow\", \"apply_to\": { \"files\": true, \"sub_folders\": true, \"this_folder\": true }, \"ignore_paths\": [ \"/parent/child2\" ], \"propagation_mode\": \"propagate\"}'
+----
+.Exemple de sortie JSON
+[listing]
+----
+{
+  "job": {
+    "uuid": "3015c294-5bbc-11eb-9c4e-0050568e8682",
+    "_links": {
+      "self": {
+        "href": "/api/cluster/jobs/3015c294-5bbc-11eb-9c4e-0050568e8682"
+      }
+    }
+  }
+}
+----
+
+
+== Étape 2 : récupération de l'état du travail
+
+Exécutez le flux de travail link:../workflows/wf_jobs_get_job.html["Obtenir l'instance de travail"] et confirmez le `state` la valeur est `success`.
