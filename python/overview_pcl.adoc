@@ -19,5 +19,7 @@ La bibliothèque client NetApp ONTAP Python est un pack que vous pouvez installe
 
 NOTE: NetApp tient à jour un référentiel GitHub contenant des exemples de code et d'autres informations utiles. Vous pouvez naviguer vers le dossier _exemples_ pour accéder aux échantillons à l'aide de la bibliothèque client Python.
 
-.Liens connexes
-https://github.com/NetApp/ontap-rest-python["Référentiel ONTAP PYTHON REST"^]
+.Informations associées
+* https://github.com/NetApp/ontap-rest-python["Référentiel ONTAP PYTHON REST"^]
+* https://github.com/NetApp/ontap-rest-python/tree/master/examples/python_client_library["Exemples de bibliothèque de clients Python REST ONTAP"^]
+

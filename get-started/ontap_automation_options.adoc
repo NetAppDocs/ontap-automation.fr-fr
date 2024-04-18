@@ -26,7 +26,7 @@ Depuis ONTAP 9.6, ONTAP inclut une API REST complète qui fournit la base pour a
 Vous pouvez accéder directement à l'API REST de ONTAP via n'importe quel langage de programmation qui prend en charge un client REST. Il s'agit de Python, PowerShell et Java.
 
 .Migration du code ONTAPI existant pour utiliser REST
-L'API ONTAPI (ZAPI) est l'ensemble d'appels propriétaires inclus dans le logiciel NetApp ONTAP pour prendre en charge l'automatisation des tâches d'administration et de gestion du stockage des données. L'interface ONTAPI sera désactivée dans les prochaines versions de ONTAP. Si vous possédez déjà du code utilisant l'API ONTAPI, vous devriez envisager de le faire migrer loin d'ONTAPI. NetApp prend en charge la conversion de votre code pour utiliser la nouvelle API REST ONTAP. Voir link:../migrate/overview.html["Migrer vers l'API REST"] pour en savoir plus.
+L'API ONTAPI (ZAPI) est l'ensemble d'appels propriétaires inclus dans le logiciel NetApp ONTAP pour prendre en charge l'automatisation des tâches d'administration et de gestion du stockage des données. L'interface ONTAPI sera désactivée dans les prochaines versions de ONTAP. Si vous possédez déjà du code utilisant l'API ONTAPI, vous devriez envisager de le faire migrer loin d'ONTAPI. NetApp prend en charge la conversion de votre code pour utiliser la nouvelle API REST ONTAP. Voir link:../migrate/ontapi_disablement.html["Migrer vers l'API REST"] pour en savoir plus.
 
 
 
@@ -37,6 +37,9 @@ NetApp propose des kits d'outils client qui extraient l'API REST ONTAP et facili
 .Bibliothèque client Python
 La bibliothèque client Python est un pack que vous pouvez utiliser lors de l'écriture de scripts pour accéder à l'API REST de ONTAP. Il prend en charge plusieurs services sous-jacents, notamment la gestion des connexions, le traitement asynchrone des demandes et le traitement des exceptions. Il vous suffit d'utiliser la bibliothèque client Python pour développer rapidement un code robuste en vue de la prise en charge de vos objectifs en matière d'automatisation ONTAP. Voir link:../python/overview_pcl.html["Bibliothèque client Python"] pour en savoir plus.
 
+.Kit PowerShell
+Vous pouvez utiliser le kit NetApp.ONTAP PowerShell pour automatiser l'administration d'un cluster ONTAP à partir d'un hôte Windows. Voir https://review.docs.netapp.com/us-en/ontap-automation_devnet-update/pstk/overview_pstk.html["Présentation du kit d'outils PowerShell"^] pour en savoir plus.
+
 
 
 == Frameworks d'automatisation
@@ -44,7 +47,7 @@ La bibliothèque client Python est un pack que vous pouvez utiliser lors de l'é
 Vous pouvez créer et déployer du code d'automatisation à l'aide de l'une des plusieurs structures
 
 .Ansible
-Ansible est un outil logiciel open source qui prend en charge le provisionnement, la gestion de la configuration et le déploiement d'applications. Depuis sa sortie et son acquisition ultérieure par RedHat, elle a continué de croître dans la popularité. NetApp fournit des modules certifiés Ansible qui permettent aux clients d'automatiser l'administration de leurs systèmes de stockage ONTAP. Voir link:../additional/resources.html["Ressources supplémentaires"] pour en savoir plus.
+Ansible est un outil logiciel open source qui prend en charge le provisionnement, la gestion de la configuration et le déploiement d'applications. Depuis sa sortie et son acquisition ultérieure par RedHat, elle a continué de croître dans la popularité. NetApp fournit des modules certifiés Ansible qui permettent aux clients d'automatiser l'administration de leurs systèmes de stockage ONTAP. Voir link:../additional/learn_more.html["En savoir plus >>"] et https://www.netapp.com/devops-solutions/ansible/["Solutions DevOps NetApp Ansible"^] pour plus d'informations.
 
 .Catalogue d'automatisation BlueXP
 La solution NetApp https://console.bluexp.netapp.com/automationCatalog/["Catalogue d'automatisation BlueXP"^] Est disponible via l'interface utilisateur Web BlueXP. Ce catalogue donne accès à des packs de solutions qui peuvent vous aider à automatiser le déploiement et l'intégration de ONTAP avec d'autres produits. Voir https://docs.netapp.com/us-en/netapp-automation/["Automatisation NetApp"^] pour obtenir de la documentation et plus d'informations.

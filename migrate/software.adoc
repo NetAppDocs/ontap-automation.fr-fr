@@ -19,7 +19,10 @@ NetApp fournit des exemples de scripts Python et d'autres logiciels associés po
 
 NOTE: Tous les exemples de code Python sont disponibles sur le https://github.com/NetApp/ontap-rest-python["NetApp ONTAP REST Python"^] Référentiel GitHub.
 
-.Outil de reporting sur l'utilisation de ONTAPI
+
+
+== Outil de reporting sur l'utilisation de ONTAPI
+
 L'outil de reporting sur l'utilisation d'ONTAP est conçu pour aider les services professionnels, les clients et les partenaires de NetApp à identifier l'utilisation d'ONTAP dans leur environnement ONTAP. Des scripts sont fournis pour trois cas d'utilisation différents, comme décrit dans le tableau ci-dessous.
 
 [cols="20,80"]
@@ -35,14 +38,26 @@ L'outil de reporting sur l'utilisation d'ONTAP est conçu pour aider les service
 
 | zapi_to_rest.py | Script permettant d'extraire les détails REST des appels et attributs ONTAPI transmis 
 |===
-Voir https://github.com/NetApp/ontap-rest-python/tree/master/ONTAPI-Usage-Reporting-Tool["Outil de reporting sur l'utilisation de ONTAPI"^] pour en savoir plus.
+Vous pouvez accéder au https://github.com/NetApp/ontap-rest-python/tree/master/ONTAPI-Usage-Reporting-Tool["Outil de reporting sur l'utilisation de ONTAPI"^] pour commencer. Voir aussi a https://www.youtube.com/watch?v=gJSWerW9S7o["Démo"^] à propos de l'outil de création de rapports et comment l'utiliser.
 
-.Passerelle CLI privée
+
+
+== Passerelle CLI privée
+
 L'API REST offre une large couverture des fonctionnalités et des installations disponibles avec ONTAP. Cependant, il peut y avoir des cas où l'accès direct à l'interface de ligne de commandes de ONTAP via l'API REST peut être utile.
 
 Pour une introduction à cette fonctionnalité, voir link:../rest/access_ontap_cli.html["Accès à l'interface de ligne de commandes de ONTAP via l'API REST"]. Pour les échantillons Python, voir https://github.com/NetApp/ontap-rest-python/tree/master/examples/rest_api/cli_passthrough_samples["Exemples de passage CLI REST"^].
 
-.Bibliothèque client Python
+
+
+== Bibliothèque client Python
+
 La bibliothèque cliente Python est un package que vous pouvez installer et utiliser pour accéder à l'API REST ONTAP avec Python. Elle vous permet de développer rapidement un code robuste pour l'automatisation de vos déploiements ONTAP.
 
 Pour une introduction à la bibliothèque cliente Python, reportez-vous à la section link:../python/overview_pcl.html["Présentation de la bibliothèque client Python"]. Pour les échantillons Python, voir https://github.com/NetApp/ontap-rest-python/tree/master/examples/python_client_library["Exemples de bibliothèques clientes Python"^].
+
+
+
+== Kit ONTAP PowerShell
+
+Le kit NetApp.ONTAP PowerShell renforce votre environnement PowerShell local avec un module qui comprend plus de 2,400 cmdlets. Il vous permet de développer rapidement du code pour votre hôte Windows afin d'automatiser les déploiements ONTAP. Pour plus d'informations, voir link:../pstk/overview_pstk.html["Présentation du kit d'outils PowerShell"].

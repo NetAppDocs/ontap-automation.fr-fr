@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: migrate/overview.html 
+permalink: migrate/ontapi_disablement.html 
 keywords: ONTAPI, ONTAPI disablement, migrate, migrate to REST API 
 summary: 'L"interface ONTAPI sera désactivée dans les prochaines versions de ONTAP. Si vous utilisez ONTAPI, vous devez planifier votre migration vers l"API REST ONTAP.' 
 ---

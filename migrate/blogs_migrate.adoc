@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
-permalink: migrate/blogs.html 
+permalink: migrate/blogs_migrate.html 
 keywords: blogs, blog articles 
 summary: 'Plusieurs articles de blog sont disponibles pour vous aider à mieux comprendre comment migrer de ONTAPI vers l"API REST ONTAP.' 
 ---
-= Blogs sur la migration vers l'API REST de ONTAP
+= Articles de blog
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
