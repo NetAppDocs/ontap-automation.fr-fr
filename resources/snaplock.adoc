@@ -14,7 +14,7 @@ summary: 'Vous pouvez utiliser ces appels d"API pour administrer la fonction Sna
 
 
 [role="lead"]
-SnapLock est une implémentation basée sur le stockage de la solution optique WORM (write once, read many) traditionnelle. Elle permet une conservation à long terme des données. Vous pouvez utiliser ces appels d'API pour administrer la fonction SnapLock.
+Vous pouvez utiliser ces appels API pour administrer la fonction ONTAP SnapLock.
 
 .Journal
 La structure du journal SnapLock est basée sur des répertoires et des fichiers d'un volume spécifique contenant les enregistrements des journaux. Les fichiers journaux sont remplis et archivés en fonction de la taille maximale du journal. Ce type de ressource a été introduit avec ONTAP 9.7.

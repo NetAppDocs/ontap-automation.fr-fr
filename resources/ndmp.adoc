@@ -14,7 +14,7 @@ summary: 'Vous pouvez utiliser ces appels d"API pour gérer les services NDMP.'
 
 
 [role="lead"]
-Le protocole Network Data Management Protocol fournit une norme de sauvegarde des périphériques NAS. Vous pouvez utiliser ces appels d'API pour gérer les services NDMP.
+Vous pouvez utiliser ces appels d'API pour gérer les services NDMP.
 
 .Mode NDMP
 Le mode de fonctionnement NDMP peut être défini au niveau du SVM ou du node. Ce type de ressource a été introduit avec ONTAP 9.7.

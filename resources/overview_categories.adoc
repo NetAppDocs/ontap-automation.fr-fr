@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: resources/overview_categories.html 
 keywords: resources, resource categories 
-summary: 'Les ressources disponibles via l"API REST de ONTAP sont organisées par catégories, comme affichées sur la page de documentation de l"API ONTAP.' 
+summary:  
 ---
 = Vue d'ensemble des catégories de ressources
 :hardbreaks:
@@ -14,14 +14,13 @@ summary: 'Les ressources disponibles via l"API REST de ONTAP sont organisées pa
 
 
 [role="lead"]
-Les ressources disponibles via l'API REST de ONTAP sont organisées par catégories, comme illustré dans la documentation en ligne de l'API ONTAP. Une brève description de chacune des ressources est présentée ci-dessous, ainsi que des considérations d'utilisation supplémentaires le cas échéant.
+Les ressources disponibles via l'API REST de ONTAP sont organisées par catégories. Chacune des catégories de ressources comprend une brève description ainsi que des considérations d'utilisation supplémentaires, le cas échéant.
 
-Les ressources REST décrites dans ce résumé sont basées sur la dernière version du produit. Si vous avez besoin de comprendre les modifications apportées par les versions précédentes, reportez-vous à la section link:../whats_new.html["Quelles sont les nouveautés de l'API REST de ONTAP"] ainsi que le https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508["Notes de version de ONTAP"^].
+Les ressources RESTANTES décrites dans le récapitulatif sont basées sur la dernière version du produit. Si vous avez besoin d'une compréhension plus détaillée des modifications apportées dans les versions précédentes, reportez-vous à la section link:../whats_new.html["Quelles sont les nouveautés de l'API REST de ONTAP"] ainsi que le https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508["Notes de version de ONTAP"^].
 
 
-TIP: Pour de nombreux terminaux REST, vous pouvez inclure une clé UUID dans la chaîne de chemin d'accès pour accéder à une instance d'objet spécifique. Cependant, vous pouvez également accéder aux objets à l'aide d'une valeur de propriété sur un paramètre de requête.
+TIP: Pour de nombreux terminaux REST, vous pouvez inclure une clé UUID dans la chaîne de chemin d'accès pour accéder à une instance d'objet spécifique. Cependant, dans de nombreux cas, vous pouvez également accéder aux objets en utilisant une valeur de propriété sur un paramètre de requête.
 
 .Informations associées
-* link:../rest/object_references_and_access.html["Autres considérations RELATIVES À L'UTILISATION DE REST"]
 * link:../reference/api_reference.html["Référence API"]
 
