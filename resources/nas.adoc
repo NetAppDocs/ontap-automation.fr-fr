@@ -109,6 +109,9 @@ Les paramètres de configuration d'une interface à Kerberos. Ce type de ressour
 .Domaines NFS Kerberos
 Les paramètres de configuration des domaines Kerberos. Ce type de ressource a été introduit avec ONTAP 9.6.
 
+.NFS sur TLS
+Cette ressource permet de récupérer et de mettre à jour la configuration de l'interface lors de l'utilisation de NFS sur TLS. Ce type de ressource a été introduit avec ONTAP 9.15.
+
 .Services NFS
 La configuration principale du serveur NFS. Ce type de ressource a été introduit avec ONTAP 9.6 et mis à jour avec ONTAP 9.7.
 

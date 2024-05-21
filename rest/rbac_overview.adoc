@@ -17,7 +17,7 @@ summary: 'ONTAP inclut des fonctionnalités robustes et évolutives de contrôle
 ONTAP inclut des fonctionnalités robustes et évolutives de contrôle d'accès basé sur des rôles (RBAC). Vous pouvez attribuer chaque compte un rôle différent afin de contrôler l'accès de l'utilisateur aux ressources exposées via l'API REST et l'interface de ligne de commande. Les rôles définissent les différents niveaux d'accès administratif des différents utilisateurs ONTAP.
 
 
-NOTE: La fonction RBAC d'ONTAP s'est poursuivie et a été considérablement améliorée grâce à ONTAP 9.11.1 (et aux versions suivantes). Voir link:../rest/rbac_overview.html#summary-of-rbac-evolution["Résumé de l'évolution du RBAC"] et link:../whats_new.html["Nouveautés de l'API REST et de l'automatisation ONTAP"] pour en savoir plus.
+NOTE: La fonction RBAC d'ONTAP s'est poursuivie et a été considérablement améliorée grâce à ONTAP 9.11.1 (et aux versions suivantes). Voir link:../rest/rbac_overview.html#summary-of-rbac-evolution["Résumé de l'évolution du RBAC"] et link:../whats-new.html["Nouveautés de l'API REST et de l'automatisation ONTAP"] pour en savoir plus.
 
 
 

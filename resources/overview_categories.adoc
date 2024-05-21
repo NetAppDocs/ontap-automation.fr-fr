@@ -16,7 +16,7 @@ summary:
 [role="lead"]
 Les ressources disponibles via l'API REST de ONTAP sont organisées par catégories. Chacune des catégories de ressources comprend une brève description ainsi que des considérations d'utilisation supplémentaires, le cas échéant.
 
-Les ressources RESTANTES décrites dans le récapitulatif sont basées sur la dernière version du produit. Si vous avez besoin d'une compréhension plus détaillée des modifications apportées dans les versions précédentes, reportez-vous à la section link:../whats_new.html["Quelles sont les nouveautés de l'API REST de ONTAP"] ainsi que le https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508["Notes de version de ONTAP"^].
+Les ressources RESTANTES décrites dans le récapitulatif sont basées sur la dernière version du produit. Si vous avez besoin d'une compréhension plus détaillée des modifications apportées dans les versions précédentes, reportez-vous à la section link:../whats-new.html["Quelles sont les nouveautés de l'API REST de ONTAP"] ainsi que le https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508["Notes de version de ONTAP"^].
 
 
 TIP: Pour de nombreux terminaux REST, vous pouvez inclure une clé UUID dans la chaîne de chemin d'accès pour accéder à une instance d'objet spécifique. Cependant, dans de nombreux cas, vous pouvez également accéder aux objets en utilisant une valeur de propriété sur un paramètre de requête.

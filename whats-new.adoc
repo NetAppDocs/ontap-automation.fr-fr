@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: whats_new.html 
+permalink: whats-new.html 
 keywords: new features, new in release 
 summary: 'NetApp met régulièrement à jour l"API REST de ONTAP pour vous offrir de nouvelles fonctionnalités, améliorations et correctifs.' 
 ---
@@ -18,6 +18,18 @@ NetApp met régulièrement à jour l'API REST de ONTAP pour vous offrir de nouve
 
 
 TIP: Vous devez également consulter le https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508["Notes de version de ONTAP"^] pour plus d'informations, y compris les limitations ou problèmes connus.
+
+
+
+== ONTAP 9.15.1
+
+ONTAP 9.15.1 continue d'étendre les fonctionnalités de l'API REST ONTAP. La mise à jour de cette version est relativement modeste, avec trois nouveaux terminaux prenant en charge une nouvelle fonctionnalité.
+
+NFS sur TLS:: Cette fonction propose trois nouveaux points d'extrémité. Vous pouvez émettre ces appels d'API pour récupérer toutes les interfaces NFS sur TLS, récupérer une interface spécifique par UUID et mettre à jour les propriétés de configuration d'une interface TLS. Collectivement, ces appels API fournissent un équivalent à l'ensemble de `vserver nfs tls interface` Commandes CLI.
+
+
+
+CAUTION: NFS over TLS est disponible dans ONTAP 9.15.1 en tant que préversion publique. Cette fonctionnalité n'est pas prise en charge pour les charges de travail de production avec ONTAP 9.15.1.
 
 
 
