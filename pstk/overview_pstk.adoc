@@ -20,4 +20,4 @@ NetApp prend en charge l'utilisation de PowerShell pour administrer vos système
 PowerShell est un programme de Microsoft que vous pouvez utiliser pour l'automatisation des tâches et la gestion des configurations. Il comprend un environnement shell de ligne de commande ainsi qu'un langage de script.
 
 .Kit NetApp ONTAP PowerShell
-Le kit NetApp.ONTAP PowerShell inclut le module PowerShell pour NetApp ONTAP. Le kit prend en charge les environnements ONTAP s'exécutant dans divers environnements, notamment les systèmes NetApp AFF et FAS, le matériel générique et le cloud. Ce module comprend plus de 2,400 cmdlets qui prennent collectivement en charge l'administration du stockage sur les hôtes Windows.
+Le NetApp. Le kit ONTAP PowerShell inclut le module PowerShell pour NetApp ONTAP. Le kit prend en charge les environnements ONTAP s'exécutant dans divers environnements, notamment les systèmes NetApp AFF et FAS, le matériel générique et le cloud. Ce module comprend plus de 2,400 cmdlets qui prennent collectivement en charge l'administration du stockage sur les hôtes Windows.
