@@ -10,7 +10,7 @@ summary: Vous pouvez utiliser ce flux de travail pour créer un utilisateur avec
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

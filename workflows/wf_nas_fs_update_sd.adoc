@@ -10,7 +10,7 @@ summary: Vous pouvez mettre à jour un descripteur de sécurité spécifique dan
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

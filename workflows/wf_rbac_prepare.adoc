@@ -10,7 +10,7 @@ summary: 'Selon votre environnement, vous pouvez utiliser la fonctionnalité RBA
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

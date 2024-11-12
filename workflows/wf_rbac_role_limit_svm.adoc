@@ -10,7 +10,7 @@ summary: 'Vous pouvez définir un rôle de restriction de l"administration des v
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

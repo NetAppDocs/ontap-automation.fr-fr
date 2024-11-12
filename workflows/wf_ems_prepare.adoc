@@ -10,7 +10,7 @@ summary: 'Vous pouvez configurer le traitement EMS (Event Management System) pou
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

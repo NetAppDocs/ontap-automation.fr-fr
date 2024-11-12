@@ -10,7 +10,7 @@ summary: 'Vous pouvez gérer les autorisations et les règles d"audit pour les f
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

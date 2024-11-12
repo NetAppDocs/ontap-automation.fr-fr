@@ -10,7 +10,7 @@ summary: 'Vous pouvez mettre à jour les coordonnées d"un cluster. Étant donn�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -10,7 +10,7 @@ summary: 'Vous pouvez récupérer la configuration d"un cluster ONTAP avec des c
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

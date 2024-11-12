@@ -10,7 +10,7 @@ summary: 'Vous pouvez récupérer l"instance d"un travail ONTAP spécifique. Vou
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -10,7 +10,7 @@ summary: Vous devez connaître la structure et le format des workflows ONTAP ava
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

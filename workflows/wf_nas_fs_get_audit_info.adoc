@@ -10,7 +10,7 @@ summary: 'Vous pouvez récupérer toutes les informations d"audit pour un fichie
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -10,7 +10,7 @@ summary: 'Vous devez préparer l"environnement d"exécution local avant d"utilis
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

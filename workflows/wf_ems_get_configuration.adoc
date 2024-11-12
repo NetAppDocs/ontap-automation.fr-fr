@@ -10,7 +10,7 @@ summary: Vous pouvez récupérer la configuration EMS actuelle pour un cluster O
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

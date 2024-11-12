@@ -10,7 +10,7 @@ summary: Vous pouvez récupérer les autorisations effectives actuelles pour un 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

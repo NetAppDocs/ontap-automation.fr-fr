@@ -10,7 +10,7 @@ summary: 'Vous pouvez supprimer une entrée d"accès cotrol existante (ACE) d"un
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

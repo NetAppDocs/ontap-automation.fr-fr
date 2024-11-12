@@ -10,7 +10,7 @@ summary: 'Vous pouvez utiliser le flux de travail suivant pour créer une nouvel
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -10,7 +10,7 @@ summary: 'Vous pouvez récupérer la liste des disques du cluster. Vous pouvez a
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

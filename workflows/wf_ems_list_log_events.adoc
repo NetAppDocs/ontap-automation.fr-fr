@@ -10,7 +10,7 @@ summary: 'Vous pouvez récupérer tous les messages de notification d"événemen
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

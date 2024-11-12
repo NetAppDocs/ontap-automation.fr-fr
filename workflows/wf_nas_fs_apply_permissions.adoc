@@ -10,7 +10,7 @@ summary: Vous pouvez appliquer un nouveau descripteur de sécurité à un fichie
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

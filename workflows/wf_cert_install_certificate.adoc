@@ -10,7 +10,7 @@ summary: 'Vous pouvez installer un certificat X.509 signé dans votre cluster ON
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

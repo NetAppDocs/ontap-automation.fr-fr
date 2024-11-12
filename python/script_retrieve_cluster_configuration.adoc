@@ -10,7 +10,7 @@ summary: 'Vous pouvez exécuter le script en utilisant Python 3 sur l"interface 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

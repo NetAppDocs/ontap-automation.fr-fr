@@ -10,7 +10,7 @@ summary: Vous pouvez offrir à un utilisateur des fonctionnalités de protection
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
