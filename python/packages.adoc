@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: python/packages.html 
-keywords: packages, documentation 
-summary:  
+keywords: python, pypi, pcl, packages, documentation 
+summary: La bibliothèque cliente Python est disponible pour chaque version de ONTAP à partir de 9.6. Vous devez accéder au progiciel PyPI et à la documentation en fonction de la version ONTAP que vous utilisez. 
 ---
 = Packages et documentation
 :hardbreaks:
@@ -10,11 +10,16 @@ summary:
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
 La bibliothèque cliente Python est disponible pour chaque version de ONTAP à partir de 9.6. Vous devez accéder au progiciel PyPI et à la documentation en fonction de la version ONTAP que vous utilisez.
+
+.ONTAP 9.16.1
+* https://pypi.org/project/netapp-ontap/9.16.1.0/["IP: NetApp ONTAP 9.16.1"^]
+* https://library.netapp.com/ecmdocs/ECMLP3331665/html/index.html["Documentation NetApp PCL pour 9.16.1"^]
+
 
 .ONTAP 9.15.1
 * https://pypi.org/project/netapp-ontap/9.15.1.0/["IP: NetApp ONTAP 9.15.1"^]

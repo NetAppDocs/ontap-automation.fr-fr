@@ -19,6 +19,9 @@ Vous pouvez utiliser ces appels d'API pour accéder au stockage objet basé sur 
 .Seaux
 Un compartiment est un conteneur d'objets et il est structuré à l'aide d'un espace de noms d'objet. Chaque serveur d'objets S3 peut avoir plusieurs compartiments. Ce type de ressource a été introduit avec ONTAP 9.7 et mis à jour avec ONTAP 9.8.
 
+.Snapshots de compartiment
+Vous pouvez créer et gérer des snapshots de vos compartiments S3. Cette fonctionnalité a été ajoutée avec ONTAP 9.16.1.
+
 .Administratifs
 Vous pouvez créer et gérer la configuration ONTAP S3, y compris les configurations de serveurs et de compartiments. Ce type de ressource a été introduit avec ONTAP 9.7.
 

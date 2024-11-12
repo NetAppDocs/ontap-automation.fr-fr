@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: migrate/performance-counters.html 
 keywords: performance, performance counters, mapping 
-summary: Le gestionnaire de compteur ONTAP tient à jour des informations complètes sur les performances de chaque système ONTAP. Il exporte ces données sous forme de compteurs de performances que vous pouvez utiliser pour évaluer les performances de votre système ONTAP et vous aider à atteindre vos objectifs de performance. 
+summary: 'Le gestionnaire de compteur ONTAP tient à jour des informations complètes sur les performances de chaque système ONTAP. Il exporte ces données sous la forme d"un ensemble de compteurs de performances que vous pouvez utiliser pour évaluer les performances de votre système ONTAP et vous aider à atteindre vos objectifs de performances.' 
 ---
 = Compteurs de performances
 :hardbreaks:
@@ -98,14 +98,7 @@ Renvoie une ligne spécifique d'une table de compteur nommée.
 
 NetApp prend en charge la migration de votre code d'automatisation depuis ONTAPI vers l'API REST ONTAP. Cela inclut la documentation de mappage pour identifier la table de compteur de performances équivalente disponible dans l'API REST pour un objet ONTAPI donné.
 
-Consultez la documentation appropriée relative à la mise en correspondance basée sur la version de ONTAP que vous utilisez :
-
-* https://docs.netapp.com/us-en/ontap-pcmap/["Mappage du compteur de performances ONTAP 9.15.1"^]
-* https://docs.netapp.com/us-en/ontap-pcmap-9141/["Mappage du compteur de performances ONTAP 9.14.1"^]
-* https://docs.netapp.com/us-en/ontap-pcmap-9131/["Mappage du compteur de performances ONTAP 9.13.1"^]
-* https://docs.netapp.com/us-en/ontap-pcmap-9121/["Mappage des compteurs de performances ONTAP 9.12.1"^]
-* https://docs.netapp.com/us-en/ontap-pcmap-9111/["Mappage des compteurs de performances ONTAP 9.11.1"^]
-
+Vous pouvez accéder à la https://docs.netapp.com/us-en/ontap-pcmap/["Mappage du compteur de performances ONTAP"^] documentation en ligne. Un sélecteur de version permet également d'accéder aux versions précédentes de la documentation basée sur la version ONTAP.
 
 
 

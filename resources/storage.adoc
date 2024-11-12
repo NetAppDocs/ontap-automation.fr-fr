@@ -62,7 +62,7 @@ Les terminaux ont été introduits pour vous permettre de récupérer et de déf
 Une charge de travail de QoS représente un objet de stockage suivi par QoS. Vous pouvez récupérer les workflows QoS. Ce type de ressource a été introduit avec ONTAP 9.10.
 
 .Qtrees
-Vous pouvez utiliser ces appels d'API aux qtrees de gestion, un type de système de fichiers divisé logiquement. Ce type de ressource a été introduit avec ONTAP 9.6.
+Vous pouvez utiliser ces appels d'API aux qtrees de gestion, un type de système de fichiers divisé logiquement. Ce type de ressource a été introduit avec ONTAP 9.6. La fonctionnalité de surveillance des performances étendue de qtree a été ajoutée à ONTAP 9.16.1.
 
 .Rapports de quotas
 Rapport sur les quotas, une technique permettant de limiter ou de suivre l'utilisation des fichiers ou de l'espace. Ce type de ressource a été introduit avec ONTAP 9.6.

@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: sw-tools/nmsdk.html 
-keywords: netapp manageability sdk, oncommand workflow automation, oncommand wfa, ontapi, ontap rest api 
+keywords: netapp manageability sdk, oncommand workflow automation, oncommand wfa, ontapi, zapi 
 summary: 'Le kit de développement logiciel de gestion NetApp fournit un ensemble d"appels API ONTAP pour le développement d"applications destinées à surveiller et gérer votre stockage ONTAP. Associé au package OnCommand Workflow Automation, le kit de développement logiciel vous aide à automatiser la gestion de vos systèmes ONTAP.' 
 ---
 = SDK de gestion NetApp
@@ -10,7 +10,7 @@ summary: 'Le kit de développement logiciel de gestion NetApp fournit un ensembl
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -30,5 +30,4 @@ Vous pouvez également utiliser l'API fournie avec le SDK pour automatiser les t
 * https://www.netapp.com/company/interoperability/["Matrice d'interopérabilité NetApp"^]
 * https://mysupport.netapp.com/documentation/docweb/index.html?productID=63638&language=en-US["Documentation du SDK de gestion NetApp"^]
 * https://www.netapp.com/data-management/oncommand-workflow-automation-documentation/["Ressources de documentation OnCommand Workflow Automation"^]
-* https://automationstore.netapp.com/home.shtml["Le site NetApp Automation Store"^]
 
