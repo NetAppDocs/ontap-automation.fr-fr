@@ -29,5 +29,5 @@ Vous pouvez également utiliser l'API fournie avec le SDK pour automatiser les t
 * https://mysupport.netapp.com/site/["Site de support NetApp"^]
 * https://www.netapp.com/company/interoperability/["Matrice d'interopérabilité NetApp"^]
 * https://mysupport.netapp.com/documentation/docweb/index.html?productID=63638&language=en-US["Documentation du SDK de gestion NetApp"^]
-* https://www.netapp.com/data-management/oncommand-workflow-automation-documentation/["Ressources de documentation OnCommand Workflow Automation"^]
+* https://www.netapp.com/data-management/oncommand-workflow-automation-documentation/["Documentation OnCommand Workflow Automation"^]
 
