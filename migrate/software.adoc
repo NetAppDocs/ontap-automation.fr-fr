@@ -52,9 +52,7 @@ Pour une introduction à cette fonctionnalité, voir link:../rest/access_ontap_c
 
 == Bibliothèque client Python
 
-La bibliothèque cliente Python est un package que vous pouvez installer et utiliser pour accéder à l'API REST ONTAP avec Python. Elle vous permet de développer rapidement un code robuste pour l'automatisation de vos déploiements ONTAP.
-
-Pour une introduction à la bibliothèque cliente Python, reportez-vous à la section link:../python/overview_pcl.html["Présentation de la bibliothèque client Python"]. Pour les échantillons Python, voir https://github.com/NetApp/ontap-rest-python/tree/master/examples/python_client_library["Exemples de bibliothèques clientes Python"^].
+La bibliothèque cliente Python est un package que vous pouvez installer et utiliser pour accéder à l'API REST ONTAP avec Python. Elle vous permet de développer rapidement un code robuste pour l'automatisation de vos déploiements ONTAP. Pour en savoir plus sur la bibliothèque de clients Python, reportez-vous à la section link:../python/learn-about-pcl.html["Bibliothèque client Python"].
 
 
 

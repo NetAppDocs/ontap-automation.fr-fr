@@ -31,7 +31,7 @@ indexpage:
     - title: Flux de travail
       url: "/workflows/prepare_workflows.html"
     - title: Bibliothèque client Python
-      url: "/python/overview_pcl.html"
+      url: "/python/learn-about-pcl.html"
     - title: Kit PowerShell
       url: "/pstk/overview_pstk.html"
     - title: SDK de gestion NetApp
