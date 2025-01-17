@@ -10,8 +10,6 @@ entries:
     url: "/python/packages.html"
   - title: Script pour récupérer la configuration du cluster
     url: "/python/script_retrieve_cluster_configuration.html"
-  - title: Articles de blog
-    url: "/python/blogs_pcl.html"
 - title: Kit PowerShell
   entries:
   - title: Présentation

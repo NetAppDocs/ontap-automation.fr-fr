@@ -4,7 +4,7 @@ permalink: additional/learn_more.html
 keywords: learn, learn more, more information, additional resources 
 summary: 'Il existe plusieurs ressources supplémentaires qui vous aideront à obtenir de l"aide et à trouver plus d"informations sur l"automatisation du déploiement et de l"administration de vos systèmes de stockage ONTAP.' 
 ---
-= En savoir plus >>
+= En savoir plus sur l'API REST ONTAP
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -20,17 +20,15 @@ Plusieurs ressources supplémentaires sont disponibles pour vous aider à automa
 
 == Articles de blog
 
+Les articles de blog sont disposés en plusieurs sections en fonction du sujet.
+
+
+
+=== Généralités
+
 * Voici un bon résumé des technologies d'automatisation actuelles de ONTAP.
 +
 https://www.netapp.com/blog/new-normal-for-automation["Nouvelle norme de l'automatisation"^]
-
-* Introduction à l'accès et à l'utilisation des exemples de scripts Python sur GitHub pour l'API REST ONTAP.
-+
-https://netapp.io/2020/04/23/ontap-rest-apis["Lancez-vous avec des exemples de scripts sur GitHub"^]
-
-* La méthode de passage de l'interface de ligne de commande fournit une technique pour l'exécution des commandes de l'interface de ligne de commande ONTAP à l'aide de l'API REST.
-+
-https://netapp.io/2020/11/09/private-cli-passthrough-ontap-rest-api["Utilisation de la passerelle CLI privée avec l'API REST de ONTAP"^]
 
 * Si vous ne connaissez pas encore Ansible pour l'automatisation d'ONTAP, c'est un bon point de départ.
 +
@@ -48,11 +46,7 @@ https://blog.netapp.com/ontap-rest-apis-automate-notification["API REST ONTAP : 
 +
 https://netapp.io/2022/06/26/rbac-using-ontap-rest-apis["Contrôle d'accès basé sur des rôles (RBAC) à l'aide d'API REST ONTAP"^]
 
-* NetApp fournit des exemples de scripts Python pour utiliser l'API REST de ONTAP.
-+
-https://netapp.io/2020/04/23/ontap-rest-apis["Exemples de scripts Python de l'API REST de ONTAP désormais disponibles sur GitHub !"^]
-
-* Pauses café avec REPOS (6 épisodes).
+* Pauses café avec REPOS (6 épisodes) :
 +
 ** https://community.netapp.com/t5/ONTAP-Rest-API-Discussions/Coffee-breaks-with-REST-Episode-1-Basics-of-ONTAP-REST-APIs/m-p/167852["Notions de base sur les API REST ONTAP"^]
 ** https://community.netapp.com/t5/ONTAP-Rest-API-Discussions/Coffee-breaks-with-REST-Episode-2-Features-of-ONTAP-REST-APIs/m-p/168168/highlight/true#M208["Fonctionnalités des API REST ONTAP"^]
@@ -61,6 +55,49 @@ https://netapp.io/2020/04/23/ontap-rest-apis["Exemples de scripts Python de l'AP
 ** https://community.netapp.com/t5/ONTAP-Rest-API-Discussions/Coffee-breaks-with-REST-Episode-5-Private-CLI-Passthrough/m-p/435293["Passe-système CLI privé"^]
 ** https://community.netapp.com/t5/ONTAP-Rest-API-Discussions/Coffee-breaks-with-REST-Episode-6-5-magical-features-that-make-ONTAP-storage/m-p/435604["5 fonctionnalités magiques qui simplifient l'automatisation du stockage ONTAP !"^]
 
+
+
+
+
+
+=== Bibliothèque client Python
+
+* Introduction à l'utilisation des exemples de scripts Python fournis par NetApp au niveau de GitHub pour accéder à l'API REST ONTAP.
++
+https://netapp.io/2020/04/23/ontap-rest-apis["Exemples de scripts Python de l'API REST de ONTAP désormais disponibles sur GitHub !"^]
+
+* Ce blog fournit une bonne introduction aux fonctionnalités de la bibliothèque client ONTAP Python.
++
+https://www.netapp.com/blog/simplify-ontap-rest-api-consumption["Simplifiez la consommation de l'API REST ONTAP avec la bibliothèque client Python"^]
+
+* Il s'agit d'une série de blogs en trois parties sur la mise en route de la bibliothèque cliente Python :
++
+** https://netapp.io/2020/06/09/ontap-rest-api-python-client-library-pt1["Partie 1"^]
+** https://netapp.io/2020/06/09/ontap-rest-api-python-client-library-pt2["Partie 2"^]
+** https://netapp.io/2020/06/09/ontap-rest-api-python-client-library-pt3["Partie 3"^]
+
+
+
+
+
+
+=== Migration vers l'API REST
+
+* NetApp prend en charge le transfert de l'API ONTAPI propriétaire vers l'API REST ONTAP via la documentation de mappage.
++
+https://netapp.io/2020/12/17/ontapi-to-rest-mapping/["Mappage ONTAPI vers REST"^]
+
+* Plusieurs technologies sont disponibles pour vous aider à transformer votre environnement d'automatisation ONTAP basé sur l'API REST.
++
+https://www.netapp.com/blog/transform-automation-ontap-rest-api/["Transformez votre automatisation en API REST ONTAP à partir de ONTAPI"^]
+
+* Pour faciliter la transition des utilisateurs de l'interface de ligne de commande et de ONTAP vers l'API REST ONTAP, ONTAP fournit un terminal d'API REST privé pouvant être utilisé pour accéder à n'importe quelle commande CLI.
++
+https://netapp.io/2020/11/09/private-cli-passthrough-ontap-rest-api/["Utilisation de la passerelle CLI privée avec l'API REST de ONTAP"^]
+
+* NetApp propose un outil qui aide les clients et les partenaires à passer à l'API REST ONTAP.
++
+https://netapp.io/2022/03/21/transitioning-from-ontapizapi-using-ontapi-usage-reporting-tool/["La transition depuis ONTAPI(ZAPI) à l'aide de l'outil de reporting de l'utilisation ONTAPI"^]
 
 
 

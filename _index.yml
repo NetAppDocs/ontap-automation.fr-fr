@@ -44,8 +44,6 @@ indexpage:
       url: "/migrate/mapping.html"
     - title: Compteurs de performances
       url: "/migrate/performance-counters.html"
-    - title: Articles de blog
-      url: "/migrate/blogs_migrate.html"
   - title: Connaissances et support
     links:
     - title: En savoir plus >>
