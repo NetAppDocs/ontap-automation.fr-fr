@@ -4,7 +4,7 @@ permalink: workflows/prepare_workflows.html
 keywords: workflows, preparation, prepare to use workflows 
 summary: Vous devez connaître la structure et le format des workflows ONTAP avant de les utiliser avec un déploiement en direct. 
 ---
-= Préparez l'utilisation des workflows
+= Préparez-vous à utiliser les workflows de l'API REST ONTAP
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

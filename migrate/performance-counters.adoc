@@ -4,7 +4,7 @@ permalink: migrate/performance-counters.html
 keywords: performance, performance counters, mapping 
 summary: 'Le gestionnaire de compteur ONTAP tient à jour des informations complètes sur les performances de chaque système ONTAP. Il exporte ces données sous la forme d"un ensemble de compteurs de performances que vous pouvez utiliser pour évaluer les performances de votre système ONTAP et vous aider à atteindre vos objectifs de performances.' 
 ---
-= Compteurs de performances
+= Utilisation des compteurs de performances avec l'API REST ONTAP
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

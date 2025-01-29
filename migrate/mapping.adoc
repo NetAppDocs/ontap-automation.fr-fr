@@ -4,7 +4,7 @@ permalink: migrate/mapping.html
 keywords: ontapi, rest api, mapping, mapping documentation, zapi 
 summary: 'L"API REST d"ONTAP comprend des fonctionnalités équivalentes à ONTAPI dans la plupart des domaines. NetApp fournit une documentation qui décrit le mappage entre les appels d"API ONTAPI et les appels d"API REST équivalents.' 
 ---
-= Mappage de l'API REST avec ONTAPI
+= Mappage de ONTAPI vers l'API REST ONTAP
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
