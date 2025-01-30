@@ -4,7 +4,7 @@ permalink: workflows/wf_ems_create_notification.html
 keywords: support, ems, event management system, create ems, create ems notification 
 summary: 'Vous pouvez utiliser le flux de travail suivant pour créer une nouvelle destination de notification EMS afin de recevoir les messages d"événement sélectionnés.' 
 ---
-= Créez une notification EMS
+= Créez une notification EMS à l'aide de l'API REST ONTAP
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

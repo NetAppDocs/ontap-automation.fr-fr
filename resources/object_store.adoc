@@ -4,7 +4,7 @@ permalink: resources/object_store.html
 keywords: object store resources 
 summary: 'Vous pouvez utiliser ces appels d"API pour accéder au stockage objet basé sur S3.' 
 ---
-= Magasin d'objets
+= Les ressources de stockage en mode objet sont stockées dans l'API REST ONTAP
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

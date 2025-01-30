@@ -4,7 +4,7 @@ permalink: workflows/wf_cert_list_certificates.html
 keywords: workflow, list certificates 
 summary: 'Vous pouvez afficher la liste des certificats installés dans votre cluster ONTAP. Vous pouvez le faire pour voir si un certificat particulier est disponible ou pour obtenir l"ID d"un certificat spécifique afin de pouvoir récupérer l"intégralité du certificat.' 
 ---
-= Répertorie les certificats installés
+= Répertoriez les certificats installés à l'aide de l'API REST ONTAP
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

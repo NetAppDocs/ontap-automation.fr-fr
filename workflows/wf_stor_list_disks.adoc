@@ -4,7 +4,7 @@ permalink: workflows/wf_stor_list_disks.html
 keywords: workflow, storage, disks, list disks 
 summary: 'Vous pouvez récupérer la liste des disques du cluster. Vous pouvez ainsi localiser une ou plusieurs réserves à utiliser dans le cadre de la création d"un agrégat.' 
 ---
-= Répertoriez les disques
+= Répertoriez les disques qui utilisent l'API REST ONTAP
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

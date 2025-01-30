@@ -4,7 +4,7 @@ permalink: resources/ndmp.html
 keywords: ndmp resources 
 summary: 'Vous pouvez utiliser ces appels d"API pour gérer les services NDMP.' 
 ---
-= NDMP
+= Ressources NDMP dans l'API REST ONTAP
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

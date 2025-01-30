@@ -4,7 +4,7 @@ permalink: workflows/wf_jobs_get_job.html
 keywords: workflow, job, job state 
 summary: 'Vous pouvez récupérer l"instance d"un travail ONTAP spécifique. Vous devez généralement effectuer cette opération pour déterminer si le travail et l"opération associée ont réussi.' 
 ---
-= Obtenir l'instance de travail
+= Obtenir l'instance de travail à l'aide de l'API REST ONTAP
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
