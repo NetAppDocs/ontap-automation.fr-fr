@@ -4,7 +4,7 @@ permalink: rest/asynchronous_processing.html
 keywords: asynchronous, asynchronous processing, job, job object 
 summary: 'Après l"émission d"une requête API conçue pour s"exécuter de manière asynchrone, un objet de travail est toujours créé et renvoyé à l"appelant. Le travail décrit et ancres une tâche d"arrière-plan qui traite la demande.' 
 ---
-= Traitement asynchrone à l'aide de l'objet travail
+= Traitement asynchrone avec l'API REST ONTAP
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

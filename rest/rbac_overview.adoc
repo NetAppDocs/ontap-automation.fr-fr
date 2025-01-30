@@ -4,7 +4,7 @@ permalink: rest/rbac_overview.html
 keywords: rbac, rbac security, rbac overview, roles, scope, role mapping 
 summary: 'ONTAP inclut des fonctionnalités robustes et évolutives de contrôle d"accès basé sur des rôles (RBAC). Vous pouvez attribuer chaque compte un rôle différent afin de contrôler l"accès de l"utilisateur aux ressources exposées via l"API REST et l"interface de ligne de commande. Les rôles définissent les différents niveaux d"accès administratif des différents utilisateurs ONTAP.' 
 ---
-= Présentation de la sécurité RBAC
+= Présentation de la sécurité RBAC avec l'API REST ONTAP
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
