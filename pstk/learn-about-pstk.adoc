@@ -1,0 +1,45 @@
+---
+sidebar: sidebar 
+permalink: pstk/learn-about-pstk.html 
+keywords: overview, powershell, powershell toolkit, install powershell toolkit 
+summary: 'NetApp prend en charge PowerShell, ce qui vous permet d"administrer vos systèmes de stockage ONTAP.' 
+---
+= En savoir plus sur le kit NetApp PowerShell
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+NetApp prend en charge PowerShell, ce qui vous permet d'administrer vos systèmes de stockage ONTAP.
+
+
+
+== Présentation
+
+PowerShell est une autre option d'automatisation de l'administration de vos clusters ONTAP.
+
+.PowerShell
+PowerShell est un langage de programmation Microsoft que vous pouvez utiliser pour l'automatisation des tâches et la gestion des configurations. Il comprend un environnement shell de ligne de commande ainsi qu'un langage de script.
+
+.Kit NetApp ONTAP PowerShell
+Le NetApp. Le kit ONTAP PowerShell inclut le module PowerShell pour NetApp ONTAP. Le kit prend en charge les environnements ONTAP s'exécutant dans divers environnements, notamment les systèmes NetApp AFF et FAS, le matériel générique et le cloud. Ce module comprend plus de 2,400 cmdlets qui prennent collectivement en charge l'administration du stockage sur les hôtes Windows.
+
+
+
+== Téléchargez et installez
+
+Deux options sont disponibles pour télécharger et installer le kit NetApp ONTAP PowerShell.
+
+.Support NetApp
+Le kit PowerShell est téléchargeable depuis le site du support NetApp :
+
+https://mysupport.netapp.com/site/tools/tool-eula/ontap-powershell-toolkit["NetApp : Kit ONTAP PowerShell"^]
+
+.Galerie PowerShell
+Téléchargez le kit PowerShell depuis la galerie PowerShell :
+
+https://www.powershellgallery.com/packages/NetApp.ONTAP/9.15.1.2410["NetApp : Kit ONTAP PowerShell"^]
