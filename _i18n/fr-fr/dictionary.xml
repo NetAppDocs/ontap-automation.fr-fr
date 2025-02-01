@@ -106,7 +106,6 @@
   <block id="b19cfdc6ba6a94190ea654a5c325673c" category="list-text">Authentification HTTP</block>
   <block id="022958270d2e89acef5cfe895ac4a5a4" category="list-text">Autorisation ONTAP</block>
   <block id="ecada31be49896665065d57659291715" category="paragraph">ONTAP implémente un modèle d'autorisation basé sur des rôles. Le compte que vous utilisez lors de l'accès à l'API REST ou à la page de documentation de l'API ONTAP doit disposer des droits appropriés.</block>
-  <block id="8ed6428212b41847f33c5db651c2aa70" category="doc">Base de services Web REST</block>
   <block id="c0aefd46729e17daeac7adf6c79cc100" category="paragraph">Representational State Transfer (REST) est un style qui permet de créer des applications Web distribuées. Lorsqu'il est appliqué à la conception d'une API de services Web, il établit un ensemble de technologies pour l'exposition des ressources basées sur serveur et la gestion de leur état. Il utilise des protocoles et des normes standard traditionnels pour offrir une base flexible d'administration des clusters ONTAP.</block>
   <block id="a3262c740712f07d5eb90eab53b90682" category="admonition">Alors QUE REST établit un ensemble commun de technologies et de bonnes pratiques, les détails de chaque API peuvent varier en fonction des choix effectués lors du développement. Il est important de connaître les caractéristiques de conception de l'API REST de ONTAP avant de l'utiliser avec un déploiement en direct.</block>
   <block id="b0fcdfb2c58efafaace08609d3e95f6d" category="section-title">Ressources et représentation d'état</block>
@@ -1982,4 +1981,5 @@
   <block id="f1f7a58e7fbfd1ed521da099492f9928" category="paragraph">PowerShell est une autre option d'automatisation de l'administration de vos clusters ONTAP.</block>
   <block id="a96db3613c36742398cc9d0c8e5e717a" category="paragraph">PowerShell est un langage de programmation Microsoft que vous pouvez utiliser pour l'automatisation des tâches et la gestion des configurations. Il comprend un environnement shell de ligne de commande ainsi qu'un langage de script.</block>
   <block id="f8769a3b6c00e170fce8e2d7779f5f7c" category="doc">Découvrez le SDK de gestion NetApp</block>
+  <block id="40165cda75e3c737682e919501eec98c" category="doc">En savoir plus sur les services Web REST</block>
 </blocks>
