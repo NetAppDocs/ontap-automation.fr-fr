@@ -642,7 +642,6 @@
   <block id="7e7397a7b79323762c61941fc0e6b5f9" category="list-text">Protection des données</block>
   <block id="4d3eb4b74688cbcce2793e7fa6452654" category="list-text">Gestion des données intégrant la cohérence applicative</block>
   <block id="93100500d8b18f60a692c67b62fe3e68" category="summary">Vous pouvez exécuter le script en utilisant Python 3 sur l'interface de ligne de commandes afin d'extraire la configuration du cluster ONTAP.</block>
-  <block id="89a63df60ff51ecd284dbabc7f893d79" category="doc">Script pour extraire la configuration du cluster</block>
   <block id="954b2e160c60b05e0b5bcd88116d6dee" category="paragraph">Le script suivant fournit un exemple simple d'utilisation de la bibliothèque client Python. Vous pouvez exécuter le script en utilisant Python 3 sur l'interface de ligne de commandes afin d'extraire la configuration du cluster ONTAP.</block>
   <block id="e5a1747d44133108641b2ef511e802b0" category="inline-link">Référentiel ONTAP PYTHON REST</block>
   <block id="62277cb84205b149ab77912513497f3a" category="paragraph"><block ref="62277cb84205b149ab77912513497f3a" category="inline-link-rx"></block></block>
@@ -1136,8 +1135,6 @@
   <block id="0a783c3ce00e8d3af4931704ca629ba3" category="paragraph-title">L'un des rôles intégrés est-il suffisant ou le rôle personnalisé requis ?</block>
   <block id="531201515c1ec0bfadb1f37e57c2222d" category="paragraph-title">Quel type de rôle est nécessaire ?</block>
   <block id="11678e3d67c685db9322ab4433f227a6" category="paragraph-title">Type de traitement</block>
-  <block id="11593a40313671a88f29e6475859f238" category="paragraph-title">Nom et version du package</block>
-  <block id="7cd8fb6e31cc946c078d2740c76a9899" category="paragraph-title">Installation</block>
   <block id="2e02e4fcb54e6e1277182e7dcc734294" category="paragraph-title">Mappage ONTAPI vers REST</block>
   <block id="88e25761f6eadcead9ced5f76a00e95c" category="doc">Votre premier appel API</block>
   <block id="8b650ff756e15491b90bea96a705b16b" category="inline-link-macro">Quelles sont les nouveautés de l'API REST de ONTAP</block>
@@ -1707,7 +1704,6 @@
   <block id="82285d8d320aa0ca532320803369535d" category="inline-link">Exemples de bibliothèque de clients Python REST ONTAP</block>
   <block id="5ba737ef4be217f04eef26090cbae251" category="list-text"><block ref="5ba737ef4be217f04eef26090cbae251" category="inline-link-rx"></block></block>
   <block id="e7847c34369de18fbc7a45ef5f19f0b9" category="doc">Packages et documentation</block>
-  <block id="b4d70452d65da9fcd38a4b8098a88b3d" category="paragraph">La bibliothèque cliente Python est disponible pour chaque version de ONTAP à partir de 9.6. Vous devez accéder au progiciel PyPI et à la documentation en fonction de la version ONTAP que vous utilisez.</block>
   <block id="9fc11a41fe68e489096a222c7c265dec" category="list-text"><block ref="9fc11a41fe68e489096a222c7c265dec" category="inline-link-rx"></block></block>
   <block id="5f6bf2fac8af69fcf38f9b1b785e910e" category="inline-link">PyPI : NetApp ONTAP 9.13.1</block>
   <block id="319c0b86b933606552d8b765ac942409" category="list-text"><block ref="319c0b86b933606552d8b765ac942409" category="inline-link-rx"></block></block>
@@ -1741,11 +1737,6 @@
   <block id="4c421ca686c08a2f5117b9c8cac019a0" category="list-text"><block ref="4c421ca686c08a2f5117b9c8cac019a0" category="inline-link-rx"></block></block>
   <block id="f358359db0f64d4f6246e5efe7bf61cd" category="inline-link">Documentation NetApp PCL pour 9.6</block>
   <block id="c6b6406d472f50178a7d6d34c51c2828" category="list-text"><block ref="c6b6406d472f50178a7d6d34c51c2828" category="inline-link-rx"></block></block>
-  <block id="7f2ab26d3f83b0c07dfcecd8c4e4d730" category="paragraph-title">Packages et documentation par version de ONTAP</block>
-  <block id="23eeeb4347bdd26bfc6b7ee9a3b755dd" category="list-text">python</block>
-  <block id="3298f13049d19cffaa37ca931dd4d421" category="list-text">demandes</block>
-  <block id="4f11865970671ba7b86c9b6eda8a46ed" category="list-text">requêtes-courroie d'outils</block>
-  <block id="104004214ebf2a9e7840ed8d280a887d" category="list-text">guimauve</block>
   <block id="6c271a07c1fe500a9af8e4bb8e005441" category="sidebar">Migration d'ONTAPI vers l'API REST</block>
   <block id="326737de1766f7c8b80a5acde0f18651" category="sidebar">Téléchargez et installez</block>
   <block id="10c96e88b9c4e92d1c2ae63f9eade937" category="paragraph">Vous pouvez utiliser ces appels API pour administrer la fonction ONTAP SnapLock.</block>
@@ -1880,16 +1871,12 @@
   <block id="a370e7923c07d85d87e81fefb3ea1979" category="list-text"><block ref="a370e7923c07d85d87e81fefb3ea1979" category="inline-link-rx"></block></block>
   <block id="4194600c450cd5967951e54d38f6d438" category="paragraph">La bibliothèque client Python est un pack que vous pouvez utiliser lors de l'écriture de scripts pour accéder à l'API REST de ONTAP. Il prend en charge plusieurs services sous-jacents, notamment la gestion des connexions, le traitement asynchrone des demandes et le traitement des exceptions. Il vous suffit d'utiliser la bibliothèque client Python pour développer rapidement un code robuste en vue de la prise en charge de vos objectifs en matière d'automatisation ONTAP. Voir <block ref="816918ba5e9c5f6dcac33de8016d4ab9" category="inline-link-macro-rx"></block> pour plus d'informations.</block>
   <block id="c05717e9174f828651b78317f146b66b" category="paragraph">La bibliothèque cliente Python est un package que vous pouvez installer et utiliser pour accéder à l'API REST ONTAP avec Python. Elle vous permet de développer rapidement un code robuste pour l'automatisation de vos déploiements ONTAP. Pour en savoir plus sur la bibliothèque de clients Python, reportez-vous à la section <block ref="816918ba5e9c5f6dcac33de8016d4ab9" category="inline-link-macro-rx"></block>.</block>
-  <block id="cca5d0ba9969f6743317e980adb3c9e1" category="summary">La bibliothèque cliente NetApp ONTAP Python est un package que vous pouvez installer et utiliser pour écrire rapidement des scripts qui accèdent à l'API REST ONTAP. Vous devrez préparer l'environnement d'exécution local avant de l'utiliser.</block>
   <block id="460a180d16bdae0c968e9ef22e4c7936" category="doc">Découvrez la bibliothèque client ONTAP Python</block>
-  <block id="13ce983c03db476a78e9bb2eaaa5cdcc" category="paragraph-title">Avantages et fonctionnalités</block>
   <block id="95b1610941323127f65cb3db6cff1ca1" category="paragraph">Vous pouvez utiliser la bibliothèque cliente Python pour développer rapidement un code robuste afin d'automatiser l'administration de vos déploiements ONTAP. Elle fournit plusieurs services sous-jacents, notamment :</block>
   <block id="35a07dde4cdfcf3565f03875ee748ac6" category="list-text">Gestion des connexions</block>
   <block id="8fe3bb19a244ccfeddfe93062360622d" category="list-text">Gestion des exceptions</block>
   <block id="06856d0d21cf25fed37bf8f01dd8e070" category="list-text">Messages d'erreur uniformes</block>
   <block id="4eabbfd21dbe2c323da49bedb2a5c62c" category="paragraph">Le nom du pack de bibliothèque client Python est *netapp-ontap*. La version associée au package est une combinaison des numéros de version majeure et mineure de ONTAP à partir de laquelle la bibliothèque a été générée, ainsi qu'une version mineure de la bibliothèque client dans la version ONTAP. Par exemple, les numéros de version valides incluent 9.6.1, 9.6 et 9.7.1.</block>
-  <block id="472bdbf647fdfc94078ab6f39ba1a11e" category="paragraph">Vous devez utiliser l'utilitaire *pip* pour installer le progiciel NetApp_ONTAP à partir du site PyPi (Python Package Index).</block>
-  <block id="5316c1611ca1b378546362193d538427" category="paragraph">Chaque version de ONTAP commençant par 9.6 est dotée d'un progiciel PyPI et de la documentation associée. Voir <block ref="75af8f7877b901b5fed8d9ea10b7425b" category="inline-link-macro-rx"></block> pour plus d'informations. Les exigences d'installation sont incluses dans chaque package et spécifient différentes versions des éléments suivants :</block>
   <block id="05ccfbea6601dcca671775f24a6b14d3" category="paragraph-title">Exemples de code</block>
   <block id="2284945e609b7e5c75ffeed3e93b30dc" category="paragraph">NetApp maintient un référentiel GitHub avec des exemples de code et d'autres informations utiles. Vous pouvez naviguer vers le dossier _exemples_ pour accéder aux échantillons à l'aide de la bibliothèque client Python. Pour plus d'informations, consultez les emplacements suivants sur GitHub :</block>
   <block id="a9672c1d2a17caa13c69c68927db925b" category="sidebar">Découvrez la bibliothèque client Python</block>
@@ -1914,7 +1901,6 @@
   <block id="15cf2f6738a770890a0ba990f1543d8d" category="inline-link">La transition depuis ONTAPI(ZAPI) à l'aide de l'outil de reporting de l'utilisation ONTAPI</block>
   <block id="2718df1a2d0085e67f1f9cfb09960b20" category="paragraph"><block ref="2718df1a2d0085e67f1f9cfb09960b20" category="inline-link-rx"></block></block>
   <block id="6f44ad18926a737f5583547164ea23a6" category="admonition">Tous les exemples de code Python sont disponibles dans le<block ref="e359793ef9022d56bacc77e70a2f7722" category="inline-link-rx"></block> référentiel GitHub. Vous devez également consulter les ressources disponibles dans <block ref="b91c0d7b0884fbccd6e11fc23dddcee7" category="inline-link-macro-rx"></block>.</block>
-  <block id="afadfcc5e8834b85c88b2a5e94fdf7bc" category="admonition">Vous devez également consulter les ressources disponibles dans <block ref="b91c0d7b0884fbccd6e11fc23dddcee7" category="inline-link-macro-rx"></block>.</block>
   <block id="f0e9bdffcded3071566cc636f2645353" category="doc">Mentions légales pour l'API REST ONTAP</block>
   <block id="0d2211154e74dec09269bf1111f07b01" category="doc">Mappage de ONTAPI vers l'API REST ONTAP</block>
   <block id="484b32b038170aab3e10173e4c46ac03" category="doc">Considérations relatives à la migration pour l'API REST ONTAP</block>
@@ -1982,4 +1968,11 @@
   <block id="a96db3613c36742398cc9d0c8e5e717a" category="paragraph">PowerShell est un langage de programmation Microsoft que vous pouvez utiliser pour l'automatisation des tâches et la gestion des configurations. Il comprend un environnement shell de ligne de commande ainsi qu'un langage de script.</block>
   <block id="f8769a3b6c00e170fce8e2d7779f5f7c" category="doc">Découvrez le SDK de gestion NetApp</block>
   <block id="40165cda75e3c737682e919501eec98c" category="doc">En savoir plus sur les services Web REST</block>
+  <block id="4c720a0398276ed3f84fdbaf97711b7d" category="summary">La bibliothèque cliente NetApp ONTAP Python est un package que vous pouvez installer et utiliser pour écrire rapidement des scripts qui accèdent à l'API REST ONTAP. Vous devrez préparer l'environnement d'exécution local avant de l'utiliser. Vous devez utiliser l'utilitaire _pip_ pour installer le package NetApp_ONTAP à partir du site PyPi (Python Package Index).</block>
+  <block id="7bafad8d0c182e2b6b31ac4018784823" category="list-text"><block ref="b91c0d7b0884fbccd6e11fc23dddcee7" category="inline-link-macro-rx"></block>.</block>
+  <block id="35ae08a314ffffc02580e3c3fbfad924" category="section-title">Caractéristiques et avantages</block>
+  <block id="b310094d4525ad8d1f7d1dab174a4148" category="section-title">Packages séparés par version ONTAP</block>
+  <block id="4411cc32563b58d1d479aff384140f24" category="paragraph">Chaque version de ONTAP commençant par 9.6 est dotée d'un progiciel PyPI et de la documentation associée. Les exigences d'installation sont incluses dans chaque package et spécifient différentes versions de : python, requêtes, requêtes-Toolbelt et marshmallow.</block>
+  <block id="075eb829f6ad7e0f3047f5e1b0db251b" category="example-title">Liste des packages et de la documentation</block>
+  <block id="04e844fe21e462953e1fe26128de4115" category="doc">Script permettant de récupérer la configuration du cluster à l'aide de la bibliothèque cliente Python</block>
 </blocks>

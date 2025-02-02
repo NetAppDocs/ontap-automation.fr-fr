@@ -6,8 +6,6 @@ entries:
   entries:
   - title: Découvrez la bibliothèque client Python
     url: "/python/learn-about-pcl.html"
-  - title: Packages et documentation
-    url: "/python/packages.html"
   - title: Script pour récupérer la configuration du cluster
     url: "/python/script_retrieve_cluster_configuration.html"
 - title: Kit PowerShell

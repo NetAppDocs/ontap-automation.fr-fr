@@ -4,7 +4,7 @@ permalink: python/script_retrieve_cluster_configuration.html
 keywords: Python, sample script, Python example 
 summary: 'Vous pouvez exécuter le script en utilisant Python 3 sur l"interface de ligne de commandes afin d"extraire la configuration du cluster ONTAP.' 
 ---
-= Script pour extraire la configuration du cluster
+= Script permettant de récupérer la configuration du cluster à l'aide de la bibliothèque cliente Python
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -27,7 +27,7 @@ Le script suivant fournit un exemple simple d'utilisation de la bibliothèque cl
 # python3 get_cluster.py
 #
 #
-# (C) Copyright 2024 NetApp, Inc.
+# (C) Copyright 2025 NetApp, Inc.
 #
 # This sample code is provided AS IS, with no support or warranties of
 # any kind, including but not limited for warranties of merchantability
