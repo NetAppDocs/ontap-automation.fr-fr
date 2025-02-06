@@ -1808,7 +1808,6 @@
   <block id="68d26d1aac1d90ae670aa8a5fe3415f3" category="summary">Le gestionnaire de compteur ONTAP tient à jour des informations complètes sur les performances de chaque système ONTAP. Il exporte ces données sous la forme d'un ensemble de compteurs de performances que vous pouvez utiliser pour évaluer les performances de votre système ONTAP et vous aider à atteindre vos objectifs de performances.</block>
   <block id="08d2a25d52e092c6c253545968ce5bb5" category="inline-link">Mappage du compteur de performances ONTAP</block>
   <block id="91b54891dd280b62b83af7ec4c8e3979" category="paragraph">Vous pouvez accéder à la<block ref="9d8aae4b84eb6e74ade1e0afd2ee1664" category="inline-link-rx"></block> documentation en ligne. Un sélecteur de version permet également d'accéder aux versions précédentes de la documentation basée sur la version ONTAP.</block>
-  <block id="d9c24a6b276d26b3ed8aa4df515da6c8" category="paragraph"><block ref="d9c24a6b276d26b3ed8aa4df515da6c8" category="inline-link-rx"></block></block>
   <block id="31272abf1c9209ab4acd0bf10f129338" category="list-title">ONTAP 9.16.1</block>
   <block id="0c06f2efbe678ca8c3e4cd68189cf2ae" category="inline-link">IP: NetApp ONTAP 9.16.1</block>
   <block id="8f3ad8f9a04fe39c8fd1b3e0ba9e3dd2" category="list-text"><block ref="8f3ad8f9a04fe39c8fd1b3e0ba9e3dd2" category="inline-link-rx"></block></block>
@@ -1973,4 +1972,5 @@
   <block id="094ae048e28df3a12a5e4fedaf56a886" category="paragraph">Vous pouvez utiliser le kit NetApp.ONTAP PowerShell pour automatiser l'administration d'un cluster ONTAP à partir d'un hôte Windows. Voir <block ref="989c1f290c32ecf34c3ac0fd6c1ac541" category="inline-link-macro-rx"></block> pour plus d'informations.</block>
   <block id="4874336dcda30fb0f9d748e03c8e2591" category="paragraph">Le kit NetApp.ONTAP PowerShell renforce votre environnement PowerShell local avec un module qui comprend plus de 2,400 cmdlets. Il vous permet de développer rapidement du code pour votre hôte Windows afin d'automatiser les déploiements ONTAP. Pour plus d'informations, voir <block ref="989c1f290c32ecf34c3ac0fd6c1ac541" category="inline-link-macro-rx"></block>.</block>
   <block id="7428add5c3a2dd7025d4c547d124a83f" category="paragraph">Le support a été retiré à différents points de chaque version. Cela inclut ONTAP 9.10.1 P11 et versions ultérieures, 9.11.1 P7 et versions ultérieures, et 9.12.1 GA et versions ultérieures. Pour plus d'informations, reportez-vous à la section<block ref="13c0668cefb5d13050e1de01793dacbb" category="inline-link-rx"></block>.</block>
+  <block id="2d173dfa208c5028d536c08827a33be8" category="paragraph"><block ref="2d173dfa208c5028d536c08827a33be8" category="inline-link-rx"></block></block>
 </blocks>
