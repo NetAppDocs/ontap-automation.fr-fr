@@ -35,4 +35,4 @@ Les contrôleurs du sous-système NVMe représentent des connexions dynamiques e
 Un mappage de sous-système NVMe est une association d'un namespace NVMe avec un sous-système NVMe. Ce type de ressource a été introduit avec ONTAP 9.6.
 
 .Sous-systèmes NVMe
-Un sous-système NVMe conserve l'état de configuration et le contrôle d'accès à l'espace de noms pour un ensemble d'hôtes connectés via NVMe. Ce type de ressource a été introduit avec ONTAP 9.6.
+Un sous-système NVMe gère l'état de configuration et le contrôle d'accès à l'espace de noms pour un ensemble d'hôtes connectés à NVMe. Ce type de ressource a été introduit avec ONTAP 9.6 et mis à jour avec la version 9.17.1.

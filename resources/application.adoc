@@ -16,6 +16,9 @@ summary: 'Vous pouvez utiliser ces appels d"API pour gérer les ressources de l"
 [role="lead"]
 Vous pouvez utiliser ces appels d'API pour gérer les ressources de l'application ONTAP.
 
+.Conteneurs d'application
+Vous pouvez utiliser un conteneur d'application pour provisionner un ou plusieurs objets de stockage. Ce type de ressource a été introduit avec ONTAP 9.17.1.
+
 .Snapshots d'applications
 Les applications prennent en charge les copies Snapshot, qui peuvent être créées ou restaurées à tout moment. Ce type de ressource a été introduit avec ONTAP 9.6.
 

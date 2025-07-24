@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: resources/security.html 
-keywords:  
-summary:  
+keywords: rest, rest api, security, security resources 
+summary: Vous pouvez utiliser ces appels d’API pour gérer les paramètres de sécurité du cluster et des SVM. 
 ---
 = Ressources de sécurité de l'API REST ONTAP
 :hardbreaks:
@@ -14,7 +14,7 @@ summary:
 
 
 [role="lead"]
-Vous pouvez utiliser ces appels d'API pour gérer les paramètres de sécurité du cluster et du SVM.
+Vous pouvez utiliser ces appels d’API pour gérer les paramètres de sécurité du cluster et des SVM.
 
 .Comptes
 Il existe un ensemble de comptes utilisateurs pour le cluster et les SVM. Ce type de ressource a été introduit avec ONTAP 9.6.
@@ -27,6 +27,9 @@ Vous pouvez administrer les informations de compte SVM au serveur Active Directo
 
 .Protection contre les ransomwares
 ONTAP détecte les fichiers potentiellement contenant une menace d'attaque par ransomware. Il existe plusieurs catégories de terminaux. Vous pouvez récupérer une liste de ces fichiers suspects et les supprimer d'un volume. Ce type de ressource a été introduit avec ONTAP 9.10.1. La prise en charge de l'affichage de la version et de la mise à jour du paquet anti-ransomware a été ajoutée avec ONTAP 9.16.
+
+.Statistiques d'entropie anti-ransomware
+Des statistiques d'entropie détaillées sont disponibles pour le fonctionnement de la fonctionnalité Autonomous Ransomware Protection (ARP). Ce type de ressource a été ajouté avec ONTAP 9.17.1.
 
 .Audit
 Les paramètres qui déterminent ce qui est consigné dans les fichiers journaux d'audit. Ce type de ressource a été introduit avec ONTAP 9.6.
@@ -42,6 +45,9 @@ Amazon Web Services inclut un service de gestion des clés qui fournit un stocka
 
 .Coffre-fort de clés Azure
 Cet ensemble d'appels d'API vous permet d'utiliser le coffre-fort de clés Azure pour stocker les clés de cryptage ONTAP. Ce type de ressource est nouveau avec ONTAP 9.8.
+
+.Barbican KMS
+La prise en charge du gestionnaire de clés OpenStack Barbican a été ajoutée pour gérer les clés de chiffrement de volumes NetApp (NVE). Ce type de ressource a été ajouté avec ONTAP 9.17.1.
 
 .Certificats
 Les appels API peuvent être utilisés pour installer, afficher et supprimer des certificats utilisés par ONTAP. Ce type de ressource a été introduit avec ONTAP 9.7.
@@ -75,6 +81,9 @@ Vous pouvez utiliser cet ensemble d'appels API pour gérer les stratégies en vi
 
 .Associations de sécurité IPsec
 Vous pouvez utiliser cet ensemble d'appels API pour gérer les associations de sécurité en vigueur pour un déploiement IPSec. Ce type de ressource est nouveau avec ONTAP 9.8.
+
+.Élévation des privilèges juste à temps (JIT)
+L'élévation des privilèges (JIT) est une amélioration du contrôle d'accès basé sur les rôles (RBAC). Les administrateurs de cluster peuvent demander une élévation temporaire vers un rôle existant. Ce type de ressource a été ajouté avec ONTAP 9.17.1.
 
 .Configurations du gestionnaire de clés
 Ces noeuds finaux vous permettent de récupérer et de mettre à jour les configurations des gestionnaires de clés. Ce type de ressource est nouveau avec ONTAP 9.10.
@@ -124,6 +133,9 @@ Instance spécifique d'un rôle. Ce type de ressource a été introduit avec ONT
 
 .Fournisseur de services SAML
 Vous pouvez afficher et gérer la configuration du fournisseur de services SAML. Ce type de ressource a été introduit avec ONTAP 9.6.
+
+.Métadonnées par défaut du fournisseur de services SAML
+Vous pouvez gérer la configuration des métadonnées SAML par défaut d'un cluster. Ce type de ressource a été ajouté avec ONTAP 9.17.1.
 
 .SSH
 Ces appels vous permettent de définir la configuration SSH. Ce type de ressource a été introduit avec ONTAP 9.7.
