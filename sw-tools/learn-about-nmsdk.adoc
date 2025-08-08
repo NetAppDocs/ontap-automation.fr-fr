@@ -17,7 +17,7 @@ summary: 'Le kit de développement logiciel de gestion NetApp fournit un ensembl
 Le kit de développement logiciel de gestion NetApp fournit un ensemble d'appels API ONTAP pour le développement d'applications destinées à surveiller et gérer votre stockage ONTAP. Associé au package OnCommand Workflow Automation, le kit de développement logiciel vous aide à automatiser la gestion de vos systèmes ONTAP.
 
 
-NOTE: Même si le kit de développement logiciel de gestion NetApp et OnCommand Workflow Automation sont toujours pris en charge, l'API REST ONTAP est la technologie privilégiée et stratégique à utiliser pour automatiser vos systèmes ONTAP. Voir link:../migrate/ontapi_disablement.html["Désactivation d'ONTAPI"] pour en savoir plus.
+NOTE: Bien que le SDK NetApp Manageability et OnCommand Workflow Automation continuent d'être pris en charge, l'API REST ONTAP est la technologie privilégiée et stratégique à utiliser lors de l'automatisation de vos systèmes ONTAP . Voir link:../migrate/migration-considerations.html["Migration d'ONTAPI vers l'API REST"] pour plus d'informations.
 
 .Téléchargez le SDK
 Vous pouvez télécharger le SDK de gestion NetApp à partir du site de support NetApp. Le SDK prend en charge plusieurs langues côté client, notamment Python, PowerShell, C, C++, Java, C#, VB. Net et Ruby. N'oubliez pas de consulter la matrice d'interopérabilité pour plus d'informations sur le SDK de gestion NetApp et sur sa prise en charge par votre version de ONTAP.

@@ -38,8 +38,8 @@ indexpage:
       url: "/sw-tools/learn-about-nmsdk.html"
   - title: Migrer vers l'API REST
     links:
-    - title: Désactivation d'ONTAPI
-      url: "/migrate/ontapi_disablement.html"
+    - title: Considérations relatives à la migration
+      url: "/migrate/migration-considerations.html"
     - title: Mappage ONTAPI vers REST
       url: "/migrate/mapping.html"
     - title: Compteurs de performances

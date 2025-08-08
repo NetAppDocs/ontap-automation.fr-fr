@@ -14,7 +14,13 @@ summary: 'Avant de migrer vers l"API REST ONTAP à partir de l"API ONTAP (ZAPI) 
 
 
 [role="lead"]
-Avant de migrer vers l'API REST ONTAP à partir de l'API ONTAP (ZAPI) ou de l'interface de ligne de commande ONTAP, vous devez prendre en compte plusieurs points.
+L'API ONTAPI (ZAPI) est l'ensemble d'appels propriétaires d'origine inclus avec le logiciel NetApp ONTAP .  L'API est fournie via le SDK Network Manageability et prend en charge l'automatisation des tâches d'administration et de gestion du stockage des données.  Si vous utilisez ONTAPI, vous devez planifier votre migration vers l'API REST ONTAP pour profiter de l'ensemble de fonctionnalités ONTAP étendu disponible avec l'API REST.
+
+.Informations associées
+* link:../get-started/ontap_automation_options.html["Découvrez les options d'automatisation ONTAP"]
+* https://mysupport.netapp.com/info/communications/ECMLP2880232.html["CPC-00410 annonce de fin de disponibilité du report de ONTAPI (ZAPI)"^]
+* https://kb.netapp.com/onprem/ontap/dm/REST_API/FAQs_on_ZAPI_to_ONTAP_REST_API_transformation_for_CPC_(Customer_Product_Communiques)_notification["FAQ sur la transformation de l'API REST de ZAPI vers ONTAP pour CPC"^]
+
 
 
 
@@ -57,9 +63,3 @@ La disponibilité de l'API SnapDiff sur les versions ONTAP est définie comme su
 
 
 Le support a été retiré à différents points de chaque version. Cela inclut ONTAP 9.10.1 P11 et versions ultérieures, 9.11.1 P7 et versions ultérieures, et 9.12.1 GA et versions ultérieures. Pour plus d'informations, reportez-vous à la section https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508["Notes de version de ONTAP"^].
-
-
-
-== Soumettez votre ONTAP aux écarts de l'API REST
-
-NetApp s'engage à accompagner ses clients lors de leur migration depuis ONTAP API vers l'API REST ONTAP. Si vous remarquez quelque chose qui manque dans l'API REST, veuillez nous le faire savoir. Vous pouvez soumettre ces lacunes et toutes les autres idées au https://forms.office.com/Pages/ResponsePage.aspx?id=oBEJS5uSFUeUS8A3RRZbOtlEKM3rNwBHjLH8dubcgOVURVM2UzIzTkQzSzdTU0pQRVFFRENZWlAxNi4u["ONTAPI POUR L'API REST"^] page.

@@ -2,8 +2,6 @@
 section: migrate
 title: Migration d'ONTAPI vers l'API REST
 entries:
-- title: Désactivation d'ONTAPI
-  url: "/migrate/ontapi_disablement.html"
 - title: Considérations relatives à la migration
   url: "/migrate/migration-considerations.html"
 - title: Mappage ONTAPI vers REST
