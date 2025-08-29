@@ -107,7 +107,7 @@ https://netapp.io/2022/03/21/transitioning-from-ontapizapi-using-ontapi-usage-re
 
 * Une bonne introduction à la bibliothèque client NetApp Python et comment commencer à écrire du code à l'aide de la bibliothèque.
 +
-video::Wws3SB5d9Ss[youtube,width=848,height=480]
+video::pg5ls1Ol6uw[youtube,width=848,height=480]
 * Découvrez les modules certifiés Ansible.
 +
 video::ZlmQ5IuVZD8[youtube,width=848,height=480]
