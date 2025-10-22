@@ -23,7 +23,7 @@ NOTE: Vous pouvez accéder à la documentation de référence de l'API REST sur 
 
 == Accédez à la documentation de référence de l'API ONTAP en ligne
 
-Vous pouvez accéder à la https://docs.netapp.com/us-en/ontap-restapi/ontap/getting_started_with_the_ontap_rest_api.html["Référence de l'API REST ONTAP"^] documentation en ligne. Un sélecteur de version permet également d'accéder aux versions précédentes de la documentation basée sur la version ONTAP.
+Vous pouvez accéder à l'actuel https://docs.netapp.com/us-en/ontap-restapi/getting_started_with_the_ontap_rest_api.html["Référence de l'API REST ONTAP"^] documentation en ligne. Un sélecteur de version est également disponible pour accéder aux versions précédentes de la documentation basées sur la version ONTAP .
 
 
 
