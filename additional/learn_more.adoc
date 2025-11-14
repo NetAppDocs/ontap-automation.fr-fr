@@ -30,9 +30,7 @@ Les articles de blog sont disposés en plusieurs sections en fonction du sujet.
 +
 https://www.netapp.com/blog/new-normal-for-automation["Nouvelle norme de l'automatisation"^]
 
-* Si vous ne connaissez pas encore Ansible pour l'automatisation d'ONTAP, c'est un bon point de départ.
-+
-https://netapp.io/2018/10/08/getting-started-with-netapp-and-ansible-install-ansible["Mise en route avec NetApp et Ansible : installation d'Ansible"^]
+
 
 * Vous pouvez explorer les possibilités d'utilisation de l'API REST ONTAP pour gérer la sécurité des fichiers et les autorisations.
 +
