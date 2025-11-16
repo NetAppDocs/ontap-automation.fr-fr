@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: get-started/access_rest_api.html 
-keywords: accessing the rest api, lif 
+keywords: access rest api, lif, cluster lif, svm lif, node lif 
 summary: 'Vous pouvez accéder ONTAP à l"API REST de plusieurs façons.' 
 ---
 = Comment accéder à l'API REST de ONTAP
@@ -20,17 +20,14 @@ Vous pouvez accéder ONTAP à l'API REST de plusieurs façons.
 
 == Considérations réseau
 
-Vous pouvez vous connecter à l'API REST via les interfaces suivantes :
+Vous pouvez vous connecter à l'API REST ONTAP en utilisant l'un des nombreux types d'interfaces. L'interface LIF que vous choisissez doit être configurée pour prendre en charge le protocole de gestion HTTPS. De plus, la configuration du pare-feu de votre réseau doit autoriser le trafic HTTPS. Les interfaces suivantes sont prises en charge :
 
 * LIF Cluster-management
 * FRV de gestion des nœuds
 * LIF de gestion SVM
 
 
-La LIF que vous choisissez d'utiliser doit être configurée pour prendre en charge le protocole de gestion HTTPS. De plus, la configuration du pare-feu de votre réseau doit autoriser le trafic HTTPS.
-
-
-TIP: Vous devez toujours utiliser une LIF de cluster management. La charge sera ainsi équilibrée entre les requêtes d'API sur tous les nœuds et évitez les nœuds hors ligne ou qui rencontrent des problèmes de connectivité. Si plusieurs LIF de cluster management sont configurées, elles sont toutes équivalentes en ce qui concerne l'accès à l'API REST.
+Bien que vous puissiez utiliser n'importe laquelle de ces LIF, la meilleure pratique recommandée consiste à utiliser la LIF de gestion de cluster. Cela permet de considérer le cluster comme une seule unité logique et offre le plus haut niveau de résilience et d'équilibrage de charge. Un LIF de cluster peut se déplacer au sein du cluster selon les besoins pour gérer les mises à niveau planifiées, les événements de quorum et autres problèmes de connectivité. Si vous avez configuré plusieurs LIF de gestion de cluster, elles sont toutes équivalentes en ce qui concerne l'accès à l'API REST. Les LIF de gestion SVM sont également équilibrées en charge, mais les requêtes envoyées aux LIF limitées au niveau du nœud sont traitées localement.
 
 
 
