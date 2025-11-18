@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: get-started/ontap_automation_options.html 
-keywords: ontap automation, rest api, python client library, powershell, ansible, bluexp automation catalog, netapp, console 
+keywords: ontap automation, rest api, python client library, powershell, ansible, bluexp automation catalog, netapp, console, hub 
 summary: 'Plusieurs options sont disponibles pour automatiser le déploiement et l"administration de vos systèmes de stockage ONTAP.' 
 ---
 = Découvrez les options d'automatisation ONTAP
@@ -49,5 +49,5 @@ Vous pouvez créer et déployer du code d’automatisation à l’aide de plusie
 .Ansible
 Ansible est un outil logiciel open source qui prend en charge le provisionnement, la gestion de la configuration et le déploiement d'applications. Depuis sa sortie et son acquisition ultérieure par RedHat, elle a continué de croître dans la popularité. NetApp fournit des modules certifiés Ansible qui permettent aux clients d'automatiser l'administration de leurs systèmes de stockage ONTAP. Voir link:../additional/learn_more.html["En savoir plus >>"] et https://www.netapp.com/devops-solutions/ansible/["Solutions DevOps NetApp Ansible"^] pour plus d'informations.
 
-.Catalogue d'automatisation de la console NetApp
-NetApp https://console.netapp.com/automationCatalog/["Catalogue d'automatisation de la console NetApp"^] est disponible via l'interface utilisateur Web de la console.  Le catalogue donne accès à des solutions packagées qui peuvent vous aider à automatiser le déploiement et l'intégration d' ONTAP avec d'autres produits.  Voir https://docs.netapp.com/us-en/netapp-automation/["Automatisation NetApp"^] pour la documentation et plus d'informations.
+.Centre d'automatisation NetApp Console
+Le https://console.netapp.com/automationHub["Centre d'automatisation NetApp Console"^] est disponible via l'interface utilisateur Web de la console. La plateforme d'automatisation donne accès à des solutions packagées qui peuvent vous aider à automatiser le déploiement et l'intégration d' ONTAP avec d'autres produits. Voir https://docs.netapp.com/us-en/netapp-automation/["Automatisation NetApp"^] pour la documentation et plus d'informations.
