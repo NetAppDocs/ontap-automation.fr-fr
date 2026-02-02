@@ -28,6 +28,9 @@ Vous pouvez administrer les informations de compte SVM au serveur Active Directo
 .Protection contre les ransomwares
 ONTAP détecte les fichiers potentiellement contenant une menace d'attaque par ransomware. Il existe plusieurs catégories de terminaux. Vous pouvez récupérer une liste de ces fichiers suspects et les supprimer d'un volume. Ce type de ressource a été introduit avec ONTAP 9.10.1. La prise en charge de l'affichage de la version et de la mise à jour du paquet anti-ransomware a été ajoutée avec ONTAP 9.16.
 
+.Activation de la protection contre les ransomwares
+Vous pouvez contrôler le fonctionnement de la fonctionnalité d’activation de la protection autonome contre les ransomwares (ARP). Cela inclut la récupération et la modification des paramètres de configuration. Ce type de ressource a été introduit avec ONTAP 9.18.1.
+
 .Statistiques d'entropie anti-ransomware
 Des statistiques d'entropie détaillées sont disponibles pour le fonctionnement de la fonctionnalité Autonomous Ransomware Protection (ARP). Ce type de ressource a été ajouté avec ONTAP 9.17.1.
 
