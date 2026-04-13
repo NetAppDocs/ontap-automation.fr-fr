@@ -24,7 +24,7 @@ Cet appel d'API REST utilise la méthode et le point de terminaison suivants.
 | Méthode HTTP | Chemin 
 
 
-| OBTENEZ | /api/stockage/disques 
+| OBTENEZ | /api/storage/aggregates 
 |===
 .Type de traitement
 Synchrone
