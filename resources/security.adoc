@@ -156,4 +156,7 @@ Ces terminaux vous permettent d'extraire la configuration de sécurité SSH pour
 Vous pouvez utiliser l'API REST pour configurer les profils TOTP (Time-based unique password) pour les comptes qui se connectent et accèdent à ONTAP à l'aide de SSH. Ce type de ressource a été introduit avec ONTAP 9.13.
 
 .Authentification Web
-L'authentification Web (WebAuthn) est une norme Web pour l'authentification sécurisée des utilisateurs basée sur la cryptographie de clé publique. Avec ONTAP, il prend en charge l'administration des appels de demandes de soutien résistants au phishing via System Manager et l'API REST de ONTAP. Cette fonctionnalité a été ajoutée avec ONTAP 9.16.
+L'authentification Web (WebAuthn) est une norme Web permettant d'authentifier les utilisateurs de manière sécurisée grâce à la cryptographie à clé publique. Avec ONTAP, elle prend en charge l'administration de MFA résistantes au phishing via System Manager et l'API REST ONTAP. Cette fonctionnalité a été ajoutée avec ONTAP 9.16 et mise à jour avec ONTAP 9.19.1.
+
+.Qui suis-je
+Un point de terminaison permet d'afficher les informations de l'utilisateur authentifié, notamment son nom d'utilisateur, son rôle et ses autorisations. Ce type de ressource a été introduit avec ONTAP 9.19.1.
