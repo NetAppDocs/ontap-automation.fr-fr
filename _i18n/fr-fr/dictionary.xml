@@ -19,8 +19,6 @@
   <block id="9a85c4ed4aea58b5cf2264e55823074c" category="list-text"><block ref="32b478a260a90a0150f84bc469ac640b" prefix="" category="inline-code"></block></block>
   <block id="7faf05b9e4d90529c54562f216bfb2d6" category="list-text"><block ref="8f7088b1308a9efa94a1fadb415a83fe" prefix="" category="inline-code"></block></block>
   <block id="30f60d67f457bb040dffde52197a54da" category="section-title">Informations associées</block>
-  <block id="673cd1c7bc219dafd3ab44f7789c7963" category="inline-link">Gestion simplifiée des autorisations de sécurité de fichiers avec les API REST ONTAP</block>
-  <block id="6f49384b8a99fec44a7cd1d6ed52add4" category="list-text"><block ref="6f49384b8a99fec44a7cd1d6ed52add4" category="inline-link-rx"></block></block>
   <block id="f3a29486bed19a90f2da6d007818b427" category="list-title">Étapes</block>
   <block id="8b64f73d0c930b953467d71771168fcb" category="cell"><block ref="e6d3e2b20641c094d3561900f189ee36" prefix="" category="inline-code"></block></block>
   <block id="2130e4445c18121e61a0496381717d89" category="list-text"><block ref="11c37609eb90008bd36d83530ab47246" prefix="" category="inline-code"></block></block>
@@ -1108,7 +1106,6 @@
   <block id="bd96d411ebb8705b0ef857c4d7b8c9c9" category="paragraph-title">Godets de service</block>
   <block id="8acc0dc5cdc4a547b0826578b2a98b48" category="paragraph-title">Groupes S3</block>
   <block id="29c67008363344d9ca92cd75f29fe2c9" category="paragraph-title">Règles S3</block>
-  <block id="bc00f7a5406f8f98848784d25ca2e573" category="paragraph-title">Utilisation de la passerelle CLI privée avec l'API REST de ONTAP</block>
   <block id="34aebac80a78170f96dfd325c4320501" category="paragraph-title">Requête HTTP</block>
   <block id="0d5a371e0c92f43305354a7ca5481105" category="paragraph-title">Réponse HTTP</block>
   <block id="135b308ed83c53f1516b7c754566d1c4" category="paragraph-title">Avant de commencer</block>
@@ -1598,14 +1595,12 @@
   <block id="bb059379feb749c05906d3ac23b4816d" category="section-title">Étape 1 : mettez à jour le descripteur de sécurité</block>
   <block id="698f9eb192e6aa6224d8848f98d6a530" category="summary">Vous pouvez gérer les autorisations et les règles d'audit pour les fichiers disponibles via les SVM au sein d'un cluster ONTAP.</block>
   <block id="7e2e1102b90cfd81da1a2e5002c37c9c" category="paragraph">ONTAP utilise les listes de contrôle d'accès système (CLS) et les listes de contrôle d'accès discrétionnaire (listes ACL) pour attribuer des autorisations aux objets de fichier. Depuis ONTAP 9.9.1, l'API REST prend en charge la gestion des autorisations SACL et DACL. Vous pouvez utiliser l'API pour automatiser l'administration des autorisations de sécurité des fichiers. Dans la plupart des cas, vous pouvez utiliser un seul appel d'API REST au lieu de plusieurs commandes CLI ou appels ONTAPI (ZAPI).</block>
-  <block id="3c4e118c8471cd86da2e54560f34234b" category="admonition">Pour les versions ONTAP antérieures à la version 9.9.1, vous pouvez automatiser l'administration des autorisations SACL et DACL à l'aide de la fonction de passerelle CLI. Voir <block ref="2827875b29ddc93c1111f4063df563c8" category="inline-link-macro-rx"></block> et<block ref="cc458ed66c48b12b86281fe13e008c20" category="inline-link-rx"></block> pour en savoir plus.</block>
   <block id="5a4c76b14341d9a5432b024437f965d1" category="paragraph">Plusieurs exemples de workflows sont disponibles pour illustrer la manière de gérer les services de sécurité des fichiers ONTAP à l'aide de l'API REST. Avant d'utiliser les flux de travail et d'émettre l'un des appels de l'API REST, assurez-vous de passer en revue <block ref="8db76eb28f35a2f0429c5f03bc9feadd" category="inline-link-macro-rx"></block>.</block>
   <block id="f13ddbbf96dbd385b6b39bedaac4e6f7" category="inline-link">file_security_permissions.py</block>
   <block id="b3b08c8a5c5a09ffbe1430bb1e019e74" category="paragraph">Si vous utilisez Python, consultez également le script<block ref="3ccddfdb1872f5bc3b7f054cd270fc1b" category="inline-link-rx"></block> pour des exemples d'automatisation de certaines activités de sécurité des fichiers.</block>
   <block id="0207c62847caaa4c5ffaeaf4b00552d6" category="paragraph">Pour de nombreuses tâches, l'utilisation de l'API REST ONTAP requiert moins d'appels que les commandes CLI ONTAP ou les appels ONTAPI (ZAPI) équivalents. Le tableau ci-dessous présente une liste d'appels API et l'équivalent des commandes CLI nécessaires à chaque tâche.</block>
   <block id="3d1a91a3f9c08c95df6cb1eff36db464" category="inline-link">Script Python illustrant les autorisations de fichier</block>
   <block id="bd9e252fe191d999eeb79daa2d91b6a8" category="list-text"><block ref="bd9e252fe191d999eeb79daa2d91b6a8" category="inline-link-rx"></block></block>
-  <block id="0c30cc0a8be3231b1496649b8f111c07" category="list-text"><block ref="0c30cc0a8be3231b1496649b8f111c07" category="inline-link-rx"></block></block>
   <block id="a58cf8beb5e4ede8e197f2cc371725fe" category="sidebar">Préparez-vous à gérer la sécurité des fichiers</block>
   <block id="22b4fdae10b975d500f499f9cd7d2659" category="sidebar">Obtenez des autorisations efficaces</block>
   <block id="f520e25b29f7e72fdce54450ea759fc8" category="sidebar">Obtenez des informations d'audit</block>
@@ -1987,4 +1982,5 @@
   <block id="7c152b2ce344c1d6fc432fba33fc71cf" category="list-text">Une nouvelle<block ref="1b0679be72ad976ad5d491ad57a5eec0" prefix=" " category="inline-code"></block> fonctionnalité a été ajoutée pour récupérer le nom d'utilisateur, le rôle et les autorisations de l'utilisateur connecté. La fonctionnalité d'authentification web (WebAuthn) a également été améliorée.</block>
   <block id="50627d24ccfbf3209a01226c32f4208c" category="list-text">L'administration de la cartographie LUN a été mise à jour avec une capacité de mise à jour améliorée.</block>
   <block id="92d15479dd92b1e555eec98a86d59c71" category="sidebar">Modifications et considérations relatives à l'API REST ONTAP</block>
+  <block id="5c7f695288b6d2a3f37f4f2e098cf200" category="admonition">Pour les versions d'ONTAP antérieures à 9.9.1, vous pouvez automatiser l'administration des autorisations SACL et DACL à l'aide de la fonction de transmission via l'interface de ligne de commande (CLI). Voir <block ref="2827875b29ddc93c1111f4063df563c8" category="inline-link-macro-rx"></block> pour plus d'informations.</block>
 </blocks>
