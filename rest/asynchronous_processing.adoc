@@ -20,6 +20,7 @@ Reportez-vous à la section link:../reference/api_reference.html["Référence AP
 
 
 
+[[controlling-how-a-request-is-processed]]
 == Contrôle du traitement d'une demande
 
 Vous pouvez utiliser le `return_timeout` Paramètre de requête pour contrôler le traitement d'un appel d'API asynchrone. Deux résultats sont possibles lors de l'utilisation de ce paramètre.
@@ -36,6 +37,7 @@ NOTE: La valeur par défaut de l' `return_timeout` le paramètre est de zéro se
 
 
 
+[[querying-the-job-object-associated-with-an-api-request]]
 == Interrogation de l'objet travail associé à une requête API
 
 L'objet travail renvoyé dans la réponse HTTP contient plusieurs propriétés. Vous pouvez interroger la propriété d'état dans un appel d'API suivant pour déterminer si la demande a bien été effectuée. Un objet travail se trouve toujours dans l'un des États suivants :
@@ -61,6 +63,7 @@ L'objet travail renvoyé dans la réponse HTTP contient plusieurs propriétés. 
 
 
 
+[[general-procedure-for-issuing-an-asynchronous-request]]
 == Procédure générale d'émission d'une demande asynchrone
 
 Vous pouvez utiliser la procédure de haut niveau suivante pour effectuer un appel d'API asynchrone. Cet exemple suppose le `return_timeout` le paramètre n'est pas utilisé ou que le délai expire avant la fin du travail en arrière-plan.

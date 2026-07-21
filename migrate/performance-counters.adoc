@@ -18,6 +18,7 @@ Le gestionnaire de compteur ONTAP tient à jour des informations complètes sur 
 
 
 
+[[access-the-ontap-performance-counters]]
 == Accès aux compteurs de performances ONTAP
 
 Vous pouvez accéder aux compteurs de performances ONTAP à l'aide de deux API différentes ainsi que via l'interface de ligne de commandes ONTAP.
@@ -27,6 +28,7 @@ NOTE: L'API REST de ONTAP est l'option stratégique et privilégiée lorsque vou
 
 
 
+[[ontapi-api]]
 === API ONTAPI
 
 L'API ONTAPI est disponible avec le SDK de gestion réseau NetApp. Lors de l'utilisation de ONTAPI, les compteurs de performances sont définis au sein d'un ensemble d'objets. Chaque objet correspond à un composant physique ou virtuel du système. Il peut y avoir une ou plusieurs instances de chaque objet en fonction de la configuration du système.
@@ -35,6 +37,7 @@ Par exemple, si votre système ONTAP possède quatre disques physiques, il y aur
 
 
 
+[[ontap-rest-api]]
 === L'API REST DE ONTAP
 
 Depuis la version ONTAP 9.11.1, vous pouvez également accéder aux données de performance via l'API REST. Dans ce cas, les compteurs de performances sont organisés sous forme de tableaux équivalents aux objets ONTAPI. Chaque ligne de table est équivalente à une instance d'un objet ONTAPI.
@@ -43,12 +46,14 @@ Par exemple, si votre système ONTAP possède quatre disques physiques, le `disk
 
 
 
+[[prepare-to-use-the-rest-api]]
 == Préparez-vous à utiliser l'API REST
 
 Vous devez préparer avant d'utiliser l'API REST de ONTAP pour accéder aux compteurs de performances.
 
 
 
+[[performance-counters-organized-in-tables]]
 === Compteurs de performances organisés en tableaux
 
 Un sous-ensemble des objets ONTAPI est disponible via l'API REST de ONTAP et présenté sous forme de tableaux. Par exemple, l'objet ONTAPI *hostadaptor* est présenté via l'API REST comme table *host_adpater*. Chaque adaptateur hôte du système est une ligne avec son propre ensemble de compteurs de performances.
@@ -67,6 +72,8 @@ Un sous-ensemble des objets ONTAPI est disponible via l'API REST de ONTAP et pr�
 |===
 
 
+[[summary-of-the-rest-endpoints]]
+[[eps]]
 === Récapitulatif des terminaux REST
 
 Quatre terminaux principaux sont disponibles pour accéder aux compteurs de performances ONTAP et aux tables associées.
@@ -94,6 +101,7 @@ Renvoie une ligne spécifique d'une table de compteur nommée.
 
 
 
+[[migrating-from-ontapi-to-the-rest-api]]
 === Migration à partir de ONTAPI vers l'API REST
 
 NetApp prend en charge la migration de votre code d'automatisation depuis ONTAPI vers l'API REST ONTAP. Cela inclut la documentation de mappage pour identifier la table de compteur de performances équivalente disponible dans l'API REST pour un objet ONTAPI donné.
@@ -102,12 +110,14 @@ Vous pouvez accéder à la https://docs.netapp.com/us-en/ontap-pcmap/["Mappage d
 
 
 
+[[get-started-with-the-ontap-rest-api]]
 == Commencez avec l'API REST de ONTAP
 
 Les exemples suivants montrent comment utiliser l'API REST pour accéder aux compteurs de performances de ONTAP. Cela inclut la récupération d'une liste des tables disponibles et l'exploration de la structure de la table.
 
 
 
+[[before-you-begin]]
 === Avant de commencer
 
 Consultez les informations suivantes avant d'utiliser les exemples.
@@ -129,6 +139,7 @@ La séquence des exemples ci-dessous montre comment utiliser les terminaux REST 
 
 
 
+[[example-1-all-performance-counter-tables]]
 === Exemple 1 : tous les tableaux de compteurs de performances
 
 Vous pouvez utiliser cet appel de l'API REST pour découvrir toutes les tables de Counter Manager disponibles.
@@ -728,6 +739,7 @@ curl --request GET --user admin:<PASSWORD> 'https://<ONTAP_IP_ADDRESS>/api/clust
 ====
 
 
+[[example-2-high-level-information-about-a-specific-table]]
 === Exemple 2 : informations générales sur une table spécifique
 
 Vous pouvez utiliser cet appel d'API REST pour afficher la description et les métadonnées d'une table spécifique. Le résultat obtenu inclut l'objectif de la table et le type de données que contient chaque compteur de performances. La table *host_adapt* est utilisée dans cet exemple.
@@ -802,6 +814,7 @@ curl --request GET --user admin:<PASSWORD> 'https://<ONTAP_IP_ADDRESS>/api/clust
 ====
 
 
+[[example-3-all-rows-in-a-specific-table]]
 === Exemple 3 : toutes les lignes d'une table spécifique
 
 Vous pouvez utiliser cet appel d'API REST pour afficher toutes les lignes d'une table. Indique les instances des objets Counter Manager existantes.
@@ -849,6 +862,7 @@ curl --request GET --user admin:<PASSWORD> 'https://<ONTAP_IP_ADDRESS>/api/clust
 ====
 
 
+[[example-4-single-row-in-a-specific-table]]
 === Exemple 4 : une seule ligne dans une table spécifique
 
 Vous pouvez utiliser cet appel d'API REST pour afficher les valeurs de compteur de performances d'une instance de gestionnaire de compteurs spécifique dans le tableau. Dans cet exemple, les données de performances de l'un des adaptateurs hôtes sont demandées.

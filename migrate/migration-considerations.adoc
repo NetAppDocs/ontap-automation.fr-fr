@@ -24,18 +24,21 @@ L'API ONTAPI (ZAPI) est l'ensemble d'appels propriétaires d'origine inclus avec
 
 
 
+[[general-design-differences]]
 == Différences générales de conception
 
 L'API REST et l'interface de ligne de commande de ONTAP ont des conceptions radicalement différentes. Les commandes et paramètres de la CLI ne sont pas directement associés aux appels de l'API REST. Et même lorsqu'il peut y avoir une similarité, les détails des paramètres d'entrée peuvent être différents. Par exemple, des unités numériques peuvent être spécifiées en octets ou à l'aide d'un suffixe (comme Ko). Voir link:../rest/input_variables.html["Variables d'entrée contrôlant une requête API"] et link:../reference/api_reference.html["Référence API"] pour en savoir plus.
 
 
 
+[[data-svms-exposed-through-the-rest-api]]
 == Les SVM de données exposés via l'API REST
 
 ONTAP prend en charge plusieurs types de serveurs virtuels de stockage (SVM). Toutefois, seuls les SVM de données sont directement exposés via l'API REST de ONTAP. Les informations de configuration décrivant le cluster et les nœuds sont disponibles via l'API REST, mais le cluster et les nœuds ne sont pas traités comme des SVM distincts.
 
 
 
+[[access-the-ontap-cli-through-the-rest-api]]
 == Accès à l'interface de ligne de commandes de ONTAP via l'API REST
 
 Pour assister les utilisateurs de l'API ONTAP et de l'interface de ligne de commande dans leur transition vers l'API REST ONTAP, ONTAP fournit un terminal REST qui permet d'accéder à l'interface de ligne de commande ONTAP. Vous pouvez utiliser cette fonctionnalité de passe-système pour exécuter n'importe quelle commande CLI.  L'utilisation du terminal REST est renvoyée dans les données AutoSupport pour que NetApp puisse identifier les failles dans l'API REST et apporter des améliorations aux futures versions d'ONTAP.
@@ -51,6 +54,7 @@ Le chemin des ressources de base pour l'accès à l'interface de ligne de comman
 
 
 
+[[changes-to-snapdiff-availability-in-ontapi]]
 == Modifications de la disponibilité SnapDiff dans ONTAPI
 
 Depuis ONTAP 9.10.1, les appels SnapDiff v1 et v2 ONTAPI ne peuvent pas être appelés. Toute application tierce qui appelle les appels ONTAPI SnapDiff v1 ou v2 ne fonctionnera pas avec ONTAP 9.10.1. Les utilisateurs de ONTAP doivent vérifier que leur application de sauvegarde prend en charge les appels REST SnapDiff v3 avant de passer à ONTAP 9.10.1.

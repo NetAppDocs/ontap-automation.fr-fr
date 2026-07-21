@@ -24,6 +24,7 @@ CAUTION: Avant d'utiliser les exemples d'entrée JSON inclus ci-dessous, assurez
 
 
 
+[[step-1-install-the-certificate]]
 == Étape 1 : installez le certificat
 
 Vous pouvez émettre un appel d'API pour installer le certificat.
@@ -82,6 +83,7 @@ IpYuBcuKXLwAarhDEacXttVjC+Bq
 ----
 
 
+[[step-2-confirm-the-certificate-has-been-installed]]
 == Étape 2 : confirmez que le certificat a été installé
 
 Exécutez le flux de travail link:../workflows/wf_cert_list_certificates.html["Répertorie les certificats installés"] et vérifiez que le certificat est disponible.

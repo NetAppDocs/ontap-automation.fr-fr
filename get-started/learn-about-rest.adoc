@@ -21,6 +21,7 @@ NOTE: Alors QUE REST établit un ensemble commun de technologies et de bonnes pr
 
 
 
+[[resources-and-state-representation]]
 == Ressources et représentation d'état
 
 Les ressources sont les composants de base d'un système basé sur le Web. Lors de la création d'une application de services Web REST, les premières tâches de conception incluent :
@@ -37,24 +38,28 @@ Les ressources se trouvent toujours dans un des États finis. Les États, ainsi 
 
 
 
+[[uri-endpoints]]
 == Terminaux URI
 
 Chaque ressource REST doit être définie et mise à disposition à l'aide d'un schéma d'adressage bien défini. Les noeuds finaux où les ressources sont situées et identifiées utilisent un URI (Uniform Resource identifier). L'URI fournit un cadre général pour créer un nom unique pour chaque ressource du réseau. L'URL (Uniform Resource Locator) est un type d'URI utilisé avec les services Web pour identifier et accéder aux ressources. Les ressources sont généralement exposées dans une structure hiérarchique similaire à un répertoire de fichiers.
 
 
 
+[[http-messages]]
 == Messages HTTP
 
 Le protocole HTTP (Hypertext Transfer Protocol) est le protocole utilisé par le client et le serveur de services Web pour échanger des messages de requête et de réponse sur les ressources. Dans le cadre de la conception d'une application de services Web, les méthodes HTTP sont mappées aux ressources et aux actions de gestion d'état correspondantes. Le HTTP est sans état. Par conséquent, pour associer un ensemble de requêtes et de réponses associées dans le cadre d'une transaction, des informations supplémentaires doivent être incluses dans les en-têtes HTTP des flux de données de requête et de réponse.
 
 
 
+[[json-formatting]]
 == Formatage JSON
 
 Bien que les informations puissent être structurées et transférées de plusieurs façons entre un client de services Web et un serveur, l'option la plus populaire est JavaScript Object notation (JSON). JSON est une norme de l'industrie qui représente les structures de données simples en texte brut et permet de transférer les informations d'état décrivant les ressources. L'API REST de ONTAP utilise JSON pour formater les données présentes dans le corps de chaque requête et réponse HTTP.
 
 
 
+[[typical-rest-api-transaction]]
 == Transaction standard d'API REST
 
 Chaque transaction API se compose d'une requête HTTP et de la réponse associée. Cette illustration montre comment récupérer la version du logiciel ONTAP utilisé par le cluster.

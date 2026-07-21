@@ -18,6 +18,7 @@ Vous pouvez mettre à jour les coordonnées d'un cluster. Étant donné que la d
 
 
 
+[[step-1-update-the-cluster-contact-information]]
 == Étape 1 : mettez à jour les coordonnées du cluster
 
 Vous pouvez émettre un appel d'API pour mettre à jour les informations de contact du cluster.
@@ -70,12 +71,14 @@ Un objet de travail est renvoyé. Vous devez enregistrer l'identifiant du travai
 ----
 
 
+[[step-2-retrieve-the-status-of-the-job]]
 == Étape 2 : récupération de l'état du travail
 
 Exécutez le flux de travail link:../workflows/wf_jobs_get_job.html["Obtenir l'instance de travail"] et confirmez le `state` la valeur est `success`.
 
 
 
+[[step-3-confirm-the-cluster-contact-information]]
 == Étape 3 : confirmez les coordonnées du cluster
 
 Exécutez le flux de travail link:../workflows/wf_cls_get_cluster.html["Obtenez la configuration du cluster"]. Vous devez définir le `fields` interroger le paramètre sur `contact`.

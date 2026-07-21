@@ -18,6 +18,7 @@ Plusieurs options sont disponibles pour automatiser le déploiement et l'adminis
 
 
 
+[[ontap-rest-api]]
 == L'API REST DE ONTAP
 
 À partir d' ONTAP 9.6, ONTAP inclut une API REST robuste qui fournit la base pour automatiser le déploiement et l'administration de vos systèmes de stockage.  Depuis lors, l’API REST a continué à se développer et à mûrir.  Il fournit désormais l’option privilégiée et stratégique lors de l’automatisation de l’administration de vos déploiements ONTAP .
@@ -30,6 +31,7 @@ L'API ONTAPI (Zephyr API ou ZAPI) est l'ensemble d'appels propriétaires d'origi
 
 
 
+[[client-software-toolkits]]
 == Kits d'outils logiciels client
 
 NetApp propose des kits d'outils client qui extraient l'API REST ONTAP et facilitent la création du code d'automatisation. Vous devez en choisir un adapté à votre langue et à votre environnement de développement.
@@ -42,6 +44,7 @@ Vous pouvez utiliser le kit NetApp.ONTAP PowerShell pour automatiser l'administr
 
 
 
+[[automation-frameworks]]
 == Frameworks d'automatisation
 
 Vous pouvez créer et déployer du code d’automatisation à l’aide de plusieurs frameworks.

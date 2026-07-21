@@ -18,6 +18,7 @@ NetApp continue d'améliorer et de mettre à jour l'API REST ONTAP à chaque nou
 
 
 
+[[changes-to-existing-ontap-rest-api-calls]]
 == Modifications apportées aux appels de l'API REST ONTAP existants
 
 Les modifications apportées aux appels d'API REST ONTAP existants, tels que les points de terminaison et les paramètres, peuvent affecter les logiciels qui utilisent l'API. Dans la plupart des situations, selon votre environnement, celles-ci sont considérées comme des _modifications incompatibles_. Vous devez examiner la liste dans le tableau ci-dessous pour déterminer s'il y a un impact sur votre environnement d'automatisation. Chaque entrée inclut le point de terminaison ou la zone d'API concernée, une description de la modification et la version d'ONTAP dans laquelle elle a été introduite.
@@ -35,6 +36,7 @@ Les modifications apportées aux appels d'API REST ONTAP existants, tels que les
 |===
 
 
+[[additional-rest-api-usage-considerations]]
 == Considérations supplémentaires relatives à l'utilisation de l'API REST
 
 Outre les modifications perturbatrices ou incompatibles, il existe plusieurs autres considérations lors de l'utilisation de l'API REST ONTAP. Il existe différents types de problèmes, notamment l'introduction de nouveaux appels d'API ou d'appels alternatifs, ainsi que des modifications du traitement interne d'ONTAP. Chaque entrée comprend le point de terminaison ou la zone d'API concernée, une description du comportement et la version d'ONTAP dans laquelle elle a été introduite.
@@ -51,6 +53,7 @@ Outre les modifications perturbatrices ou incompatibles, il existe plusieurs aut
 |===
 
 
+[[ontap-rest-api-reference-documentation-errors]]
 == Erreurs dans la documentation de référence de l'API REST ONTAP
 
 À mesure que NetApp améliore et met à jour l'API REST d'ONTAP, des erreurs peuvent parfois être introduites dans la documentation de référence en ligne. Ces erreurs peuvent créer de la confusion lors de l'utilisation de l'API, mais n'ont généralement pas d'impact ni ne perturbent votre logiciel ou environnement d'automatisation ONTAP. Vous devriez consulter la liste des erreurs dans le tableau ci-dessous. Cela vous aidera à mieux comprendre et à naviguer dans la documentation de référence de l'API REST d'ONTAP. Chaque entrée inclut le point de terminaison ou la zone de l'API concernée, une description de l'erreur et la version d'ONTAP dans laquelle elle a été introduite.

@@ -27,6 +27,7 @@ Vous pouvez ensuite, si nécessaire, mettre à jour le rôle. Dans ce workflow, 
 
 
 
+[[step-1-create-the-role]]
 == Étape 1 : créer le rôle
 
 Vous pouvez émettre un appel d'API pour créer le rôle RBAC.
@@ -68,6 +69,7 @@ curl --request POST \
 ----
 
 
+[[step-2-update-the-role]]
 == Étape 2 : mettez à jour le rôle
 
 Vous pouvez émettre un appel API pour mettre à jour le rôle existant.

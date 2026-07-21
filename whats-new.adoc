@@ -21,16 +21,18 @@ TIP: Vous devez consulter le https://library.netapp.com/ecm/ecm_download_file/EC
 
 
 
+[[ontap-9-19-1]]
 == ONTAP 9.19.1
 
 La version ONTAP 9.19.1 comprend plusieurs mises à jour qui continuent d'améliorer et d'affiner l'API REST ONTAP.
 
-Sécurité:: Une nouvelle `whoami` fonctionnalité a été ajoutée pour récupérer le nom d'utilisateur, le rôle et les autorisations de l'utilisateur connecté. La fonctionnalité d'authentification web (WebAuthn) a également été améliorée.
+Sécurité:: Une nouvelle `whoami` fonctionnalité a été ajoutée pour récupérer le nom d'utilisateur, le rôle et les informations d'autorisations de l'utilisateur connecté. La capacité d'authentification web (WebAuthn) a également été améliorée. IPsec a été mis à jour pour récupérer les stratégies et les associations de sécurité utilisées avec le réseau du cluster.
 SAN:: L'administration de la cartographie LUN a été mise à jour avec une capacité de mise à jour améliorée.
 
 
 
 
+[[ontap-9-18-1]]
 == ONTAP 9.18.1
 
 La version ONTAP 9.18.1 continue d'étendre les capacités de l'API REST ONTAP avec treize nouveaux appels d'API. Les améliorations portent principalement sur la sécurité, mais incluent également une amélioration liée à l'administration du stockage.
@@ -41,6 +43,7 @@ Stockage:: NetApp FlexCache est un cache persistant d'un volume d'origine. Il pr
 
 
 
+[[ontap-9-17-1]]
 == ONTAP 9.17.1
 
 La version ONTAP 9.17.1 continue d'étendre les fonctionnalités de l'API REST ONTAP avec près de deux douzaines de nouveaux appels d'API. Cette version se concentre principalement sur les améliorations de sécurité, avec des mises à jour supplémentaires pour le traitement des médiateurs, les sous-systèmes NMVe et les conteneurs d'applications.
@@ -53,6 +56,7 @@ Conteneurs d'application:: Les conteneurs d'applications sont une nouveauté d' 
 
 
 
+[[ontap-9-16-1]]
 == ONTAP 9.16.1
 
 ONTAP 9.16.1 inclut plus de deux douzaines de nouveaux appels d'API qui continuent d'étendre les capacités de l'API REST ONTAP. Ces améliorations sont principalement axées sur la sécurité, mais comprennent également des améliorations au niveau des metrics et de l'administration des compartiments.
@@ -78,6 +82,7 @@ Snapshots de compartiment S3:: Quatre nouveaux appels d'API ont été ajoutés p
 
 
 
+[[ontap-9-15-1]]
 == ONTAP 9.15.1
 
 ONTAP 9.15.1 continue d'étendre les fonctionnalités de l'API REST ONTAP, et prend notamment en charge deux nouvelles fonctionnalités.
@@ -93,6 +98,7 @@ Applications de sauvegarde Windows et liens symboliques de style Unix:: Lorsqu'u
 
 
 
+[[ontap-9-14-1]]
 == ONTAP 9.14.1
 
 La version ONTAP 9.14.1 comprend plus de trois douzaines de nouveaux appels d'API qui continuent d'étendre les fonctionnalités de l'API REST ONTAP. Ces terminaux prennent en charge plusieurs nouvelles fonctionnalités ONTAP ainsi que des mises à jour des fonctionnalités existantes. Cette version s'intéresse principalement aux améliorations de la sécurité, mais comprend également des améliorations apportées aux metrics de performance, NAS et QoS.
@@ -106,6 +112,7 @@ Améliorations diverses:: Plusieurs améliorations supplémentaires peuvent s'av
 
 
 
+[[ontap-9-13-1]]
 == ONTAP 9.13.1
 
 ONTAP 9.13.1 continue d'étendre les fonctionnalités de l'API REST ONTAP avec plus de deux douzaines de nouveaux appels d'API. Ces terminaux prennent en charge les nouvelles fonctionnalités ONTAP ainsi que les améliorations apportées aux fonctionnalités existantes. Cette version est axée sur les améliorations apportées à la sécurité, la gestion des ressources, les options améliorées de configuration des SVM et les metrics de performance.
@@ -121,6 +128,7 @@ Règles du compartiment S3:: Les terminaux de compartiment S3 ont été dévelop
 
 
 
+[[ontap-9-12-1]]
 == ONTAP 9.12.1
 
 Avec plus de quarante nouveaux appels d'API, ONTAP 9.12.1 continue d'étendre les fonctionnalités de l'API REST ONTAP. Ces terminaux prennent en charge les nouvelles fonctionnalités ONTAP ainsi que les améliorations apportées aux fonctionnalités existantes. Cette version vise à améliorer la sécurité et les fonctionnalités NAS.
@@ -132,6 +140,7 @@ Règles de groupe CIFS:: L'API REST a été améliorée pour prendre en charge l
 
 
 
+[[ontap-9-11-1]]
 == ONTAP 9.11.1
 
 Avec près d'une centaine d'appels d'API, ONTAP 9.11.1 continue d'étendre les capacités de l'API REST de ONTAP. Ces terminaux prennent en charge les nouvelles fonctionnalités ONTAP ainsi que les améliorations apportées aux fonctionnalités existantes.
@@ -149,6 +158,7 @@ Outil de reporting ONTAPI:: L'outil de reporting ONTAPI aide les clients et les 
 
 
 
+[[ontap-9-10-1]]
 == ONTAP 9.10.1
 
 ONTAP 9.10.1 continue d'étendre les capacités de l'API REST de ONTAP. Plus d'une centaine de nouveaux terminaux ont été ajoutés pour prendre en charge les nouvelles fonctionnalités de ONTAP et des améliorations des fonctionnalités existantes. Un résumé des améliorations de l'API REST est présenté ci-dessous.
@@ -166,6 +176,7 @@ Amélioration de la prise en charge:: La prise en charge a été améliorée gr�
 
 
 
+[[ontap-9-9-1]]
 == ONTAP 9.9.1
 
 ONTAP 9.9.1 continue d'étendre les capacités de l'API REST de ONTAP. De nouveaux terminaux API sont disponibles pour les fonctionnalités ONTAP existantes, notamment des jeux de ports SAN et la sécurité des répertoires de fichiers SVM. Des terminaux ont également été ajoutés pour prendre en charge les nouvelles fonctionnalités d'ONTAP 9.9.1 et les améliorations. Et la documentation connexe a également été améliorée. Un résumé des améliorations est présenté ci-dessous.
@@ -178,6 +189,7 @@ Documentation en ligne améliorée:: La page de référence de la documentation 
 
 
 
+[[ontap-9-8]]
 == ONTAP 9.8
 
 ONTAP 9.8 intègre plusieurs nouvelles fonctionnalités qui améliorent votre capacité à automatiser le déploiement et la gestion des systèmes de stockage ONTAP. En outre, avec l'API ONTAPI, la prise en charge a été améliorée afin d'accompagner la transition VERS LE REPOS.
@@ -193,6 +205,7 @@ Développement des mesures de performances:: Les metrics de performance de l'API
 
 
 
+[[ontap-9-7]]
 == ONTAP 9.7
 
 ONTAP 9.7 étend le périmètre fonctionnel de l'API REST de ONTAP en introduisant trois nouvelles catégories de ressources, chacune contenant plusieurs terminaux REST :
@@ -216,6 +229,7 @@ ONTAP 9.7 intègre également un ou plusieurs nouveaux terminaux REST dans plusi
 
 
 
+[[ontap-9-6]]
 == ONTAP 9.6
 
 ONTAP 9.6 étend considérablement la prise en charge des API REST initialement introduite dans ONTAP 9.4. L'API REST ONTAP 9.6 prend en charge la plupart des tâches de configuration et d'administration ONTAP.

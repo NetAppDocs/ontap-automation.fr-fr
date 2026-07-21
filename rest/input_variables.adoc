@@ -18,6 +18,7 @@ Vous pouvez contrôler le traitement d'un appel API à l'aide de paramètres et 
 
 
 
+[[http-methods]]
 == Méthodes HTTP
 
 Les méthodes HTTP prises en charge par l'API REST de ONTAP sont répertoriées dans le tableau suivant.
@@ -49,12 +50,14 @@ NOTE: Toutes les méthodes HTTP ne sont pas disponibles sur chacun des terminaux
 |===
 
 
+[[path-variables]]
 == Variables de chemin
 
 Le chemin du point de terminaison utilisé avec chaque appel de l'API REST peut inclure divers identificateurs. Chaque ID correspond à une instance de ressource spécifique. Exemples : ID de cluster et ID de SVM.
 
 
 
+[[request-headers]]
 == En-têtes de demande
 
 Vous devez inclure plusieurs en-têtes dans la requête HTTP.
@@ -71,6 +74,7 @@ Autorisation:: L'authentification de base doit être définie avec le nom d'util
 
 
 
+[[request-body]]
 == Corps de la demande
 
 Le contenu du corps de la demande varie en fonction de l'appel spécifique. Le corps de requête HTTP comprend l'un des éléments suivants :
@@ -81,6 +85,7 @@ Le contenu du corps de la demande varie en fonction de l'appel spécifique. Le c
 
 
 
+[[filtering-objects]]
 == Filtrage d'objets
 
 Lors de l'émission d'un appel API avec la méthode GET, vous pouvez limiter ou filtrer les objets renvoyés en fonction de n'importe quel attribut à l'aide d'un paramètre de requête.
@@ -141,6 +146,7 @@ Filtrer en fonction du `state` variable permettant de sélectionner les disques 
 
 
 
+[[requesting-specific-object-fields]]
 == Demande de champs d'objet spécifiques
 
 Par défaut, l'émission d'un appel API à l'aide DE GET renvoie uniquement les attributs qui identifient de manière unique l'objet ou les objets, avec un auto-lien HAL. Cet ensemble minimal de champs sert de clé pour chaque objet et varie en fonction du type d'objet. Vous pouvez sélectionner d'autres propriétés d'objet à l'aide de l' `fields` paramètre de requête des manières suivantes :
@@ -165,6 +171,7 @@ TIP: Vous devez toujours identifier les champs spécifiques que vous souhaitez. 
 
 
 
+[[sorting-objects-in-the-output-set]]
 == Tri des objets dans le jeu de sortie
 
 Les enregistrements d'une collection de ressources sont renvoyés dans l'ordre par défaut défini par l'objet. Vous pouvez modifier la commande à l'aide de la `order_by` paramètre de requête avec le nom de champ et la direction de tri comme suit :
@@ -183,6 +190,7 @@ Notez ce qui suit :
 
 
 
+[[pagination-when-retrieving-objects-in-a-collection]]
 == Pagination lors de la récupération d'objets dans une collection
 
 Lors de l'émission d'un appel API à l'aide DE GET pour accéder à une collection d'objets du même type, ONTAP tente de renvoyer le plus grand nombre possible d'objets en fonction de deux contraintes. Vous pouvez contrôler chacune de ces contraintes à l'aide de paramètres de requête supplémentaires sur la demande. La première contrainte atteinte pour une demande GET spécifique met fin à la demande et limite donc le nombre d'enregistrements renvoyés.
@@ -218,6 +226,7 @@ Vous pouvez émettre plusieurs demandes de page via les objets. Chaque appel d'A
 
 
 
+[[size-properties]]
 == Propriétés de taille
 
 Les valeurs d'entrée utilisées avec certains appels API ainsi que certains paramètres de requête sont numériques. Au lieu de fournir un entier en octets, vous pouvez éventuellement utiliser un suffixe comme indiqué dans le tableau suivant.

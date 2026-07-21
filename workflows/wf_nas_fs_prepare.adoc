@@ -18,6 +18,7 @@ Vous pouvez gérer les autorisations et les règles d'audit pour les fichiers di
 
 
 
+[[overview]]
 === Présentation
 
 ONTAP utilise les listes de contrôle d'accès système (CLS) et les listes de contrôle d'accès discrétionnaire (listes ACL) pour attribuer des autorisations aux objets de fichier. Depuis ONTAP 9.9.1, l'API REST prend en charge la gestion des autorisations SACL et DACL. Vous pouvez utiliser l'API pour automatiser l'administration des autorisations de sécurité des fichiers. Dans la plupart des cas, vous pouvez utiliser un seul appel d'API REST au lieu de plusieurs commandes CLI ou appels ONTAPI (ZAPI).
@@ -31,6 +32,7 @@ Si vous utilisez Python, consultez également le script https://github.com/NetAp
 
 
 
+[[ontap-rest-api-versus-ontap-cli-commands]]
 === Comparaison des commandes de l'API REST ONTAP et de l'interface CLI ONTAP
 
 Pour de nombreuses tâches, l'utilisation de l'API REST ONTAP requiert moins d'appels que les commandes CLI ONTAP ou les appels ONTAPI (ZAPI) équivalents. Le tableau ci-dessous présente une liste d'appels API et l'équivalent des commandes CLI nécessaires à chaque tâche.

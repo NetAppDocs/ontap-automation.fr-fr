@@ -21,12 +21,14 @@ NOTE: La fonction RBAC d'ONTAP s'est poursuivie et a été considérablement am�
 
 
 
+[[ontap-roles]]
 == Rôles ONTAP
 
 Un rôle est un ensemble de privilèges qui définissent collectivement les actions que l'utilisateur peut effectuer. Chaque privilège identifie un chemin d'accès spécifique et le niveau d'accès associé. Les rôles sont attribués aux comptes utilisateur et appliqués par ONTAP lors de décisions de contrôle d'accès.
 
 
 
+[[types-of-roles]]
 === Types de rôles
 
 Il existe deux types de rôles. Elles ont été introduites et adaptées à différents environnements, comme ONTAP a évolué.
@@ -46,6 +48,7 @@ NOTE: Il y a des avantages et des inconvénients lors de l'utilisation de chaque
 |===
 
 
+[[scope]]
 === Portée
 
 Chaque rôle a une portée ou un contexte dans lequel il est défini et appliqué. Le périmètre détermine où et comment un rôle spécifique est utilisé.
@@ -65,6 +68,7 @@ NOTE: Les comptes utilisateur ONTAP ont également un périmètre similaire qui 
 |===
 
 
+[[source-of-the-role-definitions]]
 === Source des définitions de rôle
 
 Il existe deux façons de définir un rôle ONTAP.
@@ -81,6 +85,7 @@ Il existe deux façons de définir un rôle ONTAP.
 |===
 
 
+[[role-mapping-and-ontap-processing]]
 == Mapping de rôles et traitement ONTAP
 
 Selon la version de ONTAP que vous utilisez, tous ou presque tous les appels de l'API REST sont redirigés vers une ou plusieurs commandes de l'interface de ligne de commande. Lorsque vous créez un rôle DE REPOS, un rôle traditionnel ou hérité est également créé. Ce rôle traditionnel *mappé* est basé sur les commandes CLI correspondantes et ne peut pas être manipulé ni modifié.
@@ -90,6 +95,7 @@ NOTE: Le mappage de rôle inverse n'est pas pris en charge. C'est-à-dire que la
 
 
 
+[[summary-of-rbac-evolution]]
 == Résumé de l'évolution du RBAC
 
 Ces rôles sont inclus dans toutes les versions de ONTAP 9. Les rôles DE REPOS ont été introduits plus tard et ont évolué comme décrit ci-dessous.

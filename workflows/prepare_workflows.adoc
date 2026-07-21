@@ -21,6 +21,7 @@ TIP: Vérifiez que votre version d'ONTAP prend en charge tous les appels d'API d
 
 
 
+[[introduction]]
 == Introduction
 
 Un _workflow_ est une séquence d'une ou de plusieurs étapes nécessaires à la réalisation d'une tâche ou d'un objectif administratif spécifique. Les workflows ONTAP incluent les étapes clés et les paramètres dont vous avez besoin pour mener à bien chaque tâche. Elles constituent un point de départ pour la personnalisation de votre environnement d'automatisation ONTAP.
@@ -41,12 +42,14 @@ Un flux de travail ne peut contenir qu'une seule étape. Ces flux de travail à 
 
 
 
+[[input-variables]]
 == Variables d'entrée
 
 Les flux de travail sont conçus pour être aussi généraux que possible et peuvent donc être utilisés dans n'importe quel environnement ONTAP. Dans cet esprit, les appels de l'API REST utilisent des variables dans les exemples de boucles et d'autres entrées. Les appels de l'API REST peuvent ensuite être facilement adaptés à différents environnements ONTAP.
 
 
 
+[[base-url-format]]
 === Format d'URL de base
 
 Vous pouvez accéder directement à l'API REST ONTAP via curl ou un langage de programmation. Dans ce cas, l'URL de base est différente de l'URL que vous utilisez lorsque vous accédez à la documentation en ligne de ONTAP ou à System Manager.
@@ -59,6 +62,7 @@ Voir link:../get-started/access_rest_api.html["Comment accéder à l'API REST de
 
 
 
+[[common-input-parameters]]
 === Paramètres d'entrée communs
 
 Il existe plusieurs paramètres d'entrée couramment utilisés avec la plupart des appels API REST. Ces paramètres ne sont généralement pas décrits dans chaque flux de travail. Vous devez connaître les paramètres. Voir link:../rest/input_variables.html["Variables d'entrée contrôlant une requête API"] pour en savoir plus.
@@ -67,6 +71,7 @@ Si des paramètres supplémentaires sont nécessaires pour un appel d'API REST s
 
 
 
+[[variable-format]]
 === Format variable
 
 Les valeurs d'ID et les autres variables utilisées avec les exemples de workflow sont opaques et peuvent varier en fonction du cluster ONTAP. Pour améliorer la lisibilité des exemples, les valeurs réelles ne sont pas utilisées. Les variables sont utilisées à la place. Cette approche, basée sur un format et un ensemble cohérents de noms réservés, présente plusieurs avantages, notamment :
@@ -95,6 +100,7 @@ Voici quelques mots clés de variable communs. Cette liste n'est pas exhaustive 
 |===
 
 
+[[json-input-examples]]
 === Exemples d'entrée JSON
 
 Certains appels de l'API REST, tels que ceux utilisant POST ou PATCH, nécessitent une entrée JSON dans le corps de la requête. Pour plus de clarté, les exemples d'entrée JSON sont présentés séparément des exemples de boucles. Vous pouvez utiliser les exemples d'entrée JSON avec l'une des techniques décrites ci-dessous.
@@ -107,12 +113,14 @@ Vous devez tout d'abord copier et coller l'exemple de boucle dans une coque de t
 
 
 
+[[authentication-options]]
 == Options d'authentification
 
 La technique d'authentification principale disponible pour l'API REST est l'authentification de base HTTP. À partir de ONTAP 9.14, vous avez également la possibilité d'utiliser l'infrastructure d'autorisation ouverte (OAuth 2.0) avec authentification et autorisation basées sur des jetons.
 
 
 
+[[http-basic-authentication]]
 === Authentification de base HTTP
 
 Lors de l'utilisation de l'authentification de base, les informations d'identification de l'utilisateur doivent être incluses avec chaque requête HTTP. Il existe deux options pour envoyer les informations d'identification.
@@ -145,6 +153,7 @@ Vous devez remplacer les informations d'identification appropriées pour votre e
 
 
 
+[[oauth-2-0]]
 === OAuth 2.0
 
 Lorsque vous utilisez OAuth 2.0, vous devez demander un jeton d'accès à un serveur d'autorisation externe et l'inclure à chaque requête HTTP. Les étapes générales de base sont décrites ci-dessous. Voir aussi https://docs.netapp.com/us-en/ontap/authentication/overview-oauth2.html["Présentation de la mise en œuvre de ONTAP OAuth 2.0"^] Pour plus d'informations sur OAuth 2.0 et sur son utilisation avec ONTAP.
@@ -169,6 +178,7 @@ Après avoir obtenu un jeton d'accès, vous pouvez construire un en-tête autori
 
 
 
+[[using-the-examples-with-bash]]
 == En utilisant les exemples avec Bash
 
 Si vous utilisez directement les exemples de boucles de flux de travail, vous devez mettre à jour les variables qu'ils contiennent avec les valeurs appropriées à votre environnement. Vous pouvez modifier manuellement les exemples ou vous appuyer sur le shell de hachage pour effectuer la substitution pour vous, comme décrit ci-dessous.

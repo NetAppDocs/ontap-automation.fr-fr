@@ -21,6 +21,7 @@ Ce flux de travail comprend les étapes types nécessaires pour créer un rôle 
 
 
 
+[[step-1-list-the-data-svms-in-the-cluster]]
 == Étape 1 : liste des SVM de données dans le cluster
 
 Effectuer l'appel d'API REST suivant pour lister les SVM dans le cluster. L'UUID et le nom de chaque SVM sont fournis dans le résultat.
@@ -49,6 +50,7 @@ Sélectionner le SVM souhaité dans la liste dans laquelle vous allez créer le 
 
 
 
+[[step-2-list-the-users-defined-to-the-svm]]
 == Étape 2 : liste des utilisateurs définis pour la SVM
 
 Effectuer l'appel de l'API REST suivant pour répertorier les utilisateurs définis dans la SVM que vous avez sélectionnée. Vous pouvez identifier le SVM via le paramètre propriétaire.
@@ -77,6 +79,7 @@ En fonction des utilisateurs déjà définis au sein du SVM, choisissez un nom u
 
 
 
+[[step-3-list-the-rest-roles-defined-to-the-svm]]
 == Étape 3 : liste des rôles REST définis pour la SVM
 
 Effectuer l'appel de l'API REST suivant pour répertorier les rôles définis dans la SVM que vous avez sélectionnée. Vous pouvez identifier le SVM via le paramètre propriétaire.
@@ -106,6 +109,7 @@ En fonction des rôles déjà définis dans le SVM, choisissez un nom unique pou
 
 
 
+[[step-4-create-a-custom-rest-role]]
 == Étape 4 : créez un rôle REST personnalisé
 
 Effectuer l'appel d'API REST suivant pour créer un rôle REST personnalisé dans la SVM. Au départ, le rôle n'a qu'un privilège qui établit un accès par défaut de *none* de sorte que tout accès soit refusé.
@@ -149,6 +153,7 @@ Vous pouvez également effectuer de nouveau l'étape 3 pour afficher le nouveau 
 
 
 
+[[step-5-update-the-role-by-adding-more-privileges]]
 == Étape 5 : mettez à jour le rôle en ajoutant des privilèges supplémentaires
 
 Effectuez l'appel d'API REST suivant pour modifier le rôle en ajoutant des privilèges si nécessaire.
@@ -199,6 +204,7 @@ Vous pouvez également effectuer de nouveau l'étape 3 pour afficher le nouveau 
 
 
 
+[[step-6-create-a-user]]
 == Étape 6 : créer un utilisateur
 
 Effectuez l'appel d'API REST suivant pour créer un compte utilisateur. Le rôle *dprole1* créé ci-dessus est associé au nouvel utilisateur.

@@ -18,6 +18,7 @@ Les instances de ressources ou les objets exposés via l'API REST de ONTAP peuve
 
 
 
+[[object-access-paths]]
 == Chemins d'accès aux objets
 
 À un niveau élevé, il existe deux types de chemin d'accès lors de l'accès à un objet :
@@ -34,6 +35,7 @@ L'objet n'est pas la référence principale de l'appel API, mais il est lié à 
 
 
 
+[[accessing-an-object-using-the-uuid]]
 == Accès à un objet à l'aide de l'UUID
 
 Un identifiant unique est attribué à chaque objet lors de sa création, qui est dans la plupart des cas un UUID 128 bits. Les valeurs UUID attribuées sont immuables et sont utilisées en interne dans ONTAP pour accéder aux ressources et les gérer. De ce fait, l'UUID fournit généralement le moyen le plus rapide et le plus stable d'accéder aux objets.
@@ -42,6 +44,7 @@ Pour de nombreux types de ressource, une valeur UUID peut être fournie dans le 
 
 
 
+[[accessing-an-object-using-an-object-property]]
 == Accès à un objet à l'aide d'une propriété d'objet
 
 Outre l'UUID, vous pouvez également accéder à un objet à l'aide d'une propriété d'objet. Dans la plupart des cas, il est pratique d'utiliser la propriété name. Par exemple, vous pouvez utiliser le paramètre de requête suivant dans la chaîne d'URL pour accéder à une instance de nœud par son nom : `/cluster/nodes?name=node_one`. En plus d'un paramètre de requête, un objet étranger peut être accessible via une propriété dans l'objet principal.
@@ -65,6 +68,7 @@ Notamment, une dégradation des performances peut se concrétiser lorsque :
 
 
 
+[[cluster-versus-svm-context]]
 == Contexte cluster ou SVM
 
 Il existe plusieurs terminaux REST qui prennent en charge un cluster et un SVM. Lorsque vous utilisez l'un de ces noeuds finaux, vous pouvez indiquer le contexte de l'appel API via le `scope=[svm|cluster]` valeur. Les interfaces IP et les rôles de sécurité sont des exemples de points de terminaison prenant en charge un contexte double.
@@ -74,6 +78,7 @@ NOTE: La valeur de portée est basée sur les valeurs par défaut des propriét�
 
 
 
+[[using-patch-and-delete-on-a-collection-of-objects]]
 == Utilisation DE PATCH et SUPPRESSION sur une collection d'objets
 
 Chaque noeud final REST prenant en charge LE CORRECTIF ou LA SUPPRESSION sur une instance de ressource prend également en charge la même méthode sur un ensemble d'objets. La seule exigence est qu'au moins un champ doit être fourni via un paramètre de requête dans la chaîne d'URL. Lors de l'émission d'un CORRECTIF ou DE LA SUPPRESSION sur une collection, cela équivaut à effectuer les opérations suivantes en interne :
