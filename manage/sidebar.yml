@@ -1,6 +1,0 @@
----
-section: manage
-title: Gérez le ONTAP avec l'API REST
-entries:
-- title: Autorisations DACL et SACL
-  url: "/manage/dacl-sacl-rest-api.html"
