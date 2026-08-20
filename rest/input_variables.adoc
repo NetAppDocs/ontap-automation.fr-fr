@@ -193,10 +193,10 @@ Notez ce qui suit :
 [[pagination-when-retrieving-objects-in-a-collection]]
 == Pagination lors de la récupération d'objets dans une collection
 
-Lors de l'émission d'un appel API à l'aide DE GET pour accéder à une collection d'objets du même type, ONTAP tente de renvoyer le plus grand nombre possible d'objets en fonction de deux contraintes. Vous pouvez contrôler chacune de ces contraintes à l'aide de paramètres de requête supplémentaires sur la demande. La première contrainte atteinte pour une demande GET spécifique met fin à la demande et limite donc le nombre d'enregistrements renvoyés.
+Lors d'un appel API GET pour accéder à une collection d'objets du même type, ONTAP tente de renvoyer le maximum d'objets possible, en respectant deux contraintes : le nombre maximal d'objets et le temps de récupération. Vous pouvez contrôler chacune de ces contraintes à l'aide de paramètres de requête supplémentaires sur la demande. La première contrainte atteinte pour une requête GET spécifique met fin à la demande et limite donc le nombre d'enregistrements renvoyés. Si une requête s'arrête avant d'avoir parcouru tous les objets, la réponse contient le lien nécessaire pour récupérer le lot d'enregistrements suivant.
 
 
-NOTE: Si une demande se termine avant de passer à l'itération de tous les objets, la réponse contient le lien nécessaire pour récupérer le lot d'enregistrements suivant.
+TIP: Si aucun enregistrement n'est renvoyé pour un appel API, sans lien suivant, cela peut indiquer qu'un délai d'attente est survenu avant que des enregistrements puissent être récupérés. Dans ce cas, vous pouvez réessayer la requête en utilisant une valeur  `return_timeout` plus grande ou une valeur  `max_records` plus petite (ou les deux).
 
 Limitation du nombre d'objets:: Par défaut, ONTAP renvoie un maximum de 10,000 objets pour une requête GET. Vous pouvez modifier cette limite à l'aide du `max_records` paramètre de requête. Par exemple :
 +
