@@ -2,7 +2,7 @@
 section: migrate
 title: Migration d'ONTAPI vers l'API REST
 entries:
-- title: Considérations relatives à la migration
+- title: Découvrez la migration
   url: "/migrate/migration-considerations.html"
 - title: Mappage ONTAPI vers REST
   url: "/migrate/mapping.html"

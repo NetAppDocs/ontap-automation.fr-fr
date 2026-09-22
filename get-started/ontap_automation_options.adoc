@@ -4,7 +4,7 @@ permalink: get-started/ontap_automation_options.html
 keywords: ontap automation, rest api, python client library, powershell, ansible, bluexp automation catalog, netapp, console, hub 
 summary: 'Plusieurs options sont disponibles pour automatiser le déploiement et l"administration de vos systèmes de stockage ONTAP.' 
 ---
-= Découvrez les options d'automatisation ONTAP
+= Options d'automatisation ONTAP
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

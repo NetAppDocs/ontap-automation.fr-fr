@@ -883,7 +883,6 @@
   <block id="be11c74c1dd7f307bb80183a90dc2067" category="sidebar">Commencez</block>
   <block id="ec8bc6c5f8fe5dc6045b9edfffae614a" category="sidebar">Préparez-vous à utiliser l'API REST</block>
   <block id="e78273b83daaaecb5744859fa531181b" category="sidebar">Détails d'implémentation REST</block>
-  <block id="45cd4354f07a1ab359a1cc263ed79868" category="sidebar">Comment accéder à l'API REST</block>
   <block id="a02956d1e8bd45f8818a7c63426eceba" category="sidebar">Variables d'entrée</block>
   <block id="bbd1bf9de2e4077d7d60ab5cd0b761b0" category="sidebar">Interpréter une réponse API</block>
   <block id="80164c28762060fa56d042df66e7553d" category="sidebar">Créer un utilisateur avec un rôle</block>
@@ -1513,7 +1512,6 @@
   <block id="ef3f9b4af9353a465dd6a94d006c73a7" category="sidebar">Outils logiciels</block>
   <block id="e22a3298a5f97f4069fc3abbf0054a78" category="list-text"><block ref="e22a3298a5f97f4069fc3abbf0054a78" category="inline-link-macro-rx"></block></block>
   <block id="e6a021828131c610a8d1434615483b06" category="summary">Avant de migrer vers l'API REST ONTAP à partir de l'API ONTAP (ZAPI) ou de l'interface de ligne de commande ONTAP, vous devez prendre en compte plusieurs points.</block>
-  <block id="f130aae767c73fd9684158ccdddb8f15" category="doc">Considérations relatives à la migration</block>
   <block id="b7c1ba4e54d3934ebbbfba6a29963dbe" category="paragraph">L'API REST et l'interface de ligne de commande de ONTAP ont des conceptions radicalement différentes. Les commandes et paramètres de la CLI ne sont pas directement associés aux appels de l'API REST. Et même lorsqu'il peut y avoir une similarité, les détails des paramètres d'entrée peuvent être différents. Par exemple, des unités numériques peuvent être spécifiées en octets ou à l'aide d'un suffixe (comme Ko). Voir <block ref="430e01911dcacc88e4a83d838ae504e2" category="inline-link-macro-rx"></block> et <block ref="10fd548eb0773eced2b1f8455835ae29" category="inline-link-macro-rx"></block> pour en savoir plus.</block>
   <block id="359aa321b2af8c1841936c471ac5028a" category="paragraph">Pour assister les utilisateurs de l'API ONTAP et de l'interface de ligne de commande dans leur transition vers l'API REST ONTAP, ONTAP fournit un terminal REST qui permet d'accéder à l'interface de ligne de commande ONTAP. Vous pouvez utiliser cette fonctionnalité de passe-système pour exécuter n'importe quelle commande CLI.  L'utilisation du terminal REST est renvoyée dans les données AutoSupport pour que NetApp puisse identifier les failles dans l'API REST et apporter des améliorations aux futures versions d'ONTAP.</block>
   <block id="74b014305892305348ed02c92ab2a761" category="paragraph">Pour exécuter une commande CLI, vous devez effectuer un appel d'API REST correctement formé en fonction de règles relatives aux éléments suivants :</block>
@@ -1988,4 +1986,8 @@
   <block id="b6d0a2a842f978459f1bd6e49da11974" category="doc">Découvrez comment migrer vers l'API REST ONTAP</block>
   <block id="249dde32b5b3415eea7043c85ab74e06" category="admonition">Pour les versions d'ONTAP antérieures à 9.9.1, vous pouvez automatiser l'administration des autorisations SACL et DACL à l'aide de la fonction de transmission via l'interface de ligne de commande (CLI). Voir <block ref="4cdee464b402508aee95b27a583991b8" category="inline-link-macro-rx"></block> pour plus d'informations.</block>
   <block id="76372f20d2a63611bf93c8514dcab6f2" category="sidebar">Apprenez-en davantage sur la migration</block>
+  <block id="2bba6f8cd1f39e40fa1f0d47e2b47620" category="doc">Moyens d'accéder à l'API REST ONTAP</block>
+  <block id="3c3bee5464454cc8c3e907834e3d4fda" category="doc">Effectuez votre premier appel à l'API REST ONTAP</block>
+  <block id="bda838b652b88a842b6842d75ef9fd57" category="sidebar">Moyens d'accéder à l'API REST</block>
+  <block id="fe0515a8af283239225745febd13b5b5" category="sidebar">Découvrez la migration</block>
 </blocks>
