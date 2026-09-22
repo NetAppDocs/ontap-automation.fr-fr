@@ -38,7 +38,7 @@ indexpage:
       url: "/sw-tools/learn-about-nmsdk.html"
   - title: Migrer vers l'API REST
     links:
-    - title: Considérations relatives à la migration
+    - title: Apprenez-en davantage sur la migration
       url: "/migrate/migration-considerations.html"
     - title: Mappage ONTAPI vers REST
       url: "/migrate/mapping.html"
