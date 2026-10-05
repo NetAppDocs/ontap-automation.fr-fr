@@ -4,7 +4,7 @@ permalink: additional/learn_more.html
 keywords: learn, learn more, more information, additional resources 
 summary: 'Il existe plusieurs ressources supplémentaires qui vous aideront à obtenir de l"aide et à trouver plus d"informations sur l"automatisation du déploiement et de l"administration de vos systèmes de stockage ONTAP.' 
 ---
-= En savoir plus sur l'API REST ONTAP
+= Ressources supplémentaires pour l'API REST ONTAP
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
