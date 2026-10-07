@@ -4,7 +4,7 @@ permalink: python/script_retrieve_cluster_configuration.html
 keywords: Python, sample script, Python example 
 summary: 'Vous pouvez exécuter le script en utilisant Python 3 sur l"interface de ligne de commandes afin d"extraire la configuration du cluster ONTAP.' 
 ---
-= Script permettant de récupérer la configuration du cluster à l'aide de la bibliothèque cliente Python
+= Récupérez la configuration du cluster à l’aide de la bibliothèque cliente Python ONTAP
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
